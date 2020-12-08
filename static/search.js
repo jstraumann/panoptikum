@@ -18,7 +18,6 @@ function werkSearchNext(e) {
 }
 
 function werkSearchRandom(e) {
-  alert('gugus');
   werkSearchReset(e);
   $('#restart').removeClass('disable');
   $('button#more').hide();
