@@ -18,8 +18,10 @@ function werkSearchNext(e) {
 }
 
 function werkSearchRandom(e) {
+  alert('gugus');
   werkSearchReset(e);
   $('#restart').removeClass('disable');
+  $('button#more').hide();
   werkSearchStart(e, 1, true);
 }
 
@@ -313,8 +315,10 @@ function werkSearchStart(e, from_page, random) {
     }); // -data each
 
     // Automatically open if only one image or random mode
-    if (data.length == 1 || random)
+    if (data.length == 1 || random) {
       $tgt.find('.item:last').click();
+      $('button#more').hide();
+    }
 
   }).fail(function(jqxhr, textStatus, error) {
     alert('Could not search!');
