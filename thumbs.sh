@@ -3,7 +3,7 @@
 source=`pwd`/images
 tgt=thumb
 
-for dir in ${source}/WV_ab*/
+for dir in ${source}/WV_neu*/
 do
     echo "Creating thumbnails in: ${dir}/${tgt}"
     cd "${dir}"
