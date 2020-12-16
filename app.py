@@ -17,16 +17,18 @@ except:
 
 app = FlaskAPI(__name__)
 
-
 # https://stackoverflow.com/questions/29725217/password-protect-one-webpage-in-flask-app
+"""
 def check_auth(username, password):
-    """This function is called to check if a username /
+    " ""This function is called to check if a username /
     password combination is valid.
-    """
+    "" "
+    # eliminate whitespace for proper work
     return username == 'guest' and password == '12.Capr.21'
 
 def authenticate():
-    """Sends a 401 response that enables basic auth"""
+    " ""Sends a 401 response that enables basic auth"" " 
+    # eliminate whitespace for proper work
     return Response(
     'Could not verify your access level for that URL.\n'
     'You have to login with proper credentials', 401,
@@ -40,7 +42,7 @@ def requires_auth(f):
             return authenticate()
         return f(*args, **kwargs)
     return decorated
-
+"""
 
 
 # Create API endpoints
@@ -67,19 +69,20 @@ def api_all_json(resource):
 # Static views
 
 @app.route('/')
-@requires_auth
+#@requires_auth
 def send_home():
     return render_template('public/index.html')
 
 @app.route('/static/<path:path>')
-@requires_auth
+#@requires_auth
 def send_static(path):
     return send_from_directory('static', path)
 
 @app.route('/images/<path:path>')
-@requires_auth
+#@requires_auth
 def send_images(path):
     return send_from_directory('images', path)
 
 if __name__ == '__main__':
-    app.run(debug=True, ssl_context='adhoc')
+    app.run(debug=True)
+    #app.run(debug=True, ssl_context='adhoc')
