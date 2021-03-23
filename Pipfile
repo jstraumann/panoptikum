@@ -11,5 +11,6 @@ pandas-datapackage-reader = "*"
 flask-api = "*"
 gunicorn = "*"
 hypercorn = "*"
+pandas = "*"
 
 [requires]
