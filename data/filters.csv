@@ -48,11 +48,13 @@ Cb,Form,Darstellungsformen,Darstellungsformen,Collagebuch,,,16
 Fro,Form,Darstellungsformen,Darstellungsformen,Frottage,,,46
 Gi,Form,Darstellungsformen,Darstellungsformen,"Gitterstruktur, Netzstruktur",,,175
 RiK,Form,Darstellungsformen,Darstellungsformen,Körper im Raum zu Raum im Körper,,,99
+krS,Form,Darstellungsformen,Darstellungsformen,kreisrunde Scheiben,,,0
 Lst,Form,Darstellungsformen,Darstellungsformen,Linienstrukturen,,,307
 Lwi,Form,Darstellungsformen,Darstellungsformen,Linienwirbel,,,312
 Mo,Form,Darstellungsformen,Darstellungsformen,Mosaik,,,46
 ovÖ,Form,Darstellungsformen,Darstellungsformen,ovale Öffnung,,,38
 pg,Form,Darstellungsformen,Darstellungsformen,pastos gespachtelt,,,22
+Schla,Form,Darstellungsformen,Darstellungsformen,Schlangenlinien,,,0
 Schl,Form,Darstellungsformen,Darstellungsformen,Schleifbilder,,,9
 Schü,Form,Darstellungsformen,Darstellungsformen,Schüttbilder,,,9
 sCo,Form,Darstellungsformen,Darstellungsformen,serielle Collage,,,29
@@ -62,6 +64,15 @@ Gs,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Gegenständliches,,,
 U,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches,,,2761
 UnG,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches neben Gegenständlichem,,,1221
 UoG,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches oder Gegenständliches,,,1516
+hK,Form,Komposition,Komposition,horizontale Komposition,,,0
+vK,Form,Komposition,Komposition,vertikale Komposition,,,0
+kK,Form,Komposition,Komposition,kreuzförmige Komposition,,,0
+dK,Form,Komposition,Komposition,diagonale Komposition,,,0
+ddK,Form,Komposition,Komposition,doppelt diagonale Komposition,,,0
+Drk,Form,Komposition,Komposition,Dreieckskomposition,,,0
+ROk,Form,Komposition,Komposition,Rund- oder Ovalkomposition,,,0
+Zk,Form,Komposition,Komposition,Zentralkomposition,,,0
+Rk,Form,Komposition,Komposition,Randkomposition,,,0
 wid,Form,Bildsprache,Bildsprache,Widder-/Mars-Gestaltung,,,29
 sti,Form,Bildsprache,Bildsprache,Stier-/Venus-Gestaltung,,,13
 zwi,Form,Bildsprache,Bildsprache,Zwillinge-/Merkur-Gestaltung,,,204
