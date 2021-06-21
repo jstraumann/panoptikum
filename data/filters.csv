@@ -1,12 +1,12 @@
 Code,Mode,Type,Column,Title,Link,Info,Count
 Ac,Form,Technik,Technik,Acryl,,,21
 Aq,Form,Technik,Technik,Aquarell,,,14
-B,Form,Technik,Technik,Bleistift,,,1387
+B,Form,Technik,Technik,Bleistift,,,1389
 C,Form,Technik,Technik,Collage,,,110
 Cb,Form,Technik,Technik,Collagebuch,,,16
 Fa,Form,Technik,Technik,Farbstift,,,44
 Fs,Form,Technik,Technik,Filzstift,,,26
-G,Form,Technik,Technik,Gouache,,,838
+G,Form,Technik,Technik,Gouache,,,839
 K,Form,Technik,Technik,Kohle,,,28
 Ks,Form,Technik,Technik,Kugelschreiber,,,23
 Opl,Form,Technik,Technik,Ölpastell,,,17
@@ -22,15 +22,15 @@ Od,Form,Drucktechnik,Technik,Offsetdruck,,,8
 R,Form,Drucktechnik,Technik,Radierung,,,359
 S,Form,Drucktechnik,Technik,Siebdruck,,,4
 Rd,Form,Drucktechnik,Technik,Reliefdruck,,,5
-zT,Form,mehrere Techniken,Technik,zwei Techniken,,,2284
+zT,Form,mehrere Techniken,Technik,zwei Techniken,,,2285
 Mt,Form,mehrere Techniken,Technik,Mischtechnik (3 Techniken und mehr),,,1392
-H1,Form,Helligkeit,Helligkeit,hell,,,691
-H2,Form,Helligkeit,Helligkeit,eher hell,,,2870
+H1,Form,Helligkeit,Helligkeit,hell,,,692
+H2,Form,Helligkeit,Helligkeit,eher hell,,,2871
 H3,Form,Helligkeit,Helligkeit,mittlere Helligkeit,,,2418
-H4,Form,Helligkeit,Helligkeit,eher dunkel,,,1745
+H4,Form,Helligkeit,Helligkeit,eher dunkel,,,1746
 H5,Form,Helligkeit,Helligkeit,dunkel,,,220
-bw,Form,Farbigkeit nach Dominanz,Farbigkeit,schwarzweiss,,,1060
-gr,Form,Farbigkeit nach Dominanz,Farbigkeit,grau,,,4113
+bw,Form,Farbigkeit nach Dominanz,Farbigkeit,schwarzweiss,,,1062
+gr,Form,Farbigkeit nach Dominanz,Farbigkeit,grau,,,4114
 cf,Form,Farbigkeit nach Dominanz,Farbigkeit,vielfarbig,,,1617
 y,Form,Farbigkeit nach Dominanz,Farbigkeit,gelb,,,76
 g,Form,Farbigkeit nach Dominanz,Farbigkeit,grün,,,209
@@ -39,9 +39,9 @@ v,Form,Farbigkeit nach Dominanz,Farbigkeit,violett,,,147
 m,Form,Farbigkeit nach Dominanz,Farbigkeit,rot,,,95
 b,Form,Farbigkeit nach Dominanz,Farbigkeit,braun,,,366
 klein,Form,Format,Grösse,klein,,((grössere Zahl max. 30)),5276
-mittel,Form,Format,Grösse,mittel,,((grössere Zahl 31 - 90)),2582
+mittel,Form,Format,Grösse,mittel,,((grössere Zahl 31 - 90)),2585
 gross,Form,Format,Grösse,gross,,((grössere Zahl 91 und mehr)),106
-breit,Form,Ausrichtung,Ausrichtung,breit,,,6936
+breit,Form,Ausrichtung,Ausrichtung,breit,,,6939
 hoch,Form,Ausrichtung,Ausrichtung,hoch,,,896
 quadratisch,Form,Ausrichtung,Ausrichtung,quadratisch,,,131
 Cb,Form,Darstellungsformen,Darstellungsformen,Collagebuch,,,16
@@ -60,8 +60,8 @@ Schü,Form,Darstellungsformen,Darstellungsformen,Schüttbilder,,,9
 sCo,Form,Darstellungsformen,Darstellungsformen,serielle Collage,,,29
 sM,Form,Darstellungsformen,Darstellungsformen,serielle Muster,,,43
 Ul,Form,Darstellungsformen,Darstellungsformen,Umrisslinie,,,159
-Gs,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Gegenständliches,,,2455
-U,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches,,,2754
+Gs,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Gegenständliches,,,2457
+U,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches,,,2756
 UnG,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches neben Gegenständlichem,,,1207
 UoG,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches oder Gegenständliches,,,1515
 hK,Form,Komposition,Komposition,horizontale Komposition,,,65
@@ -95,7 +95,7 @@ P,Inhalt,Motive,Motiven,Paare,,,547
 Ba,Inhalt,Motive,Motiven,Badende,,,102
 Ri,Inhalt,Motive,Motiven,"Porträts, Köpfe",,,207
 Sb,Inhalt,Motive,Motiven,Selbstbildnisse,,,164
-A,Inhalt,Motive,Motiven,Akt (nach Modell oder Vorstellung),,,1266
+A,Inhalt,Motive,Motiven,Akt (nach Modell oder Vorstellung),,,1268
 AP,Inhalt,Motive,Motiven,Akt (Paraphrasen),,,579
 Kt,Inhalt,Motive,Motiven,Körperteile,,,133
 Mw,Inhalt,Motive,Motiven,Mischwesen,Ken,,122
@@ -118,7 +118,7 @@ Sta,Inhalt,Motive,Motiven,"Stäbe, Stelen, Stangen",,,61
 Vo,Inhalt,Motive,Motiven,Vorhänge,,,50
 lL,Inhalt,Motive,Motiven,"Leere Leinwand, leeres Papier",,,125
 BiB,Inhalt,Motive,Motiven,Bild im Bild,,,392
-Sch,Inhalt,Motive,Motiven,"Schrift, Schriftzeichen",,,888
+Sch,Inhalt,Motive,Motiven,"Schrift, Schriftzeichen",,,889
 Ca,Inhalt,Motive,Motiven,Capricci,,,163
 Ec,Inhalt,Motive,Motiven,Themenkreis Ecuador,,,34
 Par1,Inhalt,"Paraphrasen, Variationen",Paraphrasen,aussereuropäische Kunst ,,,121
@@ -136,7 +136,7 @@ Par9a,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Installationen,,,51
 Par9b,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Performance, Theater, Tanz",,,85
 ParEH,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Edward Hopper,,,6
 ParAR,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Auguste Rodin,,,46
-ParFV,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Félix Vallotton,,,466
+ParFV,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Félix Vallotton,,,467
 ParJHF,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Johann Heinrich Füssli,,,30
 ParME,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Max Ernst,,,10
 ParPP,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Pablo Picasso,,,17
@@ -172,7 +172,7 @@ Kr12e,Inhalt,Projekt „Klee revisited“,Paraphrasen,Fünfklang,,,14
 1985-1999,Zeit,Chronologie,Jahr,1985–1999,,,0
 1979-1984,Zeit,Chronologie,Jahr,1979–1984,,,0
 1973-1978,Zeit,Chronologie,Jahr,1973–1978,,,0
-iBdK,Anderes,Standort,Standort,im Besitz des Künstlers,,,7557
+iBdK,Anderes,Standort,Standort,im Besitz des Künstlers,,,7560
 PB,Anderes,Standort,Status,Privatbesitz,,,262
 vers,Anderes,Standort,Status,verschollen,,,30
 vernichtet,Anderes,Standort,Status,vernichtet,,,10
