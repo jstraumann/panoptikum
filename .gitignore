@@ -20,3 +20,4 @@ yarn-error.log
 __pycache__
 env/
 shell/
+.vscode
