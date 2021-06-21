@@ -60,3 +60,4 @@ encoding, `,` as delimiter, `"` as quotation and enabling
 * Generate thumbnails by running `./thumb.sh`
 * Create the virtualenv and install the requirements as described above
 * Run `python collect.py`
+* Feed back the converted images to the server: `scp -r images root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv`
