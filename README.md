@@ -14,8 +14,9 @@ Made with [Frictionless Data](https://frictionlessdata.io), [Flask](http://flask
 5. `flask run`
 
 ```
-sudo apt-get install python3.6 python3-numpy
-virtualenv --system-site-packages -p python3.6 env
+sudo apt-get install python3.8 python3-numpy
+virtualenv --system-site-packages -p python3.8 env
+pip install -r requirements.txt
 ```
 
 # Data refresh
@@ -47,3 +48,15 @@ In development, use:
 In production, something like:
 
 `gunicorn --log-level=info -w 4 -b :8000 app:app`
+
+# Adding new images
+
+* Open the new `WERKVERZEICHNIS.xlsx` in Calc and save as CSV, using `UTF-8` as
+encoding, `,` as delimiter, `"` as quotation and enabling
+`quote all text cells`. This should produce a file `WERKVERZEICHNIS.csv`.
+* Download all existing images: `scp -r root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv/images .`
+* Place any new image files in the `IMPORT` folder
+* Crop and resize the images by running `./convert.sh`
+* Generate thumbnails by running `./thumb.sh`
+* Create the virtualenv and install the requirements as described above
+* Run `python collect.py`
