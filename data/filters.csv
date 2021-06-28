@@ -1,182 +1,182 @@
 Code,Mode,Type,Column,Title,Link,Info,Count
-Ac,Form,Technik,Technik,Acryl,,,21
+Ac,Form,Technik,Technik,Acryl,,,22
 Aq,Form,Technik,Technik,Aquarell,,,14
-B,Form,Technik,Technik,Bleistift,,,1389
-C,Form,Technik,Technik,Collage,,,110
+B,Form,Technik,Technik,Bleistift,,,1513
+C,Form,Technik,Technik,Collage,,,111
 Cb,Form,Technik,Technik,Collagebuch,,,16
-Fa,Form,Technik,Technik,Farbstift,,,44
-Fs,Form,Technik,Technik,Filzstift,,,26
-G,Form,Technik,Technik,Gouache,,,839
+Fa,Form,Technik,Technik,Farbstift,,,54
+Fs,Form,Technik,Technik,Filzstift,,,31
+G,Form,Technik,Technik,Gouache,,,854
 K,Form,Technik,Technik,Kohle,,,28
-Ks,Form,Technik,Technik,Kugelschreiber,,,23
-Opl,Form,Technik,Technik,Ölpastell,,,17
-OP,Form,Technik,Technik,Ölfarbe auf Pavatex,,,751
-OL,Form,Technik,Technik,Ölfarbe auf Leinwand,,,76
+Ks,Form,Technik,Technik,Kugelschreiber,,,24
+Opl,Form,Technik,Technik,Ölpastell,,,16
+OP,Form,Technik,Technik,Ölfarbe auf Pavatex,,,757
+OL,Form,Technik,Technik,Ölfarbe auf Leinwand,,,87
 OPa,Form,Technik,Technik,Ölfarbe auf Papier,,,67
-T,Form,Technik,Technik,Tusche,,,288
-Dd,Form,Drucktechnik,Technik,Digitaldruck,,,71
+T,Form,Technik,Technik,Tusche,,,289
+Dd,Form,Drucktechnik,Technik,Digitaldruck,,,70
 Hs,Form,Drucktechnik,Technik,Holzschnitt,,,10
 Ls,Form,Drucktechnik,Technik,Linolschnitt,,,58
 Lg,Form,Drucktechnik,Technik,Lithografie,,,20
-Od,Form,Drucktechnik,Technik,Offsetdruck,,,8
+Od,Form,Drucktechnik,Technik,Offsetdruck,,,9
 R,Form,Drucktechnik,Technik,Radierung,,,359
 S,Form,Drucktechnik,Technik,Siebdruck,,,4
 Rd,Form,Drucktechnik,Technik,Reliefdruck,,,5
-zT,Form,mehrere Techniken,Technik,zwei Techniken,,,2285
-Mt,Form,mehrere Techniken,Technik,Mischtechnik (3 Techniken und mehr),,,1392
-H1,Form,Helligkeit,Helligkeit,hell,,,692
-H2,Form,Helligkeit,Helligkeit,eher hell,,,2871
-H3,Form,Helligkeit,Helligkeit,mittlere Helligkeit,,,2418
-H4,Form,Helligkeit,Helligkeit,eher dunkel,,,1746
-H5,Form,Helligkeit,Helligkeit,dunkel,,,220
-bw,Form,Farbigkeit nach Dominanz,Farbigkeit,schwarzweiss,,,1062
-gr,Form,Farbigkeit nach Dominanz,Farbigkeit,grau,,,4114
-cf,Form,Farbigkeit nach Dominanz,Farbigkeit,vielfarbig,,,1617
+zT,Form,mehrere Techniken,Technik,zwei Techniken,,,2339
+Mt,Form,mehrere Techniken,Technik,Mischtechnik (3 Techniken und mehr),,,1412
+H1,Form,Helligkeit,Helligkeit,hell,,,712
+H2,Form,Helligkeit,Helligkeit,eher hell,,,2990
+H3,Form,Helligkeit,Helligkeit,mittlere Helligkeit,,,2496
+H4,Form,Helligkeit,Helligkeit,eher dunkel,,,1778
+H5,Form,Helligkeit,Helligkeit,dunkel,,,224
+bw,Form,Farbigkeit nach Dominanz,Farbigkeit,schwarzweiss,,,1116
+gr,Form,Farbigkeit nach Dominanz,Farbigkeit,grau,,,4219
+cf,Form,Farbigkeit nach Dominanz,Farbigkeit,vielfarbig,,,1657
 y,Form,Farbigkeit nach Dominanz,Farbigkeit,gelb,,,76
-g,Form,Farbigkeit nach Dominanz,Farbigkeit,grün,,,209
+g,Form,Farbigkeit nach Dominanz,Farbigkeit,grün,,,210
 c,Form,Farbigkeit nach Dominanz,Farbigkeit,blau,,,250
-v,Form,Farbigkeit nach Dominanz,Farbigkeit,violett,,,147
-m,Form,Farbigkeit nach Dominanz,Farbigkeit,rot,,,95
-b,Form,Farbigkeit nach Dominanz,Farbigkeit,braun,,,366
-klein,Form,Format,Grösse,klein,,((grössere Zahl max. 30)),5276
-mittel,Form,Format,Grösse,mittel,,((grössere Zahl 31 - 90)),2585
+v,Form,Farbigkeit nach Dominanz,Farbigkeit,violett,,,144
+m,Form,Farbigkeit nach Dominanz,Farbigkeit,rot,,,99
+b,Form,Farbigkeit nach Dominanz,Farbigkeit,braun,,,378
+klein,Form,Format,Grösse,klein,,((grössere Zahl max. 30)),5479
+mittel,Form,Format,Grösse,mittel,,((grössere Zahl 31 - 90)),2636
 gross,Form,Format,Grösse,gross,,((grössere Zahl 91 und mehr)),106
-breit,Form,Ausrichtung,Ausrichtung,breit,,,6939
-hoch,Form,Ausrichtung,Ausrichtung,hoch,,,896
-quadratisch,Form,Ausrichtung,Ausrichtung,quadratisch,,,131
+breit,Form,Ausrichtung,Ausrichtung,breit,,,7094
+hoch,Form,Ausrichtung,Ausrichtung,hoch,,,971
+quadratisch,Form,Ausrichtung,Ausrichtung,quadratisch,,,153
 Cb,Form,Darstellungsformen,Darstellungsformen,Collagebuch,,,16
 Fro,Form,Darstellungsformen,Darstellungsformen,Frottage,,,46
-Gi,Form,Darstellungsformen,Darstellungsformen,"Gitterstruktur, Netzstruktur",,,175
+Gi,Form,Darstellungsformen,Darstellungsformen,"Gitterstruktur, Netzstruktur",,,179
 RiK,Form,Darstellungsformen,Darstellungsformen,Körper im Raum zu Raum im Körper,,,99
-krS,Form,Darstellungsformen,Darstellungsformen,kreisrunde Scheiben,,,84
-Lst,Form,Darstellungsformen,Darstellungsformen,Linienstrukturen,,,305
-Lwi,Form,Darstellungsformen,Darstellungsformen,Linienwirbel,,,312
-Mo,Form,Darstellungsformen,Darstellungsformen,Mosaik,,,33
-ovÖ,Form,Darstellungsformen,Darstellungsformen,ovale Öffnung,,,38
+krS,Form,Darstellungsformen,Darstellungsformen,kreisrunde Scheiben,,,82
+Lst,Form,Darstellungsformen,Darstellungsformen,Linienstrukturen,,,306
+Lwi,Form,Darstellungsformen,Darstellungsformen,Linienwirbel,,,321
+Mo,Form,Darstellungsformen,Darstellungsformen,Mosaik,,,47
+ovÖ,Form,Darstellungsformen,Darstellungsformen,ovale Öffnung,,,41
 pg,Form,Darstellungsformen,Darstellungsformen,pastos gespachtelt,,,22
 Schla,Form,Darstellungsformen,Darstellungsformen,Schlangenlinien,,,9
 Schl,Form,Darstellungsformen,Darstellungsformen,Schleifbilder,,,9
 Schü,Form,Darstellungsformen,Darstellungsformen,Schüttbilder,,,9
-sCo,Form,Darstellungsformen,Darstellungsformen,serielle Collage,,,29
-sM,Form,Darstellungsformen,Darstellungsformen,serielle Muster,,,43
-Ul,Form,Darstellungsformen,Darstellungsformen,Umrisslinie,,,159
-Gs,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Gegenständliches,,,2457
-U,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches,,,2756
-UnG,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches neben Gegenständlichem,,,1207
-UoG,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches oder Gegenständliches,,,1515
-hK,Form,Komposition,Komposition,horizontale Komposition,,,65
-vK,Form,Komposition,Komposition,vertikale Komposition,,,153
-kK,Form,Komposition,Komposition,kreuzförmige Komposition,,,35
-dK,Form,Komposition,Komposition,diagonale Komposition,,,122
-ddK,Form,Komposition,Komposition,doppelt diagonale Komposition,,,58
-Drk,Form,Komposition,Komposition,Dreieckskomposition,,,60
-ROk,Form,Komposition,Komposition,Rund- oder Ovalkomposition,,,87
-Zk,Form,Komposition,Komposition,Zentralkomposition,,,392
-Rk,Form,Komposition,Komposition,Randkomposition,,,50
-wid,Form,Bildsprache,Bildsprache,Widder-/Mars-Gestaltung,,,28
+sCo,Form,Darstellungsformen,Darstellungsformen,serielle Collage,,,33
+sM,Form,Darstellungsformen,Darstellungsformen,serielle Muster,,,44
+Ul,Form,Darstellungsformen,Darstellungsformen,Umrisslinie,,,165
+Gs,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Gegenständliches,,,2495
+U,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches,,,2877
+UnG,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches neben Gegenständlichem,,,1258
+UoG,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches oder Gegenständliches,,,1556
+hK,Form,Komposition,Komposition,horizontale Komposition,,,64
+vK,Form,Komposition,Komposition,vertikale Komposition,,,159
+kK,Form,Komposition,Komposition,kreuzförmige Komposition,,,28
+dK,Form,Komposition,Komposition,diagonale Komposition,,,120
+ddK,Form,Komposition,Komposition,doppelt diagonale Komposition,,,50
+Drk,Form,Komposition,Komposition,Dreieckskomposition,,,57
+ROk,Form,Komposition,Komposition,Rund- oder Ovalkomposition,,,98
+Zk,Form,Komposition,Komposition,Zentralkomposition,,,395
+Rk,Form,Komposition,Komposition,Randkomposition,,,55
+wid,Form,Bildsprache,Bildsprache,Widder-/Mars-Gestaltung,,,33
 sti,Form,Bildsprache,Bildsprache,Stier-/Venus-Gestaltung,,,13
-zwi,Form,Bildsprache,Bildsprache,Zwillinge-/Merkur-Gestaltung,,,204
-kre,Form,Bildsprache,Bildsprache,Krebs-/Mond-Gestaltung,,,90
+zwi,Form,Bildsprache,Bildsprache,Zwillinge-/Merkur-Gestaltung,,,216
+kre,Form,Bildsprache,Bildsprache,Krebs-/Mond-Gestaltung,,,91
 löw,Form,Bildsprache,Bildsprache,Löwe-/Sonne-Gestaltung,,,2
-jun,Form,Bildsprache,Bildsprache,Jungfrau-/Merkur-Gestaltung,,,54
-waa,Form,Bildsprache,Bildsprache,Waage-/Venus-Gestaltung,,,192
-sko,Form,Bildsprache,Bildsprache,Skorpion-/Pluto-Gestaltung,,,225
+jun,Form,Bildsprache,Bildsprache,Jungfrau-/Merkur-Gestaltung,,,56
+waa,Form,Bildsprache,Bildsprache,Waage-/Venus-Gestaltung,,,198
+sko,Form,Bildsprache,Bildsprache,Skorpion-/Pluto-Gestaltung,,,232
 sch,Form,Bildsprache,Bildsprache,Schütze-/Jupiter-Gestaltung,,,27
-ste,Form,Bildsprache,Bildsprache,Steinbock-/Saturn-Gestaltung,,,108
-was,Form,Bildsprache,Bildsprache,Wassermann-/Uranus-Gestaltung,,,149
-fis,Form,Bildsprache,Bildsprache,Fische-/Neptun-Gestaltung,,,99
-mF,Inhalt,Motive,Motiven,Menschen,"A, AP, Ba, FigG, FigR, KiA, P, Sb, Z, ZM",,467
-FigG,Inhalt,Motive,Motiven,Figurengruppen,,,360
-FigR,Inhalt,Motive,Motiven,Figuren im Raum (Innenraum),,,247
+ste,Form,Bildsprache,Bildsprache,Steinbock-/Saturn-Gestaltung,,,109
+was,Form,Bildsprache,Bildsprache,Wassermann-/Uranus-Gestaltung,,,150
+fis,Form,Bildsprache,Bildsprache,Fische-/Neptun-Gestaltung,,,95
+mF,Inhalt,Motive,Motiven,Menschen,"A, AP, Ba, FigG, FigR, KiA, P, Sb, Z, ZM",,480
+FigG,Inhalt,Motive,Motiven,Figurengruppen,,,374
+FigR,Inhalt,Motive,Motiven,Figuren im Raum (Innenraum),,,248
 KiA,Inhalt,Motive,Motiven,KünstlerInnen im Atelier,,,27
 Z,Inhalt,Motive,Motiven,"ZeichnerInnen, MalerInnen",,,128
-ZM,Inhalt,Motive,Motiven,ZeichnerInnen/MalerInnen und Modell,,,221
-P,Inhalt,Motive,Motiven,Paare,,,547
+ZM,Inhalt,Motive,Motiven,ZeichnerInnen/MalerInnen und Modell,,,222
+P,Inhalt,Motive,Motiven,Paare,,,540
 Ba,Inhalt,Motive,Motiven,Badende,,,102
-Ri,Inhalt,Motive,Motiven,"Porträts, Köpfe",,,207
+Ri,Inhalt,Motive,Motiven,"Porträts, Köpfe",,,216
 Sb,Inhalt,Motive,Motiven,Selbstbildnisse,,,164
-A,Inhalt,Motive,Motiven,Akt (nach Modell oder Vorstellung),,,1268
-AP,Inhalt,Motive,Motiven,Akt (Paraphrasen),,,579
-Kt,Inhalt,Motive,Motiven,Körperteile,,,133
-Mw,Inhalt,Motive,Motiven,Mischwesen,Ken,,122
+A,Inhalt,Motive,Motiven,Akt (nach Modell oder Vorstellung),,,1272
+AP,Inhalt,Motive,Motiven,Akt (Paraphrasen),,,589
+Kt,Inhalt,Motive,Motiven,Körperteile,,,138
+Mw,Inhalt,Motive,Motiven,Mischwesen,Ken,,124
 Ken,Inhalt,Motive,Motiven,Kentauren,,,44
-Tie,Inhalt,Motive,Motiven,Tiere,,,196
-Pf,Inhalt,Motive,Motiven,Pflanzen,,,369
-F,Inhalt,Motive,Motiven,"Früchte, Gemüse",,,231
+Tie,Inhalt,Motive,Motiven,Tiere,,,203
+Pf,Inhalt,Motive,Motiven,Pflanzen,,,377
+F,Inhalt,Motive,Motiven,"Früchte, Gemüse",,,228
 Gä,Inhalt,Motive,Motiven,Gärten,,,25
-L,Inhalt,Motive,Motiven,Landschaften,,,356
-Ar,Inhalt,Motive,Motiven,"Architektur, Intérieurs",,,286
-Ma,Inhalt,Motive,Motiven,Mauern,,,56
+L,Inhalt,Motive,Motiven,Landschaften,,,359
+Ar,Inhalt,Motive,Motiven,"Architektur, Intérieurs",,,296
+Ma,Inhalt,Motive,Motiven,Mauern,,,57
 At,Inhalt,Motive,Motiven,Ateliers,,,163
-St,Inhalt,Motive,Motiven,Stillleben,,,340
-O,Inhalt,Motive,Motiven,Objekte,"Sta, Vo",,986
+St,Inhalt,Motive,Motiven,Stillleben,,,334
+O,Inhalt,Motive,Motiven,Objekte,"Sta, Vo",,1041
 Fk,Inhalt,Motive,Motiven,Farbkörper,,,23
-bb,Inhalt,Motive,Motiven,Black Box,,,164
-So,Inhalt,Motive,Motiven,Sockel,,,78
+bb,Inhalt,Motive,Motiven,Black Box,,,178
+So,Inhalt,Motive,Motiven,Sockel,,,79
 Ti,Inhalt,Motive,Motiven,Tische,,,173
 Sta,Inhalt,Motive,Motiven,"Stäbe, Stelen, Stangen",,,61
-Vo,Inhalt,Motive,Motiven,Vorhänge,,,50
+Vo,Inhalt,Motive,Motiven,Vorhänge,,,52
 lL,Inhalt,Motive,Motiven,"Leere Leinwand, leeres Papier",,,125
-BiB,Inhalt,Motive,Motiven,Bild im Bild,,,392
-Sch,Inhalt,Motive,Motiven,"Schrift, Schriftzeichen",,,889
-Ca,Inhalt,Motive,Motiven,Capricci,,,163
+BiB,Inhalt,Motive,Motiven,Bild im Bild,,,398
+Sch,Inhalt,Motive,Motiven,"Schrift, Schriftzeichen",,,933
+Ca,Inhalt,Motive,Motiven,Capricci,,,171
 Ec,Inhalt,Motive,Motiven,Themenkreis Ecuador,,,34
-Par1,Inhalt,"Paraphrasen, Variationen",Paraphrasen,aussereuropäische Kunst ,,,121
-Par2,Inhalt,"Paraphrasen, Variationen",Paraphrasen, bis und mit griechisch-römischer Antike,,,110
+Par1,Inhalt,"Paraphrasen, Variationen",Paraphrasen,aussereuropäische Kunst ,,,124
+Par2,Inhalt,"Paraphrasen, Variationen",Paraphrasen, bis und mit griechisch-römischer Antike,,,121
 Par3a,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Malerei Frühmittelalter bis 15. Jh.,,,27
-Par4,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Malerei, Zeichnung 16.–18. Jh.",ParT,,123
-Par5,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Malerei, Zeichnung 19. Jh.","ParJHF, ParPC",,133
-Par7a,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Malerei, Zeichnung 20. Jh. ","ParPK, ParME, ParGOK, ParEH, ParFV, ParRM, ParPP",,220
-Par3b,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Skulptur Mittelalter bis 18. Jh.,,,65
+Par4,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Malerei, Zeichnung 16.–18. Jh.",ParT,,127
+Par5,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Malerei, Zeichnung 19. Jh.","ParJHF, ParPC",,143
+Par7a,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Malerei, Zeichnung 20. Jh. ","ParPK, ParME, ParGOK, ParEH, ParFV, ParRM, ParPP",,245
+Par3b,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Skulptur Mittelalter bis 18. Jh.,,,67
 Par6,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Skulptur 19. Jh.,ParAR,,25
-Par7b,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Plastik 20. Jh.,,,56
+Par7b,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Plastik 20. Jh.,,,61
 Par8a,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Fotografie,ParVB,,3
-Par8b,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Film, Video",,,36
-Par9a,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Installationen,,,51
-Par9b,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Performance, Theater, Tanz",,,85
-ParEH,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Edward Hopper,,,6
-ParAR,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Auguste Rodin,,,46
-ParFV,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Félix Vallotton,,,467
+Par8b,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Film, Video",,,38
+Par9a,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Installationen,,,56
+Par9b,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Performance, Theater, Tanz",,,83
+ParEH,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Edward Hopper,,,7
+ParAR,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Auguste Rodin,,,49
+ParFV,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Félix Vallotton,,,482
 ParJHF,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Johann Heinrich Füssli,,,30
 ParME,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Max Ernst,,,10
-ParPP,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Pablo Picasso,,,17
-ParPC,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Paul Cézanne,,,694
+ParPP,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Pablo Picasso,,,23
+ParPC,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Paul Cézanne,,,630
 ParPK,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Paul Klee,,,66
 ParRM,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,René Magritte,,,60
-ParT,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Tizian,,,19
+ParT,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Tizian,,,26
 ParVB,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Vanessa Beecroft,,,73
-Kr1,Inhalt,Projekt „Klee revisited“,Paraphrasen,Bewegung,,,105
-Kr2a,Inhalt,Projekt „Klee revisited“,Paraphrasen,Pflanzen,,,116
-Kr2b,Inhalt,Projekt „Klee revisited“,Paraphrasen,Tiere,,,69
-Kr3,Inhalt,Projekt „Klee revisited“,Paraphrasen,Schrift,,,163
-Kr4,Inhalt,Projekt „Klee revisited“,Paraphrasen,Landschaften,,,119
-Kr5a,Inhalt,Projekt „Klee revisited“,Paraphrasen,Menschen: Einzelne,,,75
-Kr5b,Inhalt,Projekt „Klee revisited“,Paraphrasen,Menschen: Paare,,,56
-Kr5c,Inhalt,Projekt „Klee revisited“,Paraphrasen,Menschen: Gruppen,,,43
-Kr5d,Inhalt,Projekt „Klee revisited“,Paraphrasen,Menschen: Akt,,,46
-Kr5e,Inhalt,Projekt „Klee revisited“,Paraphrasen,"Menschen: Köpfe, Körperteile",,,61
+Kr1,Inhalt,Projekt „Klee revisited“,Paraphrasen,Bewegung,,,119
+Kr2a,Inhalt,Projekt „Klee revisited“,Paraphrasen,Pflanzen,,,120
+Kr2b,Inhalt,Projekt „Klee revisited“,Paraphrasen,Tiere,,,75
+Kr3,Inhalt,Projekt „Klee revisited“,Paraphrasen,Schrift,,,185
+Kr4,Inhalt,Projekt „Klee revisited“,Paraphrasen,Landschaften,,,125
+Kr5a,Inhalt,Projekt „Klee revisited“,Paraphrasen,Menschen: Einzelne,,,84
+Kr5b,Inhalt,Projekt „Klee revisited“,Paraphrasen,Menschen: Paare,,,53
+Kr5c,Inhalt,Projekt „Klee revisited“,Paraphrasen,Menschen: Gruppen,,,44
+Kr5d,Inhalt,Projekt „Klee revisited“,Paraphrasen,Menschen: Akt,,,47
+Kr5e,Inhalt,Projekt „Klee revisited“,Paraphrasen,"Menschen: Köpfe, Körperteile",,,67
 Kr5f,Inhalt,Projekt „Klee revisited“,Paraphrasen,Menschen: ZeichnerInnen,,,53
-Kr6,Inhalt,Projekt „Klee revisited“,Paraphrasen,Gegenstände,,,341
-Kr7,Inhalt,Projekt „Klee revisited“,Paraphrasen,Zeichen,,,163
-Kr8,Inhalt,Projekt „Klee revisited“,Paraphrasen,"Emotionen, Zustände",,,195
-Kr9,Inhalt,Projekt „Klee revisited“,Paraphrasen,Mythologisches,,,131
+Kr6,Inhalt,Projekt „Klee revisited“,Paraphrasen,Gegenstände,,,377
+Kr7,Inhalt,Projekt „Klee revisited“,Paraphrasen,Zeichen,,,195
+Kr8,Inhalt,Projekt „Klee revisited“,Paraphrasen,"Emotionen, Zustände",,,213
+Kr9,Inhalt,Projekt „Klee revisited“,Paraphrasen,Mythologisches,,,143
 Kr10,Inhalt,Projekt „Klee revisited“,Paraphrasen,Gebautes,,,0
 Kr10b,Inhalt,Projekt „Klee revisited“,Paraphrasen,Ateliers,,,95
-Kr11,Inhalt,Projekt „Klee revisited“,Paraphrasen,Komplexes und Groteskes,,,143
-Kr12a,Inhalt,Projekt „Klee revisited“,Paraphrasen,Klänge,,,62
-Kr12b,Inhalt,Projekt „Klee revisited“,Paraphrasen,Zweiklang,,,31
-Kr12c,Inhalt,Projekt „Klee revisited“,Paraphrasen,Dreiklang,,,66
-Kr12d,Inhalt,Projekt „Klee revisited“,Paraphrasen,Vierklang,,,14
-Kr12e,Inhalt,Projekt „Klee revisited“,Paraphrasen,Fünfklang,,,14
+Kr11,Inhalt,Projekt „Klee revisited“,Paraphrasen,Komplexes und Groteskes,,,155
+Kr12a,Inhalt,Projekt „Klee revisited“,Paraphrasen,Klänge,,,65
+Kr12b,Inhalt,Projekt „Klee revisited“,Paraphrasen,Zweiklang,,,37
+Kr12c,Inhalt,Projekt „Klee revisited“,Paraphrasen,Dreiklang,,,71
+Kr12d,Inhalt,Projekt „Klee revisited“,Paraphrasen,Vierklang,,,16
+Kr12e,Inhalt,Projekt „Klee revisited“,Paraphrasen,Fünfklang,,,17
 2000-2018,Zeit,Chronologie,Jahr,2000–2018,,,0
 1985-1999,Zeit,Chronologie,Jahr,1985–1999,,,0
 1979-1984,Zeit,Chronologie,Jahr,1979–1984,,,0
 1973-1978,Zeit,Chronologie,Jahr,1973–1978,,,0
-iBdK,Anderes,Standort,Standort,im Besitz des Künstlers,,,7560
-PB,Anderes,Standort,Status,Privatbesitz,,,262
+iBdK,Anderes,Standort,Standort,im Besitz des Künstlers,,,7782
+PB,Anderes,Standort,Status,Privatbesitz,,,278
 vers,Anderes,Standort,Status,verschollen,,,30
 vernichtet,Anderes,Standort,Status,vernichtet,,,10
-res,Anderes,Status,Status,reserviert,,,3124
+res,Anderes,Status,Status,reserviert,,,3082
 kR,Anderes,Status,Status,keine Reproduktion,,,0
 x,Anderes,Status,Status,schlechte Reproduktion,,,0
 .*,Anderes,Zusammenarbeit,Zus'arbeit,Zusammenarbeit,,,61
