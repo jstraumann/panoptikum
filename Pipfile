@@ -12,5 +12,6 @@ flask-api = "*"
 gunicorn = "*"
 hypercorn = "*"
 pandas = "*"
+flask-cors = "*"
 
 [requires]
