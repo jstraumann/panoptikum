@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_api import FlaskAPI
+from flask_cors import CORS
 from pandas_datapackage_reader import read_datapackage
 from functools import wraps
 
@@ -16,6 +17,7 @@ except:
     from util import *
 
 app = FlaskAPI(__name__)
+CORS(app)
 
 # https://stackoverflow.com/questions/29725217/password-protect-one-webpage-in-flask-app
 """
