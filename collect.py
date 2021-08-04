@@ -7,6 +7,7 @@ def list_files(dir):
     r = {}
     for root, dirs, files in os.walk(dir):
         if 'thumb' in root: continue
+        dirs.sort()
         for name in files:
             fn, ext = os.path.splitext(name)
             try:
