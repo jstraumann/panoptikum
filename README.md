@@ -56,6 +56,7 @@ encoding, `,` as delimiter, `"` as quotation and enabling
 `quote all text cells`. This should produce a file `WERKVERZEICHNIS.csv`.
 * Download all existing images: `scp -r root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv/images .`
 * Place any new image files in the `IMPORT` folder
+* Rename the newly imported folders with increasing numbers
 * Crop and resize the images by running `./convert.sh`
 * Generate thumbnails by running `./thumb.sh`
 * Create the virtualenv and install the requirements as described above
