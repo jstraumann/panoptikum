@@ -194,7 +194,7 @@
 "0193","a2011","zT","Dd","B",,,"21x30","klein","breit","Lwi",,"U","BiB",,,,"Fst","H2","gr","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0193"
 "0194","a2012","Mt","Dd","B","G",,"21x30","klein","breit",,,"U","BiB",,,,"Fst","H2","bw","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0194"
 "0195","a2011","Mt","Dd","T","G","C","21x30","klein","breit","krS",,"U",,,,,"Fst","H3","cf","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0195"
-"0196","a2011","zT","Aq","G",,,"21x30","klein","breit",,,"Gs","F","St",,,"Fst","H3","cf","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0196"
+"0196","a2021","zT","Aq","G",,,"21x30","klein","breit","krS",,"U",,,,,,"H4","b","Kr9",,"Uranus rising","iBdK","res",,,,,"0196"
 "0197","a2021","Fa",,,,,"15x21","klein","breit",,,"UnG","FigG",,,,,"H3","Cf","Par7a",,"Die Gefangenen (nach Käthe Kollwitz)","iBdK",,,,,,"0197"
 "0198","a2012","T",,,,,"21x30","klein","breit",,,"U",,,,,"Fst","H2","gr","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0198"
 "0199","a2012","zT","G","B",,,"21x30","klein","breit","Gi",,"UoG","St",,,,"Fst","H3","cf","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0199"
@@ -219,7 +219,7 @@
 "0218","a2015","zT","Dd","B",,,"21x30","klein","breit","krS",,"U",,,,,"Fst","H2","bw","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0218"
 "0219","a2012","zT","T","G",,,"21x30","klein","breit","krS",,"U",,,,,"Fst","H3","bw","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0219"
 "0220","a2011","Mt","Dd","B","Fs","G","21x30","klein","breit","Gi","krS","U",,,,,"Fst","H3","gr","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0220"
-"0221","a2021","zT","T","Fs",,,"21x11","klein","hoch",,,"UoG","O",,,,,"H3","Bw","Par7b",,"Aeschbacher?",,,,,,,"0221"
+"0221","a2021","zT","T","Fs",,,"21x11","klein","hoch",,,"UoG",,,,,,"H3","Bw","Par7b",,"Aeschbacher?",,,,,,,"0221"
 "0222","a2012","zT","Aq","G",,,"21x30","klein","breit",,,"UoG","F","St",,,"Fst","H3","g","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0222"
 "0223","a2011","zT","B","G",,,"21x30","klein","breit",,,"Gs","St","F",,,"Fst","H1","gr","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0223"
 "0224","a2011","zT","T","B",,,"21x30","klein","breit","Ul",,"Gs","F","St",,,"Fst","H2","gr","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0224"
@@ -304,15 +304,15 @@
 "0303","a2011","G",,,,,"21x30","klein","breit",,,"U",,,,,"Fst","H2","cf","ParPC","ste","Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0303"
 "0304","a2012","T",,,,,"21x30","klein","breit",,,"U",,,,,"Fst","H3","bw","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0304"
 "0305","a2011","zT","T","K",,,"21x30","klein","breit",,,"UoG","F","St",,,"Fst","H3","gr","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0305"
-"0306","a2021","B",,,,,"24x15","klein","hoch",,,"Gs","P",,,,,"H3","Gr","Par3b",,"Pietà",,,,,,,"0306"
-"0307","a2021","B",,,,,"19x30","klein","breit",,,"UnG","AP",,,,,"H3","Gr","Par3b",,"Christ crucifié",,,,,,"hK","0307"
+"0306","a2021","B",,,,,"24x15","klein","hoch",,,"Gs","P",,,,,"H3","b","Par3b",,"Pietà",,,,,,,"0306"
+"0307","a2021","B",,,,,"19x30","klein","breit",,,"UnG","AP",,,,,"H3","cf","Par3b",,"Christ crucifié",,,,,,"hK","0307"
 "0308","a2011","G",,,,,"21x30","klein","breit","krS",,"U",,,,,"Fst","H3","b","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0308"
 "0309","a2011","Mt","B","Fs","G","T","21x30","klein","breit",,,"U",,,,,"Fst","H3","bw","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0309"
-"0310","a2021","zT","Dd","B",,,"30x21","klein","hoch","Lwi",,"UnG","O",,,,,"H2","Gr","Kr5a, Kr6",,"Frau, Gefäss",,,,,,,"0310"
+"0310","a2021","zT","Dd","B",,,"30x21","klein","hoch","Lwi",,"UnG","O",,,,,"H2","gr","Kr5a, Kr6",,"Frau, Gefäss",,,,,,,"0310"
 "0311","a2012","T",,,,,"21x30","klein","breit",,,"U",,,,,"Fst","H4","bw","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0311"
 "0312","a2016","G",,,,,"21x30","klein","breit",,,"UoG","F","St",,,"Fst","H4","v","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0312"
 "0313","a2016","zT","Opl","T",,,"21x30","klein","breit",,,"UoG","F","St",,,"Fst","H3","cf","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0313"
-"0314","a2021","B",,,,,"15x15","klein","quadratisch",,,"UoG","Pf","O",,,,"H2","Gr","Kr1",,"danach - davor",,,,,,,"0314"
+"0314","a2021","B",,,,,"15x15","klein","quadratisch",,,"UoG","Pf","O",,,,"H2","gr","Kr1",,"danach - davor",,,,,,,"0314"
 "0315","a2012","zT","Aq","T",,,"21x30","klein","breit",,,"U",,,,,"Fst","H2","cf","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0315"
 "0316","a2012","Mt","B","T","G",,"21x30","klein","breit",,,"UoG","F","St",,,"Fst","H5","bw","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0316"
 "0317","a2011","Aq",,,,,"21x30","klein","breit",,,"UoG","F","St",,,"Fst","H4","y","ParPC","sko","Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0317"
@@ -325,8 +325,8 @@
 "0324","a2016","G",,,,,"21x30","klein","breit",,,"U",,,,,"Fst","H2","b","ParPC","ste","Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,"hK","0324"
 "0325","a2011","zT","B","T",,,"21x30","klein","breit","Gi",,"UoG","F","St",,,"Fst","H2","gr","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,"Zk","0325"
 "0326","a2021","Mt","B","Fa","T",,"11x15","klein","breit",,,"U",,,,,"Par7a","H4","Gr","Par7a",,"En movimiento (según Roberto Matta)",,,,,,,"0326"
-"0327","a2021","zT","Dd","Fa",,,"15x26","klein","breit",,,"U","Sch",,,,"Par7a","H4","Cf","Par7a",,"En movimiento (según Roberto Matta)",,,,,,,"0327"
-"0328","a2021","Mt","Dd","Fa","Kl",,"21x30","klein","breit",,,"U","Sch",,,,"Par7a","H3","Cf","Par7a",,"En movimiento (según Roberto Matta)",,,,,,,"0328"
+"0327","a2021","zT","Dd","Fa",,,"15x26","klein","breit",,,"U","Sch",,,,"Par7a","H4","cf","Par7a",,"En movimiento (según Roberto Matta)",,,,,,,"0327"
+"0328","a2021","Mt","Dd","Fa","Kl",,"21x30","klein","breit",,,"U","Sch",,,,"Par7a","H3","cf","Par7a",,"En movimiento (según Roberto Matta)",,,,,,,"0328"
 "0329","a2011","Mt","Aq","G",,,"21x30","klein","breit","Gi",,"U",,,,,"Fst","H3","g","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0329"
 "0330","a2016","Mt","G","T","C",,"21x30","klein","breit",,,"UoG","F","St",,,"Fst","H3","gr","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0330"
 "0331","a2016","zT","T","G",,,"21x30","klein","breit","Gi",,"U",,,,,"Fst","H2","v","ParPC",,"Früchtestillleben (frei nach Paul Cézanne)","iBdK","res",,,,,"0331"
@@ -663,9 +663,9 @@
 "0662","a2006","OP",,,,,"25x41","mittel","breit",,,"U",,,,,,"H4","cf",,,"Kläranlage","iBdK",,,,"Kat.OP.190",,"0662"
 "0663","a2006","OP ",,,,,"25x41","mittel","breit","Lst",,"U",,,,,,"H4","gr","Kr8",,"per aspera","iBdK","res",,,"Kat.OP.441",,"0663"
 "0664","a2005","OP",,,,,"25x41","mittel","breit",,,"UnG","P",,,,,"H3","c","Par4",,"Schaukel (nach Vermeer)","iBdK",,,,"Kat.OP.412",,"0664"
-"0665","a2008","OP ",,,,,"25x41","mittel","breit","Lst",,"U",,,,,,"H3","cf","ParRR",,"auf Ryman reimen (aus der Reihe ""Atelier"")","iBdK",,,,"Kat.OP.559",,"0665"
+"0665","a2008","OP ",,,,,"25x41","mittel","breit","Lst",,"U",,,,,,"H3","cf","Par7a",,"auf Ryman reimen (aus der Reihe ""Atelier"")","iBdK",,,,"Kat.OP.559",,"0665"
 "0666","a2011","OP",,,,,"25x41","mittel","breit",,,"UnG","Ar",,,,,"H3","cf","ParEH",,"Coast Guard Station (nach Edward Hopper)","iBdK",,,,"Kat.OP.636",,"0666"
-"0667","a2011","OP ",,,,,"25x41","mittel","breit",,,"U",,,,,,"H3","cf","ParJMWT",,"o. T. (sehr frei nach J. M. W. Turner)","iBdK",,,,"Kat.OP.443",,"0667"
+"0667","a2011","OP ",,,,,"25x41","mittel","breit",,,"U",,,,,,"H3","cf","Par5",,"o. T. (sehr frei nach J. M. W. Turner)","iBdK",,,,"Kat.OP.443",,"0667"
 "0668","a2006","OP",,,,,"25x41","mittel","breit",,,"U",,,,,,"H3","cf",,,"a matter of time (2 h 50 min)","iBdK","res",,,"Kat.OP.483","Zk","0668"
 "0669","a2011","OP ",,,,,"25x41","mittel","breit",,,"U",,,,,,"H4","cf","Par7a",,"o. T. (frei nach Dieter Roth)","iBdK",,,,"Kat.OP.213",,"0669"
 "0670","a2000","OP",,,,,"25x41","mittel","breit","Gi",,"UoG","Pf",,,,,"H5","cf","Kr2a",,"Magic Forest","iBdK",,,,"Kat.OP.22",,"0670"
@@ -673,7 +673,7 @@
 "0672","a2000","OP",,,,,"25x41","mittel","breit","RiK",,"U",,,,,,"H5","cf","Kr4",,"Mittelland","iBdK",,,,"Kat.OP.179",,"0672"
 "0673","a2000","OP ",,,,,"25x41","mittel","breit",,,"UoG","St","O",,,,"H4","cf","Kr6",,"Stapel","iBdK",,,,"Kat.OP.187",,"0673"
 "0674","a2000","OP",,,,,"25x41","mittel","breit",,,"U",,,,,,"H4","gr",,,"mazzo notturno","iBdK",,,,"Kat.OP.146",,"0674"
-"0675","a2000","OP ",,,,,"25x41","mittel","breit",,,"U",,,,,,"H4","gr","Kr1",,"nächtliche Choreografie","iBdK",,,,"Kat.OP.178",,"0675"
+"0675","a2000","OP ",,,,,"25x41","mittel","breit",,,"U",,,,,,"H4","cf","Kr1",,"nächtliche Choreografie","iBdK",,,,"Kat.OP.178",,"0675"
 "0676","a2003","OP",,,,,"25x41","mittel","breit",,,"UoG","Mw",,,,,"H4","cf","Kr11",,"kleiner Voyeur","iBdK",,,,"Kat.OP.229",,"0676"
 "0677","a2003","OP ",,,,,"25x41","mittel","breit",,,"UnG","A","FigR",,,,"H4","cf",,,"le coup de vent","iBdK",,,,"Kat.OP.45",,"0677"
 "0678","a2000","OP",,,,,"25x41","mittel","breit","Lwi",,"U",,,,,,"H4","cf","Kr1",,"walk a mile in my shoes","iBdK",,,,"Kat.OP.167",,"0678"
@@ -835,7 +835,7 @@
 "0834","a2015","G",,,,,"50x57?","mittel","breit",,,"Gs","O",,,,"WG15","H3","c","ParFV",,"La belle épingle (d'après Félix Vallotton)",,"PB",,,,,"0834"
 "0835","a2013","G",,,,,"55x73?","mittel","breit",,,"Gs","P","O",,,"WG15","H3","cf","ParFV",,"Le mensonge (d'après Félix Vallotton)","A+C Lüscher Huber, Bern","PB",,,,,"0835"
 "0836","a2012","G",,,,,"29x37","mittel","breit",,,"Gs","F",,,,"WG6","H4","cf","ParFV",,"Stillleben: rote Pfefferfrüchte auf rundem, weisslackiertem Tisch (nach Félix Vallotton)","iBdK",,,,,"Rok","0836"
-"0837","a2012","G",,,,,"40x40","mittel","quadratisch",,,"Gs","F",,,,"WG6","H3","cf","ParFV",,"Cinq gros piments rouges sur une table laqué blnac (d'après Félix Vallotton)","iBdK",,,,,,"0837"
+"0837","a2012","G",,,,,"40x40","mittel","quadratisch",,,"Gs","F",,,,"WG6","H3","cf","ParFV",,"Cinq gros piments rouges sur une table laqué blanc (d'après Félix Vallotton)","iBdK",,,,,,"0837"
 "0838","a2012","G",,,,,"22x29?","mittel","breit",,,"Gs","F",,,,"WG6","H3","cf","ParFV",,"Stillleben: Äpfel, Birnen, Tomaten, Eier (nach Félix Vallotton)","B + J Welter-Huber, Allmendingen","PB",,,,,"0838"
 "0839","a2013?","G",,,,,"33x34?","mittel","breit",,,"Gs","F",,,,"WG6","H3","cf","ParFV",,"Stillleben: Äpfel, Birnen, Tomaten, Eier (nach Félix Vallotton)","iBdK",,,,,,"0839"
 "0840","a2013?","G",,,,,"22x28?","mittel","breit",,,"Gs","F",,,,"WG6","H3","cf","ParFV",,"Stillleben: Äpfel, Birnen, Tomaten, Eier (nach Félix Vallotton)","iBdK",,,,,"Drk","0840"
@@ -960,7 +960,7 @@
 "0959","a1982","zT","B","Dp",,,"41x36","mittel","hoch",,,"Gs","A",,,,,"H2","gr",,,,"iBdK",,,,,"Drk","0959"
 "0960","a1983","zT","B","Dp",,,"31x25","mittel","hoch",,,"Gs","O","Ec",,,,"H4","gr",,,,"iBdK",,,,,,"0960"
 "0961","a1983","Mt","B","Dp","R",,"44x37","mittel","hoch",,,"Gs","Ti","bb","O","Ec",,"H2","gr",,,"la raya que dividió al mundo","iBdK",,,,,"Zk","0961"
-"0962","a1982","zT","B","Dp",,,"29x35","mittel","breit",,,"Gs","A","bb","O","FigR",,"H3","gr",,,,"iBdK",,,,,,"0962"
+"0962","a1982","zT","B","Dp",,,"29x35","mittel","breit",,,"Gs","A","FigR","O",,,"H3","gr",,,,"iBdK",,,,,,"0962"
 "0963","a1983","zT","B","Dp",,,"29x40","mittel","breit",,,"Gs","A","lL",,,,"H5","bw",,"sko",,"iBdK",,,,,,"0963"
 "0964","a1983","B",,,,,"22x31","mittel","breit",,,"Gs","A","FigR",,,,"H1","bw",,,,"iBdK",,,,,,"0964"
 "0965","a1981","B",,,,,"30x33","mittel","breit",,,"Gs","A",,,,,"H1","bw",,,,"iBdK",,,,,,"0965"
@@ -1797,10 +1797,10 @@
 1796,"a1985","Mt","R","Dp","B",,"21x26","klein","breit",,,"Gs","O","St",,,,"H2","gr",,,,"iBdK",,,,,,1796
 1797,"a1987","T ",,,,,"17x22","klein","breit",,,"UoG","O",,,,,"H4","bw",,,,"iBdK",,,,,,1797
 1798,"a2001","T ",,,,,"11x15","klein","breit",,,"Gs","A",,,,,"H3","bw",,,,"iBdK",,,,,,1798
-1799,"a2002","zT","B","Fa",,,"21x30","klein","breit",,,"Gs","A",,,,,"H1","gr",,,"Duo-Zeichnungen mit Stéphanie Pichonnat","iBdK",,"Stéphanie Pichonnat",,,,1799
-1800,"a2002","zT","B","G",,,"21x30","klein","breit",,,"Gs","A",,,,,"H2","gr",,,"Duo-Zeichnungen mit Stéphanie Pichonnat","iBdK",,"Stéphanie Pichonnat",,,,1800
-1801,"a2002","zT","B","G",,,"21x30","klein","breit",,,"Gs","A",,,,,"H2","gr",,,"Duo-Zeichnungen mit Stéphanie Pichonnat","iBdK",,"Stéphanie Pichonnat",,,,1801
-1802,"a2002","zT","B","G",,,"21x30","klein","breit",,,"Gs","A",,,,,"H2","gr",,,"Duo-Zeichnungen mit Stéphanie Pichonnat","iBdK",,"Stéphanie Pichonnat",,,,1802
+1799,"a2002","zT","B","Fa",,,"21x30","klein","breit",,,"Gs","A",,,,,"H1","gr",,,"Duo-Zeichnung mit Stéphanie Pichonnat","iBdK",,"Stéphanie Pichonnat",,,,1799
+1800,"a2002","zT","B","G",,,"21x30","klein","breit",,,"Gs","A",,,,,"H2","gr",,,"Duo-Zeichnung mit Stéphanie Pichonnat","iBdK",,"Stéphanie Pichonnat",,,,1800
+1801,"a2002","zT","B","G",,,"21x30","klein","breit",,,"Gs","A",,,,,"H2","gr",,,"Duo-Zeichnung mit Stéphanie Pichonnat","iBdK",,"Stéphanie Pichonnat",,,,1801
+1802,"a2002","zT","B","G",,,"21x30","klein","breit",,,"Gs","A",,,,,"H2","gr",,,"Duo-Zeichnung mit Stéphanie Pichonnat","iBdK",,"Stéphanie Pichonnat",,,,1802
 1803,"a2002","zT","B","G",,,"11x15","klein","breit",,,"Gs","A","P","Sch",,,"H2","cf",,,"Couple","iBdK",,,,,"Rk",1803
 1804,"a2002","zT","B","T",,,"11x15","klein","breit",,,"Gs","Kt",,,,,"H2","gr",,,,"iBdK",,,,,,1804
 1805,"a2014","Mt","G","T","B",,"12x15","klein","breit",,,"U ",,,,,,"H3","gr","Kr8",,"diffuse Wünsche","iBdK","res",,,,,1805
@@ -1903,7 +1903,7 @@
 1902,"a2006","B",,,,,"17x21","klein","breit","Lst",,"Gs","O","Tie",,,,"H3","b","Par1",,"nach einer ägyptischen Bronzeplastik","iBdK",,,,,,1902
 1903,"a2007","Mt","B","T","Opl",,"15x18","klein","breit",,,"Gs","Mw","O",,,,"H3","gr","Par1",,"BES","iBdK",,,,,,1903
 1904,"a2001","zT","B","T",,,"9x18","klein","breit",,,"Gs","mF",,,,,"H4","gr","Par1",,"empfangen","iBdK",,,,,,1904
-1905,"a2006","B",,,,,"21x30","klein","breit",,,"Gs","AP",,"O",,,"H2","bw","Par1",,"Zweklang ","iBdK",,,,,,1905
+1905,"a2006","B",,,,,"21x30","klein","breit",,,"Gs","AP",,"O",,,"H2","bw","Par1",,"Zweiklang ","iBdK",,,,,,1905
 1906,"a2008","zT","B","T",,,"21x30","klein","breit",,,"Gs","mF",,,,,"H2","gr","Par1",,"ägyptische Statuette?","iBdK",,,,,,1906
 1907,"a2005","zT","Dd","G",,,"20x28","klein","breit",,,"UnG","mF","BiB",,,,"H3","gr","Par1",,"Tänzerin, Tänzer","iBdK",,,,,,1907
 1908,"a2010","B",,"T ",,,"21x28","klein","breit",,,"Gs","Tie",,,,,"H2","gr","Par1",,"ram","iBdK",,,,,,1908
@@ -2054,8 +2054,8 @@
 2053,"a2010","G",,,,,"34x49","mittel","breit",,,"Gs","FigG","Ba",,,,"H2","cf","ParPC",,"«Baigneuses» (d'après Cézanne)","iBdK",,,,,,2053
 2054,"a2010","G",,,,,"33x50","mittel","breit",,,"Gs","FigG","L",,,,"H3","g","ParPC",,"Capriccio (frei nach Cézanne)","iBdK",,,,,,2054
 2055,"a2009","G",,,,,"24x24","mittel","quadratisch",,,"UoG","F",,,,,"H3","v","ParPC",,"Apfel (nach Cézanne)","iBdK",,,,,,2055
-2056,"a2010","G",,,,,"24x32 ","mittel","breit","krS",,"U",,,,,,"H3","v","ParPC","was","d'après «Pommes et verre» von Paul Cézanne","iBdK",,,,,,2056
-2057,"a2010","Mt","Aq","G","B",,"28x34","mittel","breit","krS",,"U",,,,,,"H2","cf","ParPC",,"nach «Pommes et oranges» von Paul Cézanne","iBdK",,,,,"Zk",2057
+2056,"a2010","G",,,,,"24x32 ","mittel","breit","krS",,"U",,,,,,"H3","v","ParPC","was","d'après «Pommes et verre» de Paul Cézanne","iBdK",,,,,,2056
+2057,"a2010","Mt","Aq","G","B",,"28x34","mittel","breit","krS",,"U",,,,,,"H2","cf","ParPC",,"d'après «Pommes et oranges» de Paul Cézanne","iBdK",,,,,"Zk",2057
 2058,"a2010","G",,,,,"24x36","mittel","breit","Lst",,"UoG","AX","St",,,,"H3","cf","ParPC",,"d'après «Pommes et verre» de Paul Cézanne","iBdK",,,,,,2058
 2059,"a2010","G",,,,,"24x31","mittel","breit","sM",,"UnG","F",,,,,"H4","cf","ParPC","sko",,"iBdK",,,,,"ddK",2059
 2060,"a2016","G",,,,,"21x33","mittel","breit","Lst",,"UoG","F","St",,,,"H3","cf","ParPC",,"frei nach einem Apfelstillleben von Cézanne","iBdK",,,,,,2060
@@ -2155,7 +2155,7 @@
 2154,"a2001","B",,,,,"11x15","klein","breit",,,"Gs","P","Ken","Mw",,,"H2","gr","Par2",,"Kentaur","iBdK",,,,,,2154
 2155,"a2001","B",,,,,"11x15","klein","breit",,,"Gs","P","Ken","Mw",,,"H3","gr","Par2",,"Kentaur, Lapithen","iBdK",,,,,,2155
 2156,"a2001","B",,,,,"11x15","klein","breit",,,"Gs","P","Ken","Mw",,,"H2","gr","Par2",,"siegreicher Kentaur","iBdK",,,,,,2156
-2157,"a2001","T",,,,,"17x21","klein","breit",,,"Gs","P","Ken","Mw",,,"H3","gr","Par2",,"den Kentauren besiegen","iBdK",,,,,,2157
+2157,"a2001","zT","B","T",,,"17x21","klein","breit",,,"Gs","P","Ken","Mw",,,"H3","gr","Par2",,"den Kentauren besiegen","iBdK",,,,,,2157
 2158,"a2001","zT","B","G",,,"14x21","klein","breit",,,"Gs","P","Ken","Mw",,,"H3","gr","Par2",,"Kentaur","iBdK",,,,,,2158
 2159,"a2001","zT","B","Fa",,,"17x21","klein","breit",,,"Gs","mF","Tie",,,,"H3","cf","Par2","sko","Stiertöterin","iBdK",,,,,,2159
 2160,"a2001","Mt","B","B","Fa",,"15x21","klein","breit",,,"Gs","O","P","Ken","Mw",,"H2","cf","Par2",,"Kentaur","iBdK",,,,,,2160
@@ -2393,7 +2393,7 @@
 2392,"a2001",,"B","G",,,"17x21","klein","breit",,,"UoG","mF","Tie",,,,"H3","gr","Par5",,"nach Delacroix: St. Georges et le Dragon","iBdK",,,,,,2392
 2393,"a2001","Mt","G","T","B","Opl","17x21","klein","breit",,,"UoG","mF","Tie",,,,"H4","gr","Par5",,"nach Delacroix: St. Georges et le Dragon","iBdK",,,,,,2393
 2394,"a2009","Mt","G","T","B","Opl","17x21","klein","breit",,,"UoG","mF","Tie",,,,"H3","gr","Par5",,"nach Delacroix: St. Georges et le Dragon","iBdK",,,,,,2394
-2395,"a2002","zT","B","G",,,"17x21","klein","breit",,,"Gs","FigG","AP",,,,"H2","gr","Par5",,"nach Delacroix' «La mort de Sartanapalé»","iBdK",,,,,"dK",2395
+2395,"a2002","zT","B","G",,,"17x21","klein","breit",,,"Gs","FigG","AP",,,,"H2","gr","Par5",,"nach Delacroix' «La mort de Sardanapale»","iBdK",,,,,"dK",2395
 2396,"a2010","zT","Dd","B",,,"11x15","klein","breit",,,"UnG","FigG","Pf",,,,"H3","cf","Par5","was","La Liberté (d'après Delacroix)","iBdK",,,,,,2396
 2397,"a2003","zT","B","Fa",,,"21x27","klein","breit",,,"UnG","AP","P","O",,,"H2","b","Par5","zwi","La Liberté (d'après Delacroix)","iBdK",,,,,,2397
 2398,"a2003","zT","B","Fa",,,"21x30","klein","breit",,,"UnG","AP","P","Pf",,,"H2","gr","Par5",,"La Liberté (d'après Delacroix)","iBdK",,,,,,2398
@@ -2451,7 +2451,7 @@
 2450,"a2007","zT","B","Dp",,,"24x30","mittel","breit",,,"UoG","FigG",,,,,"H2","bw","Kr5c",,"Gehversuche","iBdK","res",,,,,2450
 2451,"a1997","Ks",,,,,"22x30","mittel","breit",,,"U",,,,,,"H3","c",,,,"iBdK",,,,,,2451
 2452,"a2008","Sc",,,,,"24x30","mittel","breit","Lst",,"U",,,,,,"H1","gr","Kr10a",,"ville en verre","iBdK","res",,,,,2452
-2453,"a2011","zT","B","T",,,"29x42","mittel","breit","Lst",,"U",,,,,,"H1","bw",,,,"iBdK",,,,,"Rk",2453
+2453,"a2011","zT","B","T",,,"29x42","mittel","breit","Lst",,"U",,,,,,"H1","bw","Kr6",,"kind of carpet","iBdK",,,,,"Rk",2453
 2454,"a2017","zT","B","Fa",,,"30x26","mittel","hoch",,,"U",,"BiB",,,,"H2","gr","Par7b",,"scheuer Gruss an Richard Serra","iBdK",,,,,,2454
 2455,"a1997","OPa ",,,,,"22x32","mittel","breit",,,"U",,,,,,"H1","gr",,"fis",,"iBdK",,,,,,2455
 2456,"a1997","OPa ",,,,,"24x32","mittel","breit",,,"U",,,,,,"H1","gr",,"fis",,"iBdK",,,,,,2456
@@ -2529,10 +2529,10 @@
 2528,"a1983","OP",,,,,"27x31","mittel","breit",,,"Gs","O",,,,,"H3","b",,"sti","Das Milch- und Honigbüchlein","iBdK",,,,,"Zk",2528
 2529,"a1981","OP",,,,,"44x45","mittel","breit",,,"Gs","O","Pf","Ti",,,"H4","cf",,,,"IBdK",,,,,,2529
 2530,"a1995","zT","B","G",,,"28x30","mittel","breit",,,"Gs","ZM",,,,,"H4","gr",,"ste","Malerin, Maler","iBdK",,,,,,2530
-2531,"a2004","B"," ",,,,"21x33","mittel","breit",,,"UoG","Sch",,,,,"H1","gr",,,"Groteske","iBdK",,,,,,2531
-2532,"a2001","Mt","B","Fa","T",,"27x27","mittel","quadratisch",,,"U","Sch",,,,,"H1","gr",,,"HISTORY","IBdK",,,,,,2532
+2531,"a2004","B"," ",,,,"21x33","mittel","breit",,,"UoG","Sch","bb",,,,"H1","gr",,,"Groteske","iBdK",,,,,,2531
+2532,"a2001","Mt","B","Fa","T",,"27x27","mittel","quadratisch",,,"U","Sch",,,,,"H1","cf",,,"HISTORY","IBdK",,,,,,2532
 2533,"a2012","Mt","B","T","Dd","C","15x30","klein","breit",,,"UnG","Kt","Sch",,,,"H3","gr","Par1","was","Trennung","iBdK",,,,,"vK",2533
-2534,"a2007","zT","B","T",,,"30x39","mittel","breit",,,"UoG","mF",,,,,"H2","gr",,,"FOOL OF GOD","iBdK",,,,,,2534
+2534,"a2007","zT","B","T",,,"30x39","mittel","breit",,,"UoG","mF",,,,,"H2","gr","Kr5a",,"FOOL OF GOD","iBdK",,,,,,2534
 2535,"a1984","T"," ",,,,"29x26","mittel","hoch",,,"Gs","Ti","O",,,,"H3","gr",,,,"IBdK",,,,,,2535
 2536,"a1985","Mt","B","Dp","R",,"24x29","mittel","breit",,,"Gs","lL","L","O",,,"H2","gr",,,,"iBdK",,,,,,2536
 2537,"a1983","Mt","B","Dp","R",,"28x38","mittel","breit",,,"Gs","Ti","St","O",,,"H3","gr",,,,"iBdK",,,,,,2537
@@ -2602,7 +2602,7 @@
 2601,"a2015","B"," ",,,,"11x15","klein","breit",,,"UoG","Tie",,,,,"H1","gr","Kr2b",,"insektoïd","iBdK","res",,,,,2601
 2602,"a2009","zT","B","G",,,"21x30","klein","breit",,,"UoG","Tie",,,,,"H2","gr","Kr2b","waa","la vache qui rit","iBdK","res",,,,,2602
 2603,"a2016","Mt","T","B","Fs",,"11x15","klein","breit",,,"UoG","Tie",,,,,"H4","gr","Kr2b",,"Zeichnung mit Stacheln","iBdK","res",,,,,2603
-2604,"a2001","Mt","Dd","B","T","Opl","11x15","klein","breit",,,"UoG","Kt","FigR",,,,"H3","gr","Kr2b",,"mit kleiner COBRA","iBdK","res",,,,,2604
+2604,"a2001","Mt","Dd","B","T","Opl","11x15","klein","breit",,,"UoG","Kt","FigR",,,,"H3","gr","Par7a",,"mit kleiner COBRA","iBdK","res",,,,,2604
 2605,"a2009","B",,,,,"17x21","klein","breit",,,"UoG","O",,,,,"H2","gr","Par4",,"Alexander cutting the Gordian Knot (nach Martin Altomante)","iBdK","res",,,,,2605
 2606,"a2002","Mt","Dd","B","T",,"11x15","klein","breit",,,"Gs","Tie","Ar",,,,"H4","gr","Kr2b","zwi","Cerberus jun.","iBdK","res",,,,,2606
 2607,"a2007","zT","B","C",,,"11x15","klein","breit",,,"UoG","Tie",,,,,"H2","gr","Kr2b",,"Ameisenbär?","iBdK","res",,,,,2607
@@ -2885,7 +2885,7 @@
 2884,"a2006","Mt","B","G","T",,"15x18","klein","breit",,,"Gs","Z","Sb","A",,,"H4","gr","Par7a","sko","autoportrait (d'après Léon Spilliaert)","iBdK",,,,,,2884
 2885,"a2016","B",,,,,"21x25","klein","breit",,,"UoG","FigG",,,,,"H2","bw","Par7a",,"Le Quatuor de Debussy, d'après Claude Dalbanne","iBdK",,,,,,2885
 2886,"a2009","Mt","Od","Dd","B",,"21x30","klein","breit","Gi",,"UoG","Tie",,,,,"H3","gr","Par7a",,"nach Eschers ""Study for Reptiles"" ","iBdK",,,,,,2886
-2887,"a2009","zT","Od","B",,,"21x30","klein","breit","Gi","Lwi","UnG","FigG",,,,,"H2","gr","Par7a","jun","nach einer Zeichnung von Felix Hoffmann","iBdK",,,,,,2887
+2887,"a2009","zT","Od","B",,,"21x30","klein","breit","Gi","Lwi","UnG","FigG",,,,,"H2","gr","Par7a",,"nach einer Zeichnung von Felix Hoffmann","iBdK",,,,,,2887
 2888,"a2014","B",,,,,"30x21","klein","hoch",,,"U",,,,,,"H1","gr","Par7a","zwi","Trovatore (nach Giorgio de Chirico)","iBdK",,,,,,2888
 2889,"a2001","B",,,,,"11x17","klein","breit",,,"Gs","Mw","mF","P",,,"H3","gr","ParPP",,"nach Picassos ""Minotaure mourant""","iBdK",,,,,"dK",2889
 2890,"a2001","T",,,,,"15x21","klein","breit",,,"UoG","Mw","mF","AP","FigG",,"H3","gr","ParPP",,"nach Picassos ""Scène bachique au Minotaure""","iBdK",,,,,,2890
@@ -2963,7 +2963,7 @@
 2962,"a2006","Mt","Dd","B","T",,"15x21","klein","breit",,,"UnG","P",,,,,"H2","gr","Par7a",,"nach Martin Lauterburgs ""Atelierszene""","iBdK",,,,,,2962
 2963,"a2006","zT","B","T",,,"15x21","klein","breit",,,"U",,,,,,"H2","gr","Par7a",,"nach Martin Lauterburgs ""Atelierszene""","iBdK",,,,,,2963
 2964,"a2009","Mt","B","Fs","G",,"20x28","klein","breit",,,"UnG","ZM","At",,,,"H3","gr","Par7a",,"nach Martin Lauterburgs ""Atelierszene""","iBdK",,,,,,2964
-2965,"a2009","Mt","Dd","B","Fa",,"20x28","klein","breit",,,"Gs","ZM","Sch","At",,,"H3","gr","Par7a","jun","nach Martin Lauterburgs ""Atelierszene""","iBdK",,,,,"dK",2965
+2965,"a2009","Mt","Dd","B","Fa",,"20x28","klein","breit",,,"Gs","ZM","Sch","At",,,"H3","gr","Par7a",,"nach Martin Lauterburgs ""Atelierszene""","iBdK",,,,,"dK",2965
 2966,"a2009","Mt","Dd","B","G",,"21x30","klein","breit",,,"UnG","ZM","At",,,,"H2","gr","Par7a",,"nach Martin Lauterburgs ""Atelierszene""","iBdK",,,,,,2966
 2967,"a2009","Mt","Dd","B","G",,"13x14","klein","breit",,,"UnG","ZM",,,,,"H3","cf","Par7a",,"nach Martin Lauterburgs ""Atelierszene""","iBdK",,,,,,2967
 2968,"a2009","zT","Dd","G",,,"11x15","klein","breit",,,"Gs","ZM",,,,,"H2","gr","Par7a",,"nach Martin Lauterburgs ""Atelierszene""","iBdK",,,,,"Rk",2968
@@ -3167,7 +3167,7 @@
 3166,"a2014","Mt","Dd","B","Fs","Fa","15x19","klein","breit",,,"U",,,,,,"H2","gr","Kr8",,"verzwickter Streit","iBdK","res",,,,,3166
 3167,"a2007","zT","Dd","B",,,"17x28","klein","breit",,,"UnG","A",,,,,"H3","gr","Kr5d",,"hin zu","iBdK","res",,,,,3167
 3168,"a2007","Mt","Dd","B","G",,"19x26","klein","breit","Lwi",,"UnG","A",,,,,"H2","gr","Kr5d",,"kleiner Hinweis","iBdK","res",,,,,3168
-3169,"a2006","Mt","Dd","B","G",,"21x30","klein","breit",,,"UnG","AP",,,,,"H3","gr","Kr5d",,"Fackelträger","iBdK","res",,,,"Drk",3169
+3169,"a2006","Mt","Dd","B","G",,"21x30","klein","breit",,,"UnG","AP",,,,,"H3","gr","Par8b",,"Fackelträger (nach Peter Greenaway)","iBdK",,,,,"Drk",3169
 3170,"a2006","Mt","Od","B","Fs","T","21x30","klein","breit","Gi",,"UnG","A","Sch",,,,"H3","gr","Kr5d","was","Seepferdchen + Flugfische (Hugo Ball)","iBdK","res",,,"G","ddK",3170
 3171,"a2008","zT","B","T",,,"21x30","klein","breit",,,"UoG","A",,,,,"H4","gr","Kr5d","ste","get up!","iBdK","res",,,,,3171
 3172,"a2008","zT","B","Fa","T",,"21x30","klein","breit",,,"UnG","A",,,,,"H2","gr","Kr5d","waa","mikado","iBdK","res",,,,,3172
@@ -3621,7 +3621,7 @@
 3620,"a1983","G",,,,,"28x39","mittel","breit",,,"Gs","Vo",,,,,"H4","cf",,"sko",,"iBdK",,,,,,3620
 3621,"a1983","G",,,,,"29x40","mittel","breit",,,"Gs","Vo",,,,,"H4","cf",,,,"iBdK",,,,,,3621
 3622,"a1983","G",,,,,"28x40","mittel","breit",,,"Gs","Vo","bb",,,,"H4","cf",,,,"iBdK",,,,,,3622
-3623,"a1985","G",,,,,"33x38","mittel","breit",,,"UoG","Ti","Pf",,,,"H4","c",,,,"iBdK",,,,,"dK",3623
+3623,"a1985","G",,,,,"33x38","mittel","breit",,,"UoG","Ti",,,,,"H4","c",,,,"iBdK",,,,,"dK",3623
 3624,"a1991","G",,,,,"25x29","mittel","breit","RiK",,"U",,,,,,"H4","b",,,,"iBdK",,,,,,3624
 3625,"a1991","G",,,,,"32x43","mittel","breit",,,"U",,,,,,"H1","m",,,,"iBdK",,,,,,3625
 3626,"a1988","zT","G","Pm",,,"31x42","mittel","breit",,,"U",,,,,,"H3","b",,,,"iBdK",,,,,,3626
@@ -3870,7 +3870,7 @@
 3869,"a2017","T",,,,,"21x22","klein","breit",,,"U",,,,,,"H5","gr","Kr8",,"gefährliche Zone","iBdK","res",,,,"hK",3869
 3870,"a2004","T",,,,,"21x30","klein","breit",,,"U",,,,,,"H4","gr","Kr8","sko","switcher","iBdK","res",,,,,3870
 3871,"a1996","T",,,,,"21x30","klein","breit",,,"U",,,,,,"H2","gr","Kr1",,"Schweres schwebt","iBdK","res",,,,,3871
-3872,"a2020","Mt","G","B","T","Dd","14x30","klein","breit",,,"UoG","mF","Mw",,,,"H4","gr","Kr9",,"den Drachen reiten","iBdK","res",,,,,3872
+3872,"a2020","Mt","G","B","T","Dd","14x30","klein","breit",,,"U",,,,,,"H4","gr","Kr9",,"den Drachen reiten","iBdK","res",,,,,3872
 3873,"a2017","Mt","B","G","Fs",,"21x30","klein","breit",,,"UnG","Ar",,,,,"H2","gr","Kr10a",,"Haus an gefährlichem Ort","iBdK","res",,,,,3873
 3874,"a2010","zT","B","Fs",,,"21x12","klein","hoch",,,"Gs","Ar",,,,,"H3","gr","Kr10a",,"stapeln","iBdK","res",,,,,3874
 3875,"a2014","Mt","T","Fs","G",,"11x15","klein","breit",,,"U","Gi","O",,,,"H5","gr","Kr10a",,"Fenster","iBdK","res",,,,,3875
@@ -4044,7 +4044,7 @@
 4043,"a1986","OP",,,,,"102x133","gross","breit",,,"UoG",,,,,,"H4","gr",,,,"iBdK",,,,,,4043
 4044,"a1984","OP",,,,,"100x130","gross","breit",,,"UoG","L","O","lL",,,"H4","cf",,,,"Ernst und Lisi Jordi, Zollikofen","PB",,"x",,,4044
 4045,"a1987","OP",,,,,"100x124","gross","breit",,,"U",,,,,,"H5","cf",,,"die Nacht (Zaffaraya)","iBdK",,,,,,4045
-4046,"a2010?","OPa ",,"G",,,"90x128","gross","breit","Lst",,"UnG","AP",,,,,"H2","gr","ParFH",,"Anbetung des Alls (nach Ferdinand Hodler)","iBdK",,,,,"vK",4046
+4046,"a2010?","OPa ",,"G",,,"90x128","gross","breit","Lst",,"UnG","AP",,,,,"H2","gr","Par5",,"Anbetung des Alls (nach Ferdinand Hodler)","iBdK",,,,,"vK",4046
 4047,"a1995","Pk",,,,,"107x76","gross","hoch",,,"UoG","A","P",,,,"H3","gr",,,"Paar","iBdK",,,,,,4047
 4048,"a1995","K",,,,,"100x65","gross","hoch","tS",,"U",,,,,,"H2","gr",,,"Zeichner","iBdK",,"Katharina Gusset",,,,4048
 4049,"a1995","K",,,,,"65x100","gross","breit","tS",,"U",,,,,,"H2","gr",,,"Zeichner","iBdK",,"Katharina Gusset",,,,4049
@@ -4052,7 +4052,7 @@
 4051,"a1985","OL",,,,,"102x124","gross","breit",,,"UoG","Ti","bb",,,,"H4","c",,,,"iBdK",,,,,"dK",4051
 4052,"a1985","OL",,,,,"102x124","gross","breit",,,"UoG","Ti","O","Sta",,,"H4","cf",,,,"iBdK",,,,,,4052
 4053,"a2010","OL",,,,,"75x92","gross","breit","Mo",,"UnG","Ar","L",,,,"H3","cf","ParRM",,"L'avenir (nach René Magritte)","iBdK",,,,,,4053
-4054,"a2010","OL",,,,,"75x92","gross","breit","Mo",,"UnG","O",,,,,"H4","c","ParRM",,"Méditation (nach René Magritte)","Françoise Horle, Emilio Sigrist, Bern","PB",,,,,4054
+4054,"a2021","G",,,,,"21x28","klein","breit",,,"Gs","Tie","Sch",,,,"H3","b","Par1",,"sacred bull","iBdK",,,,,,4054
 4055,"a1991","OP",,,,,"79x60","mittel","hoch",,,"U",,,,,,"H4","g",,,"Dryade","iBdK",,,,,,4055
 4056,"a1997","OP",,,,,"85x102","gross","breit","Schl",,"U",,,,,,"H4","b",,,,"iBdK",,,,,,4056
 4057,"a1997","OP",,,,,"90x100","gross","breit","Schl",,"U",,,,,,"H3","gr",,,,"iBdK",,,,,,4057
@@ -4311,7 +4311,7 @@
 4310,"a2009","zT","B","T",,,"11x21","klein","breit",,,"UnG","Ar","Pf","Sch",,,"H2","gr","Kr12c","zwi","Dreiklang","iBdK","res",,,,,4310
 4311,"a2006","Mt","Dd","B","Fa",,"12x21","klein","breit","Lwi",,"U",,,,,,"H2","gr","Kr12c","waa","Dreiklang","iBdK","res",,,,,4311
 4312,"a2007","B"," ",,,,"11x21","klein","breit",,,"U",,,,,,"H2","gr","Kr12c",,"selbdritt","iBdK","res",,,,,4312
-4313,"a2002","zT","Dd","B",,,"13x21","klein","breit","Gi",,"UnG","Kt",,,,,"H2","gr","Kr12c",,"Dreiklang","iBdK","res",,,,,4313
+4313,"a2002","zT","Dd","B",,,"13x21","klein","breit","Gi",,"UnG","Kt",,,,,"H2","gr","Par7b,Kr12c",,"Dreiklang","iBdK","res",,,,,4313
 4314,"a2010","zT","Ks","T",,,"14x21","klein","breit","Lst",,"U",,,,,,"H2","c","Kr12c",,"Dreiklang","iBdK","res",,,,,4314
 4315,"a2012","zT","B","G",,,"15x19","klein","breit",,,"U",,,,,,"H1","gr","Kr12c","sch","Dreiklang","iBdK","res",,,,,4315
 4316,"a2014","zT","B","Ks",,,"15x18","klein","breit","Lwi",,"UnG","O",,,,,"H2","gr","Kr12c",,"Dreiklang","iBdK","res",,,,,4316
@@ -4347,7 +4347,7 @@
 4346,"a2015","zT","B","G",,,"21x28","klein","breit",,,"U",,,,,,"H2","gr","Kr12c",,"Dreiklang","iBdK","res",,,,,4346
 4347,"a2001","Mt","Dd","B","Fa","G","11x17","klein","breit",,,"UnG","Kt",,,,,"H2","gr","Kr12c",,"Dreiklang","iBdK","res",,,,,4347
 4348,"a2016","zT","B","Dd",,,"21x26","klein","breit","Lst",,"U",,,,,,"H2","gr","Kr12c",,"Orakel (Dreizeiler)","iBdK","res",,,,,4348
-4349,"a2014","Mt","Dd","B","T",,"21x30","klein","breit",,,"UnG","O","At",,,,"H2","gr","Kr12c",,"Atelier","iBdK","res",,,,,4349
+4349,"a2014","Mt","Dd","B","T",,"21x30","klein","breit",,,"UnG","O","At",,,,"H2","gr","Kr12c,Kr10b",,"Atelier","iBdK","res",,,,,4349
 4350,"a2009","Mt","B","Fs","T",,"21x30","klein","breit",,,"UnG","O",,,,,"H2","gr","ParPP",,"Dreiklang mit halbem Picasso","iBdK","res",,,,,4350
 4351,"a2016","Mt","Dd","B","T",,"21x30","klein","breit",,,"UoG",,,,,,"H2","gr","Kr12c",,"Dreiklang","iBdK","res",,,,,4351
 4352,"a2007","Mt","Dd","B","Fa",,"21x30","klein","breit",,,"U",,,,,,"H1","gr","Kr12c",,"Dreiklang","iBdK","res",,,,"vK",4352
@@ -4893,7 +4893,7 @@
 4892,"a2003","G",,,,,"14x16","klein","breit",,,"UnG","mF",,,,,"H4","cf","Par1",,"Tänzerin","iBdK",,,,,,4892
 4893,"a2005","G",,,,,"21x17","klein","hoch",,,"Gs","A","Sta",,,,"H3","cf",,,"Kuros","iBdK",,,,,"vK",4893
 4894,"a2006","G",,,,,"11x16","klein","breit",,,"U",,,,,,"H3","v",,,"Gefäss","iBdK",,,,,,4894
-4895,"a2006","G",,,,,"11x16","klein","breit",,,"U","Sch",,,,,"H2","g",,,"bodegón","iBdK",,,,,,4895
+4895,"a2006","G",,,,,"11x16","klein","breit",,,"U","Sch",,,,,"H2","g","Kr6",,"bodegón","iBdK",,,,,,4895
 4896,"a2006","G",,,,,"21x28","klein","breit",,,"U",,,,,,"H4","cf",,,"LA SOURCE","iBdK",,,,,"Zk",4896
 4897,"a2005","G",,,,,"21x28","klein","breit",,,"U",,,,,,"H4","m",,,,"iBdK",,,,,,4897
 4898,"a2016","G",,,,,"16x17","klein","breit",,,"UnG","mF","Sb",,,,"H4","cf",,,,"iBdK",,,,,,4898
@@ -4938,7 +4938,7 @@
 4937,"a2006","OP",,,,,"67x89","mittel","breit","Mo",,"U","Gä",,,,,"H3","g","Kr4","waa","l'échiquier vert","iBdK",,,,"Kat.OP.541",,4937
 4938,"a2005","OP",,,,,"67x89","mittel","breit",,,"UoG","Gä","Pf",,,,"H2","g","Kr2a",,"Gartenmauer","iBdK","res",,,"Kat.OP.417",,4938
 4939,"a2004","OP",,,,,"67x89","mittel","breit",,,"Gs","A","FigG",,,,"H4","cf",,"sko","Wald","iBdK",,,,"Kat.OP.36",,4939
-4940,"a2017","OP",,,,,"67x89","mittel","breit","Ul",,"UnG","mF","Pf","O",,,"H5","cf",,"was","Raum, Objekte, Figur","iBdK",,,,"Kat.OP.18",,4940
+4940,"a2017","OP",,,,,"67x89","mittel","breit","Ul",,"UnG","mF","Pf","O",,"dN","H5","cf",,"was","Raum, Objekte, Figur","iBdK",,,,"Kat.OP.18",,4940
 4941,"a2010","OP",,,,,"67x89","mittel","breit","Mo",,"UnG","mF","L",,,,"H4","cf",,,"""Femme sur la digue"" (d'après Léon Spilliaert)","iBdK",,,,"Kat.OP.606",,4941
 4942,"a1991","B",,,,,"60x78?","mittel","breit","Lwi",,"UoG",,,,,,"H3","gr",,"kre",,"iBdK",,,,,,4942
 4943,"a1983","G",,,,,"29x25","mittel","hoch",,,"Gs","Vo",,,,,"H4","cf",,,,"iBdK",,,,,,4943
@@ -4973,14 +4973,14 @@
 4972,"a2006","G",,,,,"26x31","mittel","breit",,,"Gs","AP","Sch",,,,"H4","v","Par7a",,"MALER (nach Marlene Dumas ""Adult Entertainment"")","iBdK",,,,,,4972
 4973,"a2005","G",,,,,"28x39","mittel","breit",,,"UoG","mF",,,,,"H4","g",,,"monk","iBdK","res",,,,,4973
 4974,"a2005","G",,,,,"28x34","mittel","breit",,,"U","Sch",,,,,"H2","v",,,"capriccio","iBdK",,,,,,4974
-4975,"a2004","G",,,,,"27x37","mittel","breit",,,"UnG","Ri",,,,,"H3","cf",,,,"iBdK",,,,,,4975
+4975,"a2004","G",,,,,"27x37","mittel","breit","Lst",,"UnG","Ri",,,,,"H3","c",,,,"iBdK",,,,,,4975
 4976,"a1996","G",,,,,"37x44","mittel","breit","Schü",,"U",,,,,,"H3","c",,,,"iBdK",,,,,,4976
-4977,"a2017","OP",,,,,"41x55","mittel","breit","Ul",,"UnG","O","mF","FigR",,,"H4","cf",,,"Raum, Objekte, Figur","iBdK",,,,"Kat.OP.660",,4977
-4978,"a2017","OP",,,,,"41x55","mittel","breit","Ul",,"UnG","O","mF","FigR",,,"H4","cf","ParFH","was","Nacht (nach Ferdinand Hodler)","iBdK",,,,"Kat.OP.252",,4978
-4979,"a2017","OP",,,,,"32x40","mittel","breit","Ul",,"UnG","O","mF","FigR",,,"H4","cf",,,"Insomnia","iBdK",,,,"Kat.OP.74",,4979
-4980,"a2017","OP",,,,,"32x40","mittel","breit","Ul",,"UnG","O","mF","FigR",,,"H4","cf",,,"Raum, Objekte, Figur","iBdK",,,,"Kat.OP.628",,4980
-4981,"a2017","OP",,,,,"32x40","mittel","breit","Ul",,"UnG","O","mF","FigR","Pf",,"H4","cf",,,"Raum, Objekte, Figur","iBdK",,,,"Kat.OP.367",,4981
-4982,"a2017","OP",,,,,"25x40","mittel","breit","Ul",,"UnG","O","mF","FigR",,,"H4","cf",,,"Raum, Objekte, Figuren","iBdK",,,,"Kat.OP.659",,4982
+4977,"a2017","OP",,,,,"41x55","mittel","breit","Ul",,"UnG","O","mF","FigR",,"dN","H4","cf",,,"Raum, Objekte, Figur","iBdK",,,,"Kat.OP.660",,4977
+4978,"a2017","OP",,,,,"41x55","mittel","breit","Ul",,"UnG","O","mF","FigR",,"dN","H4","cf","Par5","was","Nacht (nach Ferdinand Hodler)","iBdK",,,,"Kat.OP.252",,4978
+4979,"a2017","OP",,,,,"32x40","mittel","breit","Ul",,"UnG","O","mF","FigR",,"dN","H4","cf",,,"Insomnia","iBdK",,,,"Kat.OP.74",,4979
+4980,"a2017","OP",,,,,"32x40","mittel","breit","Ul",,"UnG","O","mF","FigR",,"dN","H4","cf",,,"Raum, Objekte, Figur","iBdK",,,,"Kat.OP.628",,4980
+4981,"a2017","OP",,,,,"32x40","mittel","breit","Ul",,"UnG","O","mF","FigR","Pf","dN","H4","cf",,,"Raum, Objekte, Figur","iBdK",,,,"Kat.OP.367",,4981
+4982,"a2017","OP",,,,,"25x40","mittel","breit","Ul",,"UnG","O","mF","FigR",,"dN","H4","cf",,,"Raum, Objekte, Figuren","iBdK",,,,"Kat.OP.659",,4982
 4983,"a2010","Mt","Dd","B","G",,"18x22","klein","breit",,,"Gs","AP","FigG","Ba",,,"H2","gr","ParPC","waa","nach ""Sept Baigneurs"" von Cézanne","iBdK",,,,,"vK",4983
 4984,"a2016","zT","B","Fa",,,"11x15","klein","breit",,,"UoG","AP","FigG","Ba",,,"H2","gr","ParPC",,"Les cinq baigneurs (d'après Cézanne)","iBdK",,,,,,4984
 4985,"a2016","zT","Dd","B",,,"20x25","klein","breit",,,"Gs","AP","FigG","Ba","Pf",,"H2","gr","ParPC","kre","d'après ""Sept Baigneurs"" de Paul Cézanne","iBdK",,,,,,4985
@@ -5253,7 +5253,7 @@
 5252,"a1982","R",,,,,"23x28","mittel","breit",,,"Gs","A","Ti",,,,"H2","gr",,,,"iBdK",,,,"Kat.DG.24.4.104",,5252
 5253,"a1982","R",,,,,"25x32","mittel","breit",,,"Gs","O","Sch","bb","Ar",,"H3","bw",,,"Kinderzimmer II","iBdK",,"Schülern der Sekundarschule Boll",,"Kat.DG.24.4.115, So",,5253
 5254,"a1982","R",,,,,"25x32","mittel","breit",,,"Gs","O","Sch","Ar","Pf",,"H2","bw",,,"Kinderzimmer III","iBdK",,"Schülern der Sekundarschule Boll",,"Kat.DG.24.4.116",,5254
-5255,"a1982","R",,,,,"20x25","klein","breit",,,"Gs","Ar","bb","O",,,"H3","bw",,,,"iBdK",,"Dominique Piatti",,"Kat.DG.24.4.118 II",,5255
+5255,"a1982","R",,,,,"20x25","klein","breit",,,"Gs","Ar","So","O",,,"H3","bw",,,,"iBdK",,"Dominique Piatti",,"Kat.DG.24.4.118 II",,5255
 5256,"a1982","R",,,,,"22x25","klein","breit",,,"Gs","Sb","mF","BiB","O","FigR","H3","bw",,"Par5","""Die Nacht"" (nach Ferdinand Hodler)","iBdK",,,,"FigR, Kat.DG.24.4.89 II",,5256
 5257,"a1982","R",,,,,"25x33","mittel","breit",,,"Gs","FigR","O","Pf","So","6R","H3","bw",,,"ohne Titel (aus ""6 Räume"")","iBdK",,,,"Kat.DG.24.4.123","Zk",5257
 5258,"a1982","R",,,,,"25x33","mittel","breit",,,"Gs","FigR","O","Pf","Sch","6R","H3","bw",,,"ohne Titel (aus ""6 Räume"")","iBdK",,,,"Kat.DG.24.4.124",,5258
@@ -5666,29 +5666,29 @@
 5665,"a2017","Mt","B","G","T","C","10x16","klein","breit",,,"U",,,,,,"H4","gr","Kr8",,"flatterhaft","iBdK","res",,,,,5665
 5666,"a2017","Mt","Dd","T","Fs","B","11x15","klein","breit",,,"U",,,,,,"H2","gr","Kr8",,"Grisaille","iBdK","res",,,,,5666
 5667,"a2017","zT","Dd","T",,,"15x11","klein","hoch",,,"U",,,,,,"H2","cf","Kr10a",,"Sizze für ein Wohnhaus im Grünen","iBdK","res",,,,,5667
-5668,"a2007","OP",,,,,"53x67","mittel","breit",,,"U","Sch",,,,"Pro","H5","cf",,,,"iBdK","res",,,"Kat.OP.98",,5668
+5668,"a2007","OP",,,,,"53x67","mittel","breit",,,"U","Sch",,,,"Pro","H5","cf",,,"o. T.  (zu ""Proteus"")","iBdK","res",,,"Kat.OP.98",,5668
 5669,"a2007","OP",,,,,"53x67","mittel","breit",,,"UoG",,,,,"Pro","H4","m","Par7a","sko","""le Hal de la Création"" (d'après Mohamed Tabal)","iBdK","res",,,"Kat.OP.329",,5669
-5670,"a2007","OP",,,,,"53x67","mittel","breit",,,"UoG",,,,,"Pro","H4","m",,,,"iBdK","res",,,"Kat.OP.301",,5670
-5671,"a2018","OP",,,,,"53x67","mittel","breit",,,"U",,,,,"Pro","H4","g",,,,"iBdK","res",,,"Kat.OP.531",,5671
+5670,"a2007","OP",,,,,"53x67","mittel","breit",,,"UoG",,,,,"Pro","H4","m",,,"o. T.  (zu ""Proteus"")","iBdK","res",,,"Kat.OP.301",,5670
+5671,"a2018","OP",,,,,"53x67","mittel","breit",,,"U",,,,,"Pro","H4","g",,,"o. T.  (zu ""Proteus"")","iBdK","res",,,"Kat.OP.531",,5671
 5672,"a2007","OP",,,,,"53x67","mittel","breit",,,"UnG","Pf",,,,"Pro","H4","m",,,"protée","iBdK","res",,,"Kat.OP.315",,5672
 5673,"a2005","OP",,,,,"53x67","mittel","breit",,,"U",,,,,,"H3","b","Kr12b","jun","Zweiklang (glissando)","iBdK","res",,,,,5673
-5674,"a2007","OP",,,,,"53x67","mittel","breit","Mo",,"UnG",,,,,"Pro","H3","b",,,,"iBdK","res",,,"Kat.OP.470",,5674
+5674,"a2007","OP",,,,,"53x67","mittel","breit","Mo",,"UnG",,,,,"Pro","H3","b",,,"o. T.  (zu ""Proteus"")","iBdK","res",,,"Kat.OP.470",,5674
 5675,"a2007","OP",,,,,"53x67","mittel","breit",,,"U","Sch",,,,,"H2","b","Kr12a",,"glissando","iBdK","res",,,,,5675
-5676,"a2006","OP",,,,,"53x67","mittel","breit",,,"U",,,,,"Pro","H2","b",,"sch","Batterie","iBdK","res",,,"Kat.OP.462",,5676
-5677,"a2012","OP",,,,,"53x67","mittel","breit","Ul",,"UoG","Ar",,,,"Pro","H3","y",,,,"iBdK","res",,,"Kat.OP.310",,5677
-5678,"a2006","OP",,,,,"53x67","mittel","breit",,,"U",,,,,"Pro","H2","y",,,"Frucht","iBdK","res",,,"Kat.OP.337",,5678
-5679,"a2008","OP",,,,,"53x67","mittel","breit",,,"UnG","Tie",,,,"Pro","H2","y",,,"seal","iBdK","res",,,"Kat.OP.577",,5679
+5676,"a2006","OP",,,,,"53x67","mittel","breit",,,"U",,,,,"Pro","H2","b",,"sch","Batterie (zu ""Proteus"")","iBdK","res",,,"Kat.OP.462",,5676
+5677,"a2012","OP",,,,,"53x67","mittel","breit","Ul",,"UoG","Ar",,,,"Pro","H3","y",,,"o. T.  (zu ""Proteus"")","iBdK","res",,,"Kat.OP.310",,5677
+5678,"a2006","OP",,,,,"53x67","mittel","breit",,,"U",,,,,"Pro","H2","y",,,"Frucht (zu ""Proteus"")","iBdK","res",,,"Kat.OP.337",,5678
+5679,"a2008","OP",,,,,"53x67","mittel","breit",,,"UnG","Tie",,,,"Pro","H2","y",,,"seal (zu ""Proteus"")","iBdK","res",,,"Kat.OP.577",,5679
 5680,"a2012","OP",,,,,"53x67","mittel","breit","Ul",,"U","Sch",,,,"Pro","H2","b",,,"o.T. (zu ""Proteus"")","iBdK","res",,,"Kat.OP.652",,5680
-5681,"a2000","OP",,,,,"53x67","mittel","breit",,,"UoG","AX",,,,"Pro","H2","g",,,"Narziss","iBdK","res",,,"Kat.OP.202",,5681
-5682,"a2007","OP",,,,,"53x67","mittel","breit",,,"U",,,,,"Pro","H3","g",,,"spring","iBdK","res",,,"Kat.OP.306",,5682
-5683,"a2007","OP",,,,,"53x67","mittel","breit",,,"UnG","Kt",,,,"Pro","H4","g","Par2",,,"iBdK","res",,,"Kat.OP.576",,5683
-5684,"a2012","OP",,,,,"53x67","mittel","breit",,,"Gs","Mw",,,,"Pro","H4","g",,,"Mutant","iBdK","res",,,"Kat.OP.564",,5684
-5685,"a2007","OP",,,,,"53x67","mittel","breit",,,"UoG","Pf",,,,"Pro","H4","cf",,,,"iBdK","res",,,"Kat.OP.568",,5685
+5681,"a2000","OP",,,,,"53x67","mittel","breit",,,"UoG","AX",,,,"Pro","H2","g",,,"Narziss (zu ""Proteus"")","iBdK","res",,,"Kat.OP.202",,5681
+5682,"a2007","OP",,,,,"53x67","mittel","breit",,,"U",,,,,"Pro","H3","g",,,"spring (zu ""Proteus"")","iBdK","res",,,"Kat.OP.306",,5682
+5683,"a2007","OP",,,,,"53x67","mittel","breit",,,"UnG","Kt",,,,"Pro","H4","g","Par2",,"o. T.  (zu ""Proteus"")","iBdK","res",,,"Kat.OP.576",,5683
+5684,"a2012","OP",,,,,"53x67","mittel","breit",,,"Gs","Mw",,,,"Pro","H4","g",,,"Mutant (zu ""Proteus"")","iBdK","res",,,"Kat.OP.564",,5684
+5685,"a2007","OP",,,,,"53x67","mittel","breit",,,"UoG","Pf",,,,"Pro","H4","cf",,,"o. T.  (zu ""Proteus"")","iBdK","res",,,"Kat.OP.568",,5685
 5686,"a2008","OP",,,,,"53x67","mittel","breit",,,"UnG","Tie",,,,"Pro","H5","c",,,"Fischers Nachtgesang","iBdK","res",,,"Kat.OP.15",,5686
-5687,"a2006","OP",,,,,"53x67","mittel","breit",,,"U",,,,,"Pro","H5","c",,,,"iBdK","res",,,"Kat.OP.473",,5687
-5688,"a2000","OP",,,,,"53x67","mittel","breit",,,"U",,,,,"Pro","H5","c",,,"malen","iBdK","res",,,"Kat.OP.136",,5688
-5689,"a2012","OP",,,,,"53x67","mittel","breit","Gi",,"UnG",,,,,"Pro","H4","c",,,"Loki","iBdK","res",,,"Kat.OP.570",,5689
-5690,"a2000","OP",,,,,"53x67","mittel","breit",,,"U",,,,,"Pro","H4","c",,"fis","o.T.","iBdK","res",,,"Kat.OP.64",,5690
+5687,"a2006","OP",,,,,"53x67","mittel","breit",,,"U",,,,,"Pro","H5","c",,,"o. T.  (zu ""Proteus"")","iBdK","res",,,"Kat.OP.473",,5687
+5688,"a2000","OP",,,,,"53x67","mittel","breit",,,"U",,,,,"Pro","H5","c",,,"malen (zu ""Proteus"")","iBdK","res",,,"Kat.OP.136",,5688
+5689,"a2012","OP",,,,,"53x67","mittel","breit","Gi",,"UnG",,,,,"Pro","H4","c",,,"Loki (zu ""Proteus"")","iBdK","res",,,"Kat.OP.570",,5689
+5690,"a2000","OP",,,,,"53x67","mittel","breit",,,"U",,,,,"Pro","H4","c",,"fis","o. T.  (zu ""Proteus"")","iBdK","res",,,"Kat.OP.64",,5690
 5691,"a2005","OP",,,,,"53x67","mittel","breit",,,"U",,,,,,"H4","cf","Kr7","was","URANIA","iBdK",,,,,,5691
 5692,"a2006","OP",,,,,"53x67","mittel","breit",,,"U",,,,,,"H3","y","Kr12b",,"con algo hay que empezar","iBdK","res",,,,,5692
 5693,"a2008","OP",,,,,"53x67","mittel","breit","Mo",,"UnG","Ri",,,,,"H3","cf","Par7a","was","nach Richard Hamiltons ""Portrait of Dieter Roth""","iBdK",,,,,,5693
@@ -5709,7 +5709,7 @@
 5708,"a2005","OP",,,,,"53x67","mittel","breit",,,"U",,,,,,,,,,,"iBdK",,,,,,5708
 5709,"a2008","OP",,,,,"53x67","mittel","breit",,,"UnG","AP","L",,,"WG1","H5","g","ParFV",,"Landschaftskomposition (nach Félix Vallotton)","iBdK",,,,,,5709
 5710,"a2007","OP",,,,,"53x67","mittel","breit",,,"U","Sch","Dét",,,"det","H3","g","Par8b",,"o.T. (aus der Reihe ""Détective"")","iBdK","res",,,,,5710
-5711,"a2006","OP",,,,,"53x67","mittel","breit",,,"U","Dét",,,,"det","H2","gr","Par8b",,"trace – carte (aus der Reihe ""Détective"")","iBdK","res",,,,,5711
+5711,"a2006","OP",,,,,"53x67","mittel","breit",,,"U","Dét",,,,"det","H2","cf","Par8b",,"trace – carte (aus der Reihe ""Détective"")","iBdK","res",,,,,5711
 5712,"a2006","OP",,,,,"53x67","mittel","breit",,,"U","Dét",,,,"det","H3","cf","Par8b","was","much ado about nothing (aus der Reihe ""Détective"")","iBdK","res",,,,"kK",5712
 5713,"a2006","OP",,,,,"53x67","mittel","breit","Lst",,"U","Dét",,,,"det","H4","b","Par8b",,"Phantombild (aus der Reihe ""Détective"")","iBdK","res",,,"Kat.OP.392",,5713
 5714,"a2005","OP",,,,,"53x67","mittel","breit","Gi",,"U","Dét",,,,"det","H4","cf","Par8b",,"o.T. (aus der Reihe ""Détective"")","iBdK","res",,,,,5714
@@ -5747,7 +5747,7 @@
 5746,"a2006","OP",,,,,"41x55","mittel","breit",,,"U","Sch","At",,,,"H3","cf",,,"plein air","Dorothe Freiburghaus, Allmendingen","PB",,,,,5746
 5747,"a2005?","OP",,,,,"32x41","mittel","breit",,,"UoG","mF",,,,,"H4","cf",,,,"Kantonalbank Bern","PB",,,,,5747
 5748,"a2005?","OP",,,,,"41x32?","mittel","hoch",,,"UnG","L","Pf",,,,"H4","cf",,,"Dordogne (d'après Félix Vallotton)?","Françoise Horle, Emilio Siegrist, Bern","PB",,,,,5748
-5749,"a2003?","OP",,,,,"32x41","mittel","breit",,,"U",,,,,,"H3","cf",,,,"Anita Rüegsegger, Res Brandenberger, Bern","PB",,,,,5749
+5749,"a2000","OP",,,,,"32x41","mittel","breit",,,"U",,,,,,"H3","cf",,,"Una bella giornata","Anita Rüegsegger, Res Brandenberger, Bern","PB",,,,,5749
 5750,"a2004?","OP",,,,,"32x41","mittel","breit",,,"U","Sch",,,,,"H5","cf",,,,"vers",,,,,,5750
 5751,"a2004?","OP",,,,,"32x41","mittel","breit",,,"U",,,,,,"H3","cf",,,,"vers",,,,,,5751
 5752,"a2006","OP",,,,,"32x41","mittel","breit",,,"UnG","mF","O",,,,"H4","cf",,,"Dionysos' Wiege","iBdK",,,,"Kat.OP.485",,5752
@@ -5922,13 +5922,13 @@
 5921,"a2018","B",,,,,"27x16","klein","hoch",,,"Gs","Kt",,,,,"H1","gr","Par4","sko","aus Matthias Grünewalds ""Kreuzigung Christi""","iBdK",,,,,"Drk",5921
 5922,"a2018","B",,,,,"21x23","klein","breit",,,"UnG","mF","Tie","O",,,"H1","gr","Par4","zwi","Eine Kunstkammer mit Venus bei der Toilette (nach Jan van Kessel)","iBdK",,,,,,5922
 5923,"a2017","zT","B","Fa",,,"28x20","klein","hoch",,,"UoG","FigG",,,,,"H2","gr","Par4","sch","Tiepolo: ""La Vergine in Gloria consegna lo Scapolare al beato Simeone Stock""","iBdK",,,,,"Rok",5923
-5924,"a2018","zT","B","G",,,"21x28","klein","breit",,,"UnG","Ri",,,,,"H2","gr","Par6",,"Die Berühmtheiten des Juste Milieu (nach Honoré Daumier)","iBdK",,,,,,5924
+5924,"a2018","zT","B","G",,,"21x28","klein","breit",,,"UnG","Ri",,,,,"H2","gr","Par6",,"Die Berühmtheiten des Juste Milieu (nach Honoré Daumier)","Benz Schär, Bern","PB",,,,,5924
 5925,"a2016","B",,,,,"21x30","klein","breit",,,"Gs","AP","FigG","Ba",,,"H2","gr","ParPC",,"Badende (nach Paul Cézanne)","iBdK",,,,,,5925
-5926,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5926
+5926,"a2021","zT","R","T",,,"35x35","mittel","quadratisch",,,"U",,,,,,"H1","gr","Kr7",,"lost and found","iBdK",,,,,"Zk",5926
 5927,"a2010","G",,,,,"27x20","klein","hoch","krS",,"U",,,,,,"H2","y","ParPC",,"Früchtestillleben (nach Paul Cézanne)","iBdK",,,,,,5927
 5928,"a2007","Mt","B","T","Opl",,"15x21","klein","breit",,,"UoG","Pf",,,,,"H2","gr","Kr2a",,"sperrige Blüte","iBdK","res",,,,,5928
 5929,"a2018","Mt","B","T","Dd",,"21x30","klein","breit",,,"UoG","L",,,,,"H3","gr","Kr4",,"grobe Landschaft","iBdK","res",,,,,5929
-5930,"a2018","Mt","B","Fs","Opl",,"13x17","klein","breit",,,"UnG","P","Sch","A",,,"H2","gr","Kr5b",,"loving couple","iBdK","res",,,,,5930
+5930,"a2018","Mt","B","Fs","Opl",,"13x17","klein","breit",,,"UnG","P","Sch","A",,,"H2","gr","Kr5b,Kr3",,"loving couple","iBdK","res",,,,,5930
 5931,"a2017","zT","Dd","B",,,"21x30","klein","breit","Lwi",,"UoG","Ri","BiB",,,,"H4","gr","Kr5e",,"Kopf, ruhend","iBdK","res",,,,,5931
 5932,"a2004","zT","B","Fa",,,"21x30","klein","breit","ovÖ",,"U",,,,,,"H1","gr","Kr1",,"Rondo capriccioso","iBdK","res",,,,"Rok",5932
 5933,"a2016","B"," ",,,,"21x30","klein","breit","Lwi",,"U",,,,,,"H3","gr","Kr11",,"a hairy tale","iBdK","res",,,,,5933
@@ -6047,9 +6047,9 @@
 6046,"a1984","Mt","R","Dp","B",,"18x23","klein","breit",,,"Gs","A","FigR",,,,"H4","gr",,"sko",,"iBdK",,,,,,6046
 6047,"a1983","Mt","R","Dp","B",,"26x36","mittel","breit",,,"Gs","A","bb",,,,"H2","gr",,"kre",,"iBdK",,,,,,6047
 6048,"a1985","Mt","R","Dp","B",,"30x36","mittel","breit",,,"Gs","A",,,,,"H2","gr",,"wid",,"iBdK",,,,,"dK",6048
-6049,"a1984","zT","Dp","B",,,"30x34","mittel","breit",,,"Gs","A","So",,,,"H2","gr",,,,"iBdK",,,,,,6049
-6050,"a2017","OP",,,,,"54x67","mittel","breit","Ul",,"UnG","A","O","Pf","FigR",,"H5","cf",,"was","Insomnia","iBdK",,,,"Kat.OP.566",,6050
-6051,"a2017","OP",,,,,"54x67","mittel","breit","Ul",,"UnG","mF","O","Pf","FigR",,"H5","cf",,"was","Raum, Objekte, Figur","iBdK",,,,"Kat.OP.641",,6051
+6049,"a1984","zT","Dp","B",,,"30x34","mittel","breit",,,"Gs","A","So",,,"dN","H2","gr",,,,"iBdK",,,,,,6049
+6050,"a2017","OP",,,,,"54x67","mittel","breit","Ul",,"UnG","A","O","Pf","FigR","dN","H5","cf",,"was","Insomnia","iBdK",,,,"Kat.OP.566",,6050
+6051,"a2017","OP",,,,,"54x67","mittel","breit","Ul",,"UnG","mF","O","Pf","FigR","dN","H5","cf",,"was","Raum, Objekte, Figur","iBdK",,,,"Kat.OP.641",,6051
 6052,"a1993","Lg",,,,,"93x15","mittel","hoch",,,"UoG","Sch",,,,"ks","H3","cf",,"was","kanagawa series","iBdK",,,"x","Kat.DG.24.3.11 I",,6052
 6053,"a1993","Lg",,,,,"70x15","mittel","hoch",,,"UoG","Sch",,,,"ks","H2","g",,"waa","kanagawa series","iBdK",,,"x","Kat.DG.24.3.11 IV",,6053
 6054,"a1993","Lg",,,,,"8x15","klein","breit",,,"UoG","Sch",,,,"ks","H4","cf",,"was","kanagawa series","iBdK",,,"x","Kat.DG.24.3.11 VI",,6054
@@ -6103,7 +6103,7 @@
 6102,"a1991","zT","Ls","C",,,"147x39","gross","hoch",,,"U",,,,,,"H3","m",,,,"Franco und Annemarie Piatti, Gümligen","PB",,,,,6102
 6103,"a1986","T"," ",,,,"28x38","mittel","breit",,,"U",,,,,,"H3","bw",,,,"Franco und Annemarie Piatti, Gümligen","PB",,,,,6103
 6104,"a1974","zT","OPa","T",,,"22x22","klein","quadratisch",,,"U",,,,,,"H2","v",,,,"Franco und Annemarie Piatti, Gümligen","PB",,,,,6104
-6105,"a1995","OP",,,,,"41x67","mittel","breit",,,"Gs","P","L","O",,,"H4","c",,,"Simone und Dominique","Dominique Piatti, Tschechien","PB",,,,,6105
+6105,"a1995","OP",,,,,"41x67","mittel","breit",,,"Gs","P","O",,,,"H4","c",,,"Simone und Dominique","Dominique Piatti, Tschechien","PB",,,,,6105
 6106,"a1997","OL",,,,,"65x85","mittel","breit",,,"U",,,,,,"H3","m",,,,"Franco und Annemarie Piatti, Gümligen","PB",,,,,6106
 6107,"a1985","OL",,,,,"80x115","gross","breit",,,"UoG","O",,,,,"H4","cf",,,,"Franco und Annemarie Piatti, Gümligen","PB",,,,,6107
 6108,"a1977","R",,,,,"25x23","klein","hoch",,,"U",,,,,,"H3","bw",,,,"Franco und Annemarie Piatti, Gümligen","PB",,,"Kat. DG. 24.4.03",,6108
@@ -6330,7 +6330,7 @@
 6329,"a2017","B",,,,,"17x24","klein","breit",,,"Gs","A",,,,,"H2","gr",,,"männlicher Halbakt","iBdK",,,,,,6329
 6330,"a2018","B",,,,,"15x21","klein","breit",,,"UnG","A",,,,,"H2","gr",,,"male nude","iBdK",,,,,,6330
 6331,"a2018","B",,,,,"15x21","klein","breit","Lst",,"UnG","A",,,,,"H2","gr",,,"männlicher Halbakt","iBdK",,,,,,6331
-6332,"a2018","zT","S","Fs",,,"21x32","mittel","breit","Lst",,"U","Sch",,,,,"H3","bw",,,"grey haze","iBdK",,,,,,6332
+6332,"a2018","zT","S","Fs",,,"21x32","mittel","breit","Lst","ovÖ","U","Sch",,,,,"H3","bw","Kr12a",,"grey haze","iBdK",,,,,"Rk",6332
 6333,"a2018","G",,,,,"23x31","mittel","breit",,,"U",,,,,,"H2","cf","Kr1",,"um 7 Ecken","iBdK","res",,,,,6333
 6334,"a2018","G",,,,,"25x28","mittel","breit",,,"U",,,,,,"H3","cf",,,"misty morning","iBdK",,,,,,6334
 6335,"a2018","G",,,,,"24x32","mittel","breit",,,"U",,,,,,"H4","c","Kr9",,"Proteus lässt bitten","iBdK","res",,,,,6335
@@ -6525,7 +6525,7 @@
 6524,"a2018","zT","Dd","B",,,"30x21","klein","hoch",,,"UnG","Ba",,,,,"H2","bw","ParPC","ste","Badender","iBdK",,,,,,6524
 6525,"a2018","Mt","Aq","Pk","C","Ks","23x26","klein","breit","Ul",,"UnG","AP","FigG","Ba",,,"H3","cf","ParPC",,"Badende (nach Paul Cézanne)","iBdK",,,,,,6525
 6526,"a2018","zT","Dd","B",,,"21x30","klein","breit","Ul",,"Gs","Ba","Sch",,,,"H3","gr","ParPC",,"Les Grandes Baigneuses nach Paul Cézanne","iBdK","res",,,,,6526
-6527,"a2018","zT","Dd","B",,,"21x30","klein","breit","Ul",,"UnG","Ba","Sch","BiB",,,"H2","gr","ParPC",,"Les Grandes Baigneuses nach Paul Cézanne","iBdK","res",,,,,6527
+6527,"a2018","zT","Dd","B",,,"21x30","klein","breit",,,"UnG","Ba","Sch","BiB",,,"H2","gr","ParPC",,"Les Grandes Baigneuses nach Paul Cézanne","iBdK","res",,,,,6527
 6528,"a2018","zT","Dd","Pk",,,"21x30","klein","breit",,,"U","Sch",,,,,"H1","gr","ParPC",,"nach Cézannes ""Früchtestillleben""","iBdK","res",,,,,6528
 6529,"a2018","B",,,,,"21x30","klein","breit","sM",,"U",,,,,,"H3","bw","ParPC",,"nach Cézannes ""Früchtestillleben""","iBdK","res",,,,,6529
 6530,"a2018","Mt","C","Od","Kh",,"21x30","klein","breit",,,"UnG","F","FigG",,,,"H4","b","ParPC",,"nach Cézannes ""Früchtestillleben""","iBdK","res",,,,,6530
@@ -6636,7 +6636,7 @@
 6635,"a2018","B",,,,,"21x30","klein","breit",,,"U","Sch",,,,,"H2","gr","ParPK",,"Teppich der Erinnerung (nach Paul Klee)","iBdK","res",,,,,6635
 6636,"a2018","B",,,,,"25x25","klein","quadratisch","Lst",,"U",,,,,,"H2","gr","Kr6","zwi","Teppich","iBdK",,,,,,6636
 6637,"a2018","B",,,,,"30x35","mittel","breit","Ul","Fro","Gs","ZM","At","Ar",,,"H3","bw","Par4","zwi","Atelier (nach Vermeer)","iBdK",,,,,"Zk",6637
-6638,"a2018","G",,,,,"27x22","klein","hoch",,,"UoG","O","Sch",,,,"H3","b","Kr6",,"Fundstück (neolithisch?)","iBdK","res",,,,,6638
+6638,"a2018","G",,,,,"27x22","klein","hoch",,,"UoG","O","Sch",,,,"H3","b","Kr6",,"Fundstück (bronzezeitlich?)","iBdK","res",,,,,6638
 6639,"a2018","G",,,,,"32x24","mittel","hoch",,,"UnG","O",,,,,"H3","b","Par1",,"o. T. (Papua Neuguinea)","iBdK",,,,,,6639
 6640,"a2018","OP",,,,,"67x89","mittel","breit",,,"UnG","Pf","Ma",,,,"H4","g","ParFV",,"Agaves (d'après Félix Vallotton)","iBdK",,,,"Kat.Op. 629",,6640
 6641,"a2018","OP",,,,,"67x89","mittel","breit","pg",,"U","At",,,,,"H4","cf","Par7a",,"Atelier années 50","iBdK",,,,"Kat.Op. 377",,6641
@@ -7094,7 +7094,7 @@
 7093,"a2013","G",,,,,"19x27","klein","breit",,,"UoG","St",,,,,"H3","cf","Kr6",,"Delikatessen","iBdK","res",,,,,7093
 7094,"a2019","Mt","G","Dd","T","C","21x30","klein","breit",,,"UoG","F","St",,,,"H3","cf","ParPC",,"Früchtestillleben (nach Paul Cézanne)","iBdK","res",,,,,7094
 7095,"a2019","Mt","Ac","G","C",,"21x30","klein","breit",,,"UoG","F","St",,,,"H3","b","ParPC",,"Früchtestillleben (nach Paul Cézanne)","iBdK","res",,,,,7095
-7096,"a2019","G",,,,,"20x24","klein","breit",,,"UoG","Fk","F",,,,"H4","cf","Kr6",,"2 Farbkörper","iBdK","res",,,,,7096
+7096,"a2019","G",,,,,"20x24","klein","breit",,,"UoG","Fk","F",,,,"H4","cf","Kr6",,"2 Farbkörper","Heidi Mathys, Münsingen","res",,,,,7096
 7097,"a2019","Mt","B","Ks","Fs","T","82x54","mittel","hoch",,,"UnG","Ri",,,,,"H2","gr","ParPK",,"Schaffendes Haupt (nach Paul Klee)","iBdK","res",,,"16-teilig",,7097
 7098,"a2019","OP",,,,,"41x55","mittel","breit","pg",,"UoG","Mw",,,,,"H4","cf","Kr9",,"Sphinx","iBdK","res",,,"Kat.OP.685",,7098
 7099,"a2005","G",,,,,"15x21","klein","breit",,,"U",,,,,,"H2","cf","Kr1",,"gut gestolpert","iBdK","res",,,,,7099
@@ -7131,7 +7131,7 @@
 7130,"a2006","G",,,,,"21x28","klein","breit",,,"UoG","O",,,,,"H4","g","Kr9",,"nordische Gottheit","iBdK","res",,,,"vK",7130
 7131,"a2018","G","B",,,,"21x27","klein","breit",,,"U",,,,,,"H4","b","Kr10a, Kr7",,"dubiose Kultstätte","iBdK","res",,,,,7131
 7132,"a2006","G",,,,,"14x21","klein","breit","sM",,"UoG","Ar","Pf","L",,,"H4","cf","Kr10a",,"Ruinen","iBdK","res",,,,"ddK",7132
-7133,"a2018","ZT","G","Fs",,,"20x27","klein","breit",,,"Gs","Ar",,,,,"H4","gr","Kr10a",,"Tor","iBdK","res",,,,"Zk",7133
+7133,"a2018","ZT","G","Fs",,,"20x27","klein","breit","Ul",,"Gs","Ar",,,,,"H4","gr","Kr10a",,"Tor","iBdK","res",,,,"Zk",7133
 7134,"a2017","G",,,,,"15x21","klein","breit","Gi",,"UoG","At",,,,,"H3","cf","Kr10b",,"Atelier","iBdK","res",,,,,7134
 7135,"a2012","G",,,,,"21x28","klein","breit",,,"U","Sch",,,,,"H3","cf","Kr11",,"Komposition mit Morgenstern und Bernstein","iBdK","res",,,,,7135
 7136,"a2012","G","C",,,,"13x24","klein","breit",,,"U",,,,,,"H3","cf","Kr11",,"Konfusius unterwegs","iBdK","res",,,,,7136
@@ -7145,7 +7145,7 @@
 7144,"a2018","G","B",,,,"21x30","klein","breit",,,"Gs","St","F",,,,"H5","v","ParPC","sko","Früchtestillleben (nach Paul Cézanne)","iBdK","res",,,,"Zk",7144
 7145,"a2019","G",,,,,"17x20","klein","breit",,,"UoG","So",,,,,"H4","cf","Par5",,"Der Schlaf der Vernunft gebiert Ungeheuer (nach Goya)","iBdK",,,,,,7145
 7146,"a2017","G",,,,,"15x19","klein","breit","bs",,"U",,,,,,"H4","cf","Kr4",,"bars and stripes","iBdK","res",,,,,7146
-7147,"a2019","G",,,,,"11x15","klein","breit",,,"U",,,,,,"H4","cf","Kr6",,"Stellprobe","iBdK","res",,,,,7147
+7147,"a2019","G",,,,,"11x15","klein","breit",,,"U",,,,,,"H4","cf","Kr6",,"Stellprobe","Heidi Mathys, Münsingen","res",,,,,7147
 7148,"a2019","G",,,,,"13x21","klein","breit",,,"UoG","O",,,,,"H4","cf","Kr6",,"dark mask","iBdK","res",,,,"dK",7148
 7149,"a2005","G",,,,,"17x26","klein","breit",,,"UnG","L",,,,,"H2","c",,,"small hard edge painting","iBdK",,,,,,7149
 7150,"a2004","G",,,,,"19x28","klein","breit",,,"Gs","P",,,,,"H3","cf",,,"Paar","iBdK",,,,,,7150
@@ -7210,7 +7210,7 @@
 7209,"a2019","Mt","G","C","Ks","Kb","56x29","mittel","hoch",,,"Gs","F","Sch",,,,"H2","b","ParPC",,"Pommes et tube de couleur (d'après Paul Cézanne)","iBdK",,,,,,7209
 7210,"a2019","zT","Aq","G",,,"26x33","mittel","breit",,,"UoG","L",,,,,"H2","cf","ParPC",,"frei nach Cézanne: Landschaft (ohne Badende)","iBdK",,,,,"ROk",7210
 7211,"a2019","OP",,,,,"41x67","mittel","breit",,,"UnG","L",,,,,"H4","cf",,,"späte Landschaft","iBdK",,,,"Kat.OP.439",,7211
-7212,"a2018","G",,,,,"30x40","mittel","breit",,,"UoG","mF","O",,,,"H3","b","Kr11b, Kr7",,"Klees Geschoss","iBdK","res",,,,,7212
+7212,"a2018","G",,,,,"30x40","mittel","breit",,,"UoG","mF","O",,,,"H3","b","Kr5a,Kr6",,"Klees Geschoss","iBdK","res",,,,,7212
 7213,"a2019","G",,,,,"30x36","mittel","breit",,,"UnG","A","P",,,,"H4","cf","Kr5d",,"Lektion 1","iBdK","res",,,,,7213
 7214,"a2006","G",,,,,"24x30","mittel","breit",,,"Gs","A",,,,,"H5","gr",,,,"iBdK",,,,,,7214
 7215,"a2019","G",,,,,"21x30","klein","breit",,,"Gs","mF","bb",,,,"H4","b","Kr5d",,"Mann, Black Box","iBdK","res",,,,,7215
@@ -7241,7 +7241,7 @@
 7240,"a2019","B",,,,,"17x21","klein","breit",,,"Gs","Ri",,,,,"H2","gr","Par7b","zwi","4 Köpfe (frei nach Plastiken von Nicole Eisenman)","iBdK",,,,,,7240
 7241,"a2019","B",,,,,"17x21","klein","breit",,,"Gs","Ri",,,,,"H3","gr","Par7b",,"frei nach einer Plastik von Nicole Eisenman","iBdK",,,,,,7241
 7242,"a2019","B",,,,,"30x18","klein","hoch",,,"UnG","mF","O",,,,"H1","bw","Par4",,"nach Tiepolos ""Martirio di Sant' Agata""","iBdK",,,,,,7242
-7243,"a2019","B",,,,,"17x30","klein","breit",,,"Gs","O","BiB",,,,"H3","gr","Kr1",,"Fluss","iBdK","res",,,,,7243
+7243,"a2019","B",,,,,"17x30","klein","breit",,,"Gs","O","BiB",,,,"H3","gr","Kr1",,,"iBdK","res",,,,,7243
 7244,"a2019","B",,,,,"30x21","klein","hoch",,,"UoG","O",,,,,"H3","gr","Kr6",,"wenn das Viele fiele...","iBdK","res",,,,,7244
 7245,"a2019","Mt","B","G","C",,"25x36","mittel","breit",,,"U","Sch",,,,,"H3","cf","Kr3",,"majo I-IV (kleine Hommage an RM; langweiliges Muster mit plötzlichem O; A behauptet sich; boys?!)","iBdK",,,,,,7245
 7246,"a2020","B",,,,,"21x30","klein","breit",,,"UoG","BiB",,,,,"H2","gr","Kr6",,"maybe the more we try to change the more we stay the same","iBdK","res",,,,,7246
@@ -7262,17 +7262,17 @@
 7261,"a2019","OP",,,,,"25x41","mittel","breit","Ul",,"UoG","L",,,,,"H3","g","Kr4",,"zwei Fünflinge","iBdK","res",,,"Kat.OP.103",,7261
 7262,"a2019","OP",,,,,"25x41","mittel","breit","Gi",,"UnG","Tie",,,,,"H3","g","Par2",,"Owl's head","iBdK",,,,"Kat.OP.678","Zk",7262
 7263,"a2015","G",,,,,"21x30","klein","breit",,,"Gs","Ri",,,,,"H3","cf",,,"Selbstporträt I / XII","iBdK",,,,,,7263
-7264,"a2015","G",,,,,"21x30","klein","breit","Ul",,"UnG","Ri",,,,,"H3","cf",,,"Selbstporträt II / XII","iBdK",,,,,,7264
+7264,"a2015","G",,,,,"21x30","klein","breit","Ul",,"UnG","Ri","Sb",,,,"H3","cf",,,"Selbstporträt II / XII","iBdK",,,,,,7264
 7265,"a2015","G",,,,,"21x30","klein","breit","Gi",,"UnG","Ri",,,,,"H2","cf",,,"Selbstporträt III / XII","iBdK",,,,,,7265
-7266,"a2015","G",,,,,"21x30","klein","breit",,,"Gs","Ri",,,,,"H2","cf",,,"Selbstporträt IV / XII","iBdK",,,,,,7266
+7266,"a2015","G",,,,,"21x30","klein","breit",,,"Gs","Ri","Sb",,,,"H2","cf",,,"Selbstporträt IV / XII","iBdK",,,,,,7266
 7267,"a2015","zT","G","T",,,"21x30","klein","breit","Lst",,"U",,,,,,"H4","cf",,,"Selbstporträt V / XII","iBdK",,,,,,7267
-7268,"a2015","G","Ko",,,,"21x30","klein","breit",,,"Gs","Ri",,"Sch",,,"H3","cf",,,"Selbstporträt VI / XII","iBdK",,,,,,7268
+7268,"a2015","G","Ko",,,,"21x30","klein","breit",,,"Gs","Ri","Sb","Sch",,,"H3","cf",,,"Selbstporträt VI / XII","iBdK",,,,,,7268
 7269,"a2015","G",,,,,"21x30","klein","breit","Lst",,"U",,,,,,"H3","cf",,,"Selbstporträt VII / XII","iBdK",,,,,,7269
-7270,"a2015","G","Dd",,,,"21x30","klein","breit","Lst",,"Gs","Ri",,"Sch",,,"H4","c",,,"Selbstporträt VIII / XII","iBdK",,,,,,7270
-7271,"a2015","G",,,,,"21x30","klein","breit",,,"Gs","Ri",,,,,"H4","cf",,,"Selbstporträt IX / XII","iBdK",,,,,"Zk",7271
-7272,"a2015","G",,,,,"21x30","klein","breit",,,"Gs","Ri",,,,,"H1","cf",,,"Selbstporträt X / XII","iBdK",,,,,"Zk",7272
-7273,"a2015","G",,,,,"21x30","klein","breit",,,"Gs","Ri",,,,,"H4","cf",,,"Selbstporträt XI / XII","iBdK",,,,,"Zk",7273
-7274,"a2015","G",,,,,"21x30","klein","breit",,,"Gs","Ri",,,,,"H3","cf",,,"Selbstporträt XII / XII","iBdK",,,,,"Zk",7274
+7270,"a2015","G","Dd",,,,"21x30","klein","breit","Lst",,"Gs","Ri","Sb","Sch",,,"H4","c",,,"Selbstporträt VIII / XII","iBdK",,,,,,7270
+7271,"a2015","G",,,,,"21x30","klein","breit",,,"Gs","Ri","Sb",,,,"H4","cf",,,"Selbstporträt IX / XII","iBdK",,,,,"Zk",7271
+7272,"a2015","G",,,,,"21x30","klein","breit",,,"Gs","Ri","Sb",,,,"H1","cf",,,"Selbstporträt X / XII","iBdK",,,,,"Zk",7272
+7273,"a2015","G",,,,,"21x30","klein","breit",,,"Gs","Ri","Sb",,,,"H4","cf",,,"Selbstporträt XI / XII","iBdK",,,,,"Zk",7273
+7274,"a2015","G",,,,,"21x30","klein","breit",,,"Gs","Ri","Sb",,,,"H3","cf",,,"Selbstporträt XII / XII","iBdK",,,,,"Zk",7274
 7275,"a2019","B",,,,,"17x23","klein","breit",,,"U",,,,,,"H4","gr","Kr4",,"notturno","iBdK","res",,,,,7275
 7276,"a2019","B",,,,,"11x19","klein","breit",,,"UoG","Vo",,,,,"H2","gr","Kr6",,"spettacolino","iBdK","res",,,,,7276
 7277,"a2019","B",,,,,"11x18","klein","breit",,,"UoG","Tie",,,,,"H1","gr","Kr2b",,"trailing","iBdK","res",,,,,7277
@@ -7462,7 +7462,7 @@
 7461,"a2020","B",,,,,"20x26","klein","breit",,,"UoG","Tie",,,,,"H1","gr","Kr2b","jun","bestioles","iBdK","res",,,,,7461
 7462,"a2019","zT","B","Ks",,,"16x29","klein","breit",,,"U","Sch",,,,,"H2","cf","Kr3",,"never mind","iBdK","res",,,,,7462
 7463,"a2020","Mt","Dd","Fs","B",,"18x30","klein","breit",,,"U","Sch",,,,,"H2","gr","Kr3",,"so. und anders","iBdK","res",,,,,7463
-7464,"a2020","B",,,,,"13x25","klein","breit","Lwi",,"Gs","L","mF","Kt",,,"H2","gr","Kr4,Kr5a","kre","Strandszene","iBdK","res",,,,,7464
+7464,"a2020","B",,,,,"13x25","klein","breit","Lwi",,"Gs","L","mF",,,,"H2","gr","Kr4,Kr5a","kre","Strandszene","iBdK","res",,,,,7464
 7465,"a2020","zT","B","Fs",,,"19x20","klein","breit",,,"U",,,,,,"H1","gr","Kr4",,"ferne Landschaft","iBdK","res",,,,,7465
 7466,"a2020","Mt","Dd","G","Fs","C","21x28","klein","breit","Mo","krS","UoG","L",,,,,"H2","cf","Kr4",,"schwarze Sonne","iBdK","res",,,,,7466
 7467,"a2020","Fa",,,,,"20x30","klein","breit","Lst",,"UoG","L",,,,,"H2","cf","Kr4",,"Landschaft (kalligrafisch)","iBdK","res",,,,,7467
@@ -7505,7 +7505,7 @@
 7504,"a2020","B",,,,,"11x15","klein","breit",,,"UnG","mF",,,,,"H3","gr","Kr8,Kr5a",,"trotzdem entspannt","iBdK","res",,,,,7504
 7505,"a2020","zT","G","Sc",,,"21x19","klein","hoch",,,"U",,,,,,"H2","gr","Kr8",,"leiser Schreck","iBdK","res",,,,,7505
 7506,"a2020","zT","G","Sc",,,"21x19","klein","hoch",,,"U",,,,,,"H3","gr","Kr8",,"dolorosa","iBdK","res",,,,,7506
-7507,"a2020","zT","B","Fs",,,"21x23","klein","breit","krS",,"Gs","Kt",,,,,"H2","gr","Kr8",,"der Blick","iBdK","res",,,,,7507
+7507,"a2020","zT","B","Fs",,,"21x23","klein","breit","krS",,"Gs","Ri",,,,,"H2","gr","Kr8",,"der Blick","iBdK","res",,,,,7507
 7508,"a2020","zT","G","B",,,"19x25","klein","breit",,,"UoG","Ar",,,,,"H2","gr","Kr8",,"seeklar!","iBdK","res",,,,,7508
 7509,"a2008","Mt","B","Fa","T",,"21x26","klein","breit",,,"UnG","Kt",,,,,"H2","gr","Kr8","waa","Behutsamkeit","iBdK","res",,,,,7509
 7510,"a2020","B",,,,,"30x21","klein","hoch",,,"U",,,,,,"H2","gr","Kr8",,"leichtherzig","iBdK","res",,,,,7510
@@ -7764,7 +7764,7 @@
 7763,"a2020","G",,,,,"16x18","klein","breit",,,"UoG","Mw",,,,,"H4","cf",,,"Mephistopheles relaxing","iBdK",,,,,,7763
 7764,"a2020","G",,,,,"17x21","klein","breit",,,"Gs","L",,,,,"H4","c",,,"paysage nocturne","iBdK",,,,,,7764
 7765,"a2020","zT","G","T",,,"21x33","mittel","breit",,,"Gs","L",,,,,"H5","cf",,,"Landschaft, verteert","iBdK",,,,,,7765
-7766,"a2020","G",,,,,"14x20","klein","breit",,,"Gs","FigR",,,,,"H4","gr",,,"Figur, Raum","iBdK",,,,,,7766
+7766,"a2020","G",,,,,"14x20","klein","breit",,,"Gs","FigR",,,,,"H4","cf",,,"Figur, Raum","iBdK",,,,,,7766
 7767,"a2020","G",,,,,"29x28","mittel","hoch",,,"Gs","mF",,,,,"H3","cf",,,"Dämmerung","iBdK",,,,,,7767
 7768,"a2020","G",,,,,"22x29","klein","breit",,,"UoG","Ar","FigG",,,,"H3","y","Par4",,"""Seehafen mit der Einschiffung der Königin"" (nach Claude Lorrain)","iBdK",,,,,,7768
 7769,"a2020","G",,,,,"16x17","klein","breit","Lst",,"U","Sch",,,,,"H3","cf","ParME",,"Max Ernst und die Meteorologie","iBdK",,,,,,7769
@@ -7804,12 +7804,12 @@
 7803,"a2020","G",,,,,"28x37","mittel","breit",,,"U",,,,,,"H2","b","Kr8",,"le départ du cirque","iBdK","res",,,,,7803
 7804,"a2020","G",,,,,"44x25","mittel","hoch",,,"U",,,,,,"H2","cf","Kr8",,"Befall","iBdK","res",,,,,7804
 7805,"a2020","G",,,,,"24x32","mittel","breit",,,"Gs","Pf","lL","At",,,"H3","g","Kr10b",,"das Atelier oder: der Albtraum des Konkreten","iBdK","res",,,,,7805
-7806,"a2020","Mt","Dd","G","Fa","C","21x30","klein","breit","bs",,"UoG","L",,,,,"H2","cf","ParFH",,"ein paar Parallelen für Ferdinand","iBdK",,,,,,7806
+7806,"a2020","Mt","Dd","G","Fa","C","21x30","klein","breit","bs",,"UoG","L",,,,,"H2","cf","Par5",,"ein paar Parallelen für Ferdinand","iBdK",,,,,,7806
 7807,"a2020","Mt","G","Fs","C",,"30x21","klein","hoch",,,"UnG","mF",,,,,"H5","g","Kr9",,"Flora (change by design or by desaster?)","iBdK","res",,,,,7807
 7808,"a2020","Mt","Opa","Fs","C",,"21x21","klein","quadratisch",,,"Gs","mF",,,,,"H2","cf","Kr9",,"Flora (change by design or by desaster?)","iBdK","res",,,,,7808
 7809,"a2004?","OP",,,,,"54x67","mittel","breit",,,"Gs","Ar","BiB",,,,"H3","cf",,,,"PB",,,,"Verkauf im Kunstkeller Bern?",,7809
 7810,"a2014","OL",,,,,"90x90","gross","quadratisch",,,"Gs","AP","L","Sch",,"WG21","H4","cf","ParFV",,"Andromède enchaînée (d'après Félix Vallotton)",,,,,,,7810
-7811,"a2020","OL",,,,,"120x120","gross","quadratisch",,,"UoG","L",,,,,"H4","cf","ParPK",,"Steinbruch Ostermundigen (nach Paul Klee)","iBdK","res",,,,,7811
+7811,"a2020","OL",,,,,"120x120","gross","quadratisch",,,"U",,,,,,"H4","cf","ParPK",,"Steinbruch Ostermundigen (nach Paul Klee)","iBdK","res",,,,,7811
 7812,"a2020","B",,,,,"15x11","klein","hoch","Lst",,"Gs","mF","Ca",,,,"H1","gr","ParPK",,"weiland Musiker (nach Paul Klee)","iBdK",,,,,,7812
 7813,"a2020","B",,,,,"15x10","klein","hoch",,,"Gs","Mw","Ca",,,,"H2","gr","ParPK",,"ein alter Musiker tut engelhaft (nach Paul Klee)","iBdK",,,,,"Zk",7813
 7814,"a2020","B",,,,,"10x15","klein","breit",,,"UnG","Kt","Ca",,,,"H2","gr","ParPK",,"nein! kein Bein herein! (nach Paul Klee)","iBdK",,,,,,7814
@@ -7957,12 +7957,12 @@
 7956,"a2020","zT","Ks","T",,,"30x35","mittel","breit",,,"Gs","A",,,,,"H3","gr",,,"spinal twist","iBdK",,,,,,7956
 7957,"a2013","B",,,,,"42x53","mittel","breit",,,"U","Sch",,,,"WG47","H2","gr","ParFV",,,"iBdK",,,,,,7957
 7958,"a2012","G",,,,,"35x48","mittel","breit",,,"UnG","Ri","Pf",,,,"H4","b","ParFV",,"L'irréparable (nach Félix Vallotton)","iBdK",,,,,,7958
-7959,"a2014","zT","G","C",,,"48x24","mittel","hoch",,,"Gs","AP",,,,"WG16","H3","bw","ParFV",," Badende (nach Félix Valloton)","iBdK",,,,,,7959
-7960,"a2013","zT","Od","G",,,"27x24","mittel","hoch",,,"Gs","L","Pf",,,"WG28","H4","cf","ParFV",,"Landschaft im Regen (d'après Félix Valloton)","iBdK",,,,,,7960
+7959,"a2014","zT","G","C",,,"48x24","mittel","hoch",,,"Gs","AP",,,,"WG16","H3","bw","ParFV",," Badende (nach Félix Vallotton)","iBdK",,,,,,7959
+7960,"a2013","zT","Od","G",,,"27x24","mittel","hoch",,,"Gs","L","Pf",,,"WG28","H4","cf","ParFV",,"Landschaft im Regen (d'après Félix Vallotton)","iBdK",,,,,,7960
 7961,"a2013","G",,,,,"30x24","klein","hoch",,,"Gs","L","Ar","Mf","Pf","WG4","H4","cf","ParFV",,"Chemin au Mourillon (d'après Félix Vallotton)","iBdK",,,,,,7961
-7962,"a2020","zT","G","Fs",,,"26x19","klein","hoch","Gi",,"Gs","L","Ar","Pf",,"WG47","H4","cf","ParFV",,"Chemin au Mourillon (d'après Félix Valloton)","iBdK",,,,,,7962
-7963,"a2013","G",,,,,"30x23","mittel","hoch",,,"Gs","L","Pf",,,"WG4","H4","cf","ParFV",,"Paysage de pluie (d'après Félix Valloton)","iBdK",,,,,,7963
-7964,"a2020","Mt","G","B ","Fko","C","27x30","mittel","breit","Gi",,"UnG","Ar","mF",,,"WG43","H4","gr","ParFV",,"Platz in Les Andelys (nach Félix Valloton)","iBdK",,,,,,7964
+7962,"a2020","zT","G","Fs",,,"26x19","klein","hoch","Gi",,"Gs","L","Ar","Pf",,"WG47","H4","cf","ParFV",,"Chemin au Mourillon (d'après Félix Vallotton)","iBdK",,,,,,7962
+7963,"a2013","G",,,,,"30x23","mittel","hoch",,,"Gs","L","Pf",,,"WG4","H4","cf","ParFV",,"Paysage de pluie (d'après Félix Vallotton)","iBdK",,,,,,7963
+7964,"a2020","Mt","G","B ","Fko","C","27x30","mittel","breit","Gi",,"UnG","Ar","mF",,,"WG43","H4","gr","ParFV",,"Platz in Les Andelys (nach Félix Vallotton)","iBdK",,,,,,7964
 7965,"a2020","Mt","G","T","Fko","C","30x36","mittel","breit","Gi",,"UnG","FigR","O",,,"WG43","H4","cf","ParFV",,"L'attente (d'après Félix Vallotton)","iBdK",,,,,,7965
 7966,"a1981","R",,,,,"16x20","klein","breit",,,,,,,,,"H4","gr",,,,"iBdK",,,,"Kat.DG.24.4.62",,7966
 7967,"a2020","Mt","B","T","G",,"31x21","mittel","hoch",,,"U",,,,,,"H4","gr","Par7a","fis","marked by Tobey's marks","iBdK",,,,,,7967
@@ -7976,7 +7976,7 @@
 7975,"a2020","Mt","B","T","Lk",,"22x30","mittel","breit",,,"Gs","A",,,,,"H3","gr",,,,"iBdK",,,,,,7975
 7976,"a2013","zT","Sc","Ac",,,"55x40","mittel","hoch",,,"UoG","mF",,,,,"H1","bw","Par7a",,"Erinnerung an eine Radierung von Jacques Villon","iBdK",,,,,,7976
 7977,"a2020","G",,,,,"21x30","klein","breit",,,"Gs","FigG","Ca",,,,"H1","gr","ParVB,Par9b",,"nach VB48.591.DR","iBdK",,,,,,7977
-7978,"a2020","Fa",,,,,"40x30","mittel","hoch",,,"UoG","P",,,,,"H3","cf","Par5","kre","Repos en Egypte à l'âne broutant (nach Rodolphe Bresdin)","iBdK",,,,,,7978
+7978,"a2020","Fa",,,,,"40x30","mittel","hoch",,,"UoG","P",,,,,"H3","cf","Par5","kre","Repos en Egypte à l'âne broutant (d'après Rodolphe Bresdin)","iBdK",,,,,,7978
 7979,"a2020","Fa",,,,,"40x30","mittel","hoch",,,"UoG","mF",,,,,"H2","cf","Par7a",,"Jeu d'éventail ou Femme à l'éventail (d'après Alice Bailly)","iBdK",,,,,,7979
 7980,"a2020","B",,,,,"40x53","mittel","breit","Gi","Lst","U",,,,,,"H3","bw","Par7b",,"Tiled Flower Garden (after El Anatsui)","iBdK",,,,,,7980
 7981,"a2020","Fa",,,,,"18x21","mittel","breit","Lwi",,"U",,,,,,"H3","cf","Kr2a",,"mazzo matto","iBdK",,,,,,7981
@@ -8151,8 +8151,8 @@
 8150,"a2020","G","Fall",,,,"18x24","klein","breit",,,"U",,,,,,"H4","gr","Kr2a",,"zittrige Zitrone","iBdK",,,,,,8150
 8151,"a2021","B",,,,,"11x21","klein","breit",,,"UoG","Tie",,,,,"H2","gr","Kr2b","zwi","Vierfüssler","iBdK",,,,,,8151
 8152,"a2021","B",,,,,"11x14","klein","breit",,,"UoG","Tie",,,,,"H3","gr","Kr2b","sko","wütendes Insekt","iBdK",,,,,,8152
-8153,"a2021","B",,,,,"12x23","klein","breit",,,"UoG","Tie","O",,,,"H4","gr","Kr2b","sko","untaugliches Insekt","iBdK",,,,,,8153
-8154,"a2021","B",,,,,"17x23","klein","breit",,,"UoG","Tie","O","bb",,,"H4","gr","Kr2b","sko","insektoid","iBdK",,,,,"Zk",8154
+8153,"a2021","B",,,,,"12x23","klein","breit",,,"UoG","Tie",,,,,"H4","gr","Kr2b","sko","untaugliches Insekt","iBdK",,,,,,8153
+8154,"a2021","B",,,,,"17x23","klein","breit",,,"UoG","Tie",,"bb",,,"H4","gr","Kr2b","sko","insektoid","iBdK",,,,,"Zk",8154
 8155,"a2021","Mt","Dd","B","Fa",,"21x30","klein","breit",,,"U","Sch",,,,,"H2","bw","Kr3, Kr11",,"Adhocist Symbolism","iBdK",,,,,"ROk",8155
 8156,"a2021","B",,,,,"11x17","klein","breit",,,"U","Sch","Kr3",,,,"H2","bw","Kr3",,"parts apart","iBdK",,,,,,8156
 8157,"a2021","zT","Dd","B",,,"20x24","klein","breit",,,"UnG","O",,,,,"H2","bw","Par2, Kr3",,"S","iBdK",,,,,,8157
@@ -8202,7 +8202,7 @@
 8201,"a2021","B",,,,,"17x17","klein","quadratisch",,,"UoG","Sch","bb",,,,"H2","bw","Kr7",,"to share a square","iBdK",,,,,"Rk",8201
 8202,"a2021","B",,,,,"17x17","klein","quadratisch",,,"U",,,,,,"H2","bw","Kr7",,"to share a square","iBdK",,,,,"Rk",8202
 8203,"a2021","B",,,,,"9x18","klein","breit",,,"U","Sch",,,,,"H2","gr","Kr7, Kr3",,"I mean business","iBdK",,,,,,8203
-8204,"a2021","B",,,,,"26x20","klein","hoch",,,"U",,,,,,"H2","gr","Kr7",,"die genaue Uhrzeit","iBdK",,,,,,8204
+8204,"a2021","B",,,,,"26x20","klein","hoch",,,"U",,,,,,"H2","gr","Kr7",,11:54:00 PM,"iBdK",,,,,,8204
 8205,"a2021","B",,,,,"21x26","klein","breit",,,"U",,,,,,"H2","gr","Kr7","wid","tout bien calculé","iBdK",,,,,,8205
 8206,"a2021","B",,,,,"23x21","klein","hoch",,,"U",,,,,,"H2","gr","Kr7",,"...auf dass es sich dann vielleicht irgendeinmal...","iBdK",,,,,,8206
 8207,"a2021","B",,,,,"15x18","klein","breit",,,"U",,,,,,"H3","gr","Kr7",,"Stellprobe","iBdK",,,,,,8207
@@ -8267,10 +8267,10 @@
 8266,"a2021","zT","B","C",,,"38x50","mittel","breit",,,"U","bb",,,,,"H3","gr","Kr6",,"Bläckbox (Gschooss, verchachlets UFO, Mouggeri, Verschmätterling, Disäinerchübu)","iBdK",,,,"Dreiergruppe",,8266
 8267,"a2021","zT","B","C",,,"38x50","mittel","breit",,,"U","bb",,,,,"H3","gr","Kr6",,"Bläckbox (kalligrafisch, schnabuliere, äs wott nid, verzabblet)","iBdK",,,,"Dreiergruppe",,8267
 8268,"a2021","zT","B","C",,,"38x50","mittel","breit",,,"U","bb",,,,,"H3","gr","Kr6",,"Bläckbox (Büle-n-am Gring, Büstehalter, kei Ahnig, drnäbe: Harpuune und Hei)","iBdK",,,,"Dreiergruppe",,8268
-8269,"a2021","B",,,,,"21x24","klein","breit",,,"Gs","O","bb",,,,"H3","gr",,,"Gschtelaasch","iBdK",,,,,,8269
+8269,"a2021","B",,,,,"21x24","klein","breit",,,"Gs","O",,,,,"H3","gr",,,"Gschtelaasch","iBdK",,,,,,8269
 8270,"a2021","zT","Dd","B",,,"18x26","klein","breit",,,"UnG","L",,,,,"H2","gr","Par1",,"nach Hokusai (37. Ansicht des Berges Fuji)","iBdK",,,,,,8270
 8271,"a2021","zT","B","Ks",,,"21x15","klein","hoch","Lst",,"UnG","Tie",,,,,"H2","gr","Par1",,"Statuette zoomorphe (Colombie)","iBdK",,,,,,8271
-8272,"a2021","B",,,,,"20x30","klein","breit",,,"Gs","O",,,,,"H2","bw","Par1",,"Masque Senoufo","iBdK",,,,,,8272
+8272,"a2021","B",,,,,"20x30","klein","breit",,,"Gs","O",,,,,"H2","bw","Par1",,"Masques Senoufo","iBdK",,,,,,8272
 8273,"a2021","B",,,,,"21x30","klein","breit",,,"Gs",,,,,,"H1","bw","Par7a, Kr5a",,"nu descendant un escalier (d'après Duchamp)","iBdK",,,,,,8273
 8274,"a2021","Mt","Ko","Fa","B",,"15x29","klein","breit",,,"Gs","Ri","Sch",,,,"H2","gr","Kr3, Kr5e","zwi","Common People (Pulp)","iBdK",,,,,,8274
 8275,"a2021","Mt","B","Fa","Ks",,"13x21","klein","breit",,,"U","Sch",,,,,"H1","gr","Kr7, Kr3",,"ganz am Rand","iBdK",,,,,,8275
@@ -8322,10 +8322,10 @@
 8321,"a2021","zT","B","Fs",,,"21 x 21","klein","quadratisch","Ul",,"UnG","O",,,,,"H2","b","Kr12b",,"Zweiklang (Glencore-Apple)","iBdK",,,,,,8321
 8322,"a2021","zT","Dd","B",,,"18x25","klein","breit",,,"Gs","P","O",,,,"H3","gr","ParPP",,"Maler und Modell (nach Picasso)","iBdK",,,,,,8322
 8323,"a2021","B",,,,,"11x28","klein","breit",,,"U","Sch",,,,,"H1","gr","Kr3",,"VARiirren (Thesaurus Rex)","iBdK",,,,,,8323
-8324,"a2021","B",,,,,"15x15","klein","quadratisch","Ul",,"Gs","mF","P",,,,"H2","b","ParML",,"Innerhalb und ausserhalb des Bildes (nach Maria Lassnig)","iBdK",,,,,,8324
-8325,"a2021","Fa",,,,,"15x19","klein","breit","Ul",,"Gs","mF","P",,,,"H2","b","ParML",,"Innerhalb und ausserhalb des Bildes (nach Maria Lassnig)","iBdK",,,,,,8325
-8326,"a2021","zT","Dd","B",,,"11x15","klein","breit",,,"Gs","mF","Ca","P",,,"H2","bw","ParML",,"Tragisches Duett (frei nach Maria Lassnig)","iBdK",,,,,,8326
-8327,"a2021","zT","Dd","B",,,"15x15","klein","quadratisch","Ul",,"UnG","A",,,,,"H2","gr","ParML",,"Tragisches Duett (frei nach Maria Lassnig)","iBdK",,,,,,8327
+8324,"a2021","B",,,,,"15x15","klein","quadratisch","Ul",,"Gs","mF","P",,,,"H2","b","Par7a",,"Innerhalb und ausserhalb des Bildes (nach Maria Lassnig)","iBdK",,,,,,8324
+8325,"a2021","Fa",,,,,"15x19","klein","breit","Ul",,"Gs","mF","P",,,,"H2","b","Par7a",,"Innerhalb und ausserhalb des Bildes (nach Maria Lassnig)","iBdK",,,,,,8325
+8326,"a2021","zT","Dd","B",,,"11x15","klein","breit",,,"Gs","mF","Ca","P",,,"H2","bw","Par7a",,"Tragisches Duett (frei nach Maria Lassnig)","iBdK",,,,,,8326
+8327,"a2021","zT","Dd","B",,,"15x15","klein","quadratisch","Ul",,"UnG","A",,,,,"H2","gr","Par7a",,"Tragisches Duett (frei nach Maria Lassnig)","iBdK",,,,,,8327
 8328,"a2021","zT","Dd","B",,,"18x18","klein","quadratisch",,,"UnG","mF","bb","Sch",,,"H3","gr","Par4",,"Narziss (nach Caravaggio)","iBdK",,,,,,8328
 8329,"a2021","zT","Dd","B",,,"21x30","klein","breit",,,"Gs","A",,,,,"H1","bw",,,"Narziss","iBdK",,,,,,8329
 8330,"a2021","zT","B","Fs",,,"26x29","mittel","breit","Gi",,"UoG","bb",,,,,"H4","gr","Kr6",,"black box","iBdK",,,,,,8330
@@ -8341,7 +8341,7 @@
 8340,"a2021","B",,,,,"15 x 24","klein","breit",,,"Gs","AP",,,,,"H2","bw","Par5",,"Casa de locos (según Goya)","iBdK",,,,,,8340
 8341,"a2021","B",,,,,"26 x 21","klein","hoch",,,"Gs","FigG",,,,,"H2","bw","Par5",,"Corral de locos (según Goya)","iBdK",,,,,,8341
 8342,"a2021","B",,,,,"27 x 19","klein","hoch",,,"Gs","FigG",,,,,"H2","bw","Par5",,"Interior de prisón (según Goya)","iBdK",,,,,,8342
-8343,"a2021","B",,,,,"25 x 19","klein","hoch",,,"Gs","A","Tie",,,,"H2","bw","Par5",,"Ensayos (según Goya)","iBdK",,,,,,8343
+8343,"a2021","B",,,,,"25 x 19","klein","hoch",,,"Gs","AP","Tie",,,,"H2","bw","Par5",,"Ensayos (según Goya)","iBdK",,,,,,8343
 8344,"a2021","B",,,,,"15 x 24","klein","breit",,,"U",,,,,,"H2","bw","Par8b",,"Adieu au language (d'après Jean-Luc Godard)","iBdK",,,,,,8344
 8345,"a2021","Fs",,,,,"15 x 30","klein","breit",,,"U",,,,,,"H2","b","Kr7","zwi","Variirren (Thesaurus Rex)","iBdK",,,,,,8345
 8346,"a2021","Mt","Fs","Fa","B",,"21 x 25","klein","breit",,,"U",,,,,,"H2","gr","Kr3","zwi","Wirrsinn (Thesaurus Rex)","iBdK",,,,,,8346
@@ -8354,116 +8354,560 @@
 8353,"a2021","B",,,,,"30x18","klein","hoch",,,"Gs","AP","bb",,,,"H2","bw","ParAR",,"Der Denker (nach Rodin)","iBdK",,,,,,8353
 8354,"a2021","B",,,,,"30x18","klein","hoch",,,"Gs","AP",,,,,"H3","bw","ParAR",,"Balzac (d'après Rodin)","iBdK",,,,,,8354
 8355,"a2021","B",,,,,"17x11","klein","hoch",,,"Gs","AP",,,,,"H2","gr","ParAR",,"Bourgeois de Calais (d'après Rodin)","iBdK",,,,,,8355
-8356,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8357,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8358,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8359,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8360,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8361,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8362,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8363,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8364,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8365,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8366,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8367,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8368,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8369,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8370,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8371,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8372,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8373,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8374,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8375,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8376,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8377,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8378,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8379,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8380,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8381,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8382,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8383,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8384,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8385,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8386,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8387,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8388,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8389,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8390,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8391,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8392,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8393,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8394,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8395,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8396,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8397,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8398,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8399,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8400,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8401,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8402,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8403,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8404,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8405,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8406,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8407,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8408,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8409,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8410,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8411,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8412,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8413,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8414,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8415,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8416,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8417,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8418,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8419,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8420,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8421,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8422,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8423,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8424,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8425,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8426,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8427,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8428,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8429,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8430,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8431,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8432,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8433,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8434,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8435,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8436,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8437,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8438,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8439,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8440,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8441,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8442,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8443,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8444,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8445,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8446,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8447,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8448,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8449,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8450,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8451,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8452,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8453,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8454,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8455,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8456,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8457,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8458,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8459,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8460,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8461,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8462,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8463,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8464,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8465,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8466,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8467,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8468,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8356,"a2014","Mt","Fa","B","Opl",,"9x11","klein","breit",,,"Gs","AP","P",,,,"H5","gr","Par8a",,"nach einem Motiv von Pernette und Leeuwenberg","iBdK",,,,,,8356
+8357,"a2017","z T","B","T",,,"9x11","klein","breit",,,"Gs","AP","P",,,,"H2","gr","Par8a",,"nach einem Motiv von Pernette und Leeuwenberg","iBdK",,,,,,8357
+8358,"a2009","zT","B","G",,,"17x21","klein","breit",,,"Gs","AP","P",,,,"H3","cf","Par8a",,"nach P/L (""twogether"")","iBdK",,,,,,8358
+8359,"a2010","zT","B","G",,,"21x30","klein","breit",,,"Gs","AP","P",,,,"H2","gr","Par8a","waa","Paar (nach Pernette und Leeuwenberg)","iBdK",,,,,,8359
+8360,"a2009","zT","Dd","B",,,"11x15","klein","breit",,,"Gs","AP","P",,,,"H2","gr","Par8a",,"nach einer Fotografie von Pernette und Leeuwenberg","iBdK",,,,,,8360
+8361,"a2002","zT","Dd","B",,,"10x15","klein","breit",,,"Gs","AP","P",,,,"H2","b","Par8a",,"nach einer Fotografie von Pernette und Leeuwenberg (aus ""twogether"")","iBdK",,,,,"Rok",8361
+8362,"a2001","zT","B","T",,,"14x21","klein","breit",,,"Gs","AP","P",,,,"H3","gr","Par8a",,"nach einer Fotografie von Pernette und Leeuwenberg (aus ""twogether"")","iBdK",,,,,,8362
+8363,"a2007","Mt","B","T","Dd",,"21x30","klein","breit",,,"Gs","AP","P",,,,"H4","gr","Par8a",,"Willemine und Floris","iBdK",,,,,,8363
+8364,"a2015","B",,,,,"19x20","klein","breit",,,"Gs","AP","P","Sch",,,"H3","gr","Par8a",,"nach einem Motiv von Willemine Pernette und Floris Leeuwenberg","iBdK",,,,,,8364
+8365,"a2014","Mt","Dd","Fa","C","Kb","14x25","klein","breit","Ul",,"Gs","AP","P","Kt",,,"H1","v","Par8a",,"nach Pernette und Leeuwenberg","iBdK",,,,,,8365
+8366,"a1984","FoP",,,,,"32x27","mittel","hoch",,,"Gs","bb","O","Ar",,,"H3","cf",,,"o. T. (Kocherspital)","iBdK","res",,,"5er Gruppe, in Schublade Linolcollagen",,8366
+8367,"a1984","FoP",,,,,"32x27","mittel","hoch",,,"Gs","bb","O","Ar",,,"H3","cf",,,"o. T. (Kocherspital)","iBdK","res",,,"5er Gruppe, in Schublade Linolcollagen",,8367
+8368,"a1984","FoP",,,,,"32x27","mittel","hoch",,,"Gs","bb","O","Ar",,,"H3","cf",,,"o. T. (Kocherspital)","iBdK","res",,,"5er Gruppe, in Schublade Linolcollagen",,8368
+8369,"a1984","FoP",,,,,"32x27","mittel","hoch",,,"Gs","bb","O","FigR",,,"H3","cf",,,"o. T. (Kocherspital)","iBdK","res",,,"5er Gruppe, in Schublade Linolcollagen",,8369
+8370,"a1984","FoP",,,,,"32x27","mittel","hoch",,,"Gs","bb","O","FigR",,,"H3","cf",,,"o. T. (Kocherspital)","iBdK","res",,,"5er Gruppe, in Schublade Linolcollagen",,8370
+8371,"a2021","B",,,,,"15x20","klein","breit",,,"Gs","P","AP",,,"Fä","H2","bw","ParPK",,"Fänger (nach Klee)","iBdK","res",,,"6er Gruppe",,8371
+8372,"a2021","B",,,,,"15x20","klein","breit",,,"Gs","P","AP",,,"Fä","H2","bw","ParPK",,"Fänger (nach Klee)","iBdK","res",,,"6er Gruppe",,8372
+8373,"a2021","B",,,,,"15x20","klein","breit","Lwi",,"U",,,,,"Fä","H2","bw","ParPK",,"Fänger (nach Klee)","iBdK","res",,,"6er Gruppe",,8373
+8374,"a2021","B",,,,,"15x20","klein","breit","Lwi",,"Gs","P","AP",,,"Fä","H2","bw","ParPK",,"Fänger (nach Klee)","iBdK","res",,,"6er Gruppe",,8374
+8375,"a2021","z T","B","Fs",,,"15x20","klein","breit","Lwi","Ul","Gs","P","AP",,,"Fä","H2","bw","ParPK",,"Fänger (nach Klee)","iBdK","res",,,"6er Gruppe",,8375
+8376,"a2021","B",,,,,"15x20","klein","breit",,,"Gs","P","AP",,,"Fä","H2","bw","ParPK",,"Fänger (nach Klee)","iBdK","res",,,"6er Gruppe",,8376
+8377,"a2021","B",,,,,"18x25","klein","breit","Lwi",,"U",,,,,,"H2","gr","ParPP",,"""Das Frühstück im Freien"" (nach Picasso)","iBdK",,,,,,8377
+8378,"a2021","B",,,,,"19x30","klein","breit","Lst",,"Gs","FigG","L","O",,,"H3","bw","Par5",,"Der Rückzug von Marignano (nach Ferdinand Hodler)","iBdK",,,,,"hK",8378
+8379,"a2021","zT","B","T",,,"23x15","klein","hoch",,,"Gs","O",,,,,"H2","gr","Par1",,"Enghalsflasche mit Tropfendekor (Khurasan)","iBdK",,,,,,8379
+8380,"a2021","Mt","Dd","B","T",,"20x28","klein","breit",,,"Gs","Ri",,,,,"H3","gr","Par1",,"Der Keltenkopf von Heidelberg-Berghain","iBdK",,,,,,8380
+8381,"a2021","z T","B","Dd",,,"21x30","klein","breit",,,"U",,,,,,"H2","bw","Par4",,"Spieler, Soldaten und Vagabunden (nach Alessandro Magnasco)","iBdK",,,,,,8381
+8382,"a2021","zT","B","Fs",,,"21x29","klein","breit",,,"U","Sch",,,,,"H2","gr","Par5","jun","Wellen und Felsen (nach Paul Gaugin)","iBdK",,,,,,8382
+8383,"a2021","Mt","Dd","B","Ks",,"15x28","klein","breit",,,"UoG","P",,,,,"H3","bw","Par5","jun","Sonnenuntergang (Die Brüder) nach Caspar David Friedrich","iBdK",,,,,,8383
+8384,"a2021","B",,,,,"30x24","mittel","hoch",,,"Gs","FigG",,,,,"H2","gr","Par7a",,"Flanierende (nach Lyonel Feininger)","iBdK",,,,,,8384
+8385,"a2021","B",,,,,"21x26","klein","breit","Krs",,"Gs","FigG",,,,,"H2","gr","Par7a",,"Auferstehung (nach Max Beckmann)","iBdK",,,,,,8385
+8386,"a2021","B",,,,,"30x42","mittel","breit",,,"UoG","FigG",,,,,"H2","gr","Par7a",,"La danse (d'après Henri Matisse)","iBdK",,,,,,8386
+8387,"a2021","B",,,,,"15x21","klein","breit",,,"Gs","AP","O",,,,"H4","bw","Par7a",,"Das glühende Bad (nach Kaspar Fischer)","iBdK",,,,,,8387
+8388,"a2021","Mt","Dd","B","Fa",,"21x25","klein","breit","Ul",,"U","Sch",,,,,"H2","cf","Par7a","was","Nicht zuviel ist fast genug (nach Ernst Caramelle)","iBdK",,,,,,8388
+8389,"a2021","zT","Fko","B",,,"28x21","klein","hoch",,,"Gs","O",,,,,"H4","bw","Par7b",,"Bronze Models on casual Socle (Pedro Cabrita Reis)","iBdK",,,,,,8389
+8390,"a2021","zT","T","Fs",,,"13x30","klein","breit","Krs",,"U",,,,,,"H2","bw","Kr1",,"fleeing from perfection","iBdK",,,,,,8390
+8391,"a2021","zT","Fs","G?",,,"15x30","klein","breit",,,"U",,,,,,"H2","gr","Kr1",,"30 cm-Lauf (ohne Hürden)","iBdK",,,,,"hK",8391
+8392,"a2021","B",,,,,"21x24","klein","breit",,,"U",,,,,,"H2","gr","Kr1","wid","wildes Treiben","iBdK",,,,,,8392
+8393,"a2021","B",,,,,"19x30","klein","breit",,,"U",,,,,,"H2","bw","Kr1","waa","Wildwasserfahrt","iBdK",,,,,,8393
+8394,"a2021","Mt","T","B","Ks",,"21x26","klein","breit",,,"U",,,,,,"H2","gr","Kr1",,"Levitation","iBdK",,,,,,8394
+8395,"a2021","B",,,,,"21x30","klein","breit","Lst",,"U",,,,,,"H2","bw","Kr1",,"stairway to h.","iBdK",,,,,,8395
+8396,"a2021","Fa",,,,,"20x28","klein","breit","Lwi",,"U",,,,,,"H2","gr","Kr2a","wid","lustvolles Keimen","iBdK",,,,,,8396
+8397,"a2021","B",,,,,"13x19","klein","breit","Lst",,"UoG","Tie","Pf",,,,"H2","bw","Kr2b",,"am Klee schnuppern","iBdK",,,,,,8397
+8398,"a2021","Mt","Dd","Fs","B",,"14x21","klein","breit","Lwi",,"UnG","Z","Tie",,,,"H2","gr","Kr2b",,"Schmetterling","iBdK",,,,,,8398
+8399,"a2021","B",,,,,"15x24","klein","breit",,,"U","Sch",,,,,"H2","gr","Kr3",,"aus dem Skizzenbuch eines Surrealisten","iBdK",,,,,,8399
+8400,"a2021","B",,,,,"18x18","klein","quadratisch",,,"U","Sch",,,,,"H2","b","Kr3","zwi","je persiste et signe","iBdK",,,,,"Rk",8400
+8401,"a2021","zT","B","Fa",,,"20x27","klein","breit",,,"U","Sch",,,,,"H2","gr","Kr3",,"rondo morbido","iBdK",,,,,,8401
+8402,"a2021","Mt","Dd","B","Fs",,"21x30","klein","breit",,,"U","Sch","BiB",,,,"H3","gr","Kr3","was","überfrachtete Ausstellung","iBdK",,,,,,8402
+8403,"a2021","B",,,,,"30x21","klein","hoch","Lwi",,"U","Sch",,,,,"H2","b","Kr3, Kr6","zwi","moitié moitié moitié","iBdK",,,,,,8403
+8404,"a2021","Fs",,,,,"19x30","klein","breit",,,"UoG","L",,,,,"H2","gr","Kr4",,"tremblement de terre","iBdK",,,,,"hK",8404
+8405,"a2021","B",,,,,"26x17","klein","hoch",,,"UoG","mF","Kt",,,,"H3","b","Kr5a",,"Augenmensch","iBdK",,,,,,8405
+8406,"a2021","Fs",,,,,"25x18","klein","hoch",,,"UoG","mF",,,,,"H3","gr","Kr5a",,"valiant crosshatcher","iBdK",,,,,,8406
+8407,"a2021","B",,,,,"19x26","klein","breit","Lwi",,"U",,,,,,"H2","gr","Kr5a",,"reclining figure (three times bigger)","iBdK",,,,,,8407
+8408,"a2021","zT","Fs","B",,,"30x21","klein","hoch","Lst",,"U","Sch",,,,,"H3","bw","Kr5a",,"Bote, schwer bepackt","iBdK",,,,,,8408
+8409,"a2021","B",,,,,"10x18","klein","breit","Lst",,"UnG","P",,,,,"H2","gr","Kr5b","waa","Paar","iBdK",,,,,"hK",8409
+8410,"a2021","zT","B","Fs",,,"15x11","klein","hoch",,,"U",,,,,,"H2","gr","Kr8, Kr5e","wid","Ungewissheit","iBdK",,,,,,8410
+8411,"a2021","B",,,,,"30x21","klein","hoch","Lwi",,"UoG","Ri",,,,,"H2","gr","Kr5e",,"Kind (verängstigt)","iBdK",,,,,,8411
+8412,"a2021","B",,,,,"21x13","klein","hoch",,,"UoG",,,,,,"H3","bw","Kr6",,"Damoklesfäden","iBdK",,,,,,8412
+8413,"a2021","T",,,,,"19x23","klein","breit",,,"U",,,,,,"H4","gr","Kr6",,"schnell eine Monumentalskulptur!","iBdK",,,,,,8413
+8414,"a2021","Mt","Dd","B","Fs",,"25x19","klein","hoch",,,"UnG","O",,,,,"H4","gr","Kr6","zwi","Einfallspinsel (Thesaurus Rex)","iBdK",,,,,,8414
+8415,"a2021","B",,,,,"25x21","klein","hoch",,,"UnG","O","L",,,,"H2","gr","Kr6","zwi","Einfallspinsel (nach Thesaurus Rex)","iBdK",,,,,"Zk",8415
+8416,"a2021","B",,,,,"19x30","klein","breit",,,"UnG","bb","Pf","Ti","Sti",,"H2","bw","Kr6, Kr2a","zwi","Stillleben mit Schrumpelpilzchen (Thesaurus Rex)","iBdK",,,,,,8416
+8417,"a2021","B",,,,,"21x30","klein","breit",,,"UoG","F",,,,,"H2","gr","Kr6",,"vier Kandidaten für ein Früchtestillleben","iBdK",,,,,,8417
+8418,"a2021","B",,,,,"21x30","klein","breit",,,"UoG","O",,,,,"H2","bw","Kr6","jun","Rekonstruktion","iBdK",,,,,"dK",8418
+8419,"a2021","B",,,,,"21x30","klein","breit",,,"UoG","FigG",,,,,"H2","bw","Kr6","zwi","Stehplastiken stehen Schlange","iBdK",,,,,"vK",8419
+8420,"a2021","B",,,,,"30x21","klein","hoch",,,"U",,,,,,"H2","bw","Kr6",,"dunkler Gegenstand","iBdK",,,,,,8420
+8421,"a2021","Mt","G","Fs","B",,"17x13","klein","hoch",,,"U",,,,,,"H3","bw","Kr7",,"Fünfeck","iBdK",,,,,,8421
+8422,"a2021","B",,,,,"15x21","klein","breit","Lwi",,"U","Sch",,,,,"H2","b","Kr7","zwi","moitié moitié moitié","iBdK",,,,,,8422
+8423,"a2021","B",,,,,"21x21","klein","quadratisch",,,"U",,,,,,"H1","gr","Kr7","wid","Kreuzritters Blitzidee","iBdK",,,,,,8423
+8424,"a2021","B",,,,,"21x21","klein","quadratisch",,,"U","bb","Sch",,,,"H1","bw","Kr7, Kr12e",,"Randnotizen","iBdK",,,,,"Rk",8424
+8425,"a2021","B",,,,,"30x15","klein","hoch",,,"U","bb",,,,,"H2","bw","Kr7",,"Kletterwand","iBdK",,,,,,8425
+8426,"a2021","B",,,,,"25x18","klein","hoch",,,"U",,,,,,"H2","gr","Kr7",,21,"iBdK",,,,,,8426
+8427,"a2021","B",,,,,"21x30","klein","breit","Lwi","Lst","U",,,,,,"H1","b","Kr7",,"si frömde no chly","iBdK",,,,,,8427
+8428,"a2021","G",,,,,"15x21","klein","breit",,,"U",,,,,,"H4","cf","Kr8","sch","esperanza","iBdK",,,,,,8428
+8429,"a2021","B",,,,,"21x30","klein","breit","Lwi","Lst","U",,,,,,"H3","gr","Kr8",,"darunter","iBdK",,,,,,8429
+8430,"a2021","zT","B","Fa",,,"23x21","klein","hoch","Gi",,"UoG","mF",,,,,"H3","cf","Kr5a","zwi","Harlekinade","iBdK",,,,,,8430
+8431,"a2021","B",,,,,"30x42","mittel","breit","Sm",,"U",,,,,,"H2","bw","Kr8",,"langeweile","iBdK",,,,,,8431
+8432,"a2021","zT","B","T",,,"13x21","klein","breit",,,"U",,,,,,"H2","gr","Kr6, Kr9",,"Cinderella","iBdK",,,,,,8432
+8433,"a2021","G",,,,,"17x21","klein","breit",,,"U",,,,,,"H2","g","Kr9",,"gesprenkeltes Gespenst","iBdK",,,,,,8433
+8434,"a2021","B",,,,,"15x24","klein","breit",,,"U","BiB",,,,,"H2","bw","Kr10a",,"schnell ein paar Bühnenbilder!","iBdK",,,,,,8434
+8435,"a2021","B",,,,,"15x24","klein","breit",,,"U","BiB",,,,,"H2","bw","Kr10a",,"schnell ein paar Bühnenbilder!","iBdK",,,,,,8435
+8436,"a2021","B",,,,,"21x30","klein","breit",,,"Gs","Ar","BiB",,,,"H2","bw","Kr10a",,"5 Räume","iBdK",,,,,,8436
+8437,"a2021","zT","Dd","B",,,"18x27","klein","breit",,,"UnG","Ar",,,,,"H2","b","Kr10a",,"Favela","iBdK",,,,,"Zk",8437
+8438,"a2021","zT","B","Fs",,,"15x21","klein","breit",,,"U","Sch",,,,,"H2","bw","Kr11",,"Springer C3-D5","iBdK",,,,,,8438
+8439,"a2021","B",,,,,"15x21","klein","breit",,,"U","Sch",,,,,"H2","gr","Kr11",,"gehen oder bleiben?","iBdK",,,,,,8439
+8440,"a2021","Mt","Dd","B","Fs","Kl","20x24","klein","breit","Lwi",,"U","Sch",,,,,"H3","gr","Kr11","was","K (mixed up confusion)","iBdK",,,,,,8440
+8441,"a2021","zT","B","Fa",,,"21x30","klein","breit",,,"U","BiB",,,,,"H2","gr","Kr12c",,"Dreizeiler","iBdK",,,,,"hK",8441
+8442,"a2021","Fa",,,,,"21x19","klein","hoch","Lwi",,"UoG","Pf","So",,,,"H2","cf","Kr2a",,"ikepanisch","iBdK",,,,,,8442
+8443,"a2021","B",,,,,"16x11","klein","hoch",,,"U","Sch",,,,,"H2","bw","Kr3",,"mit dem ABC zu Ende","iBdK",,,,,,8443
+8444,"a2021","zT","B","T",,,"15x12","klein","hoch",,,"U",,,,,,"H2","gr","Kr2a",,"fleischfressede Pflanze?","iBdK",,,,,"Zk",8444
+8445,"a2021","B",,,,,"11x14","klein","breit",,,"U",,,,,,"H2","gr","Kr5a",,"kleiner Kanute","iBdK",,,,,,8445
+8446,"a2021","Mt","B","T","Fa",,"22x11","klein","hoch",,,"UoG","O",,,,,"H2","gr","Kr6","waa","Dreiphasenvase","iBdK",,,,,,8446
+8447,"a2021","zT","B","T",,,"12x18","klein","breit",,,"U",,,,,,"H2","gr","Kr8",,"hastiger Aufbruch","iBdK",,,,,,8447
+8448,"a2021","Fa",,,,,"19x21","klein","breit",,,"U",,,,,,"H2","cf","Kr9",,"3 Kopffüssler","iBdK",,,,,,8448
+8449,"a2021","zT","Dd","B",,,"14x19","klein","breit",,,"U",,,,,,"H2","b","Kr10a","fis","ferne Stadt","iBdK",,,,,,8449
+8450,"a2021","B","Ve",,,,"15x15","klein","quadratisch",,,"UoG","bb","Sch",,,,"H3","gr",,"sko","verwüstetes Stillleben","iBdK",,,,,,8450
+8451,"a2021","B",,,,,"15x28","klein","breit","Lwi",,"UnG","bb","Sch",,,,"H3","gr",,,"black box","iBdK",,,,,,8451
+8452,"a2021","B",,,,,"15x19","klein","breit",,,"Gs","AP",,,,,"H2","bw","ParVB",,"nach VB45.9016.ALI","iBdK",,,,,,8452
+8453,"a2021","B",,,,,"17x30","klein","breit","Lwi",,"U",,,,,,"H2","bw","Par7a",,"kleine Hommage an Gertrud Guyer","iBdK",,,,,,8453
+8454,"a2021","Fa",,,,,"19x24","klein","breit","Lwi",,"U",,,,,,"H4","v","Kr6",,"Wirrpool (Thesaurus Rex)","iBdK",,,,,,8454
+8455,"a2021","B",,,,,"17x20","klein","breit","Lst",,"U",,,,,,"H3","bw","Kr8",,"unter dunklem Gewölk","iBdK",,,,,,8455
+8456,"a2021","B",,,,,"17x23","klein","breit","Lwi",,"U",,,,,,"H2","gr","Kr12a",,"il faut de tout pour faire une ronde","iBdK",,,,,"Rok",8456
+8457,"a2021","B",,,,,"18x30","klein","breit",,,"U",,,,,,"H2","bw","Kr12c",,"Dreizeiler","iBdK",,,,,,8457
+8458,"a2021","B",,,,,"21x24","klein","breit",,,"U","Sch",,,,,"H2","gr","Kr3","zwi","Analphabetisierungskampagne","iBdK",,,,,"vK",8458
+8459,"a2021","Fa",,,,,"15x23","klein","breit","Lwi",,"U",,,,,,"H2","cf","Kr1",,"kurz davor","iBdK",,,,,,8459
+8460,"a2021","zT","B","Fs",,,"21x30","klein","breit",,,"UoG","mF","Ca",,,,"H2","gr","Kr11","waa","Capriccio","iBdK",,,,,,8460
+8461,"a2021","Mt","B","Fs","Fa","Ks","21x19","klein","hoch","Lwi",,"Gs","mF",,,,,"H3","cf","Kr9",,"Uranus und Gaia","iBdK",,,,,,8461
+8462,"a2021","Mt","B","Fs","Fa","Ks","24x21","klein","hoch","Lwi",,"Gs","mF",,,,,"H2","cf","Kr9",,"Uranus und Gaia","iBdK",,,,,,8462
+8463,"a2021","Mt","B","Fs","Fa","Ks","21x15","klein","hoch","Lwi","Lst","Gs","mF","Sta",,,,"H3","cf","Kr9",,"Uranus und Gaia","iBdK",,,,,,8463
+8464,"a2021","B",,,,,"16x15","klein","hoch","Lst",,"U",,,,,,"H2","b","Kr1, Kr9","zwi","Jupiter rising","iBdK",,,,,,8464
+8465,"a2021","zT","T","B",,,"17x17","klein","quadratisch",,,"U",,,,,,"H2","bw","Kr5c",,"Stress im Kinderhort","iBdK",,,,,,8465
+8466,"a2021","z T","T","Ks",,,"23x15","klein","hoch","Gi",,"U",,,,,,"H3","gr","Kr5a",,"Systemsprenger","iBdK",,,,,,8466
+8467,"a2021","zT","B","Fs",,,"12x21","klein","breit",,,"U","BiB",,,,,"H2","gr","Kr8",,"hold the line","iBdK",,,,,,8467
+8468,"a2021","zT","G","Fa",,,"21x26","klein","breit",,,"U",,,,,,"H3","b","Kr6",,"pubertierender Stern","iBdK",,,,,,8468
+8469,"a2021","G",,,,,"21x28","klein","breit",,,"U",,,,,,"H3","b","Kr7",,"Balanceakt","iBdK",,,,,,8469
+8470,"a2021","G",,,,,"21x28","klein","breit",,,"U",,,,,,"H4","g","Kr8, Kr9",,"panisch","iBdK",,,,,,8470
+8471,"a2021","zT","G","Fa",,,"21x30","klein","breit","Ul",,"U",,,,,,"H4","cf","Kr12d",,"Konstellation","iBdK",,,,,,8471
+8472,"a1974","zT","T","Opl",,,"17x10","klein","hoch",,,"U",,,,,,"H4","gr",,,,"iBdK","vers",,"x",,,8472
+8473,"a1974","zT","T","Opl",,,"10x10","klein","quadratisch",,,"U",,,,,,"H4","gr",,,,"iBdK","vern",,"x",,,8473
+8474,"a1975","K",,,,,"52x75?","mittel","breit",,,"Gs","O","Sch",,,,"H4","gr",,"sko",,"iBdK","vern",,"x",,,8474
+8475,"a1977","Mt","R","B","Opl",,"12x12","klein","quadratisch",,,"UoG","O",,,,,"H2","cf",,,,"?",,,"x",,,8475
+8476,"a1978","zT","T","Opl",,,"12x12","klein","quadratisch",,,"U",,,,,,"H3","cf",,,,"?",,,"x",,,8476
+8477,"a1987","K",,,,,"55x75?","mittel","breit",,,"U",,,,,,"H3","gr",,,,"?",,,"x",,,8477
+8478,"a1987","K",,,,,"42x56?","mittel","breit",,,"UoG","L",,,,,"H4","gr",,"kre",,"?","PB",,"x",,,8478
+8479,"a1988","OL",,,,,"50x72?","mittel","breit",,,"U",,,,,,"H4","cf",,"kre",,"?","PB",,"x",,,8479
+8480,"a2021","Fa",,,,,"10x14","klein","breit",,,"Gs","O",,,,,"H3","cf","Kr6",,"Gefäss","Alex Lüscher, Bern",,,,,"Zk",8480
+8481,"a1984","T",,,,,"28x25","klein","hoch",,,"UoG","Tie",,,,,"H2","gr",,,,"?","PB",,,"bei einer Auktion verkauft",,8481
+8482,"a2021","G",,,,,"12x20","klein","breit",,,"UoG","O",,,,,"H4","cf",,,"verwüstetes Stillleben","iBdK",,,,,,8482
+8483,"a2021","zT","Dd","B",,,"17x28","klein","breit",,,"UoG","St","F",,,,"H3","gr","ParPC","ste","Früchtestillleben (Paul Cézanne)","iBdK",,,,,,8483
+8484,"a2021","Mt","Dd","B","Fs",,"20x30","klein","breit","Lst",,"Gs","AP",,,,,"H2","gr","ParPP","jun","Maler und Modell","iBdK",,,,,,8484
+8485,"a2021","zT","Dd","Fa",,,"30x19","klein","hoch",,,"UnG","O","Pf",,,,"H3","cf","ParPP",,"Atelierbesuch","iBdK",,,,,,8485
+8486,"a2021","zT","B","T",,,"18x28","klein","breit",,,"UnG","O",,,,,"H3","gr","Par2",,"Fundstätte","iBdK",,,,,,8486
+8487,"a2021","zT","B","T",,,"20x25","klein","breit",,,"Gs","O",,,,,"H2","gr","Par2",,"megalithische Stelen","iBdK",,,,,"Rk",8487
+8488,"a2021","zT","Dd","B",,,"21x30","klein","breit",,,"UnG","O","Sch",,,,"H2","bw","Par2",,"Spolien","iBdK",,,,,,8488
+8489,"a2021","B",,,,,"21x30","klein","breit",,,"UnG","Tie","O",,,,"H2","gr","Par3a",,"Il presepe (seccondo Vitale da Bologna)","iBdK",,,,,,8489
+8490,"a2021","B",,,,,"21x15","klein","hoch",,,"Gs","mF","So",,,,"H2","gr","Par3b",,"Ercole ubriaco","iBdK",,,,,"vK",8490
+8491,"a2021","B",,,,,"15x21","klein","breit",,,"Gs","mF",,,,,"H2","gr","Par3b",,"Ercole ubriaco","iBdK",,,,,,8491
+8492,"a2021","zT","Dd","Fa",,,"21x30","klein","breit","Lwi",,"U",,,,,,"H3","gr","Par7a",,"""Leicht bewölkt"" (nach Nanne Meyer)","iBdK",,,,,,8492
+8493,"a2021","zT","Dd","B",,,"12x30","klein","breit",,,"UnG","Sch","O",,,,"H2","bw","Par7b","zwi","Threshing Machine boarded by Tinguely","iBdK",,,,,,8493
+8494,"a2021","G",,,,,"13x17","klein","breit",,,"Gs","Tie","L",,,,"H3","cf","Par7a",,"aus Morgenthalers ""Trabrennen in Viareggio""","iBdK",,,,,,8494
+8495,"a2021","zT","Dd","Fa",,,"11x15","klein","breit",,,"UnG","O",,,,,"H2","cf","Kr1, Kr6",,"Getriebe","iBdK",,,,,,8495
+8496,"a2021","Mt","Dd","B","Fa",,"16x21","klein","breit",,,"U",,,,,,"H2","gr","Kr1",,"Ritt der Willküren","iBdK",,,,,,8496
+8497,"a2021","zT","Dd","B",,,"11x16","klein","breit",,,"UnG","Pf",,,,,"H2","g","Par7a, Kr2a",,"Emmas Zauberlehrling","iBdK",,,,,,8497
+8498,"a2021","G",,,,,"14x14","klein","quadratisch",,,"U","Sch",,,,,"H4","cf","Kr3",,"schräx","iBdK",,,,,,8498
+8499,"a2021","zT","G","Fa",,,"18x28","klein","breit",,,"U","Sch",,,,,"H5","cf","Kr3",,"Ain't it just like the night…? (Visions of Johanna)","iBdK",,,,,,8499
+8500,"a2021","B",,,,,"15x30","klein","breit",,,"U","Sch",,,,,"H2","gr","Kr3","zwi","Spielplatz","iBdK",,,,,,8500
+8501,"a2021","Fs",,,,,"20x30","klein","breit",,,"U",,,,,,"H2","cf","Kr3","zwi","vieldeutlich (nach Thesaurus Rex)","iBdK",,,,,,8501
+8502,"a2021","B",,,,,"30x21","klein","hoch","Lwi",,"U","Sch",,,,,"H2","b","Kr3","zwi","Textase (Thesaurus Rex)","iBdK",,,,,,8502
+8503,"a2021","zT","B","Fs",,,"15x30","klein","breit","Ul",,"U","BiB",,,,,"H2","bw","Kr4, Kr6","jun","hold the line","iBdK",,,,,,8503
+8504,"a2021","zT","T","B",,,"30x18","klein","hoch","Lst",,"U",,,,,,"H3","bw","Kr5a",,"Selbstbezüglicher","iBdK",,,,,,8504
+8505,"a2021","B",,,,,"18x30","klein","breit",,,"UoG","Ri","Sch",,,,"H2","gr","Kr5b, Kr3, Par7a","zwi","zwei Pop-Art-Künstler (im Altersheim)","iBdK",,,,,,8505
+8506,"a2021","zT","B","Fa",,,"15x21","klein","breit",,,"U","Ca",,,,,"H2","cf","Kr5c","waa","so entwined","iBdK",,,,,,8506
+8507,"a2021","B",,,,,"24x21","klein","hoch",,,"UnG","mF","Sch","Ca",,,"H2","gr","Kr5c",,"bande à part","iBdK",,,,,"vK",8507
+8508,"a2021","Fa",,,,,"11x15","klein","breit",,,"UoG","O","Fk",,,,"H4","cf","Kr6",,"Farbkörper","iBdK",,,,,,8508
+8509,"a2021","Fa",,,,,"10x15","klein","breit",,,"UoG","O","Fk","Sch",,,"H3","cf","Kr6","wid","3 Farbkörper","iBdK",,,,,,8509
+8510,"a2021","Fa",,,,,"10x14","klein","breit","Lwi",,"UnG","O",,,,,"H3","cf","Kr6",,"Trichter","iBdK",,,,,,8510
+8511,"a2021","zT","Dd","Fa",,,"12x17","klein","breit",,,"Gs","O",,,,,"H2","cf","Kr6","zwi","Hausapotheke","iBdK",,,,,,8511
+8512,"a2021","zT","Fs","B",,,"20x13","klein","hoch",,,"UnG","O",,,,,"H3","b","Kr6",,"Flagge","iBdK",,,,,,8512
+8513,"a2021","zT","Dd","Fa",,,"13x20","klein","breit",,,"Gs","O","BiB",,,,"H4","cf","Kr6",,"3 monochrome Bilder","iBdK",,,,,,8513
+8514,"a2021","B",,,,,"17x19","klein","breit",,,"UoG","O","So",,,,"H2","bw","Kr6",,"Exponat","iBdK",,,,,,8514
+8515,"a2021","B",,,,,"15x21","klein","breit",,,"UoG","O","Sch",,,,"H2","bw","Kr6",,"prätentiöser Rahmen","iBdK",,,,,"Zk",8515
+8516,"a2021","zT","Dd","B",,,"19x29","klein","breit","Gi",,"UnG","O",,,,,"H3","cf","Kr6",,"transfer","iBdK",,,,,,8516
+8517,"a2021","zT","Dd","B",,,"28x21","klein","hoch",,,"UnG","Kt",,,,,"H3","b","Kr6",,"soft sculpture","iBdK",,,,,,8517
+8518,"a2021","zT","Dd","Fa",,,"19x24","klein","breit",,,"UoG","O","Sch",,,,"H2","cf","Kr6",,"Märmeli","iBdK",,,,,,8518
+8519,"a2021","zT","Dd","T",,,"21x21","klein","quadratisch",,,"U","Sch",,,,,"H3","gr","Kr6",,"ein Fall für Obelix","iBdK",,,,,,8519
+8520,"a2021","zT","B","Ko",,,"19x29","klein","breit","Gi","Ul","UnG","O","BiB",,,,"H3","bw","Kr1, Kr6",,"weisses Bild","iBdK",,,,,,8520
+8521,"a2021","zT","B","Fs",,,"21x30","klein","breit",,,"UoG","O","bb","Sta",,,"H2","bw","Kr6","jun","was auf den Tisch kommt","iBdK",,,,,,8521
+8522,"a2021","zT","G","Fs",,,"21x29","klein","breit",,,"Gs","O","BiB",,,,"H5","gr","Kr6","sko","5 Bilder","iBdK",,,,,,8522
+8523,"a2021","B",,,,,"29x19","klein","hoch",,,"UoG","O",,,,,"H2","gr","Kr6","waa","Türe","iBdK",,,,,"Rk",8523
+8524,"a2021","zT","Dd","B",,,"12x17","klein","breit",,,"U",,,,,,"H2","gr","Kr7",,"Fadeout","iBdK",,,,,,8524
+8525,"a2021","zT","Dd","Fa",,,"17x17","klein","quadratisch",,,"U",,,,,,"H2","gr","Kr7",,"zimperliches Zeichen","iBdK",,,,,,8525
+8526,"a2021","B",,,,,"20x24","klein","breit",,,"U",,,,,,"H2","bw","Kr7","jun","4 Quadranten","iBdK",,,,,"Zk",8526
+8527,"a2021","zT","Dd","B",,,"20x27","klein","breit",,,"U",,,,,,"H2","b","Kr7",,"terrain vague","iBdK",,,,,,8527
+8528,"a2021","Opa",,,,,"21x28","klein","breit",,,"U",,,,,,"H4","gr","Kr7","ste","dunkles Zeichen","iBdK",,,,,"Zk",8528
+8529,"a2021","Fa",,,,,"9x12","klein","breit",,,"U",,,,,,"H3","cf","Kr8",,"Hochsommer","iBdK",,,,,,8529
+8530,"a2021","Mt","Dd","B","Fs ","Kl","16x12","klein","hoch",,,"UnG","bb",,,,,"H3","gr","Kr8",,"strano guazzabuglio","iBdK",,,,"C",,8530
+8531,"a2021","Mt","G","B","Fa",,"12x18","klein","breit",,,"UoG","L",,,,,"H4","cf","Kr8, Kr4","sko","hard rain","iBdK",,,,,,8531
+8532,"a2021","B",,,,,"15x19","klein","breit",,,"U",,,,,,"H3","bw","Kr8",,"Rondo, verwüstet","iBdK",,,,,,8532
+8533,"a2021","zT","Dd","B",,,"15x20","klein","breit",,,"U","BiB",,,,,"H2","gr","Kr8","fis","streamdream","iBdK",,,,,,8533
+8534,"a2021","B",,,,,"19x15","klein","hoch",,,"U",,,,,,"H1","gr","Kr8",,"hoffentlich","iBdK",,,,,,8534
+8535,"a2021","zT","B","Fa",,,"14x20","klein","breit","Lwi",,"U",,,,,,"H3","cf","Kr8",,"on a carrousel","iBdK",,,,,"Zk",8535
+8536,"a2021","Mt","Dd","Fa","B",,"16x21","klein","breit",,,"U",,,,,,"H2","gr","Kr8",,"freewheeling","iBdK",,,,,,8536
+8537,"a2021","Mt","Dd","T","B",,"17x21","klein","breit",,,"UnG","Ri",,,,,"H2","gr","Kr8",,"méfiance","iBdK",,,,,,8537
+8538,"a2021","zT","B","T",,,"12x30","klein","breit",,,"U","Sch",,,,,"H3","gr","Kr8, Kr4",,"hard rain","iBdK",,,,,,8538
+8539,"a2021","zT","Dd","T",,,"20x27","klein","breit",,,"UnG","O",,,,,"H2","gr","Kr8",,"Reise ins Ungewisse","iBdK",,,,,,8539
+8540,"a2021","zT","Dd","B",,,"20x28","klein","breit","Lwi",,"U",,,,,,"H2","bw","Kr8",,"rondo doloroso","iBdK",,,,,"Zk",8540
+8541,"a2021","Mt","Dd","Fs","B",,"15x21","klein","breit",,,"U","Sch",,,,,"H2","gr","Kr9",,"Proteus","iBdK",,,,,,8541
+8542,"a2021","Mt","Dd","B","Ks",,"18x27","klein","breit","Lwi",,"U","Sch",,,,,"H3","gr","Kr9",,"Proteus","iBdK",,,,,,8542
+8543,"a2021","zT","Dd","B",,,"16x9","klein","hoch",,,"UoG","Ar",,,,,"H3","bw","Kr10a","sko","Delicate Passage","iBdK",,,,,"Zk",8543
+8544,"a2021","B",,,,,"24x15","klein","hoch","Lst",,"UnG","O",,,,,"H2","gr","Kr10a",,"Monument","iBdK",,,,,"vK",8544
+8545,"a2021","B",,,,,"24x21","klein","hoch",,,"UoG","O",,,,,"H2","gr","Kr10a","waa","Portal","iBdK",,,,,"Rk",8545
+8546,"a2021","zT","Dd","B",,,"17x24","klein","breit","Gi",,"U",,,,,,"H2","bw","Kr10b",,"Atelier","iBdK",,,,,,8546
+8547,"a2021","zT","G","B",,,"14x23","klein","breit",,,"U","BiB",,,,,"H2","cf","Kr11","jun","Entwurf (entlang…)","iBdK",,,,,"dK",8547
+8548,"a2021","zT","Dd","B",,,"28x19","klein","hoch","Gi",,"U",,,,,,"H2","b","Kr11","was","way out","iBdK",,,,,,8548
+8549,"a2021","Mt","Dd","Fs","B",,"19x27","klein","breit","krS",,"U","Sch",,,,,"H2","gr","Kr11",,"en même temps","iBdK",,,,,,8549
+8550,"a2021","B",,,,,"27x21","klein","hoch","Lwi",,"U",,,,,,"H2","bw","Kr11",,"Planungsunsicherheit","iBdK",,,,,,8550
+8551,"a2021","zT","Dd","B",,,"15x18","klein","breit",,,"UnG","O",,,,,"H4","bw","Kr12b",,"Zweiklang","iBdK",,,,,,8551
+8552,"a2021","zT","Dd","Fa",,,"16x27","klein","breit",,,"Gs","O","BiB",,,,"H3","cf","Kr12b",,"dividuelle und individuelle Rhythmen","iBdK",,,,,,8552
+8553,"a2021","zT","Ks","B",,,"20x30","klein","breit",,,"UoG","L","O","BiB",,,"H2","c","Kr12b",,"Wolkenbilder","iBdK",,,,,,8553
+8554,"a2021","C","Od",,,,"30x24","mittel","hoch",,,"Gs","Ri","FigG","Sch",,,"H4","gr",,,"schreiben","iBdK",,,,,,8554
+8555,"a2021","zT","G","B",,,"19x36","mittel","breit","Gi",,"U","Ca",,,,,"H2","cf","Kr5c",,"strange inhabitants","iBdK",,,,,,8555
+8556,"a2021","G",,,,,"14x33","klein","breit",,,"UoG","BiB","L",,,,"H4","cf","Kr4",,"Abend (landschaftlich)","iBdK",,,,,,8556
+8557,"a2021","G",,,,,"14x33","klein","breit",,,"UoG","BiB","L",,,,"H4","cf","Kr6",,"Bilder in abendlicher Landschaft","iBdK",,,,,,8557
+8558,"a2021","G",,,,,"21x34","mittel","breit",,,"UoG","L",,,,,"H2","cf","Kr12a",,"Partitur (landschaftlich)","iBdK",,,,,"hK",8558
+8559,"a2021","Fa",,,,,"24x34","mittel","breit",,,"U","Sch",,,,,"H5","cf","Kr7",,"Ain't it just like the night…? (Visions of Johanna)","iBdK",,,,,,8559
+8560,"a2021","C","Fko",,,,"25x26","mittel","breit",,,"Gs","BiB","Ar",,,,"H3","bw","Par7a",,"Collage (nach Nedko Solakov)","iBdK",,,,,,8560
+8561,"a2021","B",,,,,"24x30","mittel","breit","Lwi",,"U",,,,,,"H2","gr","Par7a","waa","auf Malte Spohrs Spur","iBdK",,,,,,8561
+8562,"a2021","C","Fko","Od",,,"29x35","mittel","breit",,,"UnG","O",,,,,"H3","cf","Par7b",,"Bronze Models on casual Socle (after P. C. Reis)","iBdK",,,,,,8562
+8563,"a2021","Mt","Fko","B","Fal",,"26x24","klein","hoch","Lst",,"UnG","O",,,,,"H3","bw","Par7b",,"""Bronze Models on casual Socle 1,2"" (after P. C. Reis)","iBdK",,,,,"vK",8563
+8564,"a2021","Mt","Dd","Fa","B",,"21x30","klein","breit",,,"U","Sch",,,,,"H2","cf","Par7a",,"in memoriam Sigmar Polke","iBdK",,,,,"vK",8564
+8565,"a2021","Mt","Dd","Fa","B",,"21x30","klein","breit",,,"U","Sch","BiB",,,,"H2","cf","Par7a",,"olk (zu Sigmar Polke)","iBdK",,,,,,8565
+8566,"a2021","zT","Dd","B",,,"14x28","klein","breit",,,"UnG","Ar","FigG",,,,"H2","gr","Par4",,"zur Berner Kebes-Tafel","iBdK",,,,,,8566
+8567,"a2021","zT","Dd","Fa",,,"14x28","klein","breit",,,"UnG","Ar","FigG",,,,"H2","cf","Par4",,"zur Berner Kebes-Tafel","iBdK",,,,,,8567
+8568,"a2021","B",,,,,"12x18","klein","breit",,,"Gs","FigG",,,,,"H2","bw","Par4",,"Der Früchtekranz (nach Rubens)","iBdK",,,,,,8568
+8569,"a2021","B",,,,,"20x20","klein","quadratisch","Lwi",,"UoG","P",,,,,"H2","gr","Par2",,"Teseo e il Minotauro","iBdK",,,,,,8569
+8570,"a2021","zT","B","Fs",,,"12x30","klein","breit","Lwi","Gi","U",,,,,,"H2","gr","Par1",,"Kurtisane und Teehauskellner (nach Utamaro)","iBdK",,,,"Ul",,8570
+8571,"a2021","B",,,,,"21x30","klein","breit","Lwi",,"U","Sch",,,,,"H2","gr","Kr12d",,"stream of unconsciousness","iBdK",,,,,,8571
+8572,"a2021","Mt","B","Ks","Fs ",,"20x26","klein","breit","Lwi",,"U","Ca",,,,,"H2","gr","Kr12c",,"Capriccio","iBdK",,,,,,8572
+8573,"a2021","Mt","Dd","Fa","B",,"19x28","klein","breit","Lwi",,"UoG","So",,,,,"H4","cf","Kr8",,"ikepanisch","iBdK",,,,,,8573
+8574,"a2021","Mt","Dd","B","Fa",,"16x15","klein","hoch",,,"UnG","O","Pf",,,,"H3","gr","Kr8",,"il mio studio","iBdK",,,,,,8574
+8575,"a2021","Mt","Od","B","Ks",,"21x30","klein","breit","Gi",,"U",,,,,,"H2","gr","Kr7",,"M","iBdK",,,,,,8575
+8576,"a2021","G",,,,,"20x25","klein","breit",,,"U",,,,,,"H2","cf","Kr7",,"mit rotem Kreuz","iBdK",,,,,,8576
+8577,"a2021","B",,,,,"19x19","klein","quadratisch",,,"U","bb",,,,,"H2","gr","Kr7",,"leichtes Spiel","iBdK",,,,,,8577
+8578,"a2021","Fa",,,,,"21x30","klein","breit","Lwi",,"U",,,,,,"H3","v","Kr6, Kr8",,"Wirrpool (thesaurus Rex)","iBdK",,,,,,8578
+8579,"a2021","zT","Dd","B",,,"21x30","klein","breit",,,"UnG","O",,,,,"H2","gr","Kr6","zwi","Öffnung","iBdK",,,,,,8579
+8580,"a2021","G",,,,,"23x23","klein","quadratisch",,,"UoG","bb",,,,,"H3","b","Kr9",,"Uranus über Venus und Saturn","iBdK",,,,,,8580
+8581,"a2021","Mt","Dd","B","Ve",,"10x15","klein","breit",,,"U",,,,,,"H3","cf","Kr6",,"tapis pour tipi","iBdK",,,,,"Rok",8581
+8582,"a2021","Mt","Dd","Fa","B",,"21x21","klein","quadratisch","Lwi",,"UnG","Ri","P","Sch",,,"H2","cf","Kr5b",,"Strong Bond","iBdK",,,,,"Zk",8582
+8583,"a2021","zT","Dd","Fa",,,"30x21","klein","hoch","Lwi",,"U",,,,,,"H3","cf","Kr5a",,"stylish figure with tablet","iBdK",,,,,,8583
+8584,"a2021","B",,,,,"21x30","klein","breit",,,"UoG","A","Sch",,,,"H1","bw","Kr5d",,"sdraiato","iBdK",,,,,,8584
+8585,"a2021","B",,,,,"21x15","klein","hoch",,,"U","Sch",,,,,"H2","bw","Kr3","zwi","T-time","iBdK",,,,,,8585
+8586,"a2021","Fa",,,,,"11x15","klein","breit",,,"UoG","Pf",,,,,"H3","cf","Kr2a","wid","Wildwuchs","iBdK",,,,,,8586
+8587,"a2021","zT","Fa","B",,,"11x14","klein","breit",,,"UoG","Pf","bb",,,,"H2","cf","Kr2a",,"was so alles wächst","iBdK",,,,,,8587
+8588,"a2021","zT","Dd","Fa",,,"13x20","klein","breit",,,"UnG","FigR","bb",,,,"H4","g","Kr5a, Kr1",,"Wegnetz","iBdK",,,,,,8588
+8589,"a2021","Fa",,,,,"15x21","klein","breit","krS",,"U",,,,,,"H2","cf","ParPK",,"das Spiel artet aus (nach Paul Klee)","iBdK",,,,,,8589
+8590,"a2021","zT","B","Fa",,,"13x18","klein","breit",,,"Gs","P",,,,,"H2","v","ParPK","zwi","Gewalt (nach Paul Klee)","iBdK",,,,,,8590
+8591,"a2021","zT","Fa","B",,,"15x21","klein","breit","krS",,"U",,,,,,"H2","cf","ParPK","waa","Spiele verschiedener Art (nach Paul Klee)","iBdK",,,,,,8591
+8592,"a2021","B",,,,,"19x23","klein","breit",,,"UoG","FigG",,,,,"H2","gr","ParPK","zwi","Spiele verschiedener Art (nach Paul Klee)","iBdK",,,,,,8592
+8593,"a2021","G",,,,,"21x28","klein","breit",,,"UoG","Fk",,,,,"H3","cf",,,"Farbkörper","iBdK",,,,,,8593
+8594,"a2021","G",,,,,"20x28","klein","breit",,,"UoG","Fk",,,,,"H3","cf",,,"Farbkörper","iBdK",,,,,,8594
+8595,"a2021","G",,,,,"20x25","klein","breit",,,"UoG","Fk",,,,,"H3","b",,,"Farbkörper","iBdK",,,,,,8595
+8596,"a2021","B",,,,,"15x21","klein","breit",,,"Gs","FigR","Sta","BiB",,,"H2","gr",,,"Figur, Objekte, Raum","iBdK",,,,,,8596
+8597,"a2021","B",,,,,"16x22","klein","breit",,,"Gs","Ca","Z",,,,"H2","b","Par7a",,"Tragisches Duett (nach Maria Lassnig)","iBdK",,,,,,8597
+8598,"a2021","Fko","T",,,,"24x19","klein","hoch",,,"U",,,,,,"H2","gr","Par7a",,"ungebetene Gäste bei Frances Richardson","iBdK",,,,,,8598
+8599,"a2021","Fa",,,,,"15x21","klein","breit",,,"U",,,,,,"H4","cf","Par7a",,"vitrail pour Jean Tinguely","iBdK",,,,,,8599
+8600,"a2021","zT","B","T",,,"19x20","klein","breit","Lst",,"Gs","AP",,,,,"H2","gr","Par3b",,"Ercole ubriaco","iBdK",,,,,,8600
+8601,"a2021","Fa",,,,,"11x13","klein","breit",,,"U",,,,,,"H3","cf","Par7a","wid","kurz bei Asger Jorn vorbeigeschaut","iBdK",,,,,,8601
+8602,"a2021","zT","Dd","B",,,"21x27","klein","breit",,,"UnG","Ri",,,,,"H2","cf","Par3b",,"über den Tellerrand geschaut","iBdK",,,,,,8602
+8603,"a2021","Ks",,,,,"20x28","klein","breit",,,"O","Tie",,,,,"H1","cf","Par3b",,"Mittelalterliches","iBdK",,,,,,8603
+8604,"a2021","B",,,,,"30x21","klein","hoch",,,"Gs","P","Tie",,,,"H2","gr","Par3b",,"S. Michele Arcangelo che abbatte il demonio (secondo Alessandro Algardi)","iBdK",,,,,,8604
+8605,"a2021","B",,,,,"30x21","klein","hoch",,,"U","BiB",,,,,"H2","gr","Par4",,"Saal 22 (17. Jh.)","iBdK",,,,,"Rk",8605
+8606,"a2021","zT","Fa","G",,,"21x27","klein","breit","sM",,"Gs","Fk",,,,,"H3","cf",,,"6 Farbkörper","iBdK",,,,,,8606
+8607,"a2021","B","Ve",,,,"21x27","klein","breit",,,"U",,,,,,"H1","gr","Kr12a","wid","sharp suggestion","iBdK",,,,,,8607
+8608,"a2021","zT","Dd","B",,,"21x30","klein","breit",,,"UnG","O",,,,,"H2","gr","Kr6","zwi","clefs pour Klee","iBdK",,,,,,8608
+8609,"a2021","B",,,,,"25x13","klein","hoch",,,"UnG","mF","O",,,,"H2","gr","Par3a",,"San Sebastiano alla colonna (secondo Antonio di Bartolomeo Maineri)","iBdK",,,,,,8609
+8610,"a2021","zT","Dd","T",,,"18x29","klein","breit",,,"Gs","ZM","O",,,,"H3","bw","Par7a",,"Maler und Modell (nach Picasso)","iBdK",,,,,,8610
+8611,"a2021","Mt","Dd","Fa","T",,"20x20","klein","quadratisch",,,"Gs","bb","O","Ar",,,"H3","cf","Par9a",,"Audienz (JS bei JS)","iBdK",,,,,,8611
+8612,"a2021","Fa",,,,,"21x15","klein","hoch",,,"Gs","Fk","So",,,,"H2","cf",,,"Farbkörper","iBdK",,,,,"Zk",8612
+8613,"a2021","zT","Dd","Fa",,,"21x24","klein","breit",,,"UnG","O",,,,,"H2","cf","Kr1",,"Dokumentation","iBdK",,,,,"dK",8613
+8614,"a2021","B",,,,,"35x19","mittel","hoch",,,"U",,,,,,"H3","gr","Kr1",,"Levitation","iBdK",,,,,,8614
+8615,"a2021","zT","B","G",,,"21x32","mittel","breit",,,"UoG","L","Tie",,,,"H2","gr","Kr2b",,"flugs","iBdK",,,,,"hK",8615
+8616,"a2021","B",,,,,"35x19","mittel","hoch",,,"Gs","mF",,,,,"H2","gr","Kr5a",,"Denkmal für einen lachenden Greis","iBdK",,,,,"vK",8616
+8617,"a2021","B",,,,,"22x28","klein","breit",,,"U",,,,,,"H2","gr","Kr6","waa","composizione astratta (pizza picchiata)","iBdK",,,,,"dK",8617
+8618,"a2021","Mt","Dd","B","T","C","19x29","klein","breit",,,"UnG","O","Sch",,,,"H2","gr","Kr6",,"Speicherling (Kurt Marti)","iBdK",,,,,"Zk",8618
+8619,"a2021","Mt","Dd","B","Pk",,"11x15","klein","breit",,,"UnG","Ken",,,,,"H2","cf","Kr9, Kr7",,"my own private pentagon","iBdK",,,,,,8619
+8620,"a2021","zT","Ko","Pk",,,"19x35","mittel","breit",,,"U","Sch",,,,,"H3","cf","Kr8","sko","gestrandet","iBdK",,,,,,8620
+8621,"a2021","B",,,,,"15x30","klein","breit",,,"U",,,,,,"H3","bw","Kr8",,"geballte Unentschlossenheit","iBdK",,,,,,8621
+8622,"a2021","B",,,,,"18x26","klein","breit",,,"U","Sch",,,,,"H2","bw","Par7a, Kr11","was","aus dem Skizzenbuch eines Surrealisten","iBdK",,,,,,8622
+8623,"a2021","Fa",,,,,"15x21","klein","breit",,,"U",,,,,,"H3","v","Kr12a",,"bin mir ins Netz gegangen","iBdK",,,,,,8623
+8624,"a2021","zT","Fs","B",,,"19x35","mittel","breit","Lst",,"UoG","Tie",,,,,"H3","gr","Kr2b",,"Vogel, stark stachelnd","iBdK",,,,,,8624
+8625,"a2021","zT","B","T",,,"19x27","klein","breit",,,"UnG","A",,,,,"H3","gr","Kr7",,"Kreuz","iBdK",,,,,,8625
+8626,"a2021","zT","B","T",,,"25x18","klein","hoch",,,"Gs","A",,,,,"H2","gr",,,"männlicher Akt","iBdK",,,,,,8626
+8627,"a2021","B",,,,,"18x25","klein","breit",,,"Gs","A",,,,,"H2","gr",,,,"iBdK",,,,,,8627
+8628,"a2021","B",,,,,"18x25","klein","breit",,,"Gs","A",,,,,"H2","gr",,,"Mann, liegend","iBdK",,,,,,8628
+8629,"a2021","zT","B","Fa",,,"18x25","klein","breit",,,"Gs","A","Sch",,,,"H2","gr",,,"gehen oder bleiben","iBdK",,,,,,8629
+8630,"a2021","zT","B","T",,,"18x25","klein","breit",,,"Gs","A","Sch",,,,"H3","gr",,,,"iBdK",,,,,,8630
+8631,"a2021","B",,,,,"21x28","klein","breit",,,"Gs","A","Sch",,,,"H1","gr",,,,"iBdK",,,,,,8631
+8632,"a2021","zT","B","T",,,"18x32","klein","breit",,,"Gs","A",,,,,"H2","gr",,,"männlicher Akt","iBdK",,,,,,8632
+8633,"a2021","B",,,,,"33x15","klein","hoch",,,"Gs","A",,,,,"H2","gr",,,,"iBdK",,,,,,8633
+8634,"a2021","zT","B","T",,,"35x19","mittel","hoch","Lst",,"UnG","A",,,,,"H3","gr",,,,"iBdK",,,,,,8634
+8635,"a2021","B",,,,,"21x15","klein","hoch",,,"UnG","A",,,,,"H2","gr",,,"männlicher Halbakt","iBdK",,,,,,8635
+8636,"a2021","zT","B","T",,,"23x15","klein","hoch",,,"Gs","Ri",,,,,"H1","bw",,,,"iBdK",,,,,,8636
+8637,"a2021","zT","B","T",,,"15x20","klein","breit",,,"Gs","A",,,,,"H2","gr",,,,"iBdK",,,,,,8637
+8638,"a2021","zT","B","T",,,"15x20","klein","breit",,,"Gs","A",,,,,"H2","gr",,,,"iBdK",,,,,,8638
+8639,"a2021","B",,,,,"17x23","klein","breit",,,"Gs","A",,,,,"H3","bw",,,,"iBdK",,,,,,8639
+8640,"a2021","B",,,,,"15x21","klein","breit",,,"Gs","A",,,,,"H2","gr",,,,"iBdK",,,,,,8640
+8641,"a2021","zT","B","T",,,"21x29","klein","breit",,,"Gs","A",,,,,"H2","gr",,,"Schauspieler","iBdK",,,,,,8641
+8642,"a2021","B",,,,,"20x25","klein","breit","Lst",,"UnG","A",,,,,"H2","gr",,,,"iBdK",,,,,,8642
+8643,"a2021","zT","B","Fa",,,"21x30","klein","breit",,,"Gs","O",,,,,"Hs","gr","Kr6",,"happy skating","iBdK",,,,,,8643
+8644,"a2021","zT","Dd","T",,,"19x23","klein","breit",,,"UnG","ZM",,,,,"H2","gr",,,"Modell, Zeichner","iBdK",,,,,,8644
+8645,"a2021","zT","B","T",,,"21x28","klein","breit",,,"Gs","A","Sch",,,,"H2","bw",,,,"iBdK",,,,,,8645
+8646,"a2021","B",,,,,"30x18","klein","hoch",,,"Gs","A","O",,,,"H2","bw",,,"Fahnenschwingerin","iBdK",,,,,,8646
+8647,"a2018","Mt","B","Fa","Aq",,"20x21","klein","breit","ovÖ",,"Gs","ZM","Sch","Ca",,,"H2","cf",,,"RONDO CAPRICCIOSO","iBdK",,,,,"ROk",8647
+8648,"a2021","B",,,,,"21x30","klein","breit",,,"Gs","KiA","Ar","O",,,"H3","gr",,,"Bildhaueratelier","iBdK",,,,,,8648
+8649,"a2021","G",,,,,"12x17","klein","breit",,,"UoG","O","Sta",,,,"H3","cf",,,"verwüstetes Stillleben","iBdK",,,,,,8649
+8650,"a2017","G",,,,,"21x30","klein","breit",,,"UnG","Ar",,,,,"H4","cf",,,"Atelier (Inspirationsphase)","iBdK",,,,,,8650
+8651,"a2021","zT","Dd","B",,,"11x15","klein","breit","Lwi",,"Gs","ZM",,,,,"H2","bw","ParPP",,"Maler und Modell (nach Picasso)","iBdK",,,,,,8651
+8652,"a2021","zT","Dd","B",,,"11x15","klein","breit","Lst",,"UnG","ZM",,,,,"H2","bw","ParPP","jun","Maler und Modell (nach Picasso)","iBdK",,,,,,8652
+8653,"a2020","zT","Dd","Fa",,,"30x21","klein","hoch",,,"UnG","mF",,,,,"H2","cf","ParPC",,"Le jardinier Vallier (d'après Cézanne)","iBdK",,,,,"vK",8653
+8654,"a2021","B",,,,,"15x21","klein","breit",,,"UoG","FigG",,,,,"H2","gr","Par7a",,"kleine Hommage an Daniel de Quervain","iBdK",,,,,,8654
+8655,"a2021","B",,,,,"15x21","klein","breit","Lwi",,"UoG","mF",,,,,"H2","gr","Par7a",,"kleine Hommage an Daniel de Quervain","iBdK",,,,,,8655
+8656,"a2021","Fs",,,,,"20x26","klein","breit","ovÖ",,"UoG","Tie",,,,,"H2","b","Par7a",,"Brestin am Arbeitstisch (nach Kaspar Fischer)","iBdK",,,,,"ROk",8656
+8657,"a2021","Mt","Dd","Ks","B",,"20x20","klein","quadratisch",,,"UnG","Tie","Sch",,,,"H3","gr","Par8b",,"Adieu au language (d'après JLG)","iBdK",,,,,,8657
+8658,"a2021","T",,,,,"19x30","klein","breit",,,"U",,,,,,"H3","bw","Kr1",,"kühner Wurf","iBdK",,,,,,8658
+8659,"a2021","Mt","Fs","B","Fa",,"21x21","klein","quadratisch","ovÖ",,"U",,,,,,"H2","gr","Kr7, Kr1",,"zirkeln","iBdK",,,,,"ROk",8659
+8660,"a2021","Mt","B","Fa","Fs",,"19x30","klein","breit",,,"UnG","Pf",,,,,"H3","cf","Kr2a",,"Wildwuchs im Gletschergarten","iBdK",,,,,,8660
+8661,"a2021","zT","G","Fa",,,"14x14","klein","quadratisch","Ul",,"UoG",,,,,,"H3","cf","Kr2a",,"Keimling","iBdK",,,,,,8661
+8662,"a2021","Mt","B","T","Fs",,"30x21","klein","hoch",,,"U","Sch","Ca",,,,"H3","gr","Kr12d, Kr3",,"anagrammatischer Vierklang","iBdK",,,,,,8662
+8663,"a2021","zT","B","T",,,"30x19","klein","hoch",,,"U","Sch",,,,,"H3","gr","Kr3",,"Abhang","iBdK",,,,,,8663
+8664,"a2020","Fa",,,,,"11x17","klein","breit",,,"UoG","P","Pf",,,,"H4","cf","Kr4","kre","Eingang","iBdK",,,,,,8664
+8665,"a2021","B",,,,,"21x30","klein","breit","Lwi",,"U",,,,,,"H3","bw","Kr4",,"5 Wolken","iBdK",,,,,,8665
+8666,"a2021","zT","B","T",,,"10x19","klein","breit",,,"UoG","O",,,,,"H3","gr","Kr5b, Kr6",,"film noir","iBdK",,,,,,8666
+8667,"a2021","zT","T","B",,,"16x11","klein","hoch",,,"UoG","P",,,,,"H3","gr","Kr5b",,"zwei Sitzende","iBdK",,,,,,8667
+8668,"a2021","zT","B","T",,,"29x20","klein","hoch","Lst",,"UnG","A",,,,,"H2","gr","Kr5d",,"verzworglet","iBdK",,,,,,8668
+8669,"a2021","zT","B","Fs",,,"25x21","klein","hoch","Ul",,"UnG","A","P","Ca",,,"H2","gr","Kr5d",,"Capriccio","iBdK",,,,,,8669
+8670,"a2021","zT","Ko","Od",,,"27x18","klein","hoch","Ul",,"Gs","Ri","Sch",,,,"H2","gr","Kr5e","zwi","5 Köpfe","iBdK",,,,"Od auf Blattrückseite",,8670
+8671,"a2021","zT","Fa","B",,,"12x30","klein","breit","Lst",,"UnG","O",,,,,"H2","cf","Kr6",,"Mässmöggemaarsch","iBdK",,,,,,8671
+8672,"a2021","zT","G","B",,,"21x30","klein","breit",,,"U",,,,,,"H4","cf","Kr6",,"Bilderhaufen","iBdK",,,,,,8672
+8673,"a2021","zT","Dd","B",,,"21x30","klein","breit",,,"UnG","O",,,,,"H3","gr","Kr6",,"Speicherling (Kurt Marti)","iBdK",,,,,"Zk",8673
+8674,"a2021","B",,,,,"19x24","klein","breit",,,"UoG","O","BiB",,,,"H2","gr","Kr6",,"acht Bilder","iBdK",,,,,,8674
+8675,"a2021","Mt","Dd","B","G",,"21x27","klein","breit",,,"UoG","O","BiB",,,,"H4","gr","Kr6",,"acht dunkle Bilder","iBdK",,,,,,8675
+8676,"a2021","Mt","Dd","B","T","Fs","21x26","klein","breit",,,"UnG","O","St",,,,"H4","gr","Kr11, Kr6",,"Besuch zur falschen Zeit","iBdK",,,,,,8676
+8677,"a2021","zT","B","T",,,"13x17","klein","breit","Lst",,"U",,,,,,"H3","bw","Kr6",,"UfO (23-faltig)","iBdK",,,,,,8677
+8678,"a2021","Fa",,,,,"14x20","klein","breit","Lwi",,"UnG","bb",,,,,"H3","m","Kr6",,"kleine Improvisation mit Black Box","iBdK",,,,,,8678
+8679,"a2021","zT","G","Fa",,,"21x24","klein","breit",,,"UoG","O",,,,,"H4","m","Kr6",,"habits rouges","iBdK",,,,,,8679
+8680,"a2021","G",,,,,"19x14","klein","hoch",,,"UoG","O",,,,,"H4","m","Kr6",,"dunkles Bild, eindringlich gerahmt","iBdK",,,,,,8680
+8681,"a2021","G",,,,,"21x12","klein","hoch",,,"U","Sta",,,,,"H3","cf","Kr6",,"4 Stelen","iBdK",,,,,"vK",8681
+8682,"a2021","B",,,,,"20x30","klein","breit",,,"U",,,,,,"H2","gr","Kr12c, Kr7","jun, zwi","ASMD, aufgesockelt","iBdK",,,,,,8682
+8683,"a2021","G",,,,,"14x20","klein","breit","Schla",,"UoG","bb",,,,,"H4","cf","Kr7",,"mit dem schwarzen Quadrat","iBdK",,,,,,8683
+8684,"a2021","zT","G","Fs",,,"13x13","klein","quadratisch","Ul",,"U","Sch",,,,,"H2","b","Kr7",,"X","iBdK",,,,,"ddK",8684
+8685,"a2021","G",,,,,"13x13","klein","quadratisch","Lwi",,"U",,,,,,"H4","cf","Kr7",,"die Ringe der Melma","iBdK",,,,,"Rok",8685
+8686,"a2021","zT","B","T",,,"20x24","klein","breit",,,"UnG","A",,,,,"H3","gr","Kr7","ste","Zeichen","iBdK",,,,,"Zk",8686
+8687,"a2020","B","Fal",,,,"15x20","klein","breit","Lwi",,"U","Sch",,,,,"H2","gr","Kr7",,"Fahrplan","iBdK",,,,,,8687
+8688,"a2021","B",,,,,"30x21","klein","hoch","Lwi",,"U","Sch",,,,,"H3","bw","Kr7",,"unter dem Deckel","iBdK",,,,,,8688
+8689,"a2021","Mt","Fs","B","G",,"19x27","klein","breit",,,"UnG","A",,,,,"H3","gr","Kr8","sko","Angst","iBdK",,,,,,8689
+8690,"a2021","Mt","Dd","Fa","B","Pk","15x21","klein","breit",,,"U","Sch",,,,,"H2","cf","Kr8",,"désirée","iBdK",,,,,,8690
+8691,"a2020","Mt","Dd","T","B",,"21x30","klein","breit","Lwi",,"U",,,,,,"H4","gr","Kr8","sko","Zorn in Fesseln","iBdK",,,,,,8691
+8692,"a2020","B",,,,,"21x30","klein","breit","Lwi",,"U",,,,,,"H3","bw","Kr8","fis","dunkel umsponnen","iBdK",,,,,,8692
+8693,"a2021","G",,,,,"14x18","klein","breit","krS",,"U",,,,,,"H2","cf","Kr9","was","Uranus","iBdK",,,,,,8693
+8694,"a2021","B",,,,,"17x28","klein","breit",,,"U","Sch",,,,,"H2","b","Kr9",,"Sisyphos","iBdK",,,,,"dK",8694
+8695,"a2021","B",,,,,"20x24","klein","breit",,,"U",,,,,,"H2","gr","Kr9",,"Uranus - Venus","iBdK",,,,,,8695
+8696,"a2021","B",,,,,"21x23","klein","breit",,,"Gs","A","Pf","Mw",,,"H2","gr","Kr9",,"femme arbre","iBdK",,,,,"dK",8696
+8697,"a2021","Mt","Dd","Fa","Fs",,"21x30","klein","breit","Lwi",,"UnG","FigR","Sch",,,,"H2","gr","Kr10b","was","Atelier","iBdK",,,,,,8697
+8698,"a2021","Mt","Dd","B","Fa",,"21x27","klein","breit",,,"U","Sch",,,,,"H2","gr","Kr11",,"Vorspiel","iBdK",,,,,,8698
+8699,"a2021","Mt","Dd","B","Fa","Fs","21x30","klein","breit",,,"U","Sch",,,,,"H2","cf","Kr11",,"im Bretterhaus","iBdK",,,,,,8699
+8700,"a2021","Mt","Dd","B","Fs",,"21x30","klein","breit","Lst",,"UnG","Pf","Sch","Ar","Ca",,"H2","gr","Kr11",,"Flora wütet","iBdK",,,,,,8700
+8701,"a2021","B",,,,,"19x30","klein","breit","Lwi",,"U","bb",,,,,"H2","bw","Kr11",,"begriffsstutzige Zeichnung","iBdK",,,,,"hK",8701
+8702,"a2021","B",,,,,"15x20","klein","breit",,,"Gs","Mw","So","Ca",,,"H2","gr","Kr11",,"auf Augenhöhe","iBdK",,,,,,8702
+8703,"a2021","B",,,,,"29x21","klein","hoch","Lwi","Lst","U",,,,,,"H2","bw","Kr11",,"non sequitur","iBdK",,,,,,8703
+8704,"a2021","zT","B","Fs",,,"15x16","klein","breit","Ul",,"U","So","Ca",,,,"H2","gr","Kr11",,"junge Familie","iBdK",,,,,,8704
+8705,"a2021","B",,,,,"30x21","klein","hoch","Lst",,"U","bb","Sch","BiB",,"AbCo","H3","gr","Kr11","zwi, was","Abstract Comic","iBdK",,,,"8er Serie",,8705
+8706,"a2021","Mt","B","Ks","Od","C","30x21","klein","hoch",,,"U","Sch",,"BiB",,"AbCo","H2","cf","Kr11","zwi, was","Abstract Comic","iBdK",,,,"8er Serie",,8706
+8707,"a2021","B",,,,,"30x21","klein","hoch",,,"U","Sch",,"BiB",,"AbCo","H2","bw","Kr11","zwi, was","Abstract Comic","iBdK",,,,"8er Serie",,8707
+8708,"a2021","B",,,,,"30x21","klein","hoch","Lst",,"U",,,"BiB",,"AbCo","H2","gr","Kr11","zwi, was","Abstract Comic","iBdK",,,,"8er Serie",,8708
+8709,"a2021","Mt","Dd","Fs","T","Fal","30x21","klein","hoch",,,"U","Sch",,"BiB",,"AbCo","H2","bw","Kr11","zwi, was","Abstract Comic","iBdK",,,,"8er Serie",,8709
+8710,"a2021","B",,,,,"30x21","klein","hoch",,,"U",,,"BiB",,"AbCo","H3","gr","Kr11","zwi, was","Abstract Comic","iBdK",,,,"8er Serie",,8710
+8711,"a2021","B",,,,,"30x21","klein","hoch","Gi",,"U","Sch",,"BiB",,"AbCo","H2","gr","Kr11","zwi, was","Abstract Comic","iBdK",,,,"8er Serie",,8711
+8712,"a2021","B",,,,,"30x21","klein","hoch","Lst",,"U","bb",,"BiB",,"AbCo","H3","gr","Kr11","zwi, was","Abstract Comic","iBdK",,,,"8er Serie",,8712
+8713,"a2021","B",,,,,"19x25","klein","breit",,,"U","Sch",,,,,"H2","gr","Kr12e","jun","zu fünft","iBdK",,,,,,8713
+8714,"a2021","zT","Fs","B",,,"9x18","klein","breit","Lst",,"U",,,,,,"H3","b","Kr12b",,"zu fett orchestriert","iBdK",,,,,,8714
+8715,"a2021","zT","B","Lk",,,"19x30","klein","breit",,,"U",,,,,,"H2","bw","Kr12b",,"bridge over troubled water","iBdK",,,,,"hK",8715
+8716,"a2021","zT","B","C",,,"16x29","klein","breit","Lst",,"U","Sch",,,,,"H2","bw","Kr12c, Kr3","zwi","3 Bubbles","iBdK",,,,,,8716
+8717,"a2021","Mt","Dd","Od","Fs","C","21x28","klein","breit",,,"UnG","O",,,,,"H2","cf","Kr12c",,"Dreiklang mit Maske","iBdK",,,,,,8717
+8718,"a2021","Mt","B","Fa","G",,"20x25","klein","breit",,,"U",,,,,,"H2","cf","Kr12a",,"grau","iBdK",,,,,,8718
+8719,"a2021","Mt","T","G","C",,"21x30","klein","breit",,,"U",,,,,,"H5","gr","Kr12a",,"reflections","iBdK",,,,,,8719
+8720,"a2021","G",,,,,"30x37","mittel","breit",,,"U",,,,,,"H4","m","Kr12a",,"rote Wolken","iBdK",,,,,,8720
+8721,"a2021","B",,,,,"29x41","mittel","breit","Lwi","Lst","U",,,,,,"H2","gr","Kr11","was","non sequitur","iBdK",,,,,,8721
+8722,"a2021","Mt","G","B","Sc",,"27x27","mittel","quadratisch",,,"U",,,,,,"H2","cf","Kr11",,"Chiron im Steinbock Opposition Uranus","iBdK",,,,,,8722
+8723,"a2021","zT","G","Fa",,,"22x27","klein","breit",,,"UnG","Ar","Sch",,,,"H2","cf","Kr10a",,"Wand, Türe","iBdK",,,,,,8723
+8724,"a2021","G",,,,,"28x41","mittel","breit",,,"U","Sch",,,,,"H4","cf","Kr9",,"mythologische Szene, zur Erklärung bereit","iBdK",,,,,,8724
+8725,"a2021","Mt","T","B","Fs",,"30x42","mittel","breit","Lwi",,"U",,,,,,"H3","gr","Kr8","sko","drei unangenehme Fragen","iBdK",,,,,,8725
+8726,"a2020","zT","G","Ve",,,"28x42","mittel","breit",,,"U",,,,,,"H4","b","Kr8","sko","tristesse","iBdK",,,,,,8726
+8727,"a2021","B",,,,,"30x23","mittel","hoch","Lwi",,"U",,,,,,"H3","bw","Kr8",,"unter dem Deckel","iBdK",,,,,,8727
+8728,"a2021","G",,,,,"27x39","mittel","breit",,,"U","bb",,,,,"H4","cf","Kr7",,"schwarzes Quadrat, bunt begleitet","iBdK",,,,,,8728
+8729,"a2020","Mt","B","Fs","Ks",,"29x29","mittel","quadratisch",,,"U","Sch",,,,,"H3","gr","Kr6",,"bits and pieces held together","iBdK",,,,,,8729
+8730,"a2021","Mt","C","Od","Ac",,"31x31","mittel","quadratisch",,,"UnG","Tie","O",,,,"H4","cf","Kr6",,"graues Bild","iBdK",,,,,"Zk",8730
+8731,"a2021","zT","Fs","B",,,"15x35","klein","breit","Lwi",,"Gs","Ri",,,,,"H2","gr","Kr5e",,"Köpfchen","iBdK",,,,,,8731
+8732,"a2021","zT","T","B",,,"24x26","klein","breit",,,"Gs","P","L",,,,"H3","gr","Kr5e",,"Hünen in Dünen","iBdK",,,,,,8732
+8733,"a2021","Mt","Fs","B","T",,"18x33","klein","breit",,,"UnG","Kt",,,,,"H2","gr","Kr5g",,"Partitur","iBdK",,,,,,8733
+8734,"a2021","Mt","B","G","Fa",,"30x42","mittel","breit","Lwi",,"U",,,,,,"H3","cf","Par4",,"Grotteschi (nach Giovanni Battista Piranesi)","iBdK",,,,,,8734
+8735,"a2021","G",,,,,"12x30","klein","breit",,,"U","Sch",,,,,"H3","b","Kr3",,"tüfaT","iBdK",,,,,,8735
+8736,"a2021","G",,,,,"25x31","mittel","breit",,,"Gs","A","BiB",,,,"H4","cf",,,"Wann ist ein Mann ein Mann?!","iBdK",,,,,,8736
+8737,"a2021","zT","Fa","G",,,"23x32","mittel","breit",,,"U","Sch",,,,,"H3","cf",,,"Nicht gesagt (nach Marie Luise Laschnitz)","iBdK",,,,,"Zk",8737
+8738,"a2021","B",,,,,"19x35","mittel","breit",,,"Gs","A",,,,,"H2","gr",,,,"iBdK",,,,,"hK",8738
+8739,"a2021","zT","B","Fs",,,"30x40","mittel","breit","Lwi",,"UnG","FigG","A",,,,"H2","bw","ParVB",,"nach VB47.377.DR","iBdK",,,,,,8739
+8740,"a2021","G",,,,,"32x50","mittel","breit",,,"U",,,,,,"H3","cf","Par7a",,"Du côte de chez Per","iBdK",,,,,,8740
+8741,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O",,,"IN(II)","H2","gr",,,"INSOMNIA (II)","iBdK","res",,,"Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8741
+8742,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O","bb",,"IN(II)","H2","gr",,,"INSOMNIA (II)","iBdK","res",,,"Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8742
+8743,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O","bb",,"IN(II)","H2","gr",,,"INSOMNIA (II)","iBdK","res",,,"Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8743
+8744,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O",,,"IN(II)","H2","gr",,,"INSOMNIA (II)","iBdK","res",,,"Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8744
+8745,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O",,,"IN(II)","H2","gr",,,"INSOMNIA (II)","iBdK","res",,,"Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8745
+8746,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O","bb",,"IN(II)","H2","gr",,,"INSOMNIA (II)","iBdK","res",,,"Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8746
+8747,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O","bb",,"IN(II)","H2","gr",,,"INSOMNIA (II)","iBdK","res",,"sko","Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8747
+8748,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O",,,"IN(II)","H2","gr",,,"INSOMNIA (II)","iBdK","res",,,"Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8748
+8749,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O",,,"IN(II)","H2","gr",,,"INSOMNIA (II)","iBdK","res",,,"Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8749
+8750,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O",,,"IN(II)","H3","gr",,,"INSOMNIA (II)","iBdK","res",,,"Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8750
+8751,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O","bb",,"IN(II)","H2","gr",,,"INSOMNIA (II)","iBdK","res",,"sko","Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8751
+8752,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O",,,"IN(II)","H2","gr",,,"INSOMNIA (II)","iBdK","res",,,"Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8752
+8753,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O","bb",,"IN(II)","H2","gr",,,"INSOMNIA (II)","iBdK","res",,,"Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8753
+8754,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O","bb",,"IN(II)","H2","gr",,,"INSOMNIA (II)","iBdK","res",,,"Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8754
+8755,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O",,,"IN(II)","H2","gr",,,"INSOMNIA (II)","iBdK","res",,,"Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8755
+8756,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O",,,"IN(II)","H2","gr",,,"INSOMNIA (II)","iBdK","res",,,"Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8756
+8757,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O",,,"IN(II)","H2","gr",,,"INSOMNIA (II)","iBdK","res",,,"Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8757
+8758,"a2021","zT","Fko","Fs",,,"21x30","klein","breit",,,"Gs","mF","O","bb",,"IN(II)","H2","gr",,,"INSOMNIA (II)","iBdK","res",,,"Fko: 1984, Fs auf Transparentpapier (Projektionen für dN): 2016",,8758
+8759,"a2021","B",,,,,"21x28","klein","breit","Lwi",,"U",,,,,,"H3","bw","Kr1",,"meine momentan letzte Zeichnung","iBdK",,,,,,8759
+8760,"a2021","B",,,,,"20x28","klein","breit",,,"UoG","BiB","O",,,,"H2","gr","Kr11",,"Bildinhalte","iBdK",,,,"Dreier-Serie",,8760
+8761,"a2021","B",,,,,"20x28","klein","breit",,,"UoG","BiB","O",,,,"H2","gr","Kr11",,"Bildinhalte","iBdK",,,,"Dreier-Serie",,8761
+8762,"a2021","B",,,,,"20x28","klein","breit",,,"UoG","BiB","O","bb",,,"H2","gr","Kr11",,"Bildinhalte","iBdK",,,,"Dreier-Serie",,8762
+8763,"a2020","Mt","C","B","Od",,"20x18","klein","hoch","Lst",,"UnG","P","Sch",,,"WG47","H3","cf","ParFV",,"Mutter und Kind (nach einer Komposition von Félix Vallotton)","iBdK",,,,,,8763
+8764,"a2020","zT","G","T",,,"17x18","klein","breit","Lst",,"UnG","mF",,,,"WG47","H4","cf","ParFV",,"frei nach einer Komposition von Félix Vallotton","iBdK",,,,,,8764
+8765,"a2021","G",,,,,"21x30","klein","breit",,,"UnG","L",,,,,"H3","c",,,"Abend","iBdK",,,,,,8765
+8766,"a2021","G",,,,,"10x16","klein","breit",,,"UoG","Fk","L",,,,"H4","cf",,,"crépuscule","iBdK",,,,,,8766
+8767,"a2021","G",,,,,"15x21","klein","breit",,,"UoG","St",,,,,"H4","cf",,,"verwüstetes Stillleben","iBdK",,,,,,8767
+8768,"a2021","zT","B","Fa",,,"24x17","klein","hoch",,,"U","Sch",,,,,"H2","cf","Kr3",,"je persiste et signe","iBdK",,,,,,8768
+8769,"a2021","zT","G","Fs",,,"20x9","klein","hoch",,,"U","Sch",,,,,"H2","cf","Kr3",,"Observatorium","iBdK",,,,,,8769
+8770,"a2021","Mt","Dd","G","Fa",,"28x20","klein","hoch",,,"Gs","Ri","Sch",,,,"H3","cf","Kr5e",,"Dame mit Hut","iBdK",,,,,,8770
+8771,"a2021","Mt","Fa","B","Ko","C","20x27","klein","breit",,,"UnG","Ri","Sch",,,,"H2","b","Kr11",,"vieldeutlich (nach Thesaurus Rex)","iBdK",,,,,,8771
+8772,"a2021","zT","C","B",,,"11x21","klein","breit","sCo",,"U","Sch",,,,,"H2","bw","Kr12a",,"Partitur","iBdK",,,,,,8772
+8773,"a2021","zT","Fa","G",,,"21x30","klein","breit","sM",,"UoG","Fk",,,,,"H2","cf",,,"6 Farbkörper, ergrauend","iBdK",,,,,,8773
+8774,"a2021","zT","B","Fa",,,"15x21","klein","breit",,,"Gs","A","Sch",,,,"H2","gr",,,,"iBdK",,,,,,8774
+8775,"a2021","zT","B","T",,,"17x30","klein","breit",,,"Gs","A",,,,,"H2","gr",,,,"iBdK",,,,,,8775
+8776,"a2021","zT","Fs","B",,,"18x20","klein","breit","Lst",,"UnG","A",,,,,"H2","gr",,,,"iBdK",,,,,"ddK",8776
+8777,"a2021","Fs",,,,,"21x20","klein","hoch",,,"Gs","A",,,,,"H2","gr",,"zwi",,"iBdK",,,,,,8777
+8778,"a2021","zT","B","T",,,"21x26","klein","breit",,,"Gs","A",,,,,"H2","gr",,,,"iBdK",,,,,,8778
+8779,"a2021","B",,,,,"21x21","klein","quadratisch",,,"Gs","A","So",,,,"H2","gr",,,,"iBdK",,,,,,8779
+8780,"a2021","zT","Fs","B",,,"30x21","klein","hoch","Gi","Lwi","Gs","A",,,,,"H2","gr",,,,"iBdK",,,,,,8780
+8781,"a2021","B",,,,,"21x30","klein","breit",,,"Gs","A","P",,,,"H2","gr",,,,"iBdK",,,,,,8781
+8782,"a2021","zT","Fa","T",,,"26x18","klein","hoch",,,"Gs","A",,,,,"H2","gr",,,,"iBdK",,,,,,8782
+8783,"a2021","zT","B","T",,,"30x21","klein","hoch",,,"Gs","A",,,,,"H3","gr",,,,"iBdK",,,,,,8783
+8784,"a2021","zT","Ks","Fa",,,"30x21","klein","hoch",,,"Gs","A",,,,,"H2","cf",,,,"iBdK",,,,,,8784
+8785,"a2021","T",,,,,"29x20","klein","hoch",,,"UoG","A","Sta",,,,"H4","gr",,,,"iBdK",,,,,,8785
+8786,"a2021","Fa",,,,,"21x30","klein","breit",,,"U",,,,,,"H3","cf","Kr7","wid","Teich","iBdK",,,,,,8786
+8787,"a2021","zT","Dd","B",,,"13x22","klein","breit","Lwi",,"U","Sch",,,,,"H3","bw","Kr8",,"dazed and confused","iBdK",,,,,,8787
+8788,"a2021","B",,,,,"19x30","klein","breit","Lwi",,"U",,,,,,"H3","gr","Kr9",,"Proteus übt sich als Kellner","iBdK",,,,,,8788
+8789,"a2021","Mt","B","Fs","Fa",,"26x20","klein","hoch",,,"U","Ca",,,,,"H2","cf","Kr11",,"Harlekinade","iBdK",,,,,,8789
+8790,"a2021","zT","B","Fa",,,"21x30","klein","breit","Lwi",,"U",,,,,,"H2","gr","Kr11",,"rasante Offenheit","iBdK",,,,,,8790
+8791,"a2021","Mt","B","T","Fs","Fa","19x23","klein","breit","ovÖ",,"U",,,,,,"H2","gr","Kr11",,"zimlich viele Köche um den Brei","iBdK",,,,,"rok",8791
+8792,"a2021","zT","Dd","Fa",,,"19x23","klein","breit","Lwi","Mo","U",,,,,,"H4","gr","Kr12b",,"dialogue de sourds","iBdK",,,,,,8792
+8793,"a2021","G",,,,,"20x26","klein","breit",,,"U",,,,,,"H3","g","Kr4",,"Wiesennebel","iBdK",,,,,,8793
+8794,"a2021","Mt","T","B","Fa",,"18x25","klein","breit","Gi",,"U",,,,,,"H2","cf","Kr7",,"gebrochener Kreis","iBdK",,,,,,8794
+8795,"a2021",,,,,,,"klein","breit",,,,,,,,,,,,,,"iBdK",,,,,,8795
+8796,"a2021","G",,,,,"26x40","mittel","breit",,,"U","Sch",,,,,"H3","cf","Par7a",,"Der Pelzsessel","iBdK",,,,,,8796
+8797,"a2021","G",,,,,"27x35","mittel","breit",,,"U","BiB",,,,,"H4","cf","Par7a",,"rosa Graubner","iBdK",,,,,"Zk",8797
+8798,"a2021","OP",,,,,"25x41","mittel","breit","Schla",,"U","BiB",,,,,"H3","cf",,,"selva, tela branco","iBdK",,,,,,8798
+8799,"a2021","Mt","Kh","C","Kl",,"34x42","mittel","breit",,,"Gs","St","F","O","Ti","WG47","H4","gr","ParFV",,"Cinq gros piments rouges sur une table laqué blanc (d'après Félix Vallotton)","iBdK",,,,,,8799
+8800,"a2021","Mt","G","Fko","Fa","C","28x23","klein","hoch",,,"Gs","mF",,,,,"H4","g","ParPC",,"Der Gärtner Vallier (nach Cézanne)","iBdK",,,,,,8800
+8801,"a2021","G",,,,,"42x56","mittel","breit",,,"U",,,,,,"H3","cf","Par7a",,"Joan Mitchell im Freien","iBdK",,,,,,8801
+8802,"a2021","G",,,,,"22x42","mittel","breit",,,"UoG","Fk",,,,,"H3","cf",,,"Chemp","iBdK",,,,,,8802
+8803,"a2021","zT","R","G",,,"36x35","mittel","hoch",,,"Gs","L",,,,,"H3","gr",,,,"iBdK",,,,,,8803
+8804,"a2021","G",,,,,"28x39","mittel","breit",,,"UoG","Sta",,,,,"H4","cf",,,"verwüstetes Stillleben","iBdK",,,,,,8804
+8805,"a2021","G",,,,,"29x34","mittel","breit",,,"Gs","bb",,,,,"H4","cf",,,"verwüstetes Stillleben","iBdK",,,,,,8805
+8806,"a2021","Fa",,,,,"28x40","mittel","breit",,,"UoG","L",,,,,"H2","cf","Kr4",,"mit der lila Wolke","iBdK",,,,,,8806
+8807,"a2021","zT","G","B",,,"22x39","mittel","breit","krS","Gi","U",,,,,,"H2","cf","Kr7",,"Sundeck","iBdK",,,,,,8807
+8808,"a2021","G",,,,,"30x42","mittel","breit","krS",,"U",,,,,,"H3","b","Kr12a",,"the sound of tin","iBdK",,,,,,8808
+8809,"a2021","G",,,,,"32x48","mittel","breit","Gi",,"U","Sch","bb",,,,"H4","cf","Kr11",,"compliquons les choses!","iBdK",,,,,,8809
+8810,"a2021","zT","G","Fa",,,"27x33","mittel","breit",,,"U",,,,,,"H4","cf","Kr6, Kr7",,"Glasperlenspiel","iBdK",,,,,,8810
+8811,"a2017","G",,,,,"25x32","mittel","breit",,,"U",,,,,,"H4","g","Kr12b",,"das Fenster","iBdK",,,,,,8811
+8812,"a2021","G",,,,,"16x41","mittel","breit",,,"UnG","Sch","Tie",,,,"H4","cf","Kr3, Kr2b",,"weird tag, dead bird","iBdK",,,,,,8812
+8813,"a2021","zT","G","Fa",,,"21x28","klein","breit",,,"UoG","O",,,,,"H3","g","Kr6, Kr12b",,"Gestell","iBdK",,,,,,8813
+8814,"a2021","G",,,,,"25x31","mittel","breit",,,"U","BiB",,,,,"H4","gr","Kr6","ste","leere Leinwand (Altar)","iBdK",,,,,"Zk",8814
+8815,"a2021","G",,,,,"29x41","mittel","breit",,,"U","BiB",,,,,"H4","g","Kr6",,"mit dem roten Bild","iBdK",,,,,,8815
+8816,"a2021","zT","G","B",,,"34x41","mittel","breit","Lst",,"U","BiB",,,,,"H3","cf","Kr8",,"esperanza","iBdK",,,,,"Zk",8816
+8817,"a2021","Mt","G","Fa","Sc",,"31x42","mittel","breit",,,"U",,,,,,"H2","y","Kr6",,"Preziosen","iBdK",,,,,"Vk",8817
+8818,"a2021","zT","R","G",,,"35x47","mittel","breit",,,"UoG","St","O",,,,"H4","gr","Kr6",,"dunkles Stillleben","iBdK",,,,,,8818
+8819,"a2021","zT","G","Fs",,,"24x31","mittel","breit",,,"Gs","Sta","Ar",,,,"H4","gr","Kr10a",,"Hochhäuser","iBdK",,,,,,8819
+8820,"a2004","B",,,,,"42x60","mittel","breit",,,"UoG","FigG",,,,,"H4","gr","Kr5c,Kr8",,"heftig bewegt","iBdK",,,,,,8820
+8821,"a2021","FoD",,,,,"18x94","mittel","breit",,,"Gs","O","Sb",,,,"H3","cf","Par4",,"I like museums, museums like me","iBdK","res",,,"Dreiergruppe, noch nicht FAP; vertikaler Abstand 20cm: 94x94cm",,8821
+8822,"a2021","FoD",,,,,"18x94","mittel","breit",,,"Gs","O","Sb",,,,"H3","cf","Par4,Par5",,"I like museums, museums like me","iBdK","res",,,"Dreiergruppe, noch nicht FAP; vertikaler Abstand 20cm: 94x94cm",,8822
+8823,"a2021","FoD",,,,,"18x94","mittel","breit",,,"Gs","O","Sb",,,,"H3","cf","Par4",,"I like museums, museums like me","iBdK","res",,,"Dreiergruppe, noch nicht FAP; vertikaler Abstand 20cm: 94x94cm",,8823
+8824,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,8824
+8825,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,8825
+8826,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8827,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8828,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8829,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8830,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8831,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8832,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8833,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8834,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8835,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8836,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8837,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8838,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8839,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8840,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8841,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8842,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8843,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8844,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8845,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8846,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8847,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8848,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8849,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8850,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8851,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8852,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8853,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8854,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8855,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8856,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8857,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8858,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8859,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8860,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8861,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8862,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8863,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8864,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8865,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8866,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8867,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8868,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8869,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8870,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8871,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8872,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8873,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8874,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8875,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8876,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8877,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8878,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8879,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8880,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8881,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8882,,,,,,,,,,,,,,,,,,,,,,,"iBdK",,,,,,
+8883,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8884,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8885,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8886,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8887,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8888,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8889,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8890,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8891,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8892,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8893,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8894,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8895,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8896,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8897,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8898,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8899,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8900,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8901,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8902,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8903,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8904,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8905,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8906,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8907,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8908,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8909,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8910,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8911,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8912,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
