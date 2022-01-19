@@ -63,3 +63,7 @@ encoding, `,` as delimiter, `"` as quotation and enabling
 * Create the virtualenv and install the requirements as described above
 * Run `python collect.py`
 * Feed back the converted images to the server: `scp -r images root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv`
+
+# Adding new filters
+
+* Add the new filter to `data/filters.csv` manually, and run `python collect.py` to update the count
