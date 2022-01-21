@@ -59,7 +59,7 @@ encoding, `,` as delimiter, `"` as quotation and enabling
 * Remove metadata files by `cd`-ing into the `IMPORT` folder and running `find . -name '.*_*' | xargs -d '\n' rm`
 * Rename the newly imported folders with increasing numbers
 * Crop and resize the images by running `./convert.sh`
-* Generate thumbnails by running `./thumb.sh`
+* Generate thumbnails by running `./thumbs.sh`
 * Create the virtualenv and install the requirements as described above
 * Run `python collect.py`
 * Feed back the converted images to the server: `scp -r images root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv`

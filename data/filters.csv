@@ -6,7 +6,7 @@ C,Form,Technik,Technik,Collage,,,114
 Cb,Form,Technik,Technik,Collagebuch,,,16
 Fa,Form,Technik,Technik,Farbstift,,,76
 Fs,Form,Technik,Technik,Filzstift,,,36
-Fo,Form,Technik,Technik,Fotografie,,,7
+Fo,Form,Technik,Technik,Fotografie,,,8
 G,Form,Technik,Technik,Gouache,,,897
 K,Form,Technik,Technik,Kohle,,,31
 Ks,Form,Technik,Technik,Kugelschreiber,,,25
@@ -27,12 +27,12 @@ zT,Form,mehrere Techniken,Technik,zwei Techniken,,,2507
 Mt,Form,mehrere Techniken,Technik,Mischtechnik (3 Techniken und mehr),,,1484
 H1,Form,Helligkeit,Helligkeit,hell,,,723
 H2,Form,Helligkeit,Helligkeit,eher hell,,,3248
-H3,Form,Helligkeit,Helligkeit,mittlere Helligkeit,,,2622
+H3,Form,Helligkeit,Helligkeit,mittlere Helligkeit,,,2623
 H4,Form,Helligkeit,Helligkeit,eher dunkel,,,1840
 H5,Form,Helligkeit,Helligkeit,dunkel,,,229
 bw,Form,Farbigkeit nach Dominanz,Farbigkeit,schwarzweiss,,,1195
 gr,Form,Farbigkeit nach Dominanz,Farbigkeit,grau,,,4432
-cf,Form,Farbigkeit nach Dominanz,Farbigkeit,vielfarbig,,,1783
+cf,Form,Farbigkeit nach Dominanz,Farbigkeit,vielfarbig,,,1784
 y,Form,Farbigkeit nach Dominanz,Farbigkeit,gelb,,,77
 g,Form,Farbigkeit nach Dominanz,Farbigkeit,grün,,,219
 c,Form,Farbigkeit nach Dominanz,Farbigkeit,blau,,,252
@@ -40,9 +40,9 @@ v,Form,Farbigkeit nach Dominanz,Farbigkeit,violett,,,149
 m,Form,Farbigkeit nach Dominanz,Farbigkeit,rot,,,103
 b,Form,Farbigkeit nach Dominanz,Farbigkeit,braun,,,408
 klein,Form,Format,Grösse,klein,,((grössere Zahl max. 30)),5879
-mittel,Form,Format,Grösse,mittel,,((grössere Zahl 31 - 90)),2700
+mittel,Form,Format,Grösse,mittel,,((grössere Zahl 31 - 90)),2701
 gross,Form,Format,Grösse,gross,,((grössere Zahl 91 und mehr)),105
-breit,Form,Ausrichtung,Ausrichtung,breit,,,7432
+breit,Form,Ausrichtung,Ausrichtung,breit,,,7433
 hoch,Form,Ausrichtung,Ausrichtung,hoch,,,1070
 quadratisch,Form,Ausrichtung,Ausrichtung,quadratisch,,,179
 Cb,Form,Darstellungsformen,Darstellungsformen,Collagebuch,,,16
@@ -61,7 +61,7 @@ Schü,Form,Darstellungsformen,Darstellungsformen,Schüttbilder,,,9
 sCo,Form,Darstellungsformen,Darstellungsformen,serielle Collage,,,34
 sM,Form,Darstellungsformen,Darstellungsformen,serielle Muster,,,46
 Ul,Form,Darstellungsformen,Darstellungsformen,Umrisslinie,,,176
-Gs,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Gegenständliches,,,2614
+Gs,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Gegenständliches,,,2615
 U,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches,,,3079
 UnG,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches neben Gegenständlichem,,,1327
 UoG,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches oder Gegenständliches,,,1628
@@ -95,7 +95,7 @@ ZM,Inhalt,Motive,Motiven,ZeichnerInnen/MalerInnen und Modell,,,227
 P,Inhalt,Motive,Motiven,Paare,,,567
 Ba,Inhalt,Motive,Motiven,Badende,,,102
 Ri,Inhalt,Motive,Motiven,"Porträts, Köpfe",,,229
-Sb,Inhalt,Motive,Motiven,Selbstbildnisse,,,174
+Sb,Inhalt,Motive,Motiven,Selbstbildnisse,,,175
 A,Inhalt,Motive,Motiven,Akt (nach Modell oder Vorstellung),,,1311
 AP,Inhalt,Motive,Motiven,Akt (Paraphrasen),,,609
 Kt,Inhalt,Motive,Motiven,Körperteile,,,140
@@ -110,7 +110,7 @@ Ar,Inhalt,Motive,Motiven,"Architektur, Intérieurs",,,311
 Ma,Inhalt,Motive,Motiven,Mauern,,,57
 At,Inhalt,Motive,Motiven,Ateliers,,,163
 St,Inhalt,Motive,Motiven,Stillleben,,,338
-O,Inhalt,Motive,Motiven,Objekte,"Sta, Vo",,1131
+O,Inhalt,Motive,Motiven,Objekte,"Sta, Vo",,1132
 Fk,Inhalt,Motive,Motiven,Farbkörper,,,33
 bb,Inhalt,Motive,Motiven,Black Box,,,210
 So,Inhalt,Motive,Motiven,Sockel,,,88
@@ -125,7 +125,7 @@ Ec,Inhalt,Motive,Motiven,Themenkreis Ecuador,,,34
 Par1,Inhalt,"Paraphrasen, Variationen",Paraphrasen,aussereuropäische Kunst ,,,128
 Par2,Inhalt,"Paraphrasen, Variationen",Paraphrasen, bis und mit griechisch-römischer Antike,,,125
 Par3a,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Malerei Frühmittelalter bis 15. Jh.,,,29
-Par4,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Malerei, Zeichnung 16.–18. Jh.",ParT,,135
+Par4,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Malerei, Zeichnung 16.–18. Jh.",ParT,,136
 Par5,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Malerei, Zeichnung 19. Jh.","ParJHF, ParPC",,150
 Par7a,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Malerei, Zeichnung 20. Jh. ","ParPK, ParME, ParGOK, ParEH, ParFV, ParRM, ParPP",,276
 Par3b,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Skulptur Mittelalter bis 18. Jh.,,,73
@@ -173,11 +173,11 @@ Kr12e,Inhalt,Projekt „Klee revisited“,Paraphrasen,Fünfklang,,,19
 1985-1999,Zeit,Chronologie,Jahr,1985–1999,,,0
 1979-1984,Zeit,Chronologie,Jahr,1979–1984,,,0
 1973-1978,Zeit,Chronologie,Jahr,1973–1978,,,0
-iBdK,Anderes,Standort,Standort,im Besitz des Künstlers,,,8236
+iBdK,Anderes,Standort,Standort,im Besitz des Künstlers,,,8237
 PB,Anderes,Standort,Status,Privatbesitz,,,281
 vers,Anderes,Standort,Status,verschollen,,,31
 vernichtet,Anderes,Standort,Status,vernichtet,,,10
-res,Anderes,Status,Status,reserviert,,,3113
+res,Anderes,Status,Status,reserviert,,,3114
 kR,Anderes,Status,Status,keine Reproduktion,,,0
 x,Anderes,Status,Status,schlechte Reproduktion,,,0
 .*,Anderes,Zusammenarbeit,Zus'arbeit,Zusammenarbeit,,,61
