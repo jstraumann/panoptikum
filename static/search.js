@@ -295,7 +295,7 @@ function werkSearchStart(e, from_page, random) {
         pswpGallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default,
           pswpItems, pswpOptions);
         pswpGallery.listen('imageLoadComplete', function (index, item) {
-          if (item.h < 1 || item.w < 1) {
+          //if (item.h < 1 || item.w < 1) {
             let img = new Image();
             img.onload = () => {
               item.w = img.width;
@@ -304,7 +304,7 @@ function werkSearchStart(e, from_page, random) {
               pswpGallery.updateSize(true);
             }
             img.src = item.src;
-          }
+          //}
         });
         pswpGallery.init();
         // pswpGallery.goTo(ix);
