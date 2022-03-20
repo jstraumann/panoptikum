@@ -191,7 +191,7 @@ function werkTitle(item) {
   if (item['Techniken'] !== null) {
     var itemarr = [];
     item['Techniken'].split(' ').forEach(function(t) {
-      getcode = techniques[f['Code']]
+      getcode = techniques[t.trim()]
       if (typeof getcode !== 'undefined') {
         if (getcode.toLowerCase().indexOf('technik') > 0) return;
         itemarr.push( getcode );
