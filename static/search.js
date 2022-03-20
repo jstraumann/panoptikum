@@ -118,6 +118,72 @@ function werkSearchCount() {
 
 }
 
+var techniques = {
+  'Ac': 'Acryl auf Papier',
+  'AcP': 'Acryl auf Pavatex',
+  'Aq': 'Aquarell',
+  'B': 'Bleistift, Grafitstift',
+  'Bst': 'Bostitchklammern',
+  'Bz': 'Beize',
+  'C': 'Collage, Assemblage',
+  'Con': 'Conté-Stift',
+  'Cy': 'Cyanotypie',
+  'Dd': 'Digitaldruck (ohne FAP)',
+  'Dp': 'Dispersion',
+  'Ecl': 'Eisenchlorid',
+  'Fa': 'Farbstift',
+  'Fä': 'Fäden',
+  'Fal': 'Falz im Papier',
+  'FAP': 'Fine Art Print',
+  'Ff': 'Farbfolie',
+  'Fko': 'Fotokopie',
+  'FoD': 'Fotografie (digital, kein FAP)',
+  'FoP': 'Fotografie (Polaroid)',
+  'Fs': 'Filzstift',
+  'G': 'Gouache',
+  'Gip': 'Gips',
+  'Hd': 'Hochdruck',
+  'Hpf': 'Hellraumprojektorfolie',
+  'Hs': 'Holzschnitt',
+  'K': 'Kohle',
+  'Kf': 'Körperfarbe',
+  'Kh': 'Kunstharzfarbe',
+  'Kl': 'Klebeband',
+  'Ko': 'Kohlepapier',
+  'Ks': 'Kugelschreiber',
+  'Ksp': 'Kunststoffplatte',
+  'Kuf': 'Kupferdruckfarbe',
+  'Ldf': 'Linoldruckfarbe',
+  'Le': 'Leim',
+  'Lese': 'Lettraset',
+  'Ls': 'Linolschnitt',
+  'Lg': 'Lithografie',
+  'Lk': 'Lithokreide',
+  'Mon': 'Monotypie',
+  'Mt': 'Mischtechnik (min. 3 Techniken)',
+  'Od': 'Offsetdruck',
+  'OGip': 'Ölfarbe auf Gips',
+  'Opl': 'Ölpastell, Wachsölkreiden',
+  'OP': 'Ölfarbe auf Pavatex',
+  'OL': 'Ölfarbe auf Leinwand',
+  'OPa': 'Ölfarbe auf Papier',
+  'Pfs': 'Pflanzensäfte',
+  'Pk': 'Pastellkreide',
+  'Pm': 'Pigmentmalerei',
+  'R': 'Radierung',
+  'Rd': 'Reliefdruck',
+  'S': 'Siebdruck',
+  'Sc': 'Schnitt',
+  'Spm': 'Spachtelmasse',
+  'Sto': 'Stoff',
+  'T': 'Tusche',
+  'Tin': 'Tinte',
+  'Tx': 'TippEx',
+  'Ve': 'Verletzung des Bildträgers',
+  'W': 'Wein',
+  'zT': 'zwei Techniken'
+}
+
 // Generates an image subtitle
 function werkTitle(item) {
 //  console.log("werkTitle "+item['Titel']);
@@ -125,10 +191,10 @@ function werkTitle(item) {
   if (item['Techniken'] !== null) {
     var itemarr = [];
     item['Techniken'].split(' ').forEach(function(t) {
-      getcode = cache.find(f => f['Code'] == t.trim())
+      getcode = techniques[f['Code']]
       if (typeof getcode !== 'undefined') {
-        if (getcode.Title.toLowerCase().indexOf('technik') > 0) return;
-        itemarr.push( getcode.Title );
+        if (getcode.toLowerCase().indexOf('technik') > 0) return;
+        itemarr.push( getcode );
       }
     })
     Techniken = itemarr.join(', ');
