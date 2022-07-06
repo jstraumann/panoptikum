@@ -21,6 +21,9 @@ def list_files(dir):
             }
     return r
 
+def flatten(xss):
+    return [x for xs in xss for x in xs]
+
 def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
     with open(os.path.join('data',filename), 'r') as csvin:
 
@@ -63,12 +66,12 @@ def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
                     r['Technik IV'],
                 ])
 
-                r['Motiven'] = ' '.join([
-                    r['Motiv I'],
-                    r['Motiv II'],
-                    r['Motiv III'],
-                    r['Motiv IV'],
-                ])
+                r['Motiven'] = ' '.join(flatten([
+                    r['Motiv I'].split(", "),
+                    r['Motiv II'].split(", "),
+                    r['Motiv III'].split(", "),
+                    r['Motiv IV'].split(", "),
+                ]))
 
                 r['Darstellungsformen'] = ' '.join([
                     r['Darstellungsform'],
