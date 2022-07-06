@@ -54,7 +54,7 @@ In production, something like:
 * Open the new `WERKVERZEICHNIS.xlsx` in Calc and save as CSV, using `UTF-8` as
 encoding, `,` as delimiter, `"` as quotation and enabling
 `quote all text cells`. This should produce a file `WERKVERZEICHNIS.csv`.
-* Download all existing images: `scp -r root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv/images .`
+* Download all existing images: `rsync -azP root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv/images/ ./images/`
 * Place any new image files in the `IMPORT` folder
 * Remove metadata files by `cd`-ing into the `IMPORT` folder and running `find . -name '.*_*' | xargs -d '\n' rm`
 * Rename the newly imported folders with increasing numbers
@@ -62,7 +62,7 @@ encoding, `,` as delimiter, `"` as quotation and enabling
 * Generate thumbnails by running `./thumbs.sh`
 * Create the virtualenv and install the requirements as described above
 * Run `python collect.py`
-* Feed back the converted images to the server: `scp -r images root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv`
+* Feed back the converted images to the server: `rsync -azP ./images/ root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv/images/`
 
 # Adding new filters
 
