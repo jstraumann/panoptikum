@@ -21,3 +21,5 @@ __pycache__
 env/
 shell/
 .vscode
+
+IMPORT/**/*.jpg
