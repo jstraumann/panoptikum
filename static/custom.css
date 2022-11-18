@@ -2,11 +2,7 @@ body {
   margin-top: 1em;
 }
 
-.pswp__button--arrow--left::before, .pswp__button--arrow--right::before {
-  background-color: #bbb !important;
-}
-
-.pswp__bg, .pswp__caption, .pswp__top-bar, body {
+body {
   background-color: #bbb !important;
   color: #000;
 }
@@ -211,12 +207,6 @@ button#back {
   font-size: 80%;
   background: #eee; color: #333;
   padding: 0.2em 0.4em;
-}
-
-.pswp__caption__center {
-  text-align: center;
-  max-width: 600px;
-  color: black;
 }
 
 #footer .row {

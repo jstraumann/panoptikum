@@ -8,12 +8,17 @@
     <title>-Bildarchiv JS-</title>
 
     <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css" media="screen">
-    <link rel="stylesheet" href="/static/lib/photoswipe/default-skin/default-skin.css" media="screen">
-    <link rel="stylesheet" href="/static/lib/photoswipe/photoswipe.css" media="screen">
     <link rel="stylesheet" href="/static/lib/font-awesome/4.7.0/font-awesome.min.css" media="screen">
     <link rel="stylesheet" href="/static/lib/clusterize.css" media="screen">
 
     <link rel="stylesheet" href="/static/custom.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/css/lightgallery.css">
+
+    <style>
+      .lg-backdrop { background-color: #bbb; }
+      .lg-counter, .lg-toolbar .lg-close, .lg-sub-html { color: black; }
+    </style>
 
     <!-- Matomo -->
     <script type="text/javascript">
@@ -245,54 +250,11 @@
       </div>
     </div>
 
-    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
-          <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-          </div>
-          <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <div class="pswp__counter" style="visibility: hidden"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                <!-- <button class="pswp__button pswp__button--share" title="Share"></button> -->
-                <!-- <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> -->
-                <!-- <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button> -->
-
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-          </div>
-        </div>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/lightgallery.min.js"></script>
 
     <script src="/static/lib/jquery-3.3.1.js"></script>
     <script src="/static/lib/clusterize.min.js"></script>
     <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
-    <script src="/static/lib/photoswipe/photoswipe.min.js"></script>
-    <script src="/static/lib/photoswipe/photoswipe-ui-default.min.js"></script>
 
     <script src="/static/search.js"></script>
     <script src="/static/site.js"></script>

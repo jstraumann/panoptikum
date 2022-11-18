@@ -329,61 +329,33 @@ function werkSearchStart(e, from_page, random) {
     if (data.length == PER_PAGE)
       $('button#more').show();
 
-    var pswpElement = $('.pswp')[0];
-    var pswpItems = [];
-    var pswpGallery = null;
     // var urlPrefix = "http://moirasia.datalets.ch/"
     // var urlPrefix = "http://new.luc.gr/pano/"
     var urlPrefix = "https://archiv.juergstraumann.ch/"
-
-    // Create item index
-    data.forEach(function(item, ix) {
-      // console.log(item.path);
-      // luc.gr-mod
-      pswpItems.push({
-        src: urlPrefix+item.path, w: 0, h: 0,
-        title: werkTitle(item)
-      });
-    });
 
     // Generate thumbnails
     data.forEach(function(item, ix) {
       $tgt.append(
 
-        '<div class="col-sm-2 item">' +
+        '<a href="' + urlPrefix + item.path + '" class="col-sm-2 item" data-sub-html="' + werkTitle(item) + '">' +
           '<img src="' + urlPrefix + item.thumb + '" />' +
           // '<small>' + item.Nummer + '</small>' +
-        '</div>'
+        '</a>'
 
-      ).find('.item:last').click(function() {
-
-         console.debug(item, ix);
-        var pswpOptions = { index: ix, loop: false };
-        pswpGallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default,
-          pswpItems, pswpOptions);
-        pswpGallery.listen('imageLoadComplete', function (index, item) {
-          if (item.h < 1 || item.w < 1) {
-            let img = new Image();
-            img.onload = () => {
-              item.w = img.width;
-              item.h = img.height;
-              pswpGallery.invalidateCurrItems();
-              pswpGallery.updateSize(true);
-            }
-            img.src = item.src;
-          }
-        });
-        pswpGallery.init();
-        // pswpGallery.goTo(ix);
-
-      });
-
+      );
     }); // -data each
+
+    const gallery = lightGallery($tgt.get(0), {
+      selector: '.item',
+      plugins: [],
+      licenseKey: '0000-0000-000-0000',
+      speed: 500,
+      download: false,
+    });
 
     // Automatically open if only one image or random mode
     if (data.length == 1 || random) {
-      $tgt.find('.item:last').click();
-      $('button#more').hide();
+      gallery.openGallery(0);
     }
 
   }).fail(function(jqxhr, textStatus, error) {
