@@ -335,14 +335,18 @@ function werkSearchStart(e, from_page, random) {
 
     // Generate thumbnails
     data.forEach(function(item, ix) {
-      $tgt.append(
 
-        '<a href="' + urlPrefix + item.path + '" class="col-sm-2 item" data-sub-html="' + werkTitle(item) + '">' +
-          '<img src="' + urlPrefix + item.thumb + '" />' +
-          // '<small>' + item.Nummer + '</small>' +
-        '</a>'
+      $link = $('<a>');
+      $link.attr('href', urlPrefix + item.path);
+      $link.addClass('col-sm-2 item');
+      $link.attr('data-sub-html', werkTitle(item));
 
-      );
+      $img = $('<img>');
+      $img.attr('src', urlPrefix + item.thumb);
+
+      $link.append($img);
+
+      $tgt.append($link);
     }); // -data each
 
     const gallery = lightGallery($tgt.get(0), {
