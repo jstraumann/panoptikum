@@ -1,5 +1,4 @@
-Projekt PANOPTIKUM
-==================
+# Projekt PANOPTIKUM
 
 This is a web application that converts CSV files to an API with search and filtering. It has been used to create a digital collection of artworks, but could be used for essentially any data that is described using a [Data Package](http://frictionlessdata.io/specs/data-package/#specification). Find out more on the [Open Knowledge Blog](https://blog.okfn.org/2019/05/09/panoptikum-exploring-new-ways-to-categorize-a-collection-of-various-unusual-and-unique-objects/).
 
@@ -7,7 +6,7 @@ Made with [Frictionless Data](https://frictionlessdata.io), [Flask](http://flask
 
 # Deployment
 
-1. Install pipenv
+1. Install pipenv: `python3 -m pip install pipenv`
 2. `pipenv --python 3`
 3. `pipenv shell`
 4. `pipenv sync`
@@ -51,19 +50,19 @@ In production, something like:
 
 # Adding new images
 
-* Open the new `WERKVERZEICHNIS.xlsx` in Calc and save as CSV, using `UTF-8` as
-encoding, `,` as delimiter, `"` as quotation and enabling
-`quote all text cells`. This should produce a file `WERKVERZEICHNIS.csv`.
-* Download all existing images: `rsync -azP root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv/images/ ./images/`
-* Place any new image files in the `IMPORT` folder
-* Remove metadata files by `cd`-ing into the `IMPORT` folder and running `find . -name '.*_*' | xargs -d '\n' rm`
-* Rename the newly imported folders with increasing numbers
-* Crop and resize the images by running `./convert.sh`
-* Generate thumbnails by running `./thumbs.sh`
-* Create the virtualenv and install the requirements as described above
-* Run `python collect.py`
-* Feed back the converted images to the server: `rsync -azP ./images/ root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv/images/`
+- Open the new `WERKVERZEICHNIS.xlsx` in Calc and save as CSV, using `UTF-8` as
+  encoding, `,` as delimiter, `"` as quotation and enabling
+  `quote all text cells`. This should produce a file `WERKVERZEICHNIS.csv`.
+- Download all existing images: `rsync -azP root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv/images/ ./images/`
+- Place any new image files in the `IMPORT` folder
+- Remove metadata files by `cd`-ing into the `IMPORT` folder and running `find . -name '.*_*' | xargs -d '\n' rm`
+- Rename the newly imported folders with increasing numbers
+- Crop and resize the images by running `./convert.sh`
+- Generate thumbnails by running `./thumbs.sh`
+- Create the virtualenv and install the requirements as described above
+- Run `python collect.py`
+- Feed back the converted images to the server: `rsync -azP ./images/ root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv/images/`
 
 # Adding new filters
 
-* Add the new filter to `data/filters.csv` manually, and run `python collect.py` to update the count
+- Add the new filter to `data/filters.csv` manually, and run `python collect.py` to update the count
