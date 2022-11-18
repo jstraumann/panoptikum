@@ -122,7 +122,7 @@ var techniques = {
   'Ac': 'Acryl auf Papier',
   'AcP': 'Acryl auf Pavatex',
   'Aq': 'Aquarell',
-  'B': 'Bleistift, Grafitstift',
+  'B': 'Bleistift',
   'Bst': 'Bostitchklammern',
   'Bz': 'Beize',
   'C': 'Collage',
