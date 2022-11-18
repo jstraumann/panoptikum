@@ -66,6 +66,10 @@ def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
                     r['Technik IV'],
                 ])
 
+                # Combine FoD and FoP into Fo
+                r['Technik'] = r['Technik'].replace('FoD', 'Fo')
+                r['Technik'] = r['Technik'].replace('FoP', 'Fo')
+
                 r['Motiven'] = ' '.join(flatten([
                     r['Motiv I'].split(", "),
                     r['Motiv II'].split(", "),

@@ -20,6 +20,9 @@ def update_stats():
     # print(filters.head)
     #print("filters['Code']", images['Grösse'])
 
+    # Combine FoD and FoP into Fo
+    images = images.replace({ 'Technik': 'FoD', 'Techniken': 'FoD' }, { 'Technik': 'Fo', 'Techniken': 'Fo' })
+    images = images.replace({ 'Technik': 'FoP', 'Techniken': 'FoP' }, { 'Technik': 'Fo', 'Techniken': 'Fo' })
 
     filters['Count'] = filters.apply(
         lambda row: (

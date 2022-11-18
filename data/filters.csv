@@ -6,15 +6,15 @@ C,Form,Technik,Technik,Collage,,,114
 Cb,Form,Technik,Technik,Collagebuch,,,16
 Fa,Form,Technik,Technik,Farbstift,,,87
 Fs,Form,Technik,Technik,Filzstift,,,43
-Fo,Form,Technik,Technik,Fotografie,,,0
-G,Form,Technik,Technik,Gouache,,,936
+Fo,Form,Technik,Technik,Fotografie,,,10
+G,Form,Technik,Technik,Gouache,,,935
 K,Form,Technik,Technik,Kohle,,,33
 Ks,Form,Technik,Technik,Kugelschreiber,,,25
 Opl,Form,Technik,Technik,Ölpastell,,,16
 OP,Form,Technik,Technik,Ölfarbe auf Pavatex,,,757
 OL,Form,Technik,Technik,Ölfarbe auf Leinwand,,,87
 OPa,Form,Technik,Technik,Ölfarbe auf Papier,,,67
-T,Form,Technik,Technik,Tusche,,,286
+T,Form,Technik,Technik,Tusche,,,285
 Dd,Form,Drucktechnik,Technik,Digitaldruck,,,15
 Hs,Form,Drucktechnik,Technik,Holzschnitt,,,10
 Ls,Form,Drucktechnik,Technik,Linolschnitt,,,58
@@ -23,45 +23,45 @@ Od,Form,Drucktechnik,Technik,Offsetdruck,,,9
 R,Form,Drucktechnik,Technik,Radierung,,,359
 S,Form,Drucktechnik,Technik,Siebdruck,,,4
 Rd,Form,Drucktechnik,Technik,Reliefdruck,,,5
-zT,Form,mehrere Techniken,Technik,zwei Techniken,,,2633
-Mt,Form,mehrere Techniken,Technik,Mischtechnik (3 Techniken und mehr),,,1527
+zT,Form,mehrere Techniken,Technik,zwei Techniken,,,2615
+Mt,Form,mehrere Techniken,Technik,Mischtechnik (3 Techniken und mehr),,,1546
 H1,Form,Helligkeit,Helligkeit,hell,,,719
 H2,Form,Helligkeit,Helligkeit,eher hell,,,3452
-H3,Form,Helligkeit,Helligkeit,mittlere Helligkeit,,,2697
+H3,Form,Helligkeit,Helligkeit,mittlere Helligkeit,,,2696
 H4,Form,Helligkeit,Helligkeit,eher dunkel,,,1876
 H5,Form,Helligkeit,Helligkeit,dunkel,,,231
-bw,Form,Farbigkeit nach Dominanz,Farbigkeit,schwarzweiss,,,1254
+bw,Form,Farbigkeit nach Dominanz,Farbigkeit,schwarzweiss,,,1253
 gr,Form,Farbigkeit nach Dominanz,Farbigkeit,grau,,,4552
-cf,Form,Farbigkeit nach Dominanz,Farbigkeit,vielfarbig,,,1883
+cf,Form,Farbigkeit nach Dominanz,Farbigkeit,vielfarbig,,,1884
 y,Form,Farbigkeit nach Dominanz,Farbigkeit,gelb,,,78
 g,Form,Farbigkeit nach Dominanz,Farbigkeit,grün,,,220
 c,Form,Farbigkeit nach Dominanz,Farbigkeit,blau,,,254
-v,Form,Farbigkeit nach Dominanz,Farbigkeit,violett,,,153
+v,Form,Farbigkeit nach Dominanz,Farbigkeit,violett,,,152
 m,Form,Farbigkeit nach Dominanz,Farbigkeit,rot,,,107
 b,Form,Farbigkeit nach Dominanz,Farbigkeit,braun,,,430
 klein,Form,Format,Grösse,klein,,((grössere Zahl max. 30)),6157
-mittel,Form,Format,Grösse,mittel,,((grössere Zahl 31 - 90)),2736
+mittel,Form,Format,Grösse,mittel,,((grössere Zahl 31 - 90)),2735
 gross,Form,Format,Grösse,gross,,((grössere Zahl 91 und mehr)),105
 breit,Form,Ausrichtung,Ausrichtung,breit,,,7663
-hoch,Form,Ausrichtung,Ausrichtung,hoch,,,1136
+hoch,Form,Ausrichtung,Ausrichtung,hoch,,,1135
 quadratisch,Form,Ausrichtung,Ausrichtung,quadratisch,,,196
 Cb,Form,Darstellungsformen,Darstellungsformen,Collagebuch,,,16
 Fro,Form,Darstellungsformen,Darstellungsformen,Frottage,,,47
 Gi,Form,Darstellungsformen,Darstellungsformen,"Gitterstruktur, Netzstruktur",,,199
-RiK,Form,Darstellungsformen,Darstellungsformen,Körper im Raum zu Raum im Körper,,,101
+RiK,Form,Darstellungsformen,Darstellungsformen,Körper im Raum zu Raum im Körper,,,103
 krS,Form,Darstellungsformen,Darstellungsformen,kreisrunde Scheiben,,,96
 Lst,Form,Darstellungsformen,Darstellungsformen,Linienstrukturen,,,367
 Lwi,Form,Darstellungsformen,Darstellungsformen,Linienwirbel,,,413
 Mo,Form,Darstellungsformen,Darstellungsformen,Mosaik,,,48
 ovÖ,Form,Darstellungsformen,Darstellungsformen,ovale Öffnung,,,52
 pg,Form,Darstellungsformen,Darstellungsformen,pastos gespachtelt,,,22
-Schla,Form,Darstellungsformen,Darstellungsformen,Schlangenlinien,,,10
+Schla,Form,Darstellungsformen,Darstellungsformen,Schlangenlinien,,,11
 Schl,Form,Darstellungsformen,Darstellungsformen,Schleifbilder,,,9
 Schü,Form,Darstellungsformen,Darstellungsformen,Schüttbilder,,,22
 sCo,Form,Darstellungsformen,Darstellungsformen,serielle Collage,,,35
 sM,Form,Darstellungsformen,Darstellungsformen,serielle Muster,,,46
 Ul,Form,Darstellungsformen,Darstellungsformen,Umrisslinie,,,184
-Gs,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Gegenständliches,,,2661
+Gs,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Gegenständliches,,,2660
 U,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches,,,3211
 UnG,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches neben Gegenständlichem,,,1382
 UoG,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches oder Gegenständliches,,,1708
@@ -72,7 +72,7 @@ dK,Form,Komposition,Komposition,diagonale Komposition,,,129
 ddK,Form,Komposition,Komposition,doppelt diagonale Komposition,,,55
 Drk,Form,Komposition,Komposition,Dreieckskomposition,,,57
 ROk,Form,Komposition,Komposition,Rund- oder Ovalkomposition,,,108
-Zk,Form,Komposition,Komposition,Zentralkomposition,,,439
+Zk,Form,Komposition,Komposition,Zentralkomposition,,,438
 Rk,Form,Komposition,Komposition,Randkomposition,,,69
 wid,Form,Bildsprache,Bildsprache,Widder-/Mars-Gestaltung,,,46
 sti,Form,Bildsprache,Bildsprache,Stier-/Venus-Gestaltung,,,13
@@ -92,14 +92,14 @@ FigR,Inhalt,Motive,Motiven,Figuren im Raum (Innenraum),,,258
 KiA,Inhalt,Motive,Motiven,KünstlerInnen im Atelier,,,28
 Z,Inhalt,Motive,Motiven,"ZeichnerInnen, MalerInnen",,,132
 ZM,Inhalt,Motive,Motiven,ZeichnerInnen/MalerInnen und Modell,,,228
-P,Inhalt,Motive,Motiven,Paare,,,608
+P,Inhalt,Motive,Motiven,Paare,,,607
 Ba,Inhalt,Motive,Motiven,Badende,,,103
 Ri,Inhalt,Motive,Motiven,"Porträts, Köpfe",,,238
 Sb,Inhalt,Motive,Motiven,Selbstbildnisse,,,175
-A,Inhalt,Motive,Motiven,Akt (nach Modell oder Vorstellung),,,1321
-AP,Inhalt,Motive,Motiven,Akt (Paraphrasen),,,643
+A,Inhalt,Motive,Motiven,Akt (nach Modell oder Vorstellung),,,1318
+AP,Inhalt,Motive,Motiven,Akt (Paraphrasen),,,647
 Kt,Inhalt,Motive,Motiven,Körperteile,,,142
-Mw,Inhalt,Motive,Motiven,Mischwesen,Ken,,94
+Mw,Inhalt,Motive,Motiven,Mischwesen,Ken,,93
 Ken,Inhalt,Motive,Motiven,Kentauren,,,46
 Tie,Inhalt,Motive,Motiven,Tiere,,,226
 Pf,Inhalt,Motive,Motiven,Pflanzen,,,397
@@ -111,7 +111,7 @@ Ma,Inhalt,Motive,Motiven,Mauern,,,60
 At,Inhalt,Motive,Motiven,Ateliers,,,165
 StmFG,Inhalt,Motive,Motiven,Stillleben mit Früchten und/oder Gemüsen,,,202
 StoFG,Inhalt,Motive,Motiven,Stillleben ohne Früchte und/oder Gemüse,,,137
-O,Inhalt,Motive,Motiven,Objekte,"Sta, Vo",,1642
+O,Inhalt,Motive,Motiven,Objekte,"Sta, Vo",,1640
 Fk,Inhalt,Motive,Motiven,Farbkörper,,,39
 bb,Inhalt,Motive,Motiven,Black Box,,,232
 So,Inhalt,Motive,Motiven,Sockel,,,90
@@ -126,11 +126,11 @@ Ec,Inhalt,Motive,Motiven,Themenkreis Ecuador,,,0
 Par1,Inhalt,"Paraphrasen, Variationen",Paraphrasen,aussereuropäische Kunst ,,,128
 Par2,Inhalt,"Paraphrasen, Variationen",Paraphrasen, bis und mit griechisch-römischer Antike,,,127
 Par3a,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Malerei Frühmittelalter bis 15. Jh.,,,29
-Par4,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Malerei, Zeichnung 16.–18. Jh.",ParT,,143
+Par4,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Malerei, Zeichnung 16.–18. Jh.",ParT,,142
 Par5,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Malerei, Zeichnung 19. Jh.","ParJHF, ParPC",,160
 Par7a,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Malerei, Zeichnung 20. Jh. ","ParPK, ParME, ParGOK, ParEH, ParFV, ParRM, ParPP",,302
 Par3b,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Skulptur Mittelalter bis 18. Jh.,,,78
-Par6,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Skulptur 19. Jh.,ParAR,,28
+Par6,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Skulptur 19. Jh.,ParAR,,29
 Par7b,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Plastik 20. Jh.,,,68
 Par8a,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Fotografie,ParVB,,13
 Par8b,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Film, Video",,,41
@@ -174,8 +174,8 @@ Kr12e,Inhalt,Projekt „Klee revisited“,Paraphrasen,Fünfklang,,,20
 1985-1999,Zeit,Chronologie,Jahr,1985–1999,,,0
 1979-1984,Zeit,Chronologie,Jahr,1979–1984,,,0
 1973-1978,Zeit,Chronologie,Jahr,1973–1978,,,0
-iBdK,Anderes,Standort,Standort,im Besitz des Künstlers,,,8551
-PB,Anderes,Standort,Status,Privatbesitz,,,282
+iBdK,Anderes,Standort,Standort,im Besitz des Künstlers,,,8549
+PB,Anderes,Standort,Status,Privatbesitz,,,284
 vers,Anderes,Standort,Status,verschollen,,,31
 vernichtet,Anderes,Standort,Status,vernichtet,,,10
 res,Anderes,Status,Status,reserviert,,,3114
