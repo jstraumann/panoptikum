@@ -54,7 +54,7 @@ In production, something like:
   encoding, `,` as delimiter, `"` as quotation and enabling
   `quote all text cells`. This should produce a file `WERKVERZEICHNIS.csv`.
 - Download all existing images: `rsync -azP root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv/images/ ./images/`
-- Place any new image files in the `IMPORT` folder
+- Place any new image files in the `IMPORT` folder and rename them to 'WV_neu_$date_ersatz' or 'WV_neu_$date'
 - Remove metadata files by `cd`-ing into the `IMPORT` folder and running `find . -name '.*_*' | xargs -d '\n' rm`
 - Rename the newly imported folders with increasing numbers
 - Crop and resize the images by running `./convert.sh`
