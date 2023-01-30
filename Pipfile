@@ -13,5 +13,6 @@ gunicorn = "*"
 hypercorn = "*"
 pandas = "*"
 flask-cors = "*"
+markupsafe = "*"
 
 [requires]
