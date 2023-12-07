@@ -23,7 +23,7 @@ def get_paginated(args, dp_werke, as_json=False):
             dfname = df[f].dtype.name.lower()
             if 'object' in dfname:
                 for v in val.split(','):
-                    val = re.sub(r'[«»"()]', '.', v) #substitutes special chars with .
+                    val = re.sub(r'[«»"]', '.', v) #substitutes special chars with .
                     df = df.loc[df[f].str.contains(val, regex=True, case=False, na=False)]
             elif 'int' in dfname:
                 try:

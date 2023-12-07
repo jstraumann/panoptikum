@@ -47,8 +47,11 @@ function init_section(sname) {
     filters[sname].forEach(function(i) {
       if ($('div[data-tag="' + sname + '"]').attr('data-type') == i)
         return;
+      var allOfType = cache.filter(c => c.Type === i)
+      var allCodes = allOfType.map(c => c.Code)
+      var filter = "(" + allCodes.join('|') + ")"
       $tgt.append(
-        '<h5>' + i + '</h5>' +
+        '<h5>' + i + '&nbsp;<input type="checkbox" name="o_' + allOfType[0].Column + '" value="' + filter + '"></h5>' +
         '<div class="form-group row" ' +
           'data-tag="' + sname + '" ' +
           'data-type="' + i + '"></div>'
