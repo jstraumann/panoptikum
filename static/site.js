@@ -182,7 +182,7 @@ $('#filters .nav-link').click(function() {
 $('form').change(function() {
   // console.log('change input');
   $('input[name="Titel"]').val(''); //copies Entry to html input form
-  $('input[name="Jahr"]').val(''); //copies Entry to html input form
+  //$('input[name="Jahr"]').val(''); //copies Entry to html input form
   // Get total for this result
   werkSearchCount();
 });
