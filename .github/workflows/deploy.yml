@@ -1,0 +1,19 @@
+name: Autodeploy
+on:
+  push:
+    branches: [master]
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloning repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Push to dokku
+        uses: dokku/github-action@master
+        with:
+          git_remote_url: 'ssh://dokku@168.119.227.184/panoptikum'
+          ssh_private_key: ${{ secrets.DOKKU_SSH_PRIVATE_KEY }}
