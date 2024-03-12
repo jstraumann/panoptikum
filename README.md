@@ -4,65 +4,110 @@ This is a web application that converts CSV files to an API with search and filt
 
 Made with [Frictionless Data](https://frictionlessdata.io), [Flask](http://flask.pocoo.org/), [Bootstrap](https://getbootstrap.com) and [LightGallery](https://www.lightgalleryjs.com/).
 
-# Deployment
 
-1. Install pipenv: `python3 -m pip install pipenv`
-2. `pipenv --python 3`
-3. `pipenv shell`
-4. `pipenv sync`
-5. `flask run`
+# Prerequisites
+Before starting with the deployment, ensure you have the following installed:
+
+- Python 3.8
+- pip and virtualenv
+- ImageMagick (for image processing)
+
+
+You can install Python 3.8 and numpy on Debian/Ubuntu systems using:
 
 ```
 sudo apt-get install python3.8 python3-numpy
-virtualenv --system-site-packages -p python3.8 env
-pip install -r requirements.txt
 ```
 
-# Data refresh
+# Deployment / Development
 
-To update the metadata, we run this script from the pipenv shell:
+ 1. Set up the environment using pipenv:
+      ```
+      python3 -m pip install pipenv
+      pipenv --python 3
+      pipenv shell
+      pipenv sync
+      ```
 
-`python collect.py`
+2. Alternatively, use virtualenv:
+    ```
+    virtualenv --system-site-packages -p python3.8 env
+    source env/bin/activate
+    pip install -r requirements.txt
+    ```
 
-This script expects a `data/WERKVERZEICHNIS.csv` which is the UTF-8 encoded conversion of the source Excel file. It creates (or refreshes) a Data Package specification by inferring schema from the data using [Data Package Pipelines](https://github.com/frictionlessdata/datapackage-pipelines).
+3. Running the Application:
+- For development
+  ```
+  env FLASK_DEBUG=1 flask run
+  ```
 
-The script also checks that images are present in the `images` folder. You may want to prepare the images first, if this is part of your use case. Otherwise, look at the source code to fit the process to your data.
 
-# Image collection
+- For production, use Gunicorn or a similar WSGI server:
+  ```
+  gunicorn --log-level=info -w 4 -b :8000 app:app
+  ```
 
-The `convert` utility from [ImageMagick](https://imagemagick.org/) is required for this process.
+# Update data
 
-Use the `convert.sh` script to prepare an `images` folder with consistent formats (JPEG) and resolutions (720p).
+To add new images into the collection and ensure the metadata is up to date, follow these steps:
 
-Then use `thumbs.sh` to generate thumbnails.
+1. Save `WERKVERZEICHNIS.csv`:
 
-The scripts skip any files that are already present, and can be used for updates.
+    Open the new `WERKVERZEICHNIS.xlsx` in Calc and save as CSV, using `UTF-8` as
+    encoding, `,` as delimiter, `"` as quotation and enabling
+    `quote all text cells`. This should produce a file `WERKVERZEICHNIS.csv`.
+2. Download all existing images: 
 
-# Running
+    `rsync -azP root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv/images/ ./images/`
+3. Place any new image files in the `IMPORT` folder and rename them to `WV_neu_$date_ersatz` or `WV_neu_$date`
+4. Remove metadata from images:
 
-In development, use:
+    Make sure you are in the `IMPORT` folder and run `find . -name '.*_*' | xargs -d '\n' rm` or alternatively `exiftool -all= *.jpg`, `exiftool -all= *.png`
 
-`env FLASK_DEBUG=1 flask run`
+5. Rename the newly imported folders with increasing numbers.
+6. Crop and resize the images by running `./convert.sh`.
+7. Generate thumbnails by running `./thumbs.sh`.
 
-In production, something like:
+8. Run `python collect.py`.
+9. Test app locally:
+    
+    Create the virtualenv and install the requirements as described above
 
-`gunicorn --log-level=info -w 4 -b :8000 app:app`
+10. Upload new images and thumbnails:
+    
+    `rsync -azP ./images/ root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv/images/`
 
-# Adding new images
+11. Sync data changes to github:
 
-- Open the new `WERKVERZEICHNIS.xlsx` in Calc and save as CSV, using `UTF-8` as
-  encoding, `,` as delimiter, `"` as quotation and enabling
-  `quote all text cells`. This should produce a file `WERKVERZEICHNIS.csv`.
-- Download all existing images: `rsync -azP root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv/images/ ./images/`
-- Place any new image files in the `IMPORT` folder and rename them to 'WV_neu_$date_ersatz' or 'WV_neu_$date'
-- Remove metadata files by `cd`-ing into the `IMPORT` folder and running `find . -name '.*_*' | xargs -d '\n' rm`
-- Rename the newly imported folders with increasing numbers
-- Crop and resize the images by running `./convert.sh`
-- Generate thumbnails by running `./thumbs.sh`
-- Create the virtualenv and install the requirements as described above
-- Run `python collect.py`
-- Feed back the converted images to the server: `rsync -azP ./images/ root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv/images/`
+    This should affect `WERKVERZEICHNIS.csv`, `filters.csv` and `images.csv`.
 
-# Adding new filters
 
-- Add the new filter to `data/filters.csv` manually, and run `python collect.py` to update the count
+## Image collection
+
+Further explanation about the image collection workflow.
+
+- The `convert` utility from [ImageMagick](https://imagemagick.org/) is required for this process.
+
+- Use the `convert.sh` script to prepare an `images` folder with consistent formats (JPEG) and resolutions (720p).
+
+- Then use `thumbs.sh` to generate thumbnails.
+
+- The scripts skip any files that are already present, and can be used for updates.
+
+## 2. Filter data refresh
+
+Further explanation about the data refresh.
+
+- To update the metadata, we run this script from the pipenv shell: `python collect.py`.
+
+- This script expects a `data/WERKVERZEICHNIS.csv` which is the UTF-8 encoded conversion of the source Excel file. It creates (or refreshes) a Data Package specification by inferring schema from the data using [Data Package Pipelines](https://github.com/frictionlessdata/datapackage-pipelines).
+
+- The script also checks that images are present in the `images` folder. You may want to prepare the images first, if this is part of your use case. Otherwise, look at the source code to fit the process to your data.
+
+
+
+## Adding new filters
+
+- Add the new filter to `data/filters.csv` manually.
+- Run `python collect.py` to update the count.
