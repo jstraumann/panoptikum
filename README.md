@@ -1,25 +1,26 @@
-# Projekt PANOPTIKUM
+# Panoptikum
 
 This is a web application that converts CSV files to an API with search and filtering. It has been used to create a digital collection of artworks, but could be used for essentially any data that is described using a [Data Package](http://frictionlessdata.io/specs/data-package/#specification). Find out more on the [Open Knowledge Blog](https://blog.okfn.org/2019/05/09/panoptikum-exploring-new-ways-to-categorize-a-collection-of-various-unusual-and-unique-objects/).
 
 Made with [Frictionless Data](https://frictionlessdata.io), [Flask](http://flask.pocoo.org/), [Bootstrap](https://getbootstrap.com) and [LightGallery](https://www.lightgalleryjs.com/).
 
 
-# Prerequisites
+## Prerequisites
 Before starting with the deployment, ensure you have the following installed:
 
 - Python 3.8
 - pip and virtualenv
 - ImageMagick (for image processing)
+- NumPy
 
-
-You can install Python 3.8 and numpy on Debian/Ubuntu systems using:
+## Installation 
+Install Python 3.8 and using:
 
 ```
 sudo apt-get install python3.8 python3-numpy
 ```
 
-# Deployment / Development
+## Development
 
  1. Set up the environment using pipenv:
       ```
@@ -48,7 +49,11 @@ sudo apt-get install python3.8 python3-numpy
   gunicorn --log-level=info -w 4 -b :8000 app:app
   ```
 
-# Update data
+## Deployment
+Changes to the github are automatically deployed.
+Visit https://bildarchiv-js.ch/ to verify that the update was succesful.
+
+## Update data
 
 To add new images into the collection and ensure the metadata is up to date, follow these steps:
 
@@ -83,7 +88,7 @@ To add new images into the collection and ensure the metadata is up to date, fol
     This should affect `WERKVERZEICHNIS.csv`, `filters.csv` and `images.csv`.
 
 
-## Image collection
+### Image collection
 
 Further explanation about the image collection workflow.
 
@@ -95,7 +100,7 @@ Further explanation about the image collection workflow.
 
 - The scripts skip any files that are already present, and can be used for updates.
 
-## 2. Filter data refresh
+### Filter data refresh
 
 Further explanation about the data refresh.
 
@@ -105,9 +110,7 @@ Further explanation about the data refresh.
 
 - The script also checks that images are present in the `images` folder. You may want to prepare the images first, if this is part of your use case. Otherwise, look at the source code to fit the process to your data.
 
-
-
-## Adding new filters
+### Adding new filters
 
 - Add the new filter to `data/filters.csv` manually.
 - Run `python collect.py` to update the count.
