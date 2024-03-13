@@ -23,3 +23,10 @@ shell/
 .vscode
 
 IMPORT/**/*.jpg
+IMPORT/**/*.JPG
+IMPORT/**/*.png
+IMPORT/**/*.PNG
+IMPORT/**/*.tif
+IMPORT/**/*.TIF
+IMPORT/**/*.tiff
+IMPORT/**/*.TIFF
