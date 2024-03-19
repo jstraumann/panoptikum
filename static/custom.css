@@ -7,15 +7,29 @@ body {
   color: #000;
 }
 
+h1.page-title {
+  font-size: 2rem;
+  padding: 0.4rem 0;
+}
+
 .anleitung-infoblock {
-  background-color:white;
+  background-color: white;
   border: 1px solid transparent;
   border-radius: .5rem;
-  margin-top: -1.5em;
-  padding-top: 1em;
+  padding-top: .5em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
-.anleitung-infoblock button { float: right; }
-.anleitung-infoblock ul { margin-left: 2em; }
+
+.anleitung-infoblock button {
+  margin-top: 0.4rem;
+  float: right;
+}
+
+.anleitung-infoblock ul {
+  margin-left: 0em;
+  padding-left: 1rem;
+}
+
 .anleitung-infoblock li {
   margin: 0 .25rem 0 0;
 }
@@ -25,38 +39,47 @@ body {
   display: flex;
   align-items: baseline;
 }
+
 .btn_bildarchiv {
-/*  background-color:rgb(154,154,154);*/
-  color:black;
+  /*  background-color:rgb(154,154,154);*/
+  color: black;
   padding: .5rem 1rem;
-  cursor: pointer; /* Mouse pointer on hover */
+  cursor: pointer;
+  /* Mouse pointer on hover */
 
   border: 1px solid transparent;
   border-top-left-radius: .25rem;
   border-top-right-radius: .25rem;
-  display:inline-block;
+  display: inline-block;
 }
+
 .btn_bildarchiv:hover {
-  background-color: rgb(210,210,210);
-  color:black;
+  background-color: rgb(210, 210, 210);
+  border: solid 1px white;
+  color: black;
 }
+
 .btn_bildarchiv.active {
   background-color: white;
 }
+
 .auswahl {
   margin-left: auto;
   margin-right: 1em;
 }
+
 .anzeige {
   margin-top: 0.5em;
   margin-right: auto;
   text-align: center;
 }
+
 .anzeige .btn_bildarchiv {
-  background-color:rgb(255,255,255);
+  background-color: rgb(255, 255, 255);
   padding: .25rem 1rem;
   border-radius: .25rem;
 }
+
 .disable {
   cursor: default;
   opacity: 0.25;
@@ -81,21 +104,18 @@ body {
 }
 
 #anderes .form-check-input {
-  border:1px solid green;
+  border: 1px solid green;
   padding: 0;
 }
 
 .clusterize-content {
-    background: white;
-    margin-left: 5px;
-    color: #555;
+  background: white;
+  margin-left: 5px;
+  color: #555;
 }
 
 #total {
-  padding: 0.2em 0.4em;
-  font-size: 80%;
-  background: #eee;
-  color: #555;
+  padding: 0 0.4em;
 }
 
 .tab-content h5 {
@@ -103,13 +123,34 @@ body {
 }
 
 .nav-tabs {
-  margin-top: 1em;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  border-bottom: 1px solid #ffffff;
+}
+
+.nav-tabs .nav-link,
+.nav-tabs .nav-link:focus, 
+.nav-tabs .nav-link:hover {
+  border: none;
+  transition: all ease 0.2s;
+
+}
+
+
+.nav-tabs .nav-link:hover {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.nav-tabs .nav-link.active:hover {
+  border: none;
+  background-color: #ffffff;
 }
 
 .form-group .form-check {
   padding-bottom: 0.5em;
   opacity: 0.9;
 }
+
 .form-group .form-check:hover {
   opacity: 1.0;
 }
@@ -120,7 +161,7 @@ body {
 
 .count {
   padding: 0.2em 0.4em;
-  font-size: 80%;
+  font-size: 85%;
   background: transparent;
   color: white;
 }
@@ -152,8 +193,9 @@ button#back {
   margin: 1em 0;
   text-align: center;
 }
+
 #selection span {
-  background: #eee; color: #333;
+  color: #333;
   padding: 0.2em 0.4em;
   margin-right: 1em;
   display: inline-block;
@@ -169,7 +211,13 @@ button#back {
 }
 
 #results .item img {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   max-width: 100%;
+  transition: transform ease 0.2s;
+}
+
+#results .item img:hover {
+  transform: scale(1.02);
 }
 
 #details {
@@ -193,37 +241,54 @@ button#back {
 }
 
 .pagination {
-  width: 100%; text-align: center; padding: 1em;
+  width: 100%;
+  text-align: center;
+  padding: 1em;
   display: block;
 }
-.pagination button { font-size: 200%; }
 
-.Nummer, .Techniken { margin-right: 2em; }
+.pagination button {
+  font-size: 200%;
+}
 
-.Nummer::before { content:'[' }
-.Nummer::after { content:']' }
+.Nummer,
+.Techniken {
+  margin-right: 2em;
+}
+
+.Nummer::before {
+  content: '['
+}
+
+.Nummer::after {
+  content: ']'
+}
 
 .Techniken sm {
   font-size: 80%;
-  background: #eee; color: #333;
+  background: #eee;
+  color: #333;
   padding: 0.2em 0.4em;
 }
 
 #footer .row {
-  font-size: 80%; text-align: center;
+  font-size: 80%;
+  text-align: center;
 }
 
 /* ---------------------------- */
 /* styles for title list search */
-#_contentArea > div:nth-of-type(odd) {
+#_contentArea>div:nth-of-type(odd) {
   background: #eee;
 }
 
-#contentAreaYear > div:hover, #contentAreaTitle > div:hover {
+#contentAreaYear>div:hover,
+#contentAreaTitle>div:hover {
   cursor: pointer;
   background: #eee;
 }
 
-#contentAreaYear, #contentAreaTitle {
-  padding-left:.1em;
+#contentAreaYear,
+#contentAreaTitle {
+  padding-left: .1em;
 }
