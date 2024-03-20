@@ -304,3 +304,14 @@ button#back {
 #contentAreaTitle {
   padding-left: .1em;
 }
+
+/* Lightbox */
+.js-gallery .lg-backdrop {
+  background-color: #bbb;
+}
+
+.js-gallery .lg-counter,
+.js-gallery .lg-toolbar .lg-close,
+.js-gallery .lg-sub-html {
+  color: black;
+}

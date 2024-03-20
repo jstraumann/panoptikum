@@ -356,6 +356,7 @@ function werkSearchStart(e, from_page, random) {
       licenseKey: '0000-0000-000-0000',
       speed: 500,
       download: false,
+      addClass: "js-gallery "
     });
 
     // Automatically open if only one image or random mode

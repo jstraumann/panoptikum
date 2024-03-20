@@ -1,110 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>-Bildarchiv JS-</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css" media="screen">
-    <link rel="stylesheet" href="/static/lib/font-awesome/4.7.0/font-awesome.min.css" media="screen">
-    <link rel="stylesheet" href="/static/lib/clusterize.css" media="screen">
-    <link rel="stylesheet" href="/static/custom.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/css/lightgallery.css">
+  <title>-Bildarchiv JS-</title>
 
-    <style>
-      .lg-backdrop { background-color: #bbb; }
-      .lg-counter, .lg-toolbar .lg-close, .lg-sub-html { color: black; }
-    </style>
+  <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css" media="screen">
+  <link rel="stylesheet" href="/static/lib/font-awesome/4.7.0/font-awesome.min.css" media="screen">
+  <link rel="stylesheet" href="/static/lib/clusterize.css" media="screen">
+  <link rel="stylesheet" href="/static/custom.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/css/lightgallery.css">
 
-    <!-- Matomo -->
-    <script type="text/javascript">
-      var _paq = window._paq = window._paq || [];
-      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="https://matomo.designone.ch/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
-        _paq.push(['setSiteId', '11']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-      })();
-    </script>
-    <noscript><p><img src="https://matomo.designone.ch/matomo.php?idsite=11&amp;rec=1" style="border:0;" alt="" /></p></noscript>
-    <!-- End Matomo Code -->
+  <!-- Matomo -->
+  <script type="text/javascript">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function () {
+      var u = "https://matomo.designone.ch/";
+      _paq.push(['setTrackerUrl', u + 'matomo.php']);
+      _paq.push(['setSiteId', '11']);
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript'; g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+  <noscript>
+    <p><img src="https://matomo.designone.ch/matomo.php?idsite=11&amp;rec=1" style="border:0;" alt="" /></p>
+  </noscript>
+  <!-- End Matomo Code -->
 
 
-  </head>
-  <body>
-    <div class="top container" id="browser">
+</head>
 
-      <div class="page-header" id="banner">
-        <div class="row">
-          <div class="col-sm anleitung-infoblock">
-            <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseInfoblock" aria-expanded="false" aria-controls="collapseExample">Hilfe</button>
-            <h1 class="page-title">Bildarchiv JS</h1>
-            <ul class="collapse collapsed" id="collapseInfoblock">
-              <li>Wählen Sie eine der drei Rubriken „Inhalt“, „Form“ oder „Werk" aus.</li>
-              <li>Klicken Sie auf eine gewünschte Kategorie.</li>
-              <li>Um die Auswahl einzugrenzen, können Sie eine weitere Kategorie aus einer anderen Rubrik anklicken.</li>
-              <ul><li>Die so gefundene Anzahl Resultate wird Ihnen im Feld „Ausgewählt“ angezeigt.</li></ul>
-              <li>Klicken Sie auf „Anzeigen“, um die Auswahl anzuzeigen, auf „Neuauswahl“, um die Auswahl zurückzusetzen</li>
-              <ul><li>.. oder auf „Zufall“, um den Zufall entscheiden zu lassen.</li></ul>
+<body>
+  <div class="top container" id="browser">
+
+    <div class="page-header" id="banner">
+      <div class="row">
+        <div class="col-sm anleitung-infoblock">
+          <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseInfoblock"
+            aria-expanded="false" aria-controls="collapseExample">Hilfe</button>
+          <h1 class="page-title">Bildarchiv JS</h1>
+          <ul class="collapse collapsed" id="collapseInfoblock">
+            <li>Wählen Sie eine der drei Rubriken „Inhalt“, „Form“ oder „Werk" aus.</li>
+            <li>Klicken Sie auf eine gewünschte Kategorie.</li>
+            <li>Um die Auswahl einzugrenzen, können Sie eine weitere Kategorie aus einer anderen Rubrik anklicken.</li>
+            <ul>
+              <li>Die so gefundene Anzahl Resultate wird Ihnen im Feld „Ausgewählt“ angezeigt.</li>
             </ul>
-          </div>
+            <li>Klicken Sie auf „Anzeigen“, um die Auswahl anzuzeigen, auf „Neuauswahl“, um die Auswahl zurückzusetzen
+            </li>
+            <ul>
+              <li>.. oder auf „Zufall“, um den Zufall entscheiden zu lassen.</li>
+            </ul>
+          </ul>
         </div>
       </div>
+    </div>
 
-      <form>
+    <form>
       <div class="container bs-component" id="filters">
-          <div class="nav nav-tabs flex-container">
-            <div class="kategorien">
-              <a class="nav-item nav-link btn_bildarchiv active" data-toggle="tab" href="#inhalt">Inhalt</a>
-              <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#form">Form</a>
-              <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#anderes">Werk</a>
-            </div>
-
-            <div class="auswahl">
-              <span class="">Ausgewählt: <span id="total">0</span><a class="btn_reset hidden" id="restart"><i class="fa fa-close"></i> Reset</a></span>
-            </div>
+        <!-- Tabs -->
+        <div class="nav nav-tabs flex-container">
+          <div class="kategorien">
+            <a class="nav-item nav-link btn_bildarchiv active" data-toggle="tab" href="#inhalt">Inhalt</a>
+            <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#form">Form</a>
+            <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#anderes">Werk</a>
           </div>
 
-            <div class="anzeige">
-              
-              <a class="btn_bildarchiv" id="random"><i class="fa fa-random"></i> Zufall</a>
-              <a class="btn_bildarchiv disable" id="start"><i class="fa fa-play"></i> Anzeigen</a>
-            </div>
+          <div class="auswahl">
+            <span class="">Ausgewählt: <span id="total">0</span><a class="btn_reset hidden" id="restart"><i class="fa fa-close"></i> Reset</a></span>
+          </div>
+        </div>
 
-          <div class="tab-content">
+        <!-- Aktionen -->
+        <div class="anzeige">
+          <a class="btn_bildarchiv" id="random"><i class="fa fa-random"></i> Zufall</a>
+          <a class="btn_bildarchiv disable" id="start"><i class="fa fa-play"></i> Anzeigen</a>
+        </div>
+
+        <!-- Inhalte -->
+        <div class="tab-content">
           <div class="tab-pane active show" id="inhalt"></div>
           <div class="tab-pane" id="form"></div>
           <div class="tab-pane" id="anderes">
             <div class="row">
-
               <div class="col-sm-8">
-
                 <div class="form-group">
-                  <label class="col-form-label" for="inputTitel"><h5> Titel</h5></label>
-                  <input name="Titel" autocomplete="off" autofocus placeholder="Titelsuche" type="text" class="searchOnEnter">
+                  <label class="col-form-label" for="inputTitel">
+                    <h5> Titel</h5>
+                  </label>
+                  <input name="Titel" autocomplete="off" autofocus placeholder="Titelsuche" type="text"
+                    class="searchOnEnter">
                   <script>
                     let input = document.querySelector('input');
 
-                    input.onkeyup = function() {
+                    input.onkeyup = function () {
                       let result = [];
                       if (input.value) {
                         for (word of titlelist_uniqueEntries) {
-                          word = word.slice(5,-6); //removes <div></div> for search from word
+                          word = word.slice(5, -6); //removes <div></div> for search from word
                           if (input.value.length == 1) {
                             // option mit suche nach anfangsbuchstabe bei 1 buchstaben im feld
                             if (word.toLowerCase().startsWith(input.value.toLowerCase())) {
-                              result.push('<div>'+word+'</div>');
+                              result.push('<div>' + word + '</div>');
                             }
                           } else {
-                          // option mit suche als zeichenkette wenn mehr als 1buchstaben im feld sind
-                          if (word.toLowerCase().indexOf(input.value.toLowerCase()) > -1) { //compares values
-                              result.push('<div>'+word+'</div>');
+                            // option mit suche als zeichenkette wenn mehr als 1buchstaben im feld sind
+                            if (word.toLowerCase().indexOf(input.value.toLowerCase()) > -1) { //compares values
+                              result.push('<div>' + word + '</div>');
                             }
                           }
                         }
@@ -123,39 +131,35 @@
                   </div>
                 </div>
 
-                <div class="form-group" data-cols="1"
-                  data-tag="standort"
-                  data-type="Standort">
+                <div class="form-group" data-cols="1" data-tag="standort" data-type="Standort">
                 </div>
 
-                <div class="form-group" data-cols="1"
-                  data-tag="Zusammenarbeit"
-                  data-type="Zus'arbeit">
+                <div class="form-group" data-cols="1" data-tag="Zusammenarbeit" data-type="Zus'arbeit">
                 </div>
 
-                <div class="form-group" data-cols="1"
-                  data-tag="status"
-                  data-type="Status">
+                <div class="form-group" data-cols="1" data-tag="status" data-type="Status">
                 </div>
               </div>
 
               <div class="col-sm-4">
 
                 <div class="form-group">
-                  <label class="col-form-label" for="inputJahr"><h5>Jahreszahl</h5> </label>
+                  <label class="col-form-label" for="inputJahr">
+                    <h5>Jahreszahl</h5>
+                  </label>
                   <input placeholder="" id="inputYear" name="Jahr" type="text">
                   <script>
                     let inputyear = document.querySelector('#inputYear');
 
-                    inputyear.onkeyup = function() {
+                    inputyear.onkeyup = function () {
                       let result = [];
                       if (inputyear.value) {
                         for (word of yearlist) {
-                          word = word.slice(5,-6); //removes <div></div> for search from word
-                            // option mit suche nach anfangsbuchstabe bei 1 buchstaben im feld
-                            if (word.toLowerCase().startsWith(inputyear.value.toLowerCase())) {
-                              result.push('<div>'+word+'</div>');
-                            }
+                          word = word.slice(5, -6); //removes <div></div> for search from word
+                          // option mit suche nach anfangsbuchstabe bei 1 buchstaben im feld
+                          if (word.toLowerCase().startsWith(inputyear.value.toLowerCase())) {
+                            result.push('<div>' + word + '</div>');
+                          }
                         }
                       } else {
                         // no value in found
@@ -174,10 +178,12 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-form-label" for="inputNummer"><h5> Werknummer</h5></label>
+                  <label class="col-form-label" for="inputNummer">
+                    <h5> Werknummer</h5>
+                  </label>
                   <input class="searchOnEnter" name="Nummer" type="text">
                 </div>
-<!--
+                <!--
                 <h5>Chronologie</h5>
                 <div class="form-group" data-cols="1"
                      data-tag="zeit"
@@ -185,7 +191,7 @@
                 </div>
 -->
               </div>
-<!--
+              <!--
               <div class="col-sm-6">
 
                 <h5>Thematische Kurztouren</h5>
@@ -202,7 +208,8 @@
 
                 <p>Impressum:
                   2023 <a href="http://datalets.ch">Datalets</a> &bull;
-                  <a href="https://github.com/dataletsch/panoptikum">Open source</a> under the MIT License</a>.</p>
+                  <a href="https://github.com/dataletsch/panoptikum">Open source</a> under the MIT License</a>.
+                </p>
 
               </div>
             </div>
@@ -212,48 +219,49 @@
 
 
       </div>
-
-      <div id="results" style="display:none">
-        <div id="selection"></div>
-        <div class="container main">
-          <h4>Werke</h4>
-          <div class="row"></div>
-        </div>
-        <div class="pagination">
-          <button id="more" class="btn btn-lg" style="display:none">+ + + + +</button>
-        </div>
+    </form>
+    <!-- Werke -->
+    <div id="results" style="display:none">
+      <div id="selection"></div>
+      <div class="container main">
+        <h4>Werke</h4>
+        <div class="row">Keine Werke Ausgewählt</div>
       </div>
-
-    </form></div> <!-- // -.top.container -->
-
-    <div class="container main" id="details" style="display:none">
-      <div class="image"></div>
-      <div class="row">
-        <div class="col-sm-12">
-          <button class="btn btn-sm btn-warning" id="back">Zurück</button>
-          <b data-fld="Titel"></b> &nbsp;
-          <span class="Nummer" data-fld="Nummer"></span>
-          <span class="Techniken" data-fld="Techniken"></span>
-          <span data-fld="Format"></span> cm &nbsp;
-          <span data-fld="Jahr"></span>
-          <span data-fld="Zus'arbeit"></span>
-        </div>
+      <div class="pagination">
+        <button id="more" class="btn btn-lg" style="display:none">+ + + + +</button>
       </div>
     </div>
+  </div> <!-- // -.top.container -->
 
-    <div class="modal fade" tabindex="-1" role="dialog" id="spinnerModal">
-      <div class="modal-dialog modal-dialog-centered text-center" role="document">
-        <!-- <span class="fa fa-spinner fa-spin fa-3x w-100">🖌 ⌛ 🎨</span> -->
+  <div class="container main" id="details" style="display:none">
+    <div class="image"></div>
+    <div class="row">
+      <div class="col-sm-12">
+        <button class="btn btn-sm btn-warning" id="back">Zurück</button>
+        <b data-fld="Titel"></b> &nbsp;
+        <span class="Nummer" data-fld="Nummer"></span>
+        <span class="Techniken" data-fld="Techniken"></span>
+        <span data-fld="Format"></span> cm &nbsp;
+        <span data-fld="Jahr"></span>
+        <span data-fld="Zus'arbeit"></span>
       </div>
     </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/lightgallery.min.js"></script>
+  <div class="modal fade" tabindex="-1" role="dialog" id="spinnerModal">
+    <div class="modal-dialog modal-dialog-centered text-center" role="document">
+      <!-- <span class="fa fa-spinner fa-spin fa-3x w-100">🖌 ⌛ 🎨</span> -->
+    </div>
+  </div>
 
-    <script src="/static/lib/jquery-3.3.1.js"></script>
-    <script src="/static/lib/clusterize.min.js"></script>
-    <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/lightgallery.min.js"></script>
 
-    <script src="/static/search.js"></script>
-    <script src="/static/site.js"></script>
-  </body>
+  <script src="/static/lib/jquery-3.3.1.js"></script>
+  <script src="/static/lib/clusterize.min.js"></script>
+  <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
+
+  <script src="/static/search.js"></script>
+  <script src="/static/site.js"></script>
+</body>
+
 </html>
