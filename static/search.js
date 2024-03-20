@@ -19,7 +19,7 @@ function werkSearchNext(e) {
 
 function werkSearchRandom(e) {
   werkSearchReset(e);
-  $('#restart').removeClass('disable');
+  $('#restart').removeClass('hidden');
   $('button#more').hide();
   werkSearchStart(e, 1, true);
 }
@@ -43,7 +43,7 @@ function werkSearchReset(e) {
   /*$('#filters a:first').click();*/ //shows first nav tab.
   $('#total').text('0');
   $('#start').addClass('disable'); /* Anzeigen ausblenden */
-  $('#restart').addClass('disable'); /* Neuauswahl ausblenden */
+  $('#restart').addClass('hidden');
   $('#results').hide(); /* hides results */
   $('#filters .tab-content').show(); /*shows search form*/
   clusterTitle.update(titlelist_uniqueEntries); /* resets title list display*/
@@ -112,7 +112,8 @@ function werkSearchCount() {
 
   $.getJSON('/api/images' + qg.query, function(data) {
     $('#total').html(data.total);
-    $('#start,#restart').removeClass('disable')
+    $('#restart').removeClass('hidden');
+    $('#start').removeClass('disable')
       .addClass(data.total > 0 ? '' : 'disable');
   });
 

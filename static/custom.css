@@ -18,7 +18,7 @@ h1.page-title {
 }
 
 .anleitung-infoblock {
-  background-color: white;
+  background-color: #fff;
   border: 1px solid transparent;
   border-radius: .5rem;
   padding-top: .5em;
@@ -46,12 +46,9 @@ h1.page-title {
 }
 
 .btn_bildarchiv {
-  /*  background-color:rgb(154,154,154);*/
   color: black;
   padding: .5rem 1rem;
   cursor: pointer;
-  /* Mouse pointer on hover */
-
   border: 1px solid transparent;
   border-top-left-radius: .25rem;
   border-top-right-radius: .25rem;
@@ -60,17 +57,23 @@ h1.page-title {
 
 .btn_bildarchiv:hover {
   background-color: rgb(210, 210, 210);
-  border: solid 1px white;
+  border: solid 1px #fff;
   color: black;
 }
 
 .btn_bildarchiv.active {
-  background-color: white;
+  background-color: #fff;
+}
+
+.btn_reset {
+  color: #fff !important;
+  cursor: pointer;
+  padding: .5rem 1rem;
 }
 
 .auswahl {
+  font-weight: 500;
   margin-left: auto;
-  margin-right: 1em;
 }
 
 .anzeige {
@@ -88,6 +91,10 @@ h1.page-title {
 .disable {
   cursor: default;
   opacity: 0.25;
+}
+
+.hidden {
+  display: none;
 }
 
 /*.kategorien { }*/
@@ -114,7 +121,7 @@ h1.page-title {
 }
 
 .clusterize-content {
-  background: white;
+  background: #fff;
   margin-left: 5px;
   color: #555;
 }
@@ -130,7 +137,7 @@ h1.page-title {
 .nav-tabs {
   font-weight: 600;
   margin-top: 2.5rem;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #fff;
 }
 
 .nav-tabs .nav-link,
@@ -148,7 +155,7 @@ h1.page-title {
 }
 .nav-tabs .nav-link.active:hover {
   border: none;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .form-group .form-check {
@@ -168,7 +175,7 @@ h1.page-title {
   padding: 0.2em 0.4em;
   font-size: 85%;
   background: transparent;
-  color: white;
+  color: #fff;
 }
 
 /*
