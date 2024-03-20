@@ -1,8 +1,13 @@
-body {
-  margin-top: 1em;
+@font-face {
+  font-family: 'Switzer';
+  src: url('fonts/Switzer-Variable.ttf') format('woff2')
 }
 
 body {
+  margin-top: 1em;
+  font-family: "Switzer", monospace;
+  font-weight: 340;
+  font-optical-sizing: auto;
   background-color: #bbb !important;
   color: #000;
 }
@@ -207,7 +212,7 @@ button#back {
 }
 
 #results .item {
-  padding: 20px;
+  padding: 12px;
 }
 
 #results .item img {
