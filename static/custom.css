@@ -259,8 +259,8 @@ button#back {
   display: block;
 }
 
-.pagination button {
-  font-size: 200%;
+.pagination .btn_bildarchiv {
+  border-radius: 0.25rem;
 }
 
 .Nummer,

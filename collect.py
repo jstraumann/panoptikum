@@ -38,6 +38,7 @@ def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
         fieldnames.append('Darstellungsformen')
 
         outputpath = os.path.join('data',outputfile)
+        
         print("Writing to %s" % outputpath)
 
         with open(outputpath, 'w+') as csvout:
@@ -56,7 +57,9 @@ def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
                 r['path'] = imagerow['path']
                 r['thumb'] = imagerow['thumb']
 
-                # TODO: load image to determine dimensions
+                # Title cleaning logic here
+                if 'Titel' in r:
+                    r['Titel'] = r['Titel'].replace('"', '').strip()
 
                 r['Techniken'] = ' '.join([
                     r['Technik'],
