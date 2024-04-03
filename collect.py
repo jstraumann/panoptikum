@@ -59,7 +59,7 @@ def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
 
                 # Title cleaning logic here
                 if 'Titel' in r:
-                    r['Titel'] = r['Titel'].replace('"', '').strip()
+                    r['Titel'] = r['Titel'].replace('"', '').replace('«', '').replace('»', '').strip()
 
                 r['Techniken'] = ' '.join([
                     r['Technik'],
