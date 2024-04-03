@@ -58,13 +58,22 @@ def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
                 r['thumb'] = imagerow['thumb']
 
                 # Title cleaning logic here
-                if 'Titel' in r:
-                    # Remove standard and curly apostrophes/quotes
-                    r['Titel'] = (r['Titel']
-                                .replace('"', '')  # Removes straight double quotes
-                                .replace('«', '').replace('»', '')  # Removes guillemets
-                                .replace('“', '').replace('”', '')  # Removes curly double quotes
-                                .strip())
+                # if 'Titel' in r:
+                #     title = r['Titel']
+                #     # Check if the title is encased in double quotes
+                #     if title.startswith('"') and title.endswith('"'):
+                #         # Remove the outermost quotes
+                #         title = title[1:-1]
+                #     # Replace escaped double quotes with single quotes
+                #     title = title.replace('""', '"')
+                #     # Continue with other replacements
+                #     title = (title
+                #             .replace('«', '').replace('»', '')  # Removes guillemets
+                #             .replace('“', '').replace('”', '')  # Removes curly double quotes
+                #             .replace('"', '')  # Removes curly double quotes
+                #             .replace("...", "…")  # Replaces three consecutive dots with an ellipsis
+                #             .strip())
+                #     r['Titel'] = title
 
                 r['Techniken'] = ' '.join([
                     r['Technik'],
