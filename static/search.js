@@ -51,8 +51,11 @@ function werkSearchReset(e) {
 
 // Query builder
 function get_werkSearchQuery(from_page) {
+	var searchCriteria = $('#searchCriteria').val();
 	var q = '?sort=-Jahr&';
 	q += 'per_page=' + PER_PAGE;
+
+	console.log("Werksearch");
 
 	var ppp = (typeof from_page === typeof 1) ? from_page : 1;
 	q += '&page=' + ppp;
@@ -62,6 +65,8 @@ function get_werkSearchQuery(from_page) {
 
 	$('input:checked').each(function () {
 		var nm = $(this).attr('name');
+		console.log(nm);
+		
 		if (!hasAttr(nm)) return;
 		if (!filterdata[nm]) filterdata[nm] = [];
 		filterdata[nm].push($(this).attr('value'));
@@ -88,8 +93,16 @@ function get_werkSearchQuery(from_page) {
 		filterselect += '<span>' + v + '</span>';
 	});
 
+	var joinCharater = ',';
+	if (searchCriteria == "OR") {
+		joinCharater = '|' 
+	}
+	
 	$.each(Object.keys(filterdata), function () {
-		q += '&' + this + '=' + filterdata[this].join(',');
+		q += '&' + this + '=' + filterdata[this].join(joinCharater);
+		// Results in searchtsring
+		// q += '&' + this + '=' + filterdata[this].join(',');
+		// q += '&' + this + '=' + filterdata[this].join('|'); // Assuming '|' is the OR operator for the API
 	});
 
 	return {

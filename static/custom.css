@@ -82,10 +82,18 @@ h1.page-title {
   text-align: center;
 }
 
-.anzeige .btn_bildarchiv {
+ .anzeige .btn_bildarchiv {
   background-color: rgb(255, 255, 255);
   padding: .25rem 1rem;
   border-radius: .25rem;
+  height: 2rem;
+  box-sizing: border-box;
+  vertical-align: text-top;
+}
+
+.anzeige .btn_bildarchiv.ghost {
+  background-color: transparent;
+  border: none;
 }
 
 .disable {
@@ -97,7 +105,27 @@ h1.page-title {
   display: none;
 }
 
-/*.kategorien { }*/
+.anzeige .btn_container {
+  padding: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.anzeige .btn_container select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 30px; 
+  border: none;
+}
+
+.anzeige .btn_container i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Makes the icon non-interactive */
+}
 
 /* end new navigation styles */
 
