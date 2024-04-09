@@ -65,7 +65,7 @@ function get_werkSearchQuery(from_page) {
 
 	$('input:checked').each(function () {
 		var nm = $(this).attr('name');
-		console.log(nm);
+		console.log("category=" + nm);
 		
 		if (!hasAttr(nm)) return;
 		if (!filterdata[nm]) filterdata[nm] = [];
@@ -97,13 +97,16 @@ function get_werkSearchQuery(from_page) {
 	if (searchCriteria == "OR") {
 		joinCharater = '|' 
 	}
-	
+
 	$.each(Object.keys(filterdata), function () {
 		q += '&' + this + '=' + filterdata[this].join(joinCharater);
 		// Results in searchtsring
 		// q += '&' + this + '=' + filterdata[this].join(',');
 		// q += '&' + this + '=' + filterdata[this].join('|'); // Assuming '|' is the OR operator for the API
 	});
+
+	console.log("query" + q);
+	
 
 	return {
 		data: filterdata,
