@@ -6,6 +6,20 @@ var yearlist = [];
 
 var DEFAULT_NUM_COLUMNS = 4;
 
+const category_selectors = [
+	'o_Motiven',
+	'o_Paraphrasen',
+	'o_Technik',
+	'o_Helligkeit',
+	'o_Farbigkeit',
+	'o_Ausrichtung',
+	'o_Serie',
+	'o_Gegenständlich/Ungegenständlich',
+	'o_Darstellungsformen',
+	'o_Komposition'
+];
+
+
 (function () {
 
 	$.getJSON('/api/filters/all.json', function (jsondata) {
@@ -34,12 +48,17 @@ var DEFAULT_NUM_COLUMNS = 4;
 		var elMagic = $('#o_ParaphrasenPar9b').parent();
 		elMagic.appendTo($(elMagic).closest('.col-sm-3').prev());
 
+		// After site has been build, run URL search
+		applySearchFromURL();
+
 	}).fail(function () {
 		alert('Could not load data!');
 	});
 
 	function init_section(sname) {
 		// Add section headers
+		console.log("Init sections");
+
 		$('#' + sname).each(function () {
 			var $tgt = $(this);
 			filters[sname].forEach(function (i) {
@@ -55,7 +74,7 @@ var DEFAULT_NUM_COLUMNS = 4;
 					'data-type="' + i + '"></div>'
 				);
 			});
-		});		
+		});
 
 		// Subset the data
 		var data = cache.filter(function (i) {
@@ -103,7 +122,7 @@ var DEFAULT_NUM_COLUMNS = 4;
 					'<input class="form-check-input" ' +
 					'id="o_' + this.Column + this.Code + '" ' +
 					'name="o_' + this.Column + '" ' +
-					'value="\\b' + this.Code + '\\b" ' +
+					'value="' + this.Code + '" ' +
 					/*          'style="display:none"' + */
 					'type="' + inputtype + '">' +
 					'<label class="form-check-label" ' +
@@ -182,3 +201,61 @@ var DEFAULT_NUM_COLUMNS = 4;
 	});
 
 })();
+
+
+
+function updateURLWithSearchString(searchString) {
+	if (history.pushState) {
+		var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + searchString;
+		window.history.pushState({ path: newUrl }, '', newUrl);
+	}
+}
+
+function getSelectedTechniques() {
+	let selectedTechniques = [];
+	// Select all checkboxes with name "o_Motiven"
+
+	category_selectors.forEach(selector => {
+		// For each selector, find checked inputs and add their values to the selectedTechniques array.
+		$(`input[name="${selector}"]:checked`).each(function () {
+			selectedTechniques.push($(this).val());
+		});
+	});
+
+	console.log("selectedTechniques: " + selectedTechniques);
+
+	return selectedTechniques;
+}
+
+function applySearchFromURL() {
+	var params = {};
+	var searchStr = window.location.search;
+	if (searchStr) {
+		var pairs = searchStr.substring(1).split("&");
+		for (var i = 0; i < pairs.length; i++) {
+			var pair = pairs[i].split("=");
+			params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || "");
+		}
+	}
+	console.log(params);
+	applyURLsearch = false
+	category_selectors.forEach(function (category) {
+		if (params[category]) {
+			// Split the parameter by '|' to get the individual values
+			var values = params[category].split('|');
+			applyURLsearch = true;
+			// Use the constructed ID to check each corresponding checkbox or input
+			values.forEach(function (value) {
+				var inputID = category + value;
+				$('#' + inputID).prop('checked', true);
+				console.log("checked:" + inputID);
+
+			});
+		}
+	});
+
+	// Trigger the search if params have been found
+	if (applyURLsearch) {
+		werkSearchStart(null, 1, false, true);
+	}
+}

@@ -66,7 +66,7 @@ function get_werkSearchQuery(from_page) {
 	$('input:checked').each(function () {
 		var nm = $(this).attr('name');
 		console.log("category=" + nm);
-		
+
 		if (!hasAttr(nm)) return;
 		if (!filterdata[nm]) filterdata[nm] = [];
 		filterdata[nm].push($(this).attr('value'));
@@ -95,7 +95,7 @@ function get_werkSearchQuery(from_page) {
 
 	var joinCharater = ',';
 	if (searchCriteria == "OR") {
-		joinCharater = '|' 
+		joinCharater = '|'
 	}
 
 	$.each(Object.keys(filterdata), function () {
@@ -106,7 +106,7 @@ function get_werkSearchQuery(from_page) {
 	});
 
 	console.log("query" + q);
-	
+
 
 	return {
 		data: filterdata,
@@ -303,28 +303,43 @@ function removeDuplicates(names) {
 	return Object.keys(unique);
 }
 
-// Main function to run an search
-function werkSearchStart(e, from_page, random) {
-	if (from_page == typeof undefined)
-		from_page = 1;
-	if (typeof e !== typeof undefined)
-		e.preventDefault(); e.stopPropagation();
+// Main function to run a search
+function werkSearchStart(e, from_page, random, fromURL) {
 
-	if (random == true) {
+	
+	// Check if 'e' is not null and then prevent default actions
+	if (e) {
+		e.preventDefault();
+		e.stopPropagation();
+	}
+
+	// Setting default value for 'from_page' if not provided or undefined
+	if (typeof from_page === 'undefined' || from_page === null) {
+		from_page = 1;
+	}
+	
+	if (random === true) {
+		// Handling the random search case
 		$('#results').find('div.row').empty();
 		$('#selection').empty();
 		window.location.replace("/#&gid=1&pid=15");
+	} else if (fromURL === true) {
+		// Handling the URL search case
+		werkSearchCount();
+		$('#restart').removeClass('hidden');
 	} else {
+		// Exit if the 'start' button is disabled
 		if ($('#start').hasClass('disable')) return;
 	}
-	$('.modal').modal('show');
 
-	wsq = get_werkSearchQuery(from_page);
-	q = wsq.query;
+	// Load and build the query
+	$('.modal').modal('show'); // Show loading or processing modal
+	var wsq = get_werkSearchQuery(from_page);
+	var q = wsq.query;
 
 	// Update page number
 	$('button#more').data('page', wsq.page);
-	if (wsq.page == 1) {
+	if (wsq.page === 1) {
 		$('#results').find('div.row').empty();
 	}
 
@@ -338,44 +353,38 @@ function werkSearchStart(e, from_page, random) {
 		var $tgt = $('#results').show().find('div.row');
 
 		$('button#more').hide();
-		if (data.length == PER_PAGE)
+		if (data.length === PER_PAGE)
 			$('button#more').show();
 
-		// var urlPrefix = "http://moirasia.datalets.ch/"
-		// var urlPrefix = "http://new.luc.gr/pano/"
-		var urlPrefix = "https://archiv.juergstraumann.ch/"
+		var urlPrefix = "https://archiv.juergstraumann.ch/";
 
 		// Generate thumbnails
-		data.forEach(function (item, ix) {
-
-			$link = $('<a>');
-			$link.attr('href', urlPrefix + item.path);
-			$link.addClass('col-sm-2 item');
-			$link.attr('data-sub-html', werkTitle(item));
-
-			$img = $('<img>');
-			$img.attr('src', urlPrefix + item.thumb);
-
+		data.forEach(function (item) {
+			var $link = $('<a>').attr('href', urlPrefix + item.path).addClass('col-sm-2 item').attr('data-sub-html', werkTitle(item));
+			var $img = $('<img>').attr('src', urlPrefix + item.thumb);
 			$link.append($img);
-
 			$tgt.append($link);
-		}); // -data each
+		});
 
+		// Initialize the gallery
 		const gallery = lightGallery($tgt.get(0), {
 			selector: '.item',
 			plugins: [],
 			licenseKey: '0000-0000-000-0000',
 			speed: 500,
 			download: false,
-			addClass: "js-gallery "
+			addClass: "js-gallery"
 		});
 
 		// Automatically open if only one image or random mode
-		if (data.length == 1 || random) {
+		if (data.length === 1 || random) {
 			gallery.openGallery(0);
 		}
-
-	}).fail(function (jqxhr, textStatus, error) {
+	}).fail(function () {
 		alert('Could not search!');
 	});
+
+	// Update URL
+	updateURLWithSearchString(q.substring(1)); // Remove '?' from query before updating URL
+
 }
