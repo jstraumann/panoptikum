@@ -14,6 +14,7 @@ const category_selectors = [
 	'o_Farbigkeit',
 	'o_Ausrichtung',
 	'o_Serie',
+	'o_Grösse',
 	'o_Gegenständlich/Ungegenständlich',
 	'o_Darstellungsformen',
 	'o_Komposition'

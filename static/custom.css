@@ -17,6 +17,11 @@ h1.page-title {
   padding: 0.4rem 0;
 }
 
+h1.page-title a {
+  color: #000;
+  text-decoration: none;
+}
+
 .anleitung-infoblock {
   background-color: #fff;
   border: 1px solid transparent;
