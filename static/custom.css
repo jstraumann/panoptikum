@@ -44,6 +44,10 @@ h1.page-title a {
   margin: 0 .25rem 0 0;
 }
 
+b, strong {
+  font-weight: 600;
+}
+
 /*   new navigation styles   */
 .flex-container {
   display: flex;
