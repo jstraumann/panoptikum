@@ -17,20 +17,32 @@ def get_paginated(args, dp_werke, as_json=False):
     df = dp_werke.copy()
     for f in df:
         val = args.get('o_' + f, None)
-        # print(f, df[f].dtype.name)
         if val is not None:
             df = df.dropna(subset=[f])
             dfname = df[f].dtype.name.lower()
             if 'object' in dfname:
-                for v in val.split(','):
-                    val = re.sub(r'[«»"]', '.', v) #substitutes special chars with .
-                    df = df.loc[df[f].str.contains(val, regex=True, case=False, na=False)]
+                # Splitting the values on comma, assuming each can be a complex expression involving 'OR' (|)
+                terms = val.split(',')
+                regex_patterns = []
+                for term in terms:
+                    # Each term could contain multiple options separated by '|', handle each as part of an overall pattern
+                    options = term.split('|')
+                    # Construct regex for each option and ensure each is independently surrounded by lookbehind and lookahead
+                    options_regex = [
+                        f"(?<![a-zA-ZäöüÄÖÜ0-9]){re.escape(option)}(?![a-zA-ZäöüÄÖÜ0-9])" 
+                        for option in options
+                    ]
+                    # Combine options into a single regex pattern with OR conditions
+                    regex_pattern = f"({'|'.join(options_regex)})"
+                    regex_patterns.append(regex_pattern)
+                # Combine all regex patterns into one; since each is a complete regex, join with OR
+                final_regex = f"({'|'.join(regex_patterns)})"
+                df = df.loc[df[f].str.contains(final_regex, regex=True, case=False, na=False)]
             elif 'int' in dfname:
                 try:
                     val = int(val)
-                    df = df.loc[df[f] == val]
-                    # print(f, val)
-                except:
+                    df = df[df[f] == val]
+                except ValueError:
                     pass
 
     with_sort = args.get('sort', None)
