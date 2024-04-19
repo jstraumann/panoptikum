@@ -21,27 +21,22 @@ def get_paginated(args, dp_werke, as_json=False):
             df = df.dropna(subset=[f])
             dfname = df[f].dtype.name.lower()
             if 'object' in dfname:
-                # Splitting the values on comma, assuming each can be a complex expression involving 'OR' (|)
-                terms = val.split(',')
-                regex_patterns = []
-                for term in terms:
-                    # Each term could contain multiple options separated by '|', handle each as part of an overall pattern
-                    options = term.split('|')
-                    # Construct regex for each option and ensure each is independently surrounded by lookbehind and lookahead
-                    options_regex = [
+                # Handling both 'AND' (split by ',') and 'OR' (split by '|') conditions
+                and_conditions = val.split(',')
+                for and_cond in and_conditions:
+                    or_conditions = and_cond.split('|')
+                    regex_patterns = [
                         f"(?<![a-zA-ZäöüÄÖÜ0-9]){re.escape(option)}(?![a-zA-ZäöüÄÖÜ0-9])" 
-                        for option in options
+                        for option in or_conditions
                     ]
                     # Combine options into a single regex pattern with OR conditions
-                    regex_pattern = f"({'|'.join(options_regex)})"
-                    regex_patterns.append(regex_pattern)
-                # Combine all regex patterns into one; since each is a complete regex, join with OR
-                final_regex = f"({'|'.join(regex_patterns)})"
-                df = df.loc[df[f].str.contains(final_regex, regex=True, case=False, na=False)]
+                    or_regex = f"({'|'.join(regex_patterns)})"
+                    # Apply this 'OR' pattern to the DataFrame and continue filtering on the result
+                    df = df.loc[df[f].str.contains(or_regex, regex=True, case=False, na=False)]
             elif 'int' in dfname:
                 try:
-                    val = int(val)
-                    df = df[df[f] == val]
+                    int_conditions = map(int, and_conditions)  # Convert all to integers
+                    df = df[df[f].isin(int_conditions)]
                 except ValueError:
                     pass
 
@@ -58,11 +53,10 @@ def get_paginated(args, dp_werke, as_json=False):
     total = len(df)
     pages = round(total / per_page)
     offset = (page - 1) * per_page
-    dprange = df[offset : offset + per_page]
+    dprange = df[offset: offset + per_page]
+
     if as_json:
         return dprange.to_json(orient='records')
     return {
-        # 'items': dprange.to_dict(orient='records'),
-        'page': page, 'pages': pages, 'total': total,
-        # 'has_next': ppp.has_next, 'has_prev': ppp.has_prev
+        'page': page, 'pages': pages, 'total': total
     }
