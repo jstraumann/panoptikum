@@ -66,8 +66,8 @@ const category_selectors = [
 				if ($('div[data-tag="' + sname + '"]').attr('data-type') == i)
 					return;
 				var allOfType = cache.filter(c => c.Type === i)
-				var allCodes = allOfType.map(c => '\\b' + c.Code + '\\b'); // Ensure each code is wrapped with word boundaries
-				var filter = allCodes.join('|'); // Join all codes with '|', each already wrapped with '\b'
+				var allCodes = allOfType.map(c => c.Code); 
+				var filter = allCodes.join('|');
 				$tgt.append(
 					'<h5>' + i + '&nbsp;<input type="checkbox" name="o_' + allOfType[0].Column + '" value="' + filter + '"></h5>' +
 					'<div class="form-group row" ' +

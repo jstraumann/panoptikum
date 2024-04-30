@@ -20,22 +20,22 @@ def get_paginated(args, dp_werke, as_json=False):
         if val is not None:
             df = df.dropna(subset=[f])
             dfname = df[f].dtype.name.lower()
+            # Define 'and_conditions' regardless of data type
+            and_conditions = val.split(',')
+
             if 'object' in dfname:
-                # Handling both 'AND' (split by ',') and 'OR' (split by '|') conditions
-                and_conditions = val.split(',')
                 for and_cond in and_conditions:
                     or_conditions = and_cond.split('|')
                     regex_patterns = [
                         f"(?<![a-zA-ZäöüÄÖÜ0-9]){re.escape(option)}(?![a-zA-ZäöüÄÖÜ0-9])" 
                         for option in or_conditions
                     ]
-                    # Combine options into a single regex pattern with OR conditions
                     or_regex = f"({'|'.join(regex_patterns)})"
-                    # Apply this 'OR' pattern to the DataFrame and continue filtering on the result
                     df = df.loc[df[f].str.contains(or_regex, regex=True, case=False, na=False)]
             elif 'int' in dfname:
                 try:
-                    int_conditions = map(int, and_conditions)  # Convert all to integers
+                    # Convert all to integers now that 'and_conditions' is always defined
+                    int_conditions = map(int, and_conditions)
                     df = df[df[f].isin(int_conditions)]
                 except ValueError:
                     pass
