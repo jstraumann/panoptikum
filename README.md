@@ -62,6 +62,8 @@ To add new images into the collection and ensure the metadata is up to date, fol
     Open the new `WERKVERZEICHNIS.xlsx` in Calc and save as CSV, using `UTF-8` as
     encoding, `,` as delimiter, `"` as quotation and enabling
     `quote all text cells`. This should produce a file `WERKVERZEICHNIS.csv`.
+    It's suggested to save the old version as a duplicate.
+
 2. Download all existing images (check username): 
 
     `rsync -azP root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv/images/ ./images/`
