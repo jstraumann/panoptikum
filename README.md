@@ -62,7 +62,7 @@ To add new images into the collection and ensure the metadata is up to date, fol
     Open the new `WERKVERZEICHNIS.xlsx` in Calc and save as CSV, using `UTF-8` as
     encoding, `,` as delimiter, `"` as quotation and enabling
     `quote all text cells`. This should produce a file `WERKVERZEICHNIS.csv`.
-2. Download all existing images: 
+2. Download all existing images (check username): 
 
     `rsync -azP root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv/images/ ./images/`
 3. Place any new image files in the `IMPORT` folder and rename them to `WV_neu_$date_ersatz` or `WV_neu_$date`
@@ -77,7 +77,7 @@ To add new images into the collection and ensure the metadata is up to date, fol
 8. Run `python collect.py`.
 9. Test app locally:
     
-    Create the virtualenv and install the requirements as described above
+    Create the virtualenv and install the requirements as described above. New images probably don't show up because they are not uploaded yet.
 
 10. Upload new images and thumbnails:
     
