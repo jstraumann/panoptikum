@@ -178,9 +178,9 @@ const category_selectors = [
 	$('#contentAreaYear').on('click', 'div', yearSearch);  // -div.click for year search results
 
 	// Search for specific image
-	//$('.searchOnEnter').keypress(function (e) {
-	//  if (e.which == 13) { werkSearchStart(); }
-	//});
+	// $('.searchOnEnter').keypress(function (e) {
+	//   if (e.which == 13) { werkSearchStart(); }
+	// });
 
 	// Pop down image
 	$('#details .image').click(werkSearchBack);
