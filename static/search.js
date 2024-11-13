@@ -493,6 +493,17 @@ function loadSavedItems() {
 				localStorage.setItem('selectedItems', JSON.stringify(savedData));
 				loadSavedItems();
 			});
+
+			
+		});
+		// Initialize the gallery
+		const gallery = lightGallery($tgt.get(0), {
+			selector: '.item a',
+			plugins: [],
+			licenseKey: '0000-0000-000-0000',
+			speed: 500,
+			download: false,
+			addClass: "js-gallery"
 		});
 	}
 }
