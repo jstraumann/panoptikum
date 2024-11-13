@@ -157,6 +157,17 @@ b, strong {
   padding: 0;
 }
 
+
+/*  */
+
+input[type="checkbox"].check {
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+}
+
 .clusterize-content {
   background: #fff;
   margin-left: 5px;

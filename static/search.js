@@ -375,8 +375,9 @@ function werkSearchStart(e, from_page, random, fromURL) {
 			// Create the checkbox and set it as checked if the item is already saved
 			var $checkbox = $('<input type="checkbox">')
 				.attr('id', 'item')
+				.addClass('check')
 				.attr('data-storage-number', item.Nummer)
-				.prop('checked', isChecked); // Set the checkbox as checked if the item is saved
+				.prop('checked', isChecked);
 
 			// Append the image and checkbox to the container
 			$link.append($img);
@@ -467,7 +468,11 @@ function loadSavedItems() {
 			var $container = $('<div>').addClass('col-sm-2 item');
 			var $link = $('<a>').attr('href', urlPrefix + item.path).attr('data-sub-html', werkTitle(item));
 			var $img = $('<img>').attr('src', urlPrefix + item.thumb).addClass('thumb');
-			var $checkbox = $('<input type="checkbox">').attr('id', 'item').attr('data-storage-number', item.Nummer).prop("checked", true);
+			var $checkbox = $('<input type="checkbox">')
+				.attr('id', 'item')
+				.addClass('check')
+				.attr('data-storage-number', item.Nummer)
+				.prop("checked", true);
 			$link.append($img);
 			$container.append($link);
 			$container.append($checkbox);
