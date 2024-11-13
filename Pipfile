@@ -6,6 +6,7 @@ name = "pypi"
 [dev-packages]
 
 [packages]
+python_version = "3.8"
 dataflows = "*"
 pandas-datapackage-reader = "*"
 flask-api = "*"
