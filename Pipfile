@@ -13,6 +13,9 @@ gunicorn = "*"
 hypercorn = "*"
 pandas = "*"
 flask-cors = "*"
-markupsafe = "*"
+MarkupSafe = "==1.1.1"
+numpy = "*"
+Werkzeug = "==0.16.1"
+Jinja2 = "==2.11.3"
 
 [requires]

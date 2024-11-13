@@ -25,7 +25,7 @@ sudo apt-get install python3.8 python3-numpy
  1. Set up the environment using pipenv:
       ```
       python3 -m pip install pipenv
-      pipenv --python 3
+      pipenv --python 3.8
       pipenv shell
       pipenv sync
       ```
