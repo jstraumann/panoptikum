@@ -6,7 +6,6 @@ name = "pypi"
 [dev-packages]
 
 [packages]
-python_version = "3.8"
 dataflows = "*"
 pandas-datapackage-reader = "*"
 flask-api = "*"
@@ -14,9 +13,6 @@ gunicorn = "*"
 hypercorn = "*"
 pandas = "*"
 flask-cors = "*"
-MarkupSafe = "==1.1.1"
-numpy = "*"
-Werkzeug = "==0.16.1"
-Jinja2 = "==2.11.3"
+markupsafe = "*"
 
 [requires]
