@@ -250,22 +250,27 @@ button#back {
   display: inline-block;
 }
 
-#results .container {
+#results .container,
+#savedList .container
+ {
   margin-top: 1em;
   padding-top: 1em;
 }
 
-#results .item {
+#results .item, 
+#savedList .item {
   padding: 12px;
 }
 
-#results .item img {
+#results .item img,
+#savedList .item img {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   max-width: 100%;
   transition: transform ease 0.2s;
 }
 
-#results .item img:hover {
+#results .item img:hover,
+#savedList .item img:hover {
   transform: scale(1.02);
 }
 

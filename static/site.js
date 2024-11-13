@@ -60,6 +60,8 @@ const category_selectors = [
 		// Add section headers
 		console.log("Init sections");
 
+		loadSavedItems();
+
 		$('#' + sname).each(function () {
 			var $tgt = $(this);
 			filters[sname].forEach(function (i) {
@@ -199,6 +201,13 @@ const category_selectors = [
 		//$('input[name="Jahr"]').val(''); // Copies Entry to html input form
 		// Get total for this result
 		werkSearchCount();
+	});
+
+	// Delete local storage -> saved images
+	$('#deleteSavedList').on('click', function() {
+		console.log("delete local storage");
+		localStorage.removeItem('selectedItems');
+		loadSavedItems();
 	});
 
 })();

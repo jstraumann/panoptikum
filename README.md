@@ -25,9 +25,6 @@ sudo apt-get install python3.8 python3-numpy
  1. Set up the environment using pipenv:
       ```
       python3 -m pip install pipenv
-      pipenv --python 3.8
-      pipenv shell
-      pipenv sync
       ```
 
 2. Alternatively, use virtualenv:
@@ -40,7 +37,10 @@ sudo apt-get install python3.8 python3-numpy
 3. Running the Application:
 - For development
   ```
-  env FLASK_DEBUG=1 flask run
+  pipenv --python 3.8
+  pipenv shell
+  pipenv sync
+  env flask run
   ```
 
 
