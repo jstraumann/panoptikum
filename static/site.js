@@ -192,7 +192,6 @@ const category_selectors = [
 		$('#filters .nav-item.nav-link.btn_bildarchiv').removeClass('active');
 		$('#filters .show.active').removeClass('show active');
 		$('#filters .tab-content').show();
-		$('#results').hide();
 	});
 
 	// Counter on click

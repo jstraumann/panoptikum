@@ -70,6 +70,7 @@
             <a class="nav-item nav-link btn_bildarchiv active" data-toggle="tab" href="#inhalt">Inhalt</a>
             <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#form">Form</a>
             <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#anderes">Werk</a>
+            <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#resultate">Resultate</a>
             <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#gespeichert">Gespeichert</a>
           </div>
           <div class="auswahl">
@@ -96,7 +97,7 @@
 
         <!-- Inhalte -->
         <div class="tab-content">
-          <div class="tab-pane active show" id="inhalt"></div>
+          <div class="tab-pane show" id="inhalt"></div>
           <div class="tab-pane" id="form"></div>
           <div class="tab-pane" id="anderes">
             <div class="row">
@@ -196,8 +197,21 @@
             </div>
           </div>
 
+          <!-- Werke -->
+          <div class="tab-pane" id="resultate">
+            <div id="results">
+              <div id="selection"></div>
+              <div class="container main">
+                <h4>Werke</h4>
+                <div class="row">Keine Werke ausgewählt…</div>
+              </div>
+              <div class="pagination">
+                <button id="more" class="btn_bildarchiv" style="display:none">Mehr anzeigen</button>
+              </div>
+            </div>
+          </div>
+          <!-- Gespeicherte Liste -->
           <div class="tab-pane" id="gespeichert">
-            <!-- Gespeicherte Liste -->
             <div id="savedList">
               <div class="container main">
                 <h4>Gespeichert</h4>
@@ -208,20 +222,9 @@
           </div>
         </div>
 
-
       </div>
     </form>
-    <!-- Werke -->
-    <div id="results" style="display:none">
-      <div id="selection"></div>
-      <div class="container main">
-        <h4>Werke</h4>
-        <div class="row">Keine Werke ausgewählt…</div>
-      </div>
-      <div class="pagination">
-        <button id="more" class="btn_bildarchiv" style="display:none">Mehr anzeigen</button>
-      </div>
-    </div>
+
 
   </div> <!-- // -.top.container -->
 

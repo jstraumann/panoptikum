@@ -40,8 +40,8 @@ function werkSearchReset(e) {
 	$('#total').text('0');
 	$('#start').addClass('disable'); 	// Anzeigen ausblenden
 	$('#restart').addClass('hidden');	// Hide reset button
-	$('#results').hide(); 				// Hides results
-	$('#filters .tab-content').show(); 	// Shows search form
+	$('a[href="#inhalt"]').click(); // Switch tab
+
 	clusterTitle.update(titlelist_uniqueEntries); // Resets title list display
 	clusterYear.update(yearlist); 		// Resets year list display
 
@@ -348,9 +348,10 @@ function werkSearchStart(e, from_page, random, fromURL) {
 			$('.modal').modal('hide');
 		}, 500);
 
-		$('#filters .tab-content').hide();
+		// $('#filters .tab-content').hide();
 
 		var $tgt = $('#results').show().find('div.row');
+		$('a[href="#resultate"]').click(); // Switch tab
 
 		$('button#more').hide();
 		if (data.length === PER_PAGE)
@@ -374,7 +375,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 
 			// Create the checkbox and set it as checked if the item is already saved
 			var $checkbox = $('<input type="checkbox">')
-				.attr('id', 'item')
+				.attr('id', 'result-item' + item.Nummer)
 				.addClass('check')
 				.attr('data-storage-number', item.Nummer)
 				.prop('checked', isChecked);
@@ -469,7 +470,7 @@ function loadSavedItems() {
 			var $link = $('<a>').attr('href', urlPrefix + item.path).attr('data-sub-html', werkTitle(item));
 			var $img = $('<img>').attr('src', urlPrefix + item.thumb).addClass('thumb');
 			var $checkbox = $('<input type="checkbox">')
-				.attr('id', 'item')
+				.attr('id', 'mylist-' + item.Nummer)
 				.addClass('check')
 				.attr('data-storage-number', item.Nummer)
 				.prop("checked", true);
