@@ -60,13 +60,15 @@ const category_selectors = [
 		// Add section headers
 		console.log("Init sections");
 
+		loadSavedItems();
+
 		$('#' + sname).each(function () {
 			var $tgt = $(this);
 			filters[sname].forEach(function (i) {
 				if ($('div[data-tag="' + sname + '"]').attr('data-type') == i)
 					return;
 				var allOfType = cache.filter(c => c.Type === i)
-				var allCodes = allOfType.map(c => c.Code); 
+				var allCodes = allOfType.map(c => c.Code);
 				var filter = allCodes.join('|');
 				$tgt.append(
 					'<h5>' + i + '&nbsp;<input type="checkbox" name="o_' + allOfType[0].Column + '" value="' + filter + '"></h5>' +
@@ -190,7 +192,6 @@ const category_selectors = [
 		$('#filters .nav-item.nav-link.btn_bildarchiv').removeClass('active');
 		$('#filters .show.active').removeClass('show active');
 		$('#filters .tab-content').show();
-		$('#results').hide();
 	});
 
 	// Counter on click
@@ -199,6 +200,61 @@ const category_selectors = [
 		//$('input[name="Jahr"]').val(''); // Copies Entry to html input form
 		// Get total for this result
 		werkSearchCount();
+	});
+
+	// Delete local storage -> saved images
+	$('#deleteSavedList').on('click', function (e) {
+		if (typeof e !== typeof undefined)
+			e.preventDefault(); e.stopPropagation();
+
+		console.log("delete local storage");
+		localStorage.removeItem('selectedItems');
+		loadSavedItems();
+	});
+
+	// Export list
+	$('#exportSavedList').on('click', function (e) {
+		if (typeof e !== typeof undefined)
+			e.preventDefault(); e.stopPropagation();
+
+		const data = localStorage.getItem('selectedItems');  // Replace 'yourKey' with your actual key
+		const jsonData = data;
+		const blob = new Blob([jsonData], { type: 'application/json' });
+		const url = URL.createObjectURL(blob);
+		const link = document.createElement('a');
+		link.href = url;
+		link.download = 'data.json'; // Set the file name here
+		link.click();
+		URL.revokeObjectURL(url);
+	});
+
+	$('#importSavedList').on('click', function (e) {
+
+		if (typeof e !== typeof undefined)
+			e.preventDefault(); e.stopPropagation();
+
+		// 1. Create a file input element for selecting the JSON file
+		const input = document.createElement('input');
+		input.type = 'file';
+		input.accept = 'application/json';
+
+		
+		// 2. Handle file selection
+		input.onchange = async (event) => {
+			const file = event.target.files[0];
+			if (!file) return;
+
+			try {
+				const text = await file.text();
+				localStorage.setItem('selectedItems', text);
+				loadSavedItems();
+				
+			} catch (error) {
+				console.error('Error parsing JSON:', error);
+				alert('Fehler beim importieren der Liste');
+			}
+		}
+		input.click();
 	});
 
 })();

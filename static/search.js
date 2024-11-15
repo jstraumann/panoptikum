@@ -1,4 +1,4 @@
-var PER_PAGE = 3 * 10;
+var PER_PAGE = 30;
 var clusterTitle = new Clusterize({ // Clusterize prepares title search output
 	scrollId: 'scrollAreaTitle',
 	contentId: 'contentAreaTitle'
@@ -40,8 +40,8 @@ function werkSearchReset(e) {
 	$('#total').text('0');
 	$('#start').addClass('disable'); 	// Anzeigen ausblenden
 	$('#restart').addClass('hidden');	// Hide reset button
-	$('#results').hide(); 				// Hides results
-	$('#filters .tab-content').show(); 	// Shows search form
+	$('a[href="#inhalt"]').click(); // Switch tab
+
 	clusterTitle.update(titlelist_uniqueEntries); // Resets title list display
 	clusterYear.update(yearlist); 		// Resets year list display
 
@@ -306,7 +306,7 @@ function removeDuplicates(names) {
 // Main function to run a search
 function werkSearchStart(e, from_page, random, fromURL) {
 
-	
+
 	// Check if 'e' is not null and then prevent default actions
 	if (e) {
 		e.preventDefault();
@@ -317,7 +317,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 	if (typeof from_page === 'undefined' || from_page === null) {
 		from_page = 1;
 	}
-	
+
 	if (random === true) {
 		// Handling the random search case
 		$('#results').find('div.row').empty();
@@ -348,9 +348,10 @@ function werkSearchStart(e, from_page, random, fromURL) {
 			$('.modal').modal('hide');
 		}, 500);
 
-		$('#filters .tab-content').hide();
+		// $('#filters .tab-content').hide();
 
 		var $tgt = $('#results').show().find('div.row');
+		$('a[href="#resultate"]').click(); // Switch tab
 
 		$('button#more').hide();
 		if (data.length === PER_PAGE)
@@ -360,15 +361,68 @@ function werkSearchStart(e, from_page, random, fromURL) {
 
 		// Generate thumbnails
 		data.forEach(function (item) {
-			var $link = $('<a>').attr('href', urlPrefix + item.path).addClass('col-sm-2 item').attr('data-sub-html', werkTitle(item));
-			var $img = $('<img>').attr('src', urlPrefix + item.thumb);
+			var $container = $('<div>').addClass('col-sm-2 item');
+			var $link = $('<a>').attr('href', urlPrefix + item.path).attr('data-sub-html', werkTitle(item));
+			var $img = $('<img>').attr('src', urlPrefix + item.thumb).addClass('thumb');
+
+			// Get the current saved data from localStorage
+			var savedData = JSON.parse(localStorage.getItem('selectedItems')) || [];
+
+			// Check if the current item is already saved in localStorage
+			var isChecked = savedData.some(function (i) {
+				return i.Nummer === item.Nummer;
+			});
+
+			// Create the checkbox and set it as checked if the item is already saved
+			var $checkbox = $('<input type="checkbox">')
+				.attr('id', 'result-item' + item.Nummer)
+				.addClass('check')
+				.attr('data-storage-number', item.Nummer)
+				.prop('checked', isChecked);
+
+			// Append the image and checkbox to the container
 			$link.append($img);
-			$tgt.append($link);
+			$container.append($link);
+			$container.append($checkbox);
+
+			// Append the container to the target element
+			$tgt.append($container);
+
+			// Add event listener to checkbox
+			$checkbox.on('change', function () {
+				// Get the data-storage-number value from the checkbox
+				var storageNumber = $(this).data('storage-number');
+
+				// Find the complete item from the 'data' array
+				var selectedItem = data.find(function (i) {
+					return i.Nummer === storageNumber;
+				});
+
+				// Get current saved data from localStorage, or initialize as an empty array
+				var savedData = JSON.parse(localStorage.getItem('selectedItems')) || [];
+
+				if ($(this).is(':checked')) {
+					// If checkbox is checked, add the complete item to the array
+					if (!savedData.some(function (i) { return i.Nummer === selectedItem.Nummer; })) {
+						savedData.push(selectedItem);  // Push the entire item object
+					}
+				} else {
+					// If checkbox is unchecked, remove the specific item by matching its 'Nummer'
+					savedData = savedData.filter(function (i) {
+						return i.Nummer !== selectedItem.Nummer;  // Remove the item with the matching 'Nummer'
+					});
+				}
+
+				// Save the updated array back to localStorage
+				localStorage.setItem('selectedItems', JSON.stringify(savedData));
+				loadSavedItems();
+			});
 		});
+
 
 		// Initialize the gallery
 		const gallery = lightGallery($tgt.get(0), {
-			selector: '.item',
+			selector: '.item a',
 			plugins: [],
 			licenseKey: '0000-0000-000-0000',
 			speed: 500,
@@ -388,3 +442,69 @@ function werkSearchStart(e, from_page, random, fromURL) {
 	updateURLWithSearchString(q.substring(1)); // Remove '?' from query before updating URL
 
 }
+
+function loadSavedItems() {
+
+	// Get saved data (IDs) from localStorage
+	var savedData = JSON.parse(localStorage.getItem('selectedItems')) || [];
+	var $savedList = $('#savedList .output');
+
+	// Clear the current content (if any)
+	$savedList.empty();
+
+	if (savedData.length === 0) {
+		// If no items are saved, show the "No saved items" message
+		$savedList.text('Keine Werke gespeichert…');
+		console.log("Keine Werke gespeichert…");
+
+	} else {
+		console.log(savedData.length);
+		var urlPrefix = "https://archiv.juergstraumann.ch/";
+		var $tgt = $('#savedList').find('div.output');
+
+		// For each saved storage number, find the corresponding item in the data array
+		savedData.forEach(function (item) {
+			console.log("done", item);
+
+			var $container = $('<div>').addClass('col-sm-2 item');
+			var $link = $('<a>').attr('href', urlPrefix + item.path).attr('data-sub-html', werkTitle(item));
+			var $img = $('<img>').attr('src', urlPrefix + item.thumb).addClass('thumb');
+			var $checkbox = $('<input type="checkbox">')
+				.attr('id', 'mylist-' + item.Nummer)
+				.addClass('check')
+				.attr('data-storage-number', item.Nummer)
+				.prop("checked", true);
+			$link.append($img);
+			$container.append($link);
+			$container.append($checkbox);
+			$tgt.append($container);
+
+			$checkbox.on('change', function () {
+				
+				var storageNumber = $(this).data('storage-number');
+				var savedData = JSON.parse(localStorage.getItem('selectedItems')) || [];
+				// Remove the item from the savedList
+				savedData = savedData.filter(function (i) {
+					console.log(i);
+					return i.Nummer !== item.Nummer;  // Remove the item with the matching 'Nummer'
+				});
+				
+				// Save the updated array back to localStorage
+				localStorage.setItem('selectedItems', JSON.stringify(savedData));
+				loadSavedItems();
+			});
+
+			
+		});
+		// Initialize the gallery
+		const gallery = lightGallery($tgt.get(0), {
+			selector: '.item a',
+			plugins: [],
+			licenseKey: '0000-0000-000-0000',
+			speed: 500,
+			download: false,
+			addClass: "js-gallery"
+		});
+	}
+}
+

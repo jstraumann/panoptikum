@@ -49,12 +49,14 @@
             <li>Wählen Sie eine der drei Rubriken „Inhalt“, „Form“ oder „Werk" aus.</li>
             <li>Suchmodus:
               <ul>
-                <li><b>Werk erfüllt ein Kriterium:</b> Sucht nach Werken mit "Menschen" ODER "Figurengruppen" und zeigt beides in den Resultaten an.</li>
-                <li><b>Werk erfüllt alle Kriterien:</b> Sucht nach Werken mit "Menschen" UND "Figurengruppen" und zeigt nur genaue Treffer an.  </li>
+                <li><b>Werk erfüllt ein Kriterium:</b> Sucht nach Werken mit "Menschen" ODER "Figurengruppen" und zeigt
+                  beides in den Resultaten an.</li>
+                <li><b>Werk erfüllt alle Kriterien:</b> Sucht nach Werken mit "Menschen" UND "Figurengruppen" und zeigt
+                  nur genaue Treffer an. </li>
               </ul>
             <li>Klicken Sie auf „Anzeigen“, um die Auswahl anzuzeigen.</li>
             <li>Klicken Sie auf „Zufall“, um eine spontane Bildauswahl zu erhalten.</li>
-            
+
           </ul>
         </div>
       </div>
@@ -62,44 +64,48 @@
 
     <form>
       <div class="container bs-component" id="filters">
-        <!-- Tabs -->
-        <div class="nav nav-tabs flex-container">
-          <div class="kategorien">
-            <a class="nav-item nav-link btn_bildarchiv active" data-toggle="tab" href="#inhalt">Inhalt</a>
-            <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#form">Form</a>
-            <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#anderes">Werk</a>
-          </div>
-          <div class="auswahl">
-            <span class="">Ausgewählt: <span id="total">0</span><a class="btn_reset hidden" id="restart"><i class="fa fa-close"></i> Reset</a></span>
-          </div>
-        </div>
+         <!-- Aktionen -->
+         <div class="anzeige">
 
-        <!-- Aktionen -->
-        <div class="anzeige">
-          
-          <div class="btn_container" >
+          <div class="btn_container">
             <select class="btn_bildarchiv" id="searchCriteria">
               <option value="OR">Werk erfüllt ein Kriterium</option>
               <option value="AND">Werk erfüllt alle Kriterien</option>
             </select>
             <i class="fa fa-chevron-down" aria-hidden="true"></i>
           </div>
-          
 
           <a class="btn_bildarchiv disable" id="start">Anzeigen&nbsp;&nbsp;<i class="fa fa-play"></i> </a>
           <a class="btn_bildarchiv ghost" id="random"><i class="fa fa-random"></i> Zufall</a>
         </div>
 
+
+        <!-- Tabs -->
+        <div class="nav nav-tabs flex-container">
+          <div class="kategorien">
+            <a class="nav-item nav-link btn_bildarchiv active" data-toggle="tab" href="#inhalt">Inhalt</a>
+            <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#form">Form</a>
+            <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#anderes">Werk</a>
+            <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#resultate">Resultate</a>
+            <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#gespeichert">Meine Liste</a>
+          </div>
+          <div class="auswahl">
+            <span class="">Ausgewählt: <span id="total">0</span><a class="btn_reset hidden" id="restart"><i
+                  class="fa fa-close"></i> Reset</a></span>
+          </div>
+        </div>
+
+       
         <!-- Inhalte -->
         <div class="tab-content">
-          <div class="tab-pane active show" id="inhalt"></div>
+          <div class="tab-pane show active" id="inhalt"></div>
           <div class="tab-pane" id="form"></div>
           <div class="tab-pane" id="anderes">
             <div class="row">
               <div class="col-sm-8">
                 <div class="form-group">
                   <label class="col-form-label" for="inputTitel">
-                    <h5> Titel</h5>
+                    <h5>Titel</h5>
                   </label>
                   <input name="Titel" autocomplete="off" autofocus placeholder="Titelsuche" type="text"
                     class="searchOnEnter">
@@ -175,69 +181,54 @@
                       clusterYear.update(result);
                     };
                   </script>
-                  <!--HTML scroll clusterize area-->
                   <div id="scrollAreaYear" class="clusterize-scroll-5">
                     <div id="contentAreaYear" class="clusterize-content">
-                      <div class="clusterize-no-data">Lade Jahre...</div>
+                      <div class="clusterize-no-data">Lade Jahre…</div>
                     </div>
                   </div>
 
                 </div>
-
                 <div class="form-group">
                   <label class="col-form-label" for="inputNummer">
-                    <h5> Werknummer</h5>
+                    <h5>Werknummer</h5>
                   </label>
                   <input class="searchOnEnter" name="Nummer" type="text">
                 </div>
-                <!--
-                <h5>Chronologie</h5>
-                <div class="form-group" data-cols="1"
-                     data-tag="zeit"
-                     data-type="Chronologie">
-                </div>
--->
               </div>
-              <!--
-              <div class="col-sm-6">
-
-                <h5>Thematische Kurztouren</h5>
-                <div id="kurztouren"></div>
-
-              </div>
--->
             </div>
           </div>
 
-          <footer id="footer">
-            <div class="row">
-              <div class="col-lg-12">
-
-                <p>Impressum:
-                  2023 <a href="http://datalets.ch">Datalets</a> &bull;
-                  <a href="https://github.com/dataletsch/panoptikum">Open source</a> under the MIT License</a>.
-                </p>
-
+          <!-- Werke -->
+          <div class="tab-pane" id="resultate">
+            <div id="results">
+              <div id="selection"></div>
+              <div class="container main">
+                <h4>Werke</h4>
+                <div class="row">Keine Werke ausgewählt…</div>
+              </div>
+              <div class="pagination">
+                <button id="more" class="btn_bildarchiv" style="display:none">Mehr anzeigen</button>
               </div>
             </div>
-
-          </footer>
+          </div>
+          <!-- Gespeicherte Liste -->
+          <div class="tab-pane" id="gespeichert">
+            <div id="savedList">
+              <div class="container main">
+                <h4>Gespeichert</h4>
+                <div class="row output">Keine Werke gespeichert…</div>
+                <button class="btn btn-sm btn-default" id="deleteSavedList">Liste löschen</button>
+                <button class="btn btn-sm btn-default" id="exportSavedList">Liste exportieren</button>
+                <button class="btn btn-sm btn-default" id="importSavedList">Liste importieren</button>
+              </div>
+            </div>
+          </div>
         </div>
-
 
       </div>
     </form>
-    <!-- Werke -->
-    <div id="results" style="display:none">
-      <div id="selection"></div>
-      <div class="container main">
-        <h4>Werke</h4>
-        <div class="row">Keine Werke Ausgewählt</div>
-      </div>
-      <div class="pagination">
-        <button id="more" class="btn_bildarchiv" style="display:none">Mehr anzeigen</button>
-      </div>
-    </div>
+
+
   </div> <!-- // -.top.container -->
 
   <div class="container main" id="details" style="display:none">
@@ -260,6 +251,20 @@
       <!-- <span class="fa fa-spinner fa-spin fa-3x w-100">🖌 ⌛ 🎨</span> -->
     </div>
   </div>
+
+  <footer id="footer">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <p>Impressum:
+          2023 <a href="http://datalets.ch">Datalets</a> &bull;
+          <a href="https://github.com/dataletsch/panoptikum">Open source</a> under the MIT License</a>.
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/lightgallery.min.js"></script>
 
