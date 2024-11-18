@@ -14,10 +14,10 @@ Before starting with the deployment, ensure you have the following installed:
 - NumPy
 
 ## Installation 
-Install Python 3.8 and using:
+Install Python 3.7 and using:
 
 ```
-sudo apt-get install python3.8 python3-numpy
+sudo apt-get install python3.7 python3-numpy
 ```
 
 ## Development
@@ -29,7 +29,7 @@ sudo apt-get install python3.8 python3-numpy
 
 2. Alternatively, use virtualenv:
     ```
-    virtualenv --system-site-packages -p python3.8 env
+    virtualenv --system-site-packages -p python3.7 env
     source env/bin/activate
     pip install -r requirements.txt
     ```
@@ -48,6 +48,12 @@ sudo apt-get install python3.8 python3-numpy
   ```
   gunicorn --log-level=info -w 4 -b :8000 app:app
   ```
+
+3. Alternatively use docker
+   Make sure docker and docker-compose are installed.
+   ```
+   docker-compose up --build
+   ```
 
 ## Deployment
 Changes to the github are automatically deployed.

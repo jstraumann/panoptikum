@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  flask:
+    build: .
+    ports:
+      - "8000:8000"  # Expose port 8000 for the Flask app
+    volumes:
+      - .:/app  # Mount the apps folder (on the host) to the /app folder (inside the container)
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=development  # Enable development mode to trigger hot reload
+      - FLASK_RUN_HOST=0.0.0.0  # Bind Flask to all network interfaces
+      - FLASK_RUN_PORT=8000     # Set the port to 8000
+    command: flask run --host=0.0.0.0 --port=8000 --reload
