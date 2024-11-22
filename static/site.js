@@ -71,7 +71,7 @@ const category_selectors = [
 				var allCodes = allOfType.map(c => c.Code);
 				var filter = allCodes.join('|');
 				$tgt.append(
-					'<h5>' + i + '&nbsp;<input type="checkbox" name="o_' + allOfType[0].Column + '" value="' + filter + '"></h5>' +
+					'<h5 class="group-title"><input type="checkbox" id="group_' + i + '"name="o_' + allOfType[0].Column + '" value="' + filter + '">&nbsp;<label for="group_' + i + '">' + i + '</label></h5>' +
 					'<div class="form-group row" ' +
 					'data-tag="' + sname + '" ' +
 					'data-type="' + i + '"></div>'

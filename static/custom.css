@@ -178,9 +178,46 @@ input[type="checkbox"].check {
   padding: 0 0.4em;
 }
 
-.tab-content h5 {
-  margin-top: 1em;
+.tab-content h5.group-title {
+  display: flex;
+  justify-content: start;
+  align-content: start;
+  border-radius: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  margin: 1rem 0 0.5rem 0;
+  line-height: 1rem;
 }
+
+h5.group-title label {
+  width: 100%;
+  margin-bottom: 0;
+  padding: 1rem 0.5rem 0.5rem 0;
+  cursor: pointer;
+}
+
+h5.group-title input[type="checkbox"] { 
+  margin: 1rem 0.25rem 1rem 0.5rem;
+}
+
+/* h5.group-title label::before {
+  content: "□";
+}
+h5.group-title input[type="checkbox"]+label::before { 
+  padding: 0 0.5rem;
+
+}
+
+h5.group-title input[type="checkbox"]:checked+label { 
+  display: inline;
+}
+
+h5.group-title input[type="checkbox"]:checked+label::before { 
+  content: "▣";
+}
+
+h5.group-title input[type='checkbox'] {
+  display: none;
+} */
 
 .nav-tabs {
   font-weight: 600;
