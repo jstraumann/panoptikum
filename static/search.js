@@ -45,8 +45,9 @@ function werkSearchReset(e) {
 	clusterTitle.update(titlelist_uniqueEntries); // Resets title list display
 	clusterYear.update(yearlist); 		// Resets year list display
 
-	// Show the counters again
-	// $('.form-check small').css('visibility', 'visible');
+	// Update the URL to the base URL
+    const baseUrl = window.location.origin;
+    history.pushState(null, '', baseUrl);
 }
 
 // Query builder
@@ -425,7 +426,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 			selector: '.item a',
 			plugins: [],
 			licenseKey: '0000-0000-000-0000',
-			speed: 500,
+			speed: 1,
 			download: false,
 			addClass: "js-gallery"
 		});
