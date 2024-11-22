@@ -202,10 +202,18 @@ const category_selectors = [
 		werkSearchCount();
 	});
 
-	// Delete local storage -> saved images
+	// Save all result images
+	$('#selectAllResults').on('click', function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$('.check').prop('checked', true);
+		$('.check').trigger('change');
+	});
+
+	// Delete local storage -> Delete saved images
 	$('#deleteSavedList').on('click', function (e) {
-		if (typeof e !== typeof undefined)
-			e.preventDefault(); e.stopPropagation();
+		e.preventDefault(); 
+		e.stopPropagation();
 
 		console.log("delete local storage");
 		localStorage.removeItem('selectedItems');
@@ -214,32 +222,27 @@ const category_selectors = [
 
 	// Export list
 	$('#exportSavedList').on('click', function (e) {
-		if (typeof e !== typeof undefined)
-			e.preventDefault(); e.stopPropagation();
-
-		const data = localStorage.getItem('selectedItems');  // Replace 'yourKey' with your actual key
+		e.preventDefault(); 
+		e.stopPropagation();
+		const data = localStorage.getItem('selectedItems');  
 		const jsonData = data;
 		const blob = new Blob([jsonData], { type: 'application/json' });
 		const url = URL.createObjectURL(blob);
 		const link = document.createElement('a');
 		link.href = url;
-		link.download = 'data.json'; // Set the file name here
+		link.download = 'data.json'; 
 		link.click();
 		URL.revokeObjectURL(url);
 	});
 
 	$('#importSavedList').on('click', function (e) {
+		e.preventDefault(); 
+		e.stopPropagation();
 
-		if (typeof e !== typeof undefined)
-			e.preventDefault(); e.stopPropagation();
-
-		// 1. Create a file input element for selecting the JSON file
 		const input = document.createElement('input');
 		input.type = 'file';
 		input.accept = 'application/json';
 
-		
-		// 2. Handle file selection
 		input.onchange = async (event) => {
 			const file = event.target.files[0];
 			if (!file) return;

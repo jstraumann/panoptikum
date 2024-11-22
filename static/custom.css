@@ -285,6 +285,22 @@ button#back {
   transform: scale(1.02);
 }
 
+.list-actions,
+.empty-state {
+  width: 100%;
+  border-radius: 0.25rem;
+  padding: 0.2rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  margin-bottom: 1rem;
+}
+
+.empty-state {
+  text-align: center;
+  margin: 0 15px;
+  padding: 1rem;
+}
+
+
 #details {
   position: absolute;
   top: 0px;

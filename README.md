@@ -8,7 +8,7 @@ Made with [Frictionless Data](https://frictionlessdata.io), [Flask](http://flask
 ## Prerequisites
 Before starting with the deployment, ensure you have the following installed:
 
-- Python 3.8
+- Python 3.7
 - pip and virtualenv
 - ImageMagick (for image processing)
 - NumPy
@@ -40,7 +40,7 @@ sudo apt-get install python3.7 python3-numpy
   pipenv --python 3
   pipenv shell
   pipenv sync
-  env flask run
+  env FLASK_DEBUG=1 flask run
   ```
 
 

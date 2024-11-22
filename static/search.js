@@ -1,4 +1,4 @@
-var PER_PAGE = 30;
+var PER_PAGE = 100;
 var clusterTitle = new Clusterize({ // Clusterize prepares title search output
 	scrollId: 'scrollAreaTitle',
 	contentId: 'contentAreaTitle'
@@ -355,7 +355,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 
 		$('button#more').hide();
 		if (data.length === PER_PAGE)
-			$('button#more').show();
+			$('button#more').show(); 
 
 		var urlPrefix = "https://archiv.juergstraumann.ch/";
 
@@ -454,7 +454,7 @@ function loadSavedItems() {
 
 	if (savedData.length === 0) {
 		// If no items are saved, show the "No saved items" message
-		$savedList.text('Keine Werke gespeichert…');
+		$savedList.html('<div class="empty-state">Keine Werke gespeichert…</div>');
 		console.log("Keine Werke gespeichert…");
 
 	} else {
