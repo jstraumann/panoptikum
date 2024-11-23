@@ -201,6 +201,15 @@ const category_selectors = [
 	// Pop down image
 	$('#details .image').click(werkSearchBack);
 
+	// Main nav tabs
+	$('.main-nav-item').click(function () {
+		$('.main-nav .main-nav-item').removeClass('active');
+		$('.main .main-nav-pane').removeClass('active');
+		var activeSection = $(this).attr("href");
+		$(activeSection).addClass('active');
+        console.log(activeSection);
+	});
+
 	// Search tab styling on click
 	$('#search .nav-link').click(function () {
 		$('#search .nav-item.nav-link').removeClass('active');
