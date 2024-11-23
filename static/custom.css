@@ -3,12 +3,23 @@
   src: url('fonts/Switzer-Variable.ttf') format('woff2')
 }
 
+:root {
+  --primary: #1e90ff;
+  --gray3: #565656;
+  --gray2: #9a9a9a;
+  --gray1: #dfdfdf;
+  --black: #020202;
+  --black25: rgba(0,0,0,0.25);
+  --white: #fff;
+  --white25: rgba(255,255,255,0.25);
+}
+
 body {
   font-family: "Switzer", monospace;
   font-weight: 340;
   font-optical-sizing: auto;
-  background-color: #bbb !important;
-  color: #000;
+  background-color: var(--gray1) !important;
+  color: var(--black);
   margin: 0;
   padding: 0;
 }
@@ -20,7 +31,7 @@ body {
 
 .page-header {
   padding: 1rem;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 h1.page-title {
@@ -29,30 +40,8 @@ h1.page-title {
 }
 
 h1.page-title a {
-  color: #000;
+  color: var(--black);
   text-decoration: none;
-}
-
-.anleitung-infoblock {
-  background-color: #fff;
-  border: 1px solid transparent;
-  border-radius: .5rem;
-  padding-top: .5em;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
-
-.anleitung-infoblock button {
-  margin-top: 0.4rem;
-  float: right;
-}
-
-.anleitung-infoblock ul {
-  margin-left: 0em;
-  padding-left: 1rem;
-}
-
-.anleitung-infoblock li {
-  margin: 0 .25rem 0 0;
 }
 
 b, strong {
@@ -77,16 +66,16 @@ b, strong {
 
 .btn_bildarchiv:hover {
   background-color: rgb(210, 210, 210);
-  border: solid 1px #fff;
+  border: solid 1px var(--white);
   color: black;
 }
 
 .btn_bildarchiv.active {
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .btn_reset {
-  color: #fff !important;
+  color: var(--white) !important;
   cursor: pointer;
   padding: .5rem 1rem;
 }
@@ -156,10 +145,10 @@ b, strong {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
+  color: var(--gray3);
+  background-color: var(--white);
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid var(--gary1);
   border-radius: .25rem;
 }
 
@@ -180,9 +169,9 @@ input[type="checkbox"].check {
 }
 
 .clusterize-content {
-  background: #fff;
+  background: var(--white);
   margin-left: 5px;
-  color: #555;
+  color: var(--gray2);
 }
 
 #total {
@@ -194,7 +183,7 @@ input[type="checkbox"].check {
   justify-content: start;
   align-content: start;
   border-radius: 0.25rem;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: var(--white25);
   margin: 1rem 0 0.5rem 0;
   line-height: 1rem;
 }
@@ -233,7 +222,7 @@ h5.group-title input[type='checkbox'] {
 .nav-tabs {
   font-weight: 600;
   margin-top: 2.5rem;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--white);
 }
 
 .nav-tabs .nav-link,
@@ -247,11 +236,11 @@ h5.group-title input[type='checkbox'] {
 
 .nav-tabs .nav-link:hover {
   border: none;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: var(--white25);
 }
 .nav-tabs .nav-link.active:hover {
   border: none;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .form-group .form-check {
@@ -271,7 +260,7 @@ h5.group-title input[type='checkbox'] {
   padding: 0.2em 0.4em;
   font-size: 85%;
   background: transparent;
-  color: #fff;
+  color: var(--white);
 }
 
 /*
@@ -323,7 +312,7 @@ button#back {
 
 #results .item img,
 #savedList .item img {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: var(--black25) 0px 50px 100px -20px, var(--black25) 0px 30px 60px -30px;
   max-width: 100%;
   transition: transform ease 0.2s;
 }
@@ -338,7 +327,7 @@ button#back {
   width: 100%;
   border-radius: 0.25rem;
   padding: 0.2rem;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: var(--white25);
   margin-bottom: 1rem;
 }
 
@@ -424,7 +413,7 @@ button#back {
 
 /* Lightbox */
 .js-gallery .lg-backdrop {
-  background-color: #bbb;
+  background-color: var(--gray1);
 }
 
 .js-gallery .lg-counter,
