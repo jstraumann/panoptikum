@@ -6,8 +6,9 @@
 
 :root {
   --primary: #1e90ff;
-  --gray3: #565656;
-  --gray2: #9a9a9a;
+  --gray4: #565656;
+  --gray3: #9a9a9a;
+  --gray2: #bebebe;
   --gray1: #dfdfdf;
   --black: #020202;
   --black25: rgba(0, 0, 0, 0.25);
@@ -53,8 +54,13 @@ body {
 .container.main-nav-pane {
   display: none;
 }
+
 .container.main-nav-pane.active {
   display: block;
+}
+
+.container-fill {
+  min-height: 100vh;
 }
 
 /* Fonts */
@@ -104,7 +110,7 @@ input[type="checkbox"].check {
 .clusterize-content {
   background: var(--white);
   margin-left: var(--spacing-sm);
-  color: var(--gray2);
+  color: var(--gray3);
 }
 
 #total {
@@ -258,8 +264,9 @@ button#back {
   padding: 0.2em 0.4em;
 }
 
-#footer .row {
-  font-size: 80%;
+.footer {
+  background-color: var(--gray2);
+  padding: var(--spacing-lg);
   text-align: center;
 }
 

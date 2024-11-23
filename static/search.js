@@ -345,7 +345,6 @@ function werkSearchStart(e, from_page, random, fromURL) {
 
 	$.getJSON(random ? '/api/images.random' : '/api/images.json' + q, function (data) {
 		var $tgt = $('#results').show().find('div.row');
-		$('a[href="#resultate"]').click(); // Switch tab
 
 		$('button#more').hide();
 		if (data.length === PER_PAGE)
