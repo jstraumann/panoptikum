@@ -4,12 +4,23 @@
 }
 
 body {
-  margin-top: 1em;
   font-family: "Switzer", monospace;
   font-weight: 340;
   font-optical-sizing: auto;
   background-color: #bbb !important;
   color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.top {
+  padding: 0;
+  margin: 0;
+}
+
+.page-header {
+  padding: 1rem;
+  background-color: #fff;
 }
 
 h1.page-title {

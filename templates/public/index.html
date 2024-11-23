@@ -37,35 +37,19 @@
 </head>
 
 <body>
-  <div class="top container" id="browser">
+  <div class="top main container-fluid d-flex flex-column" id="browser">
 
-    <div class="page-header" id="banner">
-      <div class="row">
-        <div class="col-sm anleitung-infoblock">
-          <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseInfoblock"
-            aria-expanded="false" aria-controls="collapseExample">Hilfe</button>
-          <h1 class="page-title"><a href="https://bildarchiv-js.ch/">Bildarchiv JS</a></h1>
-          <ul class="collapse collapsed" id="collapseInfoblock">
-            <li>Wählen Sie eine der drei Rubriken „Inhalt“, „Form“ oder „Werk" aus.</li>
-            <li>Suchmodus:
-              <ul>
-                <li><b>Werk erfüllt ein Kriterium:</b> Sucht nach Werken mit "Menschen" ODER "Figurengruppen" und zeigt
-                  beides in den Resultaten an.</li>
-                <li><b>Werk erfüllt alle Kriterien:</b> Sucht nach Werken mit "Menschen" UND "Figurengruppen" und zeigt
-                  nur genaue Treffer an. </li>
-              </ul>
-            <li>Klicken Sie auf „Anzeigen“, um die Auswahl anzuzeigen.</li>
-            <li>Klicken Sie auf „Zufall“, um eine spontane Bildauswahl zu erhalten.</li>
-
-          </ul>
-        </div>
-      </div>
+    <div class="page-header d-flex sticky-top" id="banner">
+      <h1 class="page-title mr-auto"><a href="https://bildarchiv-js.ch/">Bildarchiv JS</a></h1>
+      <button type="button" class="btn align-self-center" data-toggle="modal" data-target="#helpModal">
+        Hilfe
+      </button>
     </div>
 
     <form>
       <div class="container bs-component" id="filters">
-         <!-- Aktionen -->
-         <div class="anzeige">
+        <!-- Aktionen -->
+        <div class="anzeige">
 
           <div class="btn_container">
             <select class="btn_bildarchiv" id="searchCriteria">
@@ -95,7 +79,7 @@
           </div>
         </div>
 
-       
+
         <!-- Inhalte -->
         <div class="tab-content">
           <div class="tab-pane show active" id="inhalt"></div>
@@ -258,6 +242,35 @@
   <div class="modal fade" tabindex="-1" role="dialog" id="spinnerModal">
     <div class="modal-dialog modal-dialog-centered text-center" role="document">
       <!-- <span class="fa fa-spinner fa-spin fa-3x w-100">🖌 ⌛ 🎨</span> -->
+    </div>
+  </div>
+
+  <!-- Help Modal -->
+  <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="helpModalLabel">Hilfe</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>Wählen Sie eine der drei Rubriken „Inhalt“, „Form“ oder „Werk" aus.</li>
+            <li>Suchmodus:
+              <ul>
+                <li><b>Werk erfüllt ein Kriterium:</b> Sucht nach Werken mit "Menschen" ODER "Figurengruppen" und zeigt
+                  beides in den Resultaten an.</li>
+                <li><b>Werk erfüllt alle Kriterien:</b> Sucht nach Werken mit "Menschen" UND "Figurengruppen" und zeigt
+                  nur genaue Treffer an. </li>
+              </ul>
+            <li>Klicken Sie auf „Anzeigen“, um die Auswahl anzuzeigen.</li>
+            <li>Klicken Sie auf „Zufall“, um eine spontane Bildauswahl zu erhalten.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 

@@ -334,7 +334,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 	}
 
 	// Load and build the query
-	$('.modal').modal('show'); // Show loading or processing modal
+	// $('.modal').modal('show'); // Show loading or processing modal
 	var wsq = get_werkSearchQuery(from_page);
 	var q = wsq.query;
 
@@ -345,9 +345,9 @@ function werkSearchStart(e, from_page, random, fromURL) {
 	}
 
 	$.getJSON(random ? '/api/images.random' : '/api/images.json' + q, function (data) {
-		setTimeout(function () {
-			$('.modal').modal('hide');
-		}, 500);
+		// setTimeout(function () {
+		// 	$('.modal').modal('hide');
+		// }, 500);
 
 		// $('#filters .tab-content').hide();
 
