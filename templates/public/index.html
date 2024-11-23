@@ -40,17 +40,32 @@
   <div class="top main container-fluid d-flex flex-column" id="browser">
 
     <div class="page-header d-flex sticky-top" id="banner">
-      <h1 class="page-title mr-auto"><a href="https://bildarchiv-js.ch/">Bildarchiv JS</a></h1>
-      <button type="button" class="btn align-self-center" data-toggle="modal" data-target="#helpModal">
-        Hilfe
-      </button>
+      <h1 class="page-title"><a href="https://bildarchiv-js.ch/">Bildarchiv JS</a></h1>
+      <div class="content-center d-flex mx-auto">
+        <button class="btn"  data-toggle="tab" href="#anderes">
+          Suche
+        </button>
+        <button class="btn"  data-toggle="tab" href="#resultate">
+          Resultate
+        </button>
+        <button class="btn" data-toggle="tab" href="#gespeichert">
+          Meine Liste
+        </button>
+      </div>
+      <div class="content-right d-flex align-self-center">
+        <button class="btn" id="random">
+          Zufall
+        </button>
+        <button class="btn align-self-center" data-toggle="modal" data-target="#helpModal">
+          Hilfe
+        </button>
+      </div>
     </div>
 
     <form>
       <div class="container bs-component" id="filters">
         <!-- Aktionen -->
         <div class="anzeige">
-
           <div class="btn_container">
             <select class="btn_bildarchiv" id="searchCriteria">
               <option value="OR">Werk erfüllt ein Kriterium</option>
@@ -58,9 +73,7 @@
             </select>
             <i class="fa fa-chevron-down" aria-hidden="true"></i>
           </div>
-
           <a class="btn_bildarchiv disable" id="start">Anzeigen&nbsp;&nbsp;<i class="fa fa-play"></i> </a>
-          <a class="btn_bildarchiv ghost" id="random"><i class="fa fa-random"></i> Zufall</a>
         </div>
 
 
@@ -70,8 +83,7 @@
             <a class="nav-item nav-link btn_bildarchiv active" data-toggle="tab" href="#inhalt">Inhalt</a>
             <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#form">Form</a>
             <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#anderes">Werk</a>
-            <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#resultate">Resultate</a>
-            <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#gespeichert">Meine Liste</a>
+            
           </div>
           <div class="auswahl">
             <span class="">Ausgewählt: <span id="total">0</span><a class="btn_reset hidden" id="restart"><i

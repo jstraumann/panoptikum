@@ -37,7 +37,7 @@ body {
 }
 
 .page-header {
-  padding: var(--spacing-lg);
+  padding: 0 var(--spacing-lg);
   background-color: var(--white);
 }
 
