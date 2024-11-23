@@ -9,8 +9,9 @@
   --gray4: #565656;
   --gray3: #9a9a9a;
   --gray2: #bebebe;
-  --gray1: #dfdfdf;
+  --gray1: #BBBBBB;
   --black: #020202;
+  --black10: rgba(0, 0, 0, 0.1);
   --black25: rgba(0, 0, 0, 0.25);
   --white: #fff;
   --white25: rgba(255, 255, 255, 0.25);
@@ -58,19 +59,59 @@ body {
   background-color: var(--black);
 }
 
+.main-nav-item:not(.active):hover {
+  background-color: var(--black10);
+}
+
+
 /* Tabs */
+.nav-tabs {
+  border: none;
+}
+
 .nav-tabs .nav-item,
 .nav-tabs .nav-item:focus {
   color: var(--black);
   border-radius: 0;
   padding: var(--spacing-md) var(--spacing-lg);
   box-shadow: none;
+  border: none;
 }
 
 .nav-tabs .nav-item.active {
   color: var(--white);
   background-color: var(--black);
+  border: none;
 }
+
+.nav-tabs .nav-item:not(.active):hover {
+  background-color: var(--white25);
+}
+
+.tab-content,
+.row.tab-content {
+  margin: 0;
+  padding: var(--spacing-lg);
+  background-color: var(--white25);
+}
+
+/* List Actions */
+.list-actions  {
+  width: 100%;
+  background-color: var(--white25);
+  margin-bottom: var(--spacing-lg);
+}
+
+.list-actions .btn {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: none;
+}
+
+.list-actions .btn:not(.active):hover {
+  background-color: var(--white25);
+}
+
+
 
 /* Buttons */
 button,
@@ -78,6 +119,7 @@ button,
 .lg-next,
 .lg-prev {
   border-radius: 0;
+  
 }
 
 /* Container */
@@ -91,12 +133,13 @@ button,
 
 .container-fill {
   min-height: 100vh;
-  padding: var(--spacing-lg) 0;
+  margin-top: var(--spacing-lg);
 }
 
 /* Fonts */
 h1.page-title {
   font-size: 2rem;
+  font-weight: 650;
   padding: var(--spacing-lg);
   margin: 0;
 }
@@ -149,10 +192,13 @@ input[type="checkbox"].check {
   display: flex;
   justify-content: start;
   align-content: start;
-  border-radius: var(--spacing-sm);
   background-color: var(--white25);
   margin: var(--spacing-lg) 0 var(--spacing-md) 0;
   line-height: var(--spacing-lg);
+}
+
+.tab-content h5.group-title:first-child {
+  margin-top: 0;
 }
 
 h5.group-title label {
@@ -229,16 +275,11 @@ button#back {
   transform: scale(1.02);
 }
 
-.list-actions,
 .empty-state {
   width: 100%;
+  text-align: center;
   background-color: var(--white25);
   margin-bottom: var(--spacing-lg);
-}
-
-.empty-state {
-  text-align: center;
-  margin: 0 15px;
   padding: var(--spacing-lg);
 }
 
