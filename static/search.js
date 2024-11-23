@@ -24,13 +24,6 @@ function werkSearchRandom(e) {
 	werkSearchStart(e, 1, true);
 }
 
-function werkSearchBack(e) {
-	if (typeof e !== typeof undefined)
-		e.preventDefault(); e.stopPropagation();
-
-	var $det = $('#details').hide(); $('#browser').show();
-}
-
 function werkSearchReset(e) {
 	if (typeof e !== typeof undefined)
 		e.preventDefault(); e.stopPropagation();

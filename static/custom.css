@@ -278,30 +278,8 @@ button#back {
 .empty-state {
   width: 100%;
   text-align: center;
-  background-color: var(--white25);
-  margin-bottom: var(--spacing-lg);
+  margin: var(--spacing-lg);
   padding: var(--spacing-lg);
-}
-
-
-#details {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  max-width: none;
-}
-
-#details .image {
-  cursor: pointer;
-  margin-top: 10px;
-  overflow: hidden;
-  width: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top left;
 }
 
 .pagination {

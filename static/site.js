@@ -186,20 +186,9 @@ const category_selectors = [
 	// Pagination
 	$('button#more').click(werkSearchNext); // -button.click
 
-	// Close image
-	$('button#back').click(werkSearchBack); // -button.click
-
 	// Title, Year Search
 	$('#contentAreaTitle').on('click', 'div', titleSearch);  // -div.click for title search results
 	$('#contentAreaYear').on('click', 'div', yearSearch);  // -div.click for year search results
-
-	// Search for specific image
-	// $('.searchOnEnter').keypress(function (e) {
-	//   if (e.which == 13) { werkSearchStart(); }
-	// });
-
-	// Pop down image
-	$('#details .image').click(werkSearchBack);
 
 	// Main nav tabs
 	$('.main-nav-item').click(function () {
