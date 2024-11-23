@@ -182,12 +182,11 @@ input[type="checkbox"].check {
   margin: var(--spacing-lg);
 }
 
-.clusterize-content {
-  background: var(--white);
-  margin-left: var(--spacing-sm);
-  color: var(--gray3);
-}
 
+
+
+
+/* Form groups */
 .tab-content h5.group-title {
   display: flex;
   justify-content: start;
@@ -212,9 +211,13 @@ h5.group-title input[type="checkbox"] {
   margin: var(--spacing-lg) var(--spacing-sm) var(--spacing-lg) var(--spacing-md);
 }
 
+.form-group.row {
+  padding: 0;
+  margin: var(--spacing-lg) var(--spacing-sm) var(--spacing-lg) var(--spacing-md);
+}
+
 .form-group .form-check {
-  padding-bottom: 0.5em;
-  opacity: 0.9;
+  padding-bottom: var(--spacing-md);
 }
 
 .form-group .form-check:hover {
@@ -366,6 +369,9 @@ button#back {
 .clusterize-content {
   outline: 0;
   counter-reset: clusterize-counter;
+  background: var(--white);
+  margin-left: var(--spacing-sm);
+  color: var(--gray3);
 }
 
 .clusterize-no-data td {

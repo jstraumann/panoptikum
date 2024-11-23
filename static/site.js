@@ -46,8 +46,8 @@ const category_selectors = [
 		listTitles();
 
 		// Hack for display "performance" as wished
-		var elMagic = $('#o_ParaphrasenPar9b').parent();
-		elMagic.appendTo($(elMagic).closest('.col-sm-3').prev());
+		// var elMagic = $('#o_ParaphrasenPar9b').parent();
+		// elMagic.appendTo($(elMagic).closest('.col-sm-3').prev());
 
 		// After site has been build, run URL search
 		applySearchFromURL();
@@ -114,49 +114,32 @@ const category_selectors = [
 	}
 
 	function render_form($out, dp) {
-		var wtag = $out.attr('data-tag'),
-			wtype = $out.attr('data-type'),
-			wcols = attr_or($out.attr('data-cols'), DEFAULT_NUM_COLUMNS),
+		var wtype = $out.attr('data-type'),
 			inputtype = attr_or($out.attr('data-input'), 'checkbox');
-
+	
+		// Filter data based on type
 		data = dp.filter(function (i) {
-			return i.Type.toLowerCase() == wtype.toLowerCase()
+			return i.Type.toLowerCase() == wtype.toLowerCase();
 		});
-
-		col_ix = 0; // $out.parent().find('div').count()
-		per_col = Math.round(data.length / wcols);
-		col_size = 12 / wcols;
-
-		get_col = function (colsm) {
-			return $out.append('<div class="col-sm-' + colsm + '" />')
-				.find('div:last');
-		};
-
-		$col = get_col(col_size);
+	
+		// Append "form-check" divs directly to $out
 		$.each(data, function () {
-
-			$col.append(
-				'<div class="form-check">' + (this.Code == null ? '&nbsp;' :
-					'<input class="form-check-input" ' +
-					'id="o_' + this.Column + this.Code + '" ' +
-					'name="o_' + this.Column + '" ' +
-					'value="' + this.Code + '" ' +
-					'type="' + inputtype + '">' +
-					'<label class="form-check-label" ' +
-					'for="o_' + this.Column + this.Code + '">' +
-					this.Title +
-					(this.Count == 0 ? '' :
-						'&nbsp;<span class="badge badge-light badge-pill count">' + this.Count + '</span> ') +
-					'</label>' +
-					'') +
+			$out.append(
+				'<div class="form-check">' +
+					(this.Code == null ? '&nbsp;' :
+						'<input class="form-check-input" ' +
+						'id="o_' + this.Column + this.Code + '" ' +
+						'name="o_' + this.Column + '" ' +
+						'value="' + this.Code + '" ' +
+						'type="' + inputtype + '">' +
+						'<label class="form-check-label" ' +
+						'for="o_' + this.Column + this.Code + '">' +
+						this.Title +
+						(this.Count == 0 ? '' :
+							'&nbsp;<span class="badge badge-light badge-pill count">' + this.Count + '</span> ') +
+						'</label>') +
 				'</div>'
 			);
-
-			if (++col_ix == per_col) {
-				$col = get_col(col_size);
-				col_ix = 0;
-			}
-
 		});
 	}
 
