@@ -76,30 +76,6 @@ strong {
   display: none;
 }
 
-/* end new navigation styles */
-
-#anderes input[type="text"] {
-  display: block;
-  width: 100%;
-  padding: var(--spacing-md) var(--spacing-md);
-  font-size: var(--spacing-lg);
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--gray3);
-  background-color: var(--white);
-  background-clip: padding-box;
-  border: 1px solid var(--gary1);
-  border-radius: var(--spacing-sm);
-}
-
-#anderes .form-check-input {
-  border: 1px solid green;
-  padding: 0;
-}
-
-
-/*  */
-
 input[type="checkbox"].check {
   font-size: var(--spacing-xl);
   position: absolute;
@@ -139,31 +115,6 @@ h5.group-title input[type="checkbox"] {
   margin: var(--spacing-lg) var(--spacing-sm) var(--spacing-lg) var(--spacing-md);
 }
 
-.nav-tabs {
-  font-weight: 600;
-  margin-top: var(--spacing-xl);
-  border-bottom: 1px solid var(--white);
-}
-
-.nav-tabs .nav-link,
-.nav-tabs .nav-link:focus,
-.nav-tabs .nav-link:hover {
-  border: none;
-  transition: all ease 0.2s;
-
-}
-
-
-.nav-tabs .nav-link:hover {
-  border: none;
-  background-color: var(--white25);
-}
-
-.nav-tabs .nav-link.active:hover {
-  border: none;
-  background-color: var(--white);
-}
-
 .form-group .form-check {
   padding-bottom: 0.5em;
   opacity: 0.9;
@@ -182,19 +133,6 @@ h5.group-title input[type="checkbox"] {
   vertical-align: var(--spacing-xs);
 }
 
-/*
-.form-group .form-check-input + label {
-  border: 1px solid transparent;
-}
-
-.form-group .form-check-input:checked + label {
-  border: 1px solid blue;
-}
-
-.form-group .form-check-input:hover + label {
-  background-color: blue;
-}
-*/
 button#back {
   float: right;
 }

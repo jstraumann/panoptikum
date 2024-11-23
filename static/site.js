@@ -58,11 +58,26 @@ const category_selectors = [
 
 	function init_section(sname) {
 		// Add section headers
-		console.log("Init sections");
+		console.log("Init sections", sname);
 
 		loadSavedItems();
 
-		$('#' + sname).each(function () {
+		let id = "";
+		switch (sname) {
+			case 'anderes':
+				id = "#titleSearch"
+				break;
+			case 'inhalt':
+				id = "#contentSearch"
+				break;
+			case 'form':
+				id = "#formSearch"
+				break;
+			default:
+				break;
+		}
+
+		$(id).each(function () {
 			var $tgt = $(this);
 			filters[sname].forEach(function (i) {
 				if ($('div[data-tag="' + sname + '"]').attr('data-type') == i)
@@ -186,18 +201,14 @@ const category_selectors = [
 	// Pop down image
 	$('#details .image').click(werkSearchBack);
 
-	// Restore on click
-	$('#filters .nav-link').click(function () {
-		$('#filters .nav-item.nav-link').removeClass('active');
-		$('#filters .show.active').removeClass('show active');
-		$('#filters .tab-content').show();
+	// Search tab styling on click
+	$('#search .nav-link').click(function () {
+		$('#search .nav-item.nav-link').removeClass('active');
 	});
 
 	// Counter on click
 	$('form').change(function () {
-		$('input[name="Titel"]').val(''); // Copies Entry to html input form
-		//$('input[name="Jahr"]').val(''); // Copies Entry to html input form
-		// Get total for this result
+		$('input[name="Titel"]').val('');
 		werkSearchCount();
 	});
 

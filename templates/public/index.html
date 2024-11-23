@@ -42,13 +42,13 @@
     <div class="page-header d-flex sticky-top" id="banner">
       <h1 class="page-title"><a href="https://bildarchiv-js.ch/">Bildarchiv JS</a></h1>
       <div class="content-center d-flex mx-auto">
-        <button class="btn" data-toggle="tab" href="#anderes">
+        <button class="btn main-nav-item" data-toggle="tab" href="#search">
           Suche
         </button>
-        <button class="btn" data-toggle="tab" href="#resultate">
+        <button class="btn main-nav-item" data-toggle="tab" href="#works">
           Resultate
         </button>
-        <button class="btn" data-toggle="tab" href="#gespeichert">
+        <button class="btn main-nav-item" data-toggle="tab" href="#lists">
           Meine Liste
         </button>
       </div>
@@ -62,17 +62,17 @@
       </div>
     </div>
 
-    <form>
-      <div class="container bs-component" id="filters">
-        
-        <!-- Search -->
+    <!-- Search Form -->
+    <div class="container main-nav-pane active" id="search">
+      <form id="searchForm">
         <div class="nav nav-tabs d-flex">
+          <!-- Search Form Nav -->
           <div class="search-modes d-flex mr-auto">
-            <a class="nav-item nav-link" data-toggle="tab" href="#anderes">Werk</a>
-            <a class="nav-item nav-link active" data-toggle="tab" href="#inhalt">Inhalt</a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#form">Form</a>
+            <a class="nav-item nav-link active" data-toggle="tab" href="#titleSearch">Werk</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#contentSearch">Inhalt</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#formSearch">Form</a>
           </div>
-
+          <!-- Search Actions -->
           <div class="search-action d-flex">
             <select class="btn_bildarchiv" id="searchCriteria">
               <option value="OR">Werk erfüllt ein Kriterium</option>
@@ -85,21 +85,13 @@
               Suchen</i>
             </button>
           </div>
-         
+
         </div>
 
-        <div>
-          <div class="ressult-action d-flex">
-            <button class="btn" id="restart">Reset</button>
-          </div>
-        </div>
-
-
-        <!-- Inhalte -->
+        <!-- Erweiterte Suche -->
         <div class="tab-content">
-          <div class="tab-pane show active" id="inhalt"></div>
-          <div class="tab-pane" id="form"></div>
-          <div class="tab-pane" id="anderes">
+          <!-- Titel -->
+          <div class="tab-pane active" id="titleSearch">
             <div class="row">
               <div class="col-sm-8">
                 <div class="form-group">
@@ -196,45 +188,57 @@
               </div>
             </div>
           </div>
+          <!-- Inhalt -->
+          <div class="tab-pane" id="contentSearch"></div>
+          <!-- Form -->
+          <div class="tab-pane" id="formSearch"></div>
+      </form>
+    </div>
 
-          <!-- Werke -->
-          <div class="tab-pane" id="resultate">
-            <div id="results">
-              <div id="selection"></div>
-              <div class="container main">
-                <h4>Werke</h4>
-                <div class="list-actions">
-                  <button class="btn btn-sm btn-default" id="selectAllResults">Alle Bilder auswählen</button>
-                </div>
-                <div class="row output">
-                  <div class="empty-state">Keine Werke gefunden…</div>
-                </div>
-              </div>
-              <div class="pagination">
-                <button id="more" class="btn_bildarchiv" style="display:none">Mehr anzeigen</button>
-              </div>
+    <!-- Resultate / Werke -->
+    <div class="container  main-nav-pane" id="works">
+      <div class="tab-pane" id="resultate">
+        <div id="results">
+          <div id="selection"></div>
+          <div class="container main">
+            <h4>Werke</h4>
+            <!-- Results Actions -->
+            <div class="ressult-action d-flex">
+              <button class="btn" id="restart">Reset</button>
+            </div>
+            <div class="list-actions">
+              <button class="btn btn-sm btn-default" id="selectAllResults">Alle Bilder auswählen</button>
+            </div>
+            <div class="row output">
+              <div class="empty-state">Keine Werke gefunden…</div>
             </div>
           </div>
-          <!-- Gespeicherte Liste -->
-          <div class="tab-pane" id="gespeichert">
-            <div id="savedList">
-              <div class="container main">
-                <h4>Gespeichert</h4>
-                <div class="list-actions">
-                  <button class="btn btn-sm btn-default" id="deleteSavedList">Liste löschen</button>
-                  <button class="btn btn-sm btn-default" id="exportSavedList">Liste exportieren</button>
-                  <button class="btn btn-sm btn-default" id="importSavedList">Liste importieren</button>
-                </div>
-                <div class="row output">
-                  <div class="empty-state">Keine Werke gespeichert…</div>
-                </div>
-              </div>
+          <div class="pagination">
+            <button id="more" class="btn_bildarchiv" style="display:none">Mehr anzeigen</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gespeicherte Liste -->
+    <div class="container main-nav-pane" id="lists">
+      <div class="tab-pane" id="gespeichert">
+        <div id="savedList">
+          <div class="container main">
+            <h4>Gespeichert</h4>
+            <div class="list-actions">
+              <button class="btn btn-sm btn-default" id="deleteSavedList">Liste löschen</button>
+              <button class="btn btn-sm btn-default" id="exportSavedList">Liste exportieren</button>
+              <button class="btn btn-sm btn-default" id="importSavedList">Liste importieren</button>
+            </div>
+            <div class="row output">
+              <div class="empty-state">Keine Werke gespeichert…</div>
             </div>
           </div>
         </div>
-
       </div>
-    </form>
+    </div>
+  </div>
 
 
   </div> <!-- // -.top.container -->

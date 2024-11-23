@@ -40,7 +40,7 @@ function werkSearchReset(e) {
 	$('#total').text('0');
 	$('#start').addClass('disable'); 	// Anzeigen ausblenden
 	$('#restart').addClass('hidden');	// Hide reset button
-	$('a[href="#inhalt"]').click(); // Switch tab
+	$('a[href="#titleSearch"]').click(); // Switch tab
 
 	clusterTitle.update(titlelist_uniqueEntries); // Resets title list display
 	clusterYear.update(yearlist); 		// Resets year list display
