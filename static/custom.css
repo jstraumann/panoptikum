@@ -21,7 +21,7 @@
   --spacing-md: 0.5rem;
   --spacing-lg: 1rem;
   --spacing-xl: 2rem;
-  --spacing-xxl: 2rem;
+  --spacing-xxl: 3rem;
 }
 
 body {
@@ -46,17 +46,36 @@ body {
   background-color: var(--white);
 }
 
+h1.page-title {
+  font-size: 2.5rem;
+  font-weight: 650;
+  padding: 0.75rem;
+  margin: 0;
+}
+
+h1.page-title a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+
 /* Main Nav */
 .main-nav-item,
 .main-nav-item:focus {
+  font-size: 1.064rem;
   border-radius: 0;
   padding: var(--spacing-lg) var(--spacing-xl);
   box-shadow: none;
+  transition: all 0.2s ease;
 }
 
 .main-nav-item.active {
   color: var(--white);
+  font-weight: 500;
   background-color: var(--black);
+}
+.main-nav-item:hover {
+  padding: 1.1rem var(--spacing-xl) 0.9rem var(--spacing-xl);
 }
 
 .main-nav-item:not(.active):hover {
@@ -80,6 +99,7 @@ body {
 
 .nav-tabs .nav-item.active {
   color: var(--white);
+  font-weight: 500;
   background-color: var(--black);
   border: none;
 }
@@ -204,18 +224,6 @@ h5.group-title input[type="checkbox"] {
 }
 
 /* Fonts */
-h1.page-title {
-  font-size: 2rem;
-  font-weight: 650;
-  padding: var(--spacing-lg);
-  margin: 0;
-}
-
-h1.page-title a {
-  color: var(--black);
-  text-decoration: none;
-}
-
 b, strong {
   font-weight: 600;
 }
