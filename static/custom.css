@@ -45,12 +45,39 @@ body {
   background-color: var(--white);
 }
 
+/* Main Nav */
+.main-nav-item,
+.main-nav-item:focus {
+  border-radius: 0;
+  padding: var(--spacing-lg) var(--spacing-lg);
+  box-shadow: none;
+}
+
 .main-nav-item.active {
   color: var(--white);
   background-color: var(--black);
 }
 
-/* Main */
+/* Tabs */
+.nav-tabs .nav-item,
+.nav-tabs .nav-item:focus {
+  color: var(--black);
+  border-radius: 0;
+  padding: var(--spacing-md) var(--spacing-lg);
+  box-shadow: none;
+}
+
+.nav-tabs .nav-item.active {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+/* Buttons */
+button, .btn, .lg-next, .lg-prev {
+  border-radius: 0;
+}
+
+/* Container */
 .container.main-nav-pane {
   display: none;
 }
@@ -61,12 +88,14 @@ body {
 
 .container-fill {
   min-height: 100vh;
+  padding: var(--spacing-lg) 0;
 }
 
 /* Fonts */
 h1.page-title {
-  font-size: var(--spacing-xl);
-  padding: var(--spacing-md) 0;
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
 }
 
 h1.page-title a {
@@ -74,8 +103,7 @@ h1.page-title a {
   text-decoration: none;
 }
 
-b,
-strong {
+b, strong {
   font-weight: 600;
 }
 
@@ -111,10 +139,6 @@ input[type="checkbox"].check {
   background: var(--white);
   margin-left: var(--spacing-sm);
   color: var(--gray3);
-}
-
-#total {
-  padding: 0 0.4em;
 }
 
 .tab-content h5.group-title {
@@ -204,8 +228,6 @@ button#back {
 .list-actions,
 .empty-state {
   width: 100%;
-  border-radius: var(--spacing-sm);
-  padding: var(--spacing-sm);
   background-color: var(--white25);
   margin-bottom: var(--spacing-lg);
 }
