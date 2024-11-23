@@ -49,7 +49,7 @@ body {
 .main-nav-item,
 .main-nav-item:focus {
   border-radius: 0;
-  padding: var(--spacing-lg) var(--spacing-lg);
+  padding: var(--spacing-lg) var(--spacing-xl);
   box-shadow: none;
 }
 
@@ -73,7 +73,10 @@ body {
 }
 
 /* Buttons */
-button, .btn, .lg-next, .lg-prev {
+button,
+.btn,
+.lg-next,
+.lg-prev {
   border-radius: 0;
 }
 
@@ -94,7 +97,7 @@ button, .btn, .lg-next, .lg-prev {
 /* Fonts */
 h1.page-title {
   font-size: 2rem;
-  padding: 0;
+  padding: var(--spacing-lg);
   margin: 0;
 }
 
@@ -103,7 +106,8 @@ h1.page-title a {
   text-decoration: none;
 }
 
-b, strong {
+b,
+strong {
   font-weight: 600;
 }
 
@@ -318,4 +322,33 @@ button#back {
 .js-gallery .lg-toolbar .lg-close,
 .js-gallery .lg-sub-html {
   color: black;
+}
+
+/* Clusterize */
+.clusterize-scroll {
+  max-height: 120px;
+  overflow: auto;
+}
+
+.clusterize-scroll-5 {
+  max-height: 100px;
+  overflow: auto;
+}
+
+.clusterize-extra-row {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.clusterize-extra-row.clusterize-keep-parity {
+  display: none;
+}
+
+.clusterize-content {
+  outline: 0;
+  counter-reset: clusterize-counter;
+}
+
+.clusterize-no-data td {
+  text-align: center;
 }
