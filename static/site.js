@@ -188,7 +188,7 @@ const category_selectors = [
 
 	// Restore on click
 	$('#filters .nav-link').click(function () {
-		$('#filters .nav-item.nav-link.btn_bildarchiv').removeClass('active');
+		$('#filters .nav-item.nav-link').removeClass('active');
 		$('#filters .show.active').removeClass('show active');
 		$('#filters .tab-content').show();
 	});

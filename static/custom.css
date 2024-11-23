@@ -56,38 +56,6 @@ strong {
   font-weight: 600;
 }
 
-/*   new navigation styles   */
-.flex-container {
-  display: flex;
-  align-items: baseline;
-}
-
-.btn_bildarchiv {
-  color: black;
-  padding: var(--spacing-md) var(--spacing-lg);
-  cursor: pointer;
-  border: 1px solid transparent;
-  border-top-left-radius: var(--spacing-sm);
-  border-top-right-radius: var(--spacing-sm);
-  display: inline-block;
-}
-
-.btn_bildarchiv:hover {
-  background-color: rgb(210, 210, 210);
-  border: solid 1px var(--white);
-  color: black;
-}
-
-.btn_bildarchiv.active {
-  background-color: var(--white);
-}
-
-.btn_reset {
-  color: var(--white) !important;
-  cursor: pointer;
-  padding: var(--spacing-md); var(--spacing-lg);
-}
-
 .auswahl {
   font-weight: 500;
   margin-left: auto;
@@ -99,20 +67,6 @@ strong {
   text-align: center;
 }
 
-.anzeige .btn_bildarchiv {
-  background-color: rgb(255, 255, 255);
-  padding: var(--spacing-sm); var(--spacing-lg);
-  border-radius: var(--spacing-sm);;
-  height: var(--spacing-xl);
-  box-sizing: border-box;
-  vertical-align: text-top;
-}
-
-.anzeige .btn_bildarchiv.ghost {
-  background-color: transparent;
-  border: none;
-}
-
 .disable {
   cursor: default;
   opacity: 0.25;
@@ -120,29 +74,6 @@ strong {
 
 .hidden {
   display: none;
-}
-
-.anzeige .btn_container {
-  padding: 0;
-  display: inline-block;
-  position: relative;
-}
-
-.anzeige .btn_container select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding-right: 30px;
-  border: none;
-}
-
-.anzeige .btn_container i {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  /* Makes the icon non-interactive */
 }
 
 /* end new navigation styles */
@@ -350,10 +281,6 @@ button#back {
   text-align: center;
   padding: 1em;
   display: block;
-}
-
-.pagination .btn_bildarchiv {
-  border-radius: var(--spacing-sm);
 }
 
 .Nummer,
