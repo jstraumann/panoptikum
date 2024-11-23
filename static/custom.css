@@ -96,7 +96,7 @@ body {
 }
 
 /* List Actions */
-.list-actions  {
+.list-actions {
   width: 100%;
   background-color: var(--white25);
   margin-bottom: var(--spacing-lg);
@@ -111,15 +111,13 @@ body {
   background-color: var(--white25);
 }
 
-
-
 /* Buttons */
 button,
 .btn,
 .lg-next,
 .lg-prev {
   border-radius: 0;
-  
+
 }
 
 /* Container */
@@ -136,57 +134,7 @@ button,
   margin-top: var(--spacing-lg);
 }
 
-/* Fonts */
-h1.page-title {
-  font-size: 2rem;
-  font-weight: 650;
-  padding: var(--spacing-lg);
-  margin: 0;
-}
-
-h1.page-title a {
-  color: var(--black);
-  text-decoration: none;
-}
-
-b,
-strong {
-  font-weight: 600;
-}
-
-.auswahl {
-  font-weight: 500;
-  margin-left: auto;
-}
-
-.anzeige {
-  margin-top: 0.5em;
-  margin-right: auto;
-  text-align: center;
-}
-
-.disable {
-  cursor: default;
-  opacity: 0.25;
-}
-
-.hidden {
-  display: none;
-}
-
-input[type="checkbox"].check {
-  font-size: var(--spacing-xl);
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: var(--spacing-lg);
-}
-
-
-
-
-
-/* Form groups */
+/* Form Groups Titles */
 .tab-content h5.group-title {
   display: flex;
   justify-content: start;
@@ -211,9 +159,31 @@ h5.group-title input[type="checkbox"] {
   margin: var(--spacing-lg) var(--spacing-sm) var(--spacing-lg) var(--spacing-md);
 }
 
+/* Form Groups Content */
 .form-group.row {
-  padding: 0;
+  display: block;
+  column-count: 3;
+  column-gap: var(--spacing-lg);
+
   margin: var(--spacing-lg) var(--spacing-sm) var(--spacing-lg) var(--spacing-md);
+  padding: 0;
+}
+
+.form-group.row .form-check {
+  box-sizing: border-box;
+  /* Ensures padding and border are included in the width */
+}
+
+@media (max-width: 1199px) {
+  .form-group.row {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-group.row {
+    column-count: 1;
+  }
 }
 
 .form-group .form-check {
@@ -233,28 +203,36 @@ h5.group-title input[type="checkbox"] {
   vertical-align: var(--spacing-xs);
 }
 
-button#back {
-  float: right;
+/* Fonts */
+h1.page-title {
+  font-size: 2rem;
+  font-weight: 650;
+  padding: var(--spacing-lg);
+  margin: 0;
 }
 
-#spinnerModal span {
-  font-size: 200%;
-  font-weight: bold;
-  color: blue;
+h1.page-title a {
+  color: var(--black);
+  text-decoration: none;
 }
 
-#selection {
-  margin: 1em 0;
-  text-align: center;
+b, strong {
+  font-weight: 600;
 }
 
-#selection span {
-  color: #333;
-  padding: 0.2em 0.4em;
-  margin-right: 1em;
-  display: inline-block;
+/* Utilities */
+.disable {
+  cursor: default;
+  opacity: 0.25;
 }
 
+.hidden {
+  display: none;
+}
+
+
+
+/* Results */
 #results .container,
 #savedList .container {
   margin-top: 1em;
@@ -276,6 +254,14 @@ button#back {
 #results .item img:hover,
 #savedList .item img:hover {
   transform: scale(1.02);
+}
+
+#results input[type="checkbox"].check {
+  font-size: var(--spacing-xl);
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: var(--spacing-lg);
 }
 
 .empty-state {

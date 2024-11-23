@@ -101,7 +101,7 @@ const category_selectors = [
 
 		// Process any tags
 		$('div[data-tag="' + sname + '"]').each(function () {
-			render_form($(this), data);
+			renderForm($(this), data);
 		});
 	}
 
@@ -113,7 +113,7 @@ const category_selectors = [
 		}
 	}
 
-	function render_form($out, dp) {
+	function renderForm($out, dp) {
 		var wtype = $out.attr('data-type'),
 			inputtype = attr_or($out.attr('data-input'), 'checkbox');
 	
