@@ -65,29 +65,35 @@
     <form>
       <div class="container bs-component" id="filters">
         <!-- Aktionen -->
-        <div class="anzeige">
-          <div class="btn_container">
-            <select class="btn_bildarchiv" id="searchCriteria">
-              <option value="OR">Werk erfüllt ein Kriterium</option>
-              <option value="AND">Werk erfüllt alle Kriterien</option>
-            </select>
-            <i class="fa fa-chevron-down" aria-hidden="true"></i>
-          </div>
-          <a class="btn_bildarchiv disable" id="start">Anzeigen&nbsp;&nbsp;<i class="fa fa-play"></i> </a>
-        </div>
+        
 
 
         <!-- Tabs -->
         <div class="nav nav-tabs flex-container">
           <div class="kategorien">
+            <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#anderes">Werk</a>
             <a class="nav-item nav-link btn_bildarchiv active" data-toggle="tab" href="#inhalt">Inhalt</a>
             <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#form">Form</a>
-            <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#anderes">Werk</a>
-            
           </div>
+          <div class="anzeige">
+            <div class="btn_container">
+              <select class="btn_bildarchiv" id="searchCriteria">
+                <option value="OR">Werk erfüllt ein Kriterium</option>
+                <option value="AND">Werk erfüllt alle Kriterien</option>
+              </select>
+              <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </div>
+            <button class="btn btn-primary disable" id="start" data-toggle="tab" href="#gespeichert">
+              Suchen</i>
+            </button>
+          </div>
+         
+        </div>
+
+        <div>
           <div class="auswahl">
             <span class="">Ausgewählt: <span id="total">0</span><a class="btn_reset hidden" id="restart"><i
-                  class="fa fa-close"></i> Reset</a></span>
+                  class="fa fa-close"></i>Reset</a></span>
           </div>
         </div>
 
