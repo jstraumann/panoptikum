@@ -126,13 +126,12 @@ const category_selectors = [
 					'id="o_' + this.Column + this.Code + '" ' +
 					'name="o_' + this.Column + '" ' +
 					'value="' + this.Code + '" ' +
-					/*          'style="display:none"' + */
 					'type="' + inputtype + '">' +
 					'<label class="form-check-label" ' +
 					'for="o_' + this.Column + this.Code + '">' +
 					this.Title +
 					(this.Count == 0 ? '' :
-						'<span class="count">' + this.Count + '</span> ') +
+						'&nbsp;<span class="badge badge-light badge-pill count">' + this.Count + '</span> ') +
 					'</label>' +
 					'') +
 				'</div>'
