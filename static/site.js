@@ -164,7 +164,11 @@ const category_selectors = [
 	$('#random').click(werkSearchRandom); // -button.click
 
 	// Reset search
-	$('#restart').click(werkSearchReset); // -button.click
+	$('#restart').on('click', { resetPage: false }, werkSearchReset);
+	$('#restartAll').on('click', function() {
+		werkSearchReset();
+		$("#searchMenuItem").click(); // Switch tab
+	});
 
 	// Pagination
 	$('button#more').click(werkSearchNext); // -button.click
@@ -175,8 +179,11 @@ const category_selectors = [
 
 	// Main nav tabs
 	$('.main-nav-item').click(function () {
+		console.log("Tabs");
+		
 		$('.main-nav .main-nav-item').removeClass('active');
 		$('.main .main-nav-pane').removeClass('active');
+		$(this).addClass('active');
 		var activeSection = $(this).attr("href");
 		$(activeSection).addClass('active');
         console.log(activeSection);

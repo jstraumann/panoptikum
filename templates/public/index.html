@@ -39,13 +39,13 @@
     <div class="page-header d-flex sticky-top" id="banner">
       <h1 class="page-title"><a href="https://bildarchiv-js.ch/">Bildarchiv JS</a></h1>
       <div class="main-nav content-center d-flex mx-auto">
-        <button class="btn main-nav-item active" data-toggle="tab" href="#search">
+        <button class="btn main-nav-item active" id="searchMenuItem" href="#search">
           Suche
         </button>
-        <button class="btn main-nav-item" data-toggle="tab" href="#works">
+        <button class="btn main-nav-item" id="worksMenuItem" href="#works">
           Resultate
         </button>
-        <button class="btn main-nav-item" data-toggle="tab" href="#lists">
+        <button class="btn main-nav-item" id="listMenuItem" href="#lists">
           Meine Liste
         </button>
       </div>
@@ -72,15 +72,13 @@
           </div>
           <!-- Search Actions -->
           <div class="search-action d-flex">
-            <select class="btn" id="searchCriteria">
+            <select class="btn hidden" id="searchCriteria">
               <option value="OR">Werk erfüllt ein Kriterium</option>
               <option value="AND">Werk erfüllt alle Kriterien</option>
             </select>
-            <button class="btn">
-              Ausgewählt: <span id="total">0</span>
-            </button>
+            <button class="btn ml-auto" id="restart">Reset</button>
             <button class="btn btn-primary disable" id="start" data-toggle="tab" href="#gespeichert">
-              Suchen</i>
+              <span id="total">0</span> Anzeigen
             </button>
           </div>
 
@@ -196,7 +194,7 @@
         <!-- Results Actions -->
         <div class="list-actions d-flex">
           <button class="btn" id="selectAllResults">Alle Bilder auswählen</button>
-          <button class="btn ml-auto" id="restart">Reset</button>
+          <button class="btn ml-auto" id="restartAll">Reset</button>
         </div>
         <div class="row output tab-content">
           <div class="empty-state">Keine Werke gefunden…</div>

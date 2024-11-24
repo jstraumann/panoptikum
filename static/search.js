@@ -25,22 +25,23 @@ function werkSearchRandom(e) {
 }
 
 function werkSearchReset(e) {
-	if (typeof e !== typeof undefined)
-		e.preventDefault(); e.stopPropagation();
+	if (typeof e !== typeof undefined) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
 
 	// Clear the form and return to start when tapped
 	$('form')[0].reset();
 	$('#total').text('0');
-	$('#start').addClass('disable'); 	// Anzeigen ausblenden
-	$('#restart').addClass('hidden');	// Hide reset button
-	$('a[href="#titleSearch"]').click(); // Switch tab
+	$('#start').addClass('disable');
+	$('#restart', '#restartAll').addClass('hidden');
 
 	clusterTitle.update(titlelist_uniqueEntries); // Resets title list display
 	clusterYear.update(yearlist); 		// Resets year list display
 
 	// Update the URL to the base URL
-    const baseUrl = window.location.origin;
-    history.pushState(null, '', baseUrl);
+	const baseUrl = window.location.origin;
+	history.pushState(null, '', baseUrl);
 }
 
 // Query builder
@@ -118,7 +119,7 @@ function werkSearchCount() {
 
 	$.getJSON('/api/images' + qg.query, function (data) {
 		$('#total').html(data.total);
-		$('#restart').removeClass('hidden');
+		$('#restart', 'restartAll').removeClass('hidden');
 		$('#start').removeClass('disable')
 			.addClass(data.total > 0 ? '' : 'disable');
 	});
@@ -341,7 +342,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 
 		$('button#more').hide();
 		if (data.length === PER_PAGE)
-			$('button#more').show(); 
+			$('button#more').show();
 
 		var urlPrefix = "https://archiv.juergstraumann.ch/";
 
@@ -466,7 +467,7 @@ function loadSavedItems() {
 			$tgt.append($container);
 
 			$checkbox.on('change', function () {
-				
+
 				var storageNumber = $(this).data('storage-number');
 				var savedData = JSON.parse(localStorage.getItem('selectedItems')) || [];
 				// Remove the item from the savedList
@@ -474,13 +475,13 @@ function loadSavedItems() {
 					console.log(i);
 					return i.Nummer !== item.Nummer;  // Remove the item with the matching 'Nummer'
 				});
-				
+
 				// Save the updated array back to localStorage
 				localStorage.setItem('selectedItems', JSON.stringify(savedData));
 				loadSavedItems();
 			});
 
-			
+
 		});
 		// Initialize the gallery
 		const gallery = lightGallery($tgt.get(0), {
