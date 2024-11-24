@@ -56,6 +56,23 @@ const category_selectors = [
 		alert('Could not load data!');
 	});
 
+	// Apply fancy polar button effect
+	$('.btn-polar').each(function() {
+        const buttonText = $(this).text();
+        const newContent = `
+            <span>${buttonText}</span>
+            <div class="marquee" aria-hidden="true">
+                <div class="marquee-inner">
+                    <span>${buttonText}</span>
+                    <span>${buttonText}</span>
+                    <span>${buttonText}</span>
+                    <span>${buttonText}</span>
+                </div>
+            </div>
+        `;
+        $(this).html(newContent);
+    });
+
 	function init_section(sname) {
 		// Add section headers
 		console.log("Init sections", sname);
