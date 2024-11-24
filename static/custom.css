@@ -127,10 +127,6 @@ h1.page-title a {
   border: none;
 }
 
-.list-actions .btn:not(.active):hover {
-  background-color: var(--white25);
-}
-
 /* Buttons */
 button,
 .btn,
@@ -243,8 +239,8 @@ b, strong {
 /* Results */
 #results .container,
 #savedList .container {
-  margin-top: 1em;
-  padding-top: 1em;
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
 }
 
 #results .item,
@@ -275,8 +271,8 @@ b, strong {
 .empty-state {
   width: 100%;
   text-align: center;
-  margin: var(--spacing-lg);
   padding: var(--spacing-lg);
+  background-color: var(--white25);
 }
 
 .pagination {

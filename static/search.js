@@ -36,8 +36,8 @@ function werkSearchReset(e) {
 	$('#start').addClass('disable');
 	$('#restart', '#restartAll').addClass('hidden');
 
-	clusterTitle.update(titlelist_uniqueEntries); // Resets title list display
-	clusterYear.update(yearlist); 		// Resets year list display
+	clusterTitle.update(titlelist_uniqueEntries);
+	clusterYear.update(yearlist);
 
 	// Update the URL to the base URL
 	const baseUrl = window.location.origin;
@@ -101,7 +101,6 @@ function get_werkSearchQuery(from_page) {
 	});
 
 	console.log("query" + q);
-
 
 	return {
 		data: filterdata,
@@ -300,9 +299,6 @@ function removeDuplicates(names) {
 
 // Main function to run a search
 function werkSearchStart(e, from_page, random, fromURL) {
-
-
-	// Check if 'e' is not null and then prevent default actions
 	if (e) {
 		e.preventDefault();
 		e.stopPropagation();
@@ -441,11 +437,14 @@ function loadSavedItems() {
 
 	if (savedData.length === 0) {
 		// If no items are saved, show the "No saved items" message
-		$savedList.html('<div class="empty-state">Keine Werke gespeichert…</div>');
+		$("#savedList .output").addClass('hidden');
+		$("#savedList .empty-state").removeClass('hidden');
 		console.log("Keine Werke gespeichert…");
 
 	} else {
 		console.log(savedData.length);
+		$("#savedList .output").removeClass('hidden');
+		$("#savedList .empty-state").addClass('hidden');
 		var urlPrefix = "https://archiv.juergstraumann.ch/";
 		var $tgt = $('#savedList').find('div.output');
 
@@ -467,7 +466,6 @@ function loadSavedItems() {
 			$tgt.append($container);
 
 			$checkbox.on('change', function () {
-
 				var storageNumber = $(this).data('storage-number');
 				var savedData = JSON.parse(localStorage.getItem('selectedItems')) || [];
 				// Remove the item from the savedList
