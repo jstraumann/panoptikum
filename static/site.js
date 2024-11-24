@@ -158,8 +158,13 @@ const category_selectors = [
 	}
 
 	// Run search
-	$('#start').click(werkSearchStart); // -button.click
-
+	// $('#start').click(werkSearchStart); // -button.click
+	$('#start').on('click', function(e) {
+		e.preventDefault(); 
+		e.stopPropagation();
+		werkSearchStart();
+		$("#worksMenuItem").click(); // Switch tab
+	});
 	// Random search
 	$('#random').click(werkSearchRandom); // -button.click
 
