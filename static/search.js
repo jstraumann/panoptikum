@@ -29,12 +29,14 @@ function werkSearchReset(e) {
         e.preventDefault();
         e.stopPropagation();
     }
-
-	// Clear the form and return to start when tapped
+	
+	// Update appearance
 	$('form')[0].reset();
 	$('#total').text('0');
 	$('#start').addClass('disable');
-	$('#restart', '#restartAll').addClass('hidden');
+	$('#restart, #restartAll').addClass('hidden');
+	$('#results .pagination, #results .output').addClass('hidden');
+	$('#results .empty-state').removeClass('hidden');
 
 	clusterTitle.update(titlelist_uniqueEntries);
 	clusterYear.update(yearlist);
@@ -101,6 +103,8 @@ function get_werkSearchQuery(from_page) {
 	});
 
 	console.log("query" + q);
+
+	$('#restart, #restartAll').removeClass('hidden');
 
 	return {
 		data: filterdata,
@@ -424,6 +428,10 @@ function werkSearchStart(e, from_page, random, fromURL) {
 	// Update URL
 	updateURLWithSearchString(q.substring(1)); // Remove '?' from query before updating URL
 
+	// Update Apperance
+	$('#restart, #restartAll').removeClass('hidden');
+	$('#results .pagination, #results .output').removeClass('hidden');
+	$('#results .empty-state').addClass('hidden');
 }
 
 function loadSavedItems() {

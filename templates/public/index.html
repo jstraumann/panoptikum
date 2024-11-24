@@ -76,7 +76,7 @@
               <option value="OR">Werk erfüllt ein Kriterium</option>
               <option value="AND">Werk erfüllt alle Kriterien</option>
             </select>
-            <button class="btn ml-auto" id="restart">
+            <button class="btn ml-auto hidden" id="restart">
               Reset
             </button>
             <button class="btn btn-primary disable" id="start">
@@ -198,14 +198,14 @@
           <button class="btn" id="selectAllResults">
             Alle Bilder auswählen
           </button>
-          <button class="btn ml-auto" id="restartAll">
+          <button class="btn ml-auto hidden" id="restartAll">
             Reset
           </button>
         </div>
-        <div class="row output tab-content">
+        <div class="row output tab-content hidden">
         </div>
-        <div class="pagination">
-          <button id="more" class="btn_bildarchiv" style="display:none">Mehr anzeigen</button>
+        <div class="pagination hidden">
+          <button id="more" class="btn btn-secondary mx-auto hidden">Mehr anzeigen</button>
         </div>
         <div class="empty-state">Keine Werke gefunden…</div>
       </div>

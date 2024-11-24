@@ -268,18 +268,12 @@ b, strong {
   margin: var(--spacing-lg);
 }
 
-.empty-state {
+.empty-state, 
+.pagination {
   width: 100%;
   text-align: center;
   padding: var(--spacing-lg);
   background-color: var(--white25);
-}
-
-.pagination {
-  width: 100%;
-  text-align: center;
-  padding: 1em;
-  display: block;
 }
 
 .Nummer,
