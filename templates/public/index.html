@@ -92,14 +92,14 @@
           <div class="tab-pane active" id="titleSearch">
 
             <div class="form-group">
-              <input id="newInputTitle" class="" type="text" name="newInputTitle" placeholder="Neue Titelsuche" autocomplete="off"/>
+              <input id="searchTitleInput" class="searchOnEnter"  type="text" name="searchTitleInput" placeholder="Neue Titelsuche" autocomplete="off"/>
             </div> 
 
             <div class="form-group">
               <label for="inputTitle">
                 <h5 class="search-title">Titel</h5>
               </label>
-              <input id="inputTitle" class="searchOnEnter" type="text" name="Titel" placeholder="Titel eingeben" autocomplete="off"/>
+              <input id="inputTitle" type="text" name="Titel" placeholder="Titel eingeben" autocomplete="off"/>
               <script>
                 let inputtitle = document.querySelector('#inputTitle');
                 inputtitle.onkeyup = function () {

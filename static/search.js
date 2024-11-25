@@ -52,19 +52,17 @@ function werkSearchReset(e) {
 // Query builder
 function get_werkSearchQuery(from_page) {
 	var searchCriteria = $('#searchCriteriaInput').val();
-	var titleSearch = $('#newInputTitle').val();
+	var contentSearch = $('#searchTitleInput').val();
 	var q = '?sort=-Jahr&';
 	q += 'per_page=' + PER_PAGE;
-
-	console.log("Werksearch");
 
 	var currentPage = (typeof from_page === typeof 1) ? from_page : 1;
 	q += '&page=' + currentPage;
 
 	// If there's a search term, include it in the query
-	if (titleSearch) {
-		console.log(titleSearch);
-		q += '&title=' + encodeURIComponent(titleSearch);
+	if (contentSearch) {
+		console.log(contentSearch);
+		q += '&o_Titel=' + encodeURIComponent(contentSearch);
 	}
 
 	filterselect = '';

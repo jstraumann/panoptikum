@@ -142,6 +142,8 @@ const category_selectors = [
 	}
 
 	function titleSearch(e) {
+		console.log("titleSearch");
+		
 		$('input[name="Jahr"]').val(''); // Copies Entry to html input form
 		$('input[name="Titel"]').val(this.innerHTML); // Copies Entry to html input form
 		werkSearchCount();

@@ -30,10 +30,8 @@ def filter_columns(df, args):
                 if 'object' in dfname:
                     for and_cond in and_conditions:
                         or_conditions = and_cond.split('|')
-                        regex_patterns = [
-                            f"(?<![a-zA-ZäöüÄÖÜ0-9]){re.escape(option)}(?![a-zA-ZäöüÄÖÜ0-9])"
-                            for option in or_conditions
-                        ]
+                        # Allow partial matches by dropping the word boundary anchors
+                        regex_patterns = [re.escape(option) for option in or_conditions]
                         or_regex = f"({'|'.join(regex_patterns)})"
                         df = df.loc[df[f].str.contains(or_regex, regex=True, case=False, na=False)]
                 elif 'int' in dfname:
