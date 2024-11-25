@@ -29,10 +29,10 @@ function werkSearchRandom(e) {
 
 function werkSearchReset(e) {
 	if (typeof e !== typeof undefined) {
-        e.preventDefault();
-        e.stopPropagation();
-    }
-	
+		e.preventDefault();
+		e.stopPropagation();
+	}
+
 	// Update appearance
 	$('form')[0].reset();
 	$('#total').text('0');
@@ -51,7 +51,8 @@ function werkSearchReset(e) {
 
 // Query builder
 function get_werkSearchQuery(from_page) {
-	var searchCriteria = $('#searchCriteria').val();
+	var searchCriteria = $('#searchCriteriaInput').val();
+	var titleSearch = $('#newInputTitle').val();
 	var q = '?sort=-Jahr&';
 	q += 'per_page=' + PER_PAGE;
 
@@ -59,6 +60,12 @@ function get_werkSearchQuery(from_page) {
 
 	var currentPage = (typeof from_page === typeof 1) ? from_page : 1;
 	q += '&page=' + currentPage;
+
+	// If there's a search term, include it in the query
+	if (titleSearch) {
+		console.log(titleSearch);
+		q += '&title=' + encodeURIComponent(titleSearch);
+	}
 
 	filterselect = '';
 	filterdata = {};
@@ -76,9 +83,9 @@ function get_werkSearchQuery(from_page) {
 			.clone()    // Clone the element
 			.children() // Select all the children
 			.remove()   // Remove all the children
-			.end()  	// Again go back to selected element
+			.end()      // Go back to selected element
 			.text();
-		var labelNumber = label.find(".count").text()
+		var labelNumber = label.find(".count").text();
 		filterselect += '<span>' + labelTitle + ' ' + labelNumber + '</span>';
 	});
 
@@ -100,9 +107,6 @@ function get_werkSearchQuery(from_page) {
 
 	$.each(Object.keys(filterdata), function () {
 		q += '&' + this + '=' + filterdata[this].join(joinCharater);
-		// Results in searchtsring
-		// q += '&' + this + '=' + filterdata[this].join(',');
-		// q += '&' + this + '=' + filterdata[this].join('|'); // Assuming '|' is the OR operator for the API
 	});
 
 	console.log("query" + q);
@@ -341,6 +345,9 @@ function werkSearchStart(e, from_page, random, fromURL) {
 	}
 
 	$.getJSON(random ? '/api/images.random' : '/api/images.json' + q, function (data) {
+
+		console.log(data);
+		
 		var $tgt = $('#results').show().find('div.row');
 
 		$('#more').hide();
@@ -409,8 +416,6 @@ function werkSearchStart(e, from_page, random, fromURL) {
 			});
 		});
 
-		console.log("did something");
-		
 		// Initialize the gallery
 		gallery = lightGallery($tgt.get(0), {
 			selector: '.item a',
@@ -493,7 +498,7 @@ function loadSavedItems() {
 
 
 		});
-		
+
 		// Initialize the gallery
 		gallery = lightGallery($tgt.get(0), {
 			selector: '.item a',

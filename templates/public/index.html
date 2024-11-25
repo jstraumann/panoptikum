@@ -37,7 +37,7 @@
   <!-- Main Navigation -->
   <div class="top main container-fluid d-flex flex-column">
     <div class="page-header d-flex sticky-top" id="banner">
-      <h1 class="page-title"><a id="myLink" href="javascript:void(0);" onclick="this.href=window.location.origin;">Bildarchiv JS</a></h1>
+      <h1 class="page-title"><a id="home" href="javascript:void(0);" onclick="this.href=window.location.origin;">Bildarchiv JS</a></h1>
       <div class="main-nav content-center d-flex mx-auto">
         <button class="btn main-nav-item active btn-polar" id="searchMenuItem" href="#search">
           Suche
@@ -72,7 +72,7 @@
           </div>
           <!-- Search Actions -->
           <div class="search-action d-flex">
-            <select class="btn hidden" id="searchCriteria">
+            <select class="btn hidden" id="searchCriteriaInput">
               <option value="OR">Werk erfüllt ein Kriterium</option>
               <option value="AND">Werk erfüllt alle Kriterien</option>
             </select>
@@ -92,26 +92,29 @@
           <div class="tab-pane active" id="titleSearch">
 
             <div class="form-group">
-              <label for="inputTitel">
+              <input id="newInputTitle" class="" type="text" name="newInputTitle" placeholder="Neue Titelsuche" autocomplete="off"/>
+            </div> 
+
+            <div class="form-group">
+              <label for="inputTitle">
                 <h5 class="search-title">Titel</h5>
               </label>
-              <input id="title" class="searchOnEnter" type="text" name="Titel" placeholder="Titel eingeben" autocomplete="off"/>
+              <input id="inputTitle" class="searchOnEnter" type="text" name="Titel" placeholder="Titel eingeben" autocomplete="off"/>
               <script>
-                let input = document.querySelector('input');
-
-                input.onkeyup = function () {
+                let inputtitle = document.querySelector('#inputTitle');
+                inputtitle.onkeyup = function () {
                   let result = [];
-                  if (input.value) {
+                  if (inputtitle.value) {
                     for (word of titlelist_uniqueEntries) {
                       word = word.slice(5, -6); //removes <div></div> for search from word
-                      if (input.value.length == 1) {
+                      if (inputtitle.value.length == 1) {
                         // option mit suche nach anfangsbuchstabe bei 1 buchstaben im feld
-                        if (word.toLowerCase().startsWith(input.value.toLowerCase())) {
+                        if (word.toLowerCase().startsWith(inputtitle.value.toLowerCase())) {
                           result.push('<div>' + word + '</div>');
                         }
                       } else {
                         // option mit suche als zeichenkette wenn mehr als 1buchstaben im feld sind
-                        if (word.toLowerCase().indexOf(input.value.toLowerCase()) > -1) { //compares values
+                        if (word.toLowerCase().indexOf(inputtitle.value.toLowerCase()) > -1) { //compares values
                           result.push('<div>' + word + '</div>');
                         }
                       }
