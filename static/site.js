@@ -20,12 +20,7 @@ const category_selectors = [
 
 	$.getJSON('/api/filters/all.json', function (jsondata) {
 		cache = jsondata;
-
-		// Parse filter structure
 		cache.forEach(function (d) {
-			//    if (d.Type == 'Format') {
-			//      return; // TODO: enable Format in the future
-			//    }
 			dm = d.Mode.toLowerCase();
 			if (!filters[dm])
 				filters[dm] = [];
@@ -34,21 +29,13 @@ const category_selectors = [
 		});
 
 		Object.keys(filters).forEach(function (f) {
-			init_section(f);
+			initFilterSections(f);
 		});
-
-		// Filter for Titles (calls js function to store titles (all of them) into var titlelist.)
 		listTitles();
-
-		// Hack for display "performance" as wished
-		// var elMagic = $('#o_ParaphrasenPar9b').parent();
-		// elMagic.appendTo($(elMagic).closest('.col-sm-3').prev());
-
-		// After site has been build, run URL search
 		applySearchFromURL();
 
 	}).fail(function () {
-		alert('Could not load data!');
+		alert('Fehler: Daten konnten nicht geladen werden.');
 	});
 
 	// Apply fancy polar button effect
@@ -68,10 +55,9 @@ const category_selectors = [
         $(this).html(newContent);
     });
 
-	function init_section(sname) {
+	function initFilterSections(sname) {
 		// Add section headers
 		console.log("Init sections", sname);
-
 		loadSavedItems();
 
 		let id = "";
@@ -117,7 +103,7 @@ const category_selectors = [
 		});
 	}
 
-	function attr_or(attr, defaultval) {
+	function getAttrOrDefault(attr, defaultval) {
 		if (typeof attr !== typeof undefined && attr !== false) {
 			return attr;
 		} else {
@@ -127,7 +113,7 @@ const category_selectors = [
 
 	function renderForm($out, dp) {
 		var wtype = $out.attr('data-type'),
-			inputtype = attr_or($out.attr('data-input'), 'checkbox');
+			inputtype = getAttrOrDefault($out.attr('data-input'), 'checkbox');
 	
 		// Filter data based on type
 		data = dp.filter(function (i) {
@@ -168,13 +154,13 @@ const category_selectors = [
 	}
 
 	// Run search
-	// $('#start').click(werkSearchStart); // -button.click
 	$('#start').on('click', function(e) {
 		e.preventDefault(); 
 		e.stopPropagation();
 		werkSearchStart();
 		$("#worksMenuItem").click(); // Switch tab
 	});
+
 	// Random search
 	$('#random').click(werkSearchRandom); // -button.click
 
@@ -186,11 +172,11 @@ const category_selectors = [
 	});
 
 	// Pagination
-	$('#more').click(werkSearchNext); // -button.click
+	$('#more').click(werkSearchNext);
 
 	// Title, Year Search
-	$('#contentAreaTitle').on('click', 'div', titleSearch);  // -div.click for title search results
-	$('#contentAreaYear').on('click', 'div', yearSearch);  // -div.click for year search results
+	$('#contentAreaTitle').on('click', 'div', titleSearch);
+	$('#contentAreaYear').on('click', 'div', yearSearch);
 
 	// Main nav tabs
 	$('.main-nav-item').click(function () {
@@ -225,8 +211,6 @@ const category_selectors = [
 	$('#deleteSavedList').on('click', function (e) {
 		e.preventDefault(); 
 		e.stopPropagation();
-
-		console.log("delete local storage");
 		localStorage.removeItem('selectedItems');
 		loadSavedItems();
 	});
@@ -249,20 +233,16 @@ const category_selectors = [
 	$('#importSavedList').on('click', function (e) {
 		e.preventDefault(); 
 		e.stopPropagation();
-
 		const input = document.createElement('input');
 		input.type = 'file';
 		input.accept = 'application/json';
-
 		input.onchange = async (event) => {
 			const file = event.target.files[0];
 			if (!file) return;
-
 			try {
 				const text = await file.text();
 				localStorage.setItem('selectedItems', text);
 				loadSavedItems();
-				
 			} catch (error) {
 				console.error('Error parsing JSON:', error);
 				alert('Fehler beim importieren der Liste');
@@ -270,7 +250,6 @@ const category_selectors = [
 		}
 		input.click();
 	});
-
 })();
 
 
@@ -280,22 +259,6 @@ function updateURLWithSearchString(searchString) {
 		var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + searchString;
 		window.history.pushState({ path: newUrl }, '', newUrl);
 	}
-}
-
-function getSelectedTechniques() {
-	let selectedTechniques = [];
-	// Select all checkboxes with name "o_Motiven"
-
-	category_selectors.forEach(selector => {
-		// For each selector, find checked inputs and add their values to the selectedTechniques array.
-		$(`input[name="${selector}"]:checked`).each(function () {
-			selectedTechniques.push($(this).val());
-		});
-	});
-
-	console.log("selectedTechniques: " + selectedTechniques);
-
-	return selectedTechniques;
 }
 
 function applySearchFromURL() {
@@ -308,7 +271,6 @@ function applySearchFromURL() {
 			params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || "");
 		}
 	}
-	console.log(params);
 	applyURLsearch = false
 	category_selectors.forEach(function (category) {
 		if (params[category]) {
@@ -323,7 +285,6 @@ function applySearchFromURL() {
 			});
 		}
 	});
-
 	// Trigger the search if params have been found
 	if (applyURLsearch) {
 		werkSearchStart(null, 1, false, true);
