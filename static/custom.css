@@ -256,6 +256,12 @@ h5.group-title input[type="checkbox"] {
   margin: var(--spacing-lg) var(--spacing-sm) var(--spacing-lg) var(--spacing-md);
 }
 
+.form-group input[type="text"] {
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  border: none;
+} 
+
 /* Form Groups Content */
 .form-group.row {
   display: block;

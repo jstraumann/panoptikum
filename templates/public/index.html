@@ -95,7 +95,7 @@
               <label for="inputTitel">
                 <h5>Titel</h5>
               </label>
-              <input name="Titel" autocomplete="off" placeholder="Titelsuche" type="text" class="searchOnEnter" />
+              <input id="title" class="searchOnEnter" type="text" name="Titel" placeholder="Titel eingeben" autocomplete="off"/>
               <script>
                 let input = document.querySelector('input');
 
@@ -137,7 +137,7 @@
               <label for="inputJahr">
                 <h5>Jahreszahl</h5>
               </label>
-              <input placeholder="" id="inputYear" name="Jahr" type="text" />
+              <input id="inputYear" class="searchOnEnter" type="text" name="Jahr" placeholder="Jahr eingeben" autocomplete="off"/>
               <script>
                 let inputyear = document.querySelector('#inputYear');
                 inputyear.onkeyup = function () {
@@ -167,10 +167,10 @@
             </div>
 
             <div class="form-group">
-              <label class="col-form-label" for="inputNummer">
-                <h5 class="group-title">Werknummer</h5>
+              <label class="col-form-label" for="Nummer">
+                <h5>Werknummer</h5>
               </label>
-              <input name="Nummer" type="text">
+              <input id="werkNumber" class="searchOnEnter" type="text" name="Nummer" placeholder="Werknummer eingeben"/>
             </div>
           </div>
           <!-- Inhalt -->
