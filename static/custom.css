@@ -220,7 +220,7 @@ button,
 }
 
 .container-fill {
-  min-height: calc(100vh - 10.5rem);
+  min-height: calc(100vh - 11.5rem);
   margin-top: 1rem;
 }
 
@@ -401,8 +401,8 @@ b, strong {
 }
 
 .footer {
-  color: var(--white);
-  background-color: var(--black);
+  color: var(--black);
+  margin-top: 1rem;
   padding: var(--spacing-lg);
   text-align: center;
   height: 4.5rem;
@@ -412,7 +412,7 @@ b, strong {
   margin: 0;
 }
 .footer a, .footer a:hover, .footer a:active {
-  color: var(--white);
+  color: var(--black);
 }
 
 /* ---------------------------- */
