@@ -1,10 +1,5 @@
 var cache = {};
 var filters = {};
-var titlelist = {};
-var titlelist_uniqueEntries = {};
-var yearlist = [];
-
-var DEFAULT_NUM_COLUMNS = 4;
 
 const category_selectors = [
 	'o_Motiven',

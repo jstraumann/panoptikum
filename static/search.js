@@ -1,5 +1,11 @@
+var titlelist = {};
+var titlelist_uniqueEntries = {};
+var yearlist = [];
+
 var PER_PAGE = 100;
-var clusterTitle = new Clusterize({ // Clusterize prepares title search output
+
+// Clusterize title- and yearlist
+var clusterTitle = new Clusterize({
 	scrollId: 'scrollAreaTitle',
 	contentId: 'contentAreaTitle'
 });
@@ -7,10 +13,6 @@ var clusterYear = new Clusterize({
 	scrollId: 'scrollAreaYear',
 	contentId: 'contentAreaYear'
 });
-
-function hasAttr(attr) {
-	return (typeof attr !== typeof undefined && attr !== false)
-}
 
 function werkSearchNext(e) {
 	var ppp = $('button#more').data('page');
@@ -64,7 +66,7 @@ function get_werkSearchQuery(from_page) {
 		var nm = $(this).attr('name');
 		console.log("category=" + nm);
 
-		if (!hasAttr(nm)) return;
+		if (!nm) return;
 		if (!filterdata[nm]) filterdata[nm] = [];
 		filterdata[nm].push($(this).attr('value'));
 		var label = $(this).parent().find('label');
@@ -81,7 +83,7 @@ function get_werkSearchQuery(from_page) {
 
 	$('input[type=text]').each(function () {
 		var nm = $(this).attr('name');
-		if (!hasAttr(nm)) return;
+		if (!nm) return;
 		if (!nm.indexOf('o_') == 0) nm = 'o_' + nm;
 		var v = $(this).val();
 		if (!v.length) return;
