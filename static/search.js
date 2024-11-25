@@ -23,7 +23,7 @@ function werkSearchNext(e) {
 function werkSearchRandom(e) {
 	werkSearchReset(e);
 	$('#restart').removeClass('hidden');
-	$('#more').hide();
+	$('.pagination').hide();
 	werkSearchStart(e, 1, true);
 }
 
@@ -348,9 +348,9 @@ function werkSearchStart(e, from_page, random, fromURL) {
 		
 		var $tgt = $('#results').show().find('div.row');
 
-		$('#more').hide();
+		$('.pagination').addClass('hidden');
 		if (data.length === PER_PAGE)
-			$('#more').show();
+			$('.pagination').removeClass('hidden');
 
 		var urlPrefix = "https://archiv.juergstraumann.ch/";
 
