@@ -238,6 +238,13 @@ button,
   margin-top: 0;
 }
 
+
+/* Form Groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
 h5.group-title label {
   width: 100%;
   margin-bottom: 0;
@@ -415,23 +422,6 @@ b, strong {
   color: var(--black);
 }
 
-/* ---------------------------- */
-/* styles for title list search */
-#_contentArea>div:nth-of-type(odd) {
-  background: #eee;
-}
-
-#contentAreaYear>div:hover,
-#contentAreaTitle>div:hover {
-  cursor: pointer;
-  background: #eee;
-}
-
-#contentAreaYear,
-#contentAreaTitle {
-  padding-left: .1em;
-}
-
 /* Lightbox */
 .js-gallery .lg-backdrop {
   background-color: var(--gray1);
@@ -449,25 +439,11 @@ b, strong {
   overflow: auto;
 }
 
-.clusterize-scroll-5 {
-  max-height: 100px;
-  overflow: auto;
-}
-
-.clusterize-extra-row {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.clusterize-extra-row.clusterize-keep-parity {
-  display: none;
-}
-
 .clusterize-content {
   outline: 0;
   counter-reset: clusterize-counter;
   background: var(--white);
-  margin-left: var(--spacing-sm);
+  padding: var(--spacing-md);
   color: var(--gray3);
 }
 
