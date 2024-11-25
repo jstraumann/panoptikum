@@ -57,6 +57,7 @@ body {
 .page-header {
   padding: 0 var(--spacing-lg);
   background-color: var(--white);
+  height: 5rem;
 }
 
 h1.page-title {
@@ -219,8 +220,8 @@ button,
 }
 
 .container-fill {
-  min-height: 100vh;
-  margin-top: var(--spacing-lg);
+  min-height: calc(100vh - 10.5rem);
+  margin-top: 1rem;
 }
 
 /* Form Groups Titles */
@@ -304,10 +305,8 @@ b, strong {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
-
-
 
 /* Results */
 #results .container,
@@ -374,6 +373,7 @@ b, strong {
   text-align: center;
   padding: var(--spacing-lg);
   background-color: var(--white25);
+  border-radius: 0;
 }
 
 .pagination {
@@ -401,9 +401,18 @@ b, strong {
 }
 
 .footer {
-  background-color: var(--gray2);
+  color: var(--white);
+  background-color: var(--black);
   padding: var(--spacing-lg);
   text-align: center;
+  height: 4.5rem;
+}
+
+.footer h6 {
+  margin: 0;
+}
+.footer a, .footer a:hover, .footer a:active {
+  color: var(--white);
 }
 
 /* ---------------------------- */
