@@ -1,6 +1,7 @@
 var titlelist = {};
 var titlelist_uniqueEntries = {};
 var yearlist = [];
+var gallery;
 
 var PER_PAGE = 100;
 
@@ -408,9 +409,10 @@ function werkSearchStart(e, from_page, random, fromURL) {
 			});
 		});
 
-
+		console.log("did something");
+		
 		// Initialize the gallery
-		const gallery = lightGallery($tgt.get(0), {
+		gallery = lightGallery($tgt.get(0), {
 			selector: '.item a',
 			plugins: [],
 			licenseKey: '0000-0000-000-0000',
@@ -491,8 +493,9 @@ function loadSavedItems() {
 
 
 		});
+		
 		// Initialize the gallery
-		const gallery = lightGallery($tgt.get(0), {
+		gallery = lightGallery($tgt.get(0), {
 			selector: '.item a',
 			plugins: [],
 			licenseKey: '0000-0000-000-0000',

@@ -158,14 +158,12 @@ const category_selectors = [
 	function titleSearch(e) {
 		$('input[name="Jahr"]').val(''); // Copies Entry to html input form
 		$('input[name="Titel"]').val(this.innerHTML); // Copies Entry to html input form
-		// $('input').prop("checked", false); // Unchecks all input boxes, reset selection
 		werkSearchCount();
 	}
 
 	function yearSearch(e) {
 		$('input[name="Titel"]').val(''); // Copies Entry to html input form
 		$('input[name="Jahr"]').val(this.innerHTML); // Copies Entry to html input form
-		//$('input').prop("checked", false); //unchecks all input boxes, reset selection
 		werkSearchCount();
 	}
 
@@ -322,7 +320,6 @@ function applySearchFromURL() {
 				var inputID = category + value;
 				$('#' + inputID).prop('checked', true);
 				console.log("checked:" + inputID);
-
 			});
 		}
 	});
@@ -330,5 +327,6 @@ function applySearchFromURL() {
 	// Trigger the search if params have been found
 	if (applyURLsearch) {
 		werkSearchStart(null, 1, false, true);
+		$("#worksMenuItem").click();
 	}
 }
