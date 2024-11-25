@@ -241,9 +241,30 @@ b, strong {
   padding-top: var(--spacing-lg);
 }
 
+#savedList .row,
+#results .row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 992px) {
+  #savedList .row,
+  #results .row {
+      grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+@media (max-width: 640px) {
+  #savedList .row,
+  #results .row {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 #results .item,
 #savedList .item {
-  padding: 12px;
+  position: relative;
 }
 
 #results .item img,
@@ -258,12 +279,18 @@ b, strong {
   transform: scale(1.02);
 }
 
-#results input[type="checkbox"].check {
+#results .item input[type="checkbox"].check,
+#savedList .item input[type="checkbox"].check {
   font-size: var(--spacing-xl);
   position: absolute;
   top: 0;
   right: 0;
   margin: var(--spacing-lg);
+}
+
+#savedList .item input[type="checkbox"].check {
+  left: 0;
+  right: auto;
 }
 
 .empty-state, 

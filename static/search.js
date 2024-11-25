@@ -350,7 +350,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 
 		// Generate thumbnails
 		data.forEach(function (item) {
-			var $container = $('<div>').addClass('col-sm-2 item');
+			var $container = $('<div>').addClass('item');
 			var $link = $('<a>').attr('href', urlPrefix + item.path).attr('data-sub-html', werkTitle(item));
 			var $img = $('<img>').attr('src', urlPrefix + item.thumb).addClass('thumb');
 
@@ -462,7 +462,7 @@ function loadSavedItems() {
 		savedData.forEach(function (item) {
 			console.log("done", item);
 
-			var $container = $('<div>').addClass('col-sm-2 item');
+			var $container = $('<div>').addClass('item');
 			var $link = $('<a>').attr('href', urlPrefix + item.path).attr('data-sub-html', werkTitle(item));
 			var $img = $('<img>').attr('src', urlPrefix + item.thumb).addClass('thumb');
 			var $checkbox = $('<input type="checkbox">')
