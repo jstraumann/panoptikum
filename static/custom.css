@@ -35,7 +35,9 @@ body {
 }
 
 /* Viewport */
-@media (min-width: 576px), (min-width: 768px), (min-width: 992px) {
+@media (min-width: 576px),
+(min-width: 768px),
+(min-width: 992px) {
   .container {
     max-width: 100vw;
   }
@@ -43,7 +45,7 @@ body {
 
 @media (min-width: 1360px) {
   .container {
-      max-width: 1360px;
+    max-width: 1360px;
   }
 }
 
@@ -62,6 +64,34 @@ a {
   padding: 0 var(--spacing-lg);
   background-color: var(--white);
   height: 5rem;
+}
+
+@media (max-width: 920px) {
+  .page-header {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .content-left {
+    order: 1;
+    flex-basis: 65%;
+  }
+
+  .content-center {
+    flex-basis: 100%;
+    order: 3;
+    text-align: center;
+  }
+
+  .content-center button {
+    flex-grow: 1; /* Make buttons stretch equally */
+  }
+
+  .content-right {
+    order: 2;
+    flex-basis: 35%;
+    justify-content: flex-end;
+  }
 }
 
 h1.page-title {
@@ -158,64 +188,64 @@ button,
 
 .btn-polar {
   position: relative;
-	font-family: signo, sans-serif;
-	font-weight: 500;
+  font-family: signo, sans-serif;
+  font-weight: 500;
 }
 
-.btn-polar > span {
-	display: inline-block;
+.btn-polar>span {
+  display: inline-block;
 }
 
-.btn-polar:hover > span {
-	opacity: 0;
+.btn-polar:hover>span {
+  opacity: 0;
 }
 
 .marquee {
-	position: absolute;
-	top: 0;
-	left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   bottom: 0;
-	right: 0;
-	overflow: hidden;
-	pointer-events: none;
+  right: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .marquee-inner {
-	position: relative;
-	width: fit-content;
-	display: table;
-	--offset: 1rem;
-	--move-initial: calc(-25% + var(--offset));
-	--move-final: calc(-50% + var(--offset));
-	transform: translate3d(var(--move-initial), 0, 0);
-	animation: marquee 1.2s linear infinite;
-	animation-play-state: paused;
-	opacity: 0;
+  position: relative;
+  width: fit-content;
+  display: table;
+  --offset: 1rem;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-50% + var(--offset));
+  transform: translate3d(var(--move-initial), 0, 0);
+  animation: marquee 1.2s linear infinite;
+  animation-play-state: paused;
+  opacity: 0;
   height: 100%;
 }
 
 .btn-polar:hover .marquee-inner {
-	animation-play-state: running;
-	opacity: 1;
-	transition-duration: .4s;
+  animation-play-state: running;
+  opacity: 1;
+  transition-duration: .4s;
 }
 
 .marquee span {
-	text-align: center;
-	white-space: nowrap;
+  text-align: center;
+  white-space: nowrap;
   display: table-cell;
   vertical-align: middle;
   padding: 0 var(--spacing-sm);
 }
 
 @keyframes marquee {
-	0% {
-		transform: translate3d(var(--move-initial), 0, 0);
-	}
+  0% {
+    transform: translate3d(var(--move-initial), 0, 0);
+  }
 
-	100% {
-		transform: translate3d(var(--move-final), 0, 0);
-	}
+  100% {
+    transform: translate3d(var(--move-final), 0, 0);
+  }
 }
 
 /* Container */
@@ -273,7 +303,7 @@ h5.group-title input[type="checkbox"] {
   padding: var(--spacing-md);
   margin-bottom: var(--spacing-sm);
   border: none;
-} 
+}
 
 /* Form Groups Content */
 .form-group.row {
@@ -320,7 +350,8 @@ h5.group-title input[type="checkbox"] {
 }
 
 /* Fonts */
-b, strong {
+b,
+strong {
   font-weight: 600;
 }
 
@@ -344,21 +375,23 @@ b, strong {
 #savedList .row,
 #results .row {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); 
+  grid-template-columns: repeat(6, 1fr);
   gap: var(--spacing-lg);
 }
 
 @media (max-width: 992px) {
+
   #savedList .row,
   #results .row {
-      grid-template-columns: repeat(5, 1fr); 
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
 @media (max-width: 640px) {
+
   #savedList .row,
   #results .row {
-      grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -393,7 +426,7 @@ b, strong {
   right: auto;
 }
 
-.empty-state, 
+.empty-state,
 .pagination {
   width: 100%;
   text-align: center;
@@ -437,7 +470,10 @@ b, strong {
 .footer h6 {
   margin: 0;
 }
-.footer a, .footer a:hover, .footer a:active {
+
+.footer a,
+.footer a:hover,
+.footer a:active {
   color: var(--black);
 }
 

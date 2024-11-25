@@ -45,10 +45,10 @@ const category_selectors = [
             <span>${buttonText}</span>
             <div class="marquee" aria-hidden="true">
                 <div class="marquee-inner">
-                    <span>${buttonText}</span>
-                    <span>${buttonText}</span>
-                    <span>${buttonText}</span>
-                    <span>${buttonText}</span>
+                    <span>${buttonText}</span><span>${buttonText}</span>
+                    <span>${buttonText}</span><span>${buttonText}</span>
+                    <span>${buttonText}</span><span>${buttonText}</span>
+                    <span>${buttonText}</span><span>${buttonText}</span>
                 </div>
             </div>
         `;

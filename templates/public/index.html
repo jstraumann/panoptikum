@@ -36,8 +36,10 @@
 <body>
   <!-- Main Navigation -->
   <div class="top main container-fluid d-flex flex-column">
-    <div class="page-header d-flex sticky-top" id="banner">
-      <h1 class="page-title"><a id="home" href="javascript:void(0);" onclick="this.href=window.location.origin;">Bildarchiv JS</a></h1>
+    <div class="page-header d-flex sticky-top" id="banner">      
+      <div class="main-nav d-flex content-left">
+        <h1 class="page-title"><a id="home" href="javascript:void(0);" onclick="this.href=window.location.origin;">Bildarchiv JS</a></h1>
+      </div>
       <div class="main-nav content-center d-flex mx-auto">
         <button class="btn main-nav-item active btn-polar" id="searchMenuItem" href="#search">
           Suche
@@ -49,7 +51,7 @@
           Meine Liste
         </button>
       </div>
-      <div class="content-right d-flex align-self-center">
+      <div class="content-right d-flex justify-content-end">
         <button class="btn" id="random">
           Zufall
         </button>
