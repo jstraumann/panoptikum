@@ -135,11 +135,11 @@ button,
 }
 
 /* Container */
-.container.main-nav-pane {
+.container.main-pane {
   display: none;
 }
 
-.container.main-nav-pane.active {
+.container.main-pane.active {
   display: block;
 }
 
@@ -272,6 +272,10 @@ b, strong {
   text-align: center;
   padding: var(--spacing-lg);
   background-color: var(--white25);
+}
+
+.pagination {
+  padding: 0 0 var(--spacing-xl) 0;
 }
 
 .Nummer,

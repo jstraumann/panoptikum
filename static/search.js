@@ -15,14 +15,14 @@ var clusterYear = new Clusterize({
 });
 
 function werkSearchNext(e) {
-	var ppp = $('button#more').data('page');
-	werkSearchStart(e, ppp + 1);
+	var currentPage = $('#more').data('page');
+	werkSearchStart(e, currentPage + 1);
 }
 
 function werkSearchRandom(e) {
 	werkSearchReset(e);
 	$('#restart').removeClass('hidden');
-	$('button#more').hide();
+	$('#more').hide();
 	werkSearchStart(e, 1, true);
 }
 
@@ -56,8 +56,8 @@ function get_werkSearchQuery(from_page) {
 
 	console.log("Werksearch");
 
-	var ppp = (typeof from_page === typeof 1) ? from_page : 1;
-	q += '&page=' + ppp;
+	var currentPage = (typeof from_page === typeof 1) ? from_page : 1;
+	q += '&page=' + currentPage;
 
 	filterselect = '';
 	filterdata = {};
@@ -111,7 +111,7 @@ function get_werkSearchQuery(from_page) {
 	return {
 		data: filterdata,
 		html: filterselect,
-		page: ppp,
+		page: currentPage,
 		query: q
 	}
 }
@@ -334,7 +334,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 	var q = wsq.query;
 
 	// Update page number
-	$('button#more').data('page', wsq.page);
+	$('#more').data('page', wsq.page);
 	if (wsq.page === 1) {
 		$('#results').find('div.row').empty();
 	}
@@ -342,9 +342,9 @@ function werkSearchStart(e, from_page, random, fromURL) {
 	$.getJSON(random ? '/api/images.random' : '/api/images.json' + q, function (data) {
 		var $tgt = $('#results').show().find('div.row');
 
-		$('button#more').hide();
+		$('#more').hide();
 		if (data.length === PER_PAGE)
-			$('button#more').show();
+			$('#more').show();
 
 		var urlPrefix = "https://archiv.juergstraumann.ch/";
 

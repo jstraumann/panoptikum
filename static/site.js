@@ -188,7 +188,7 @@ const category_selectors = [
 	});
 
 	// Pagination
-	$('button#more').click(werkSearchNext); // -button.click
+	$('#more').click(werkSearchNext); // -button.click
 
 	// Title, Year Search
 	$('#contentAreaTitle').on('click', 'div', titleSearch);  // -div.click for title search results
@@ -196,14 +196,12 @@ const category_selectors = [
 
 	// Main nav tabs
 	$('.main-nav-item').click(function () {
-		console.log("Tabs");
-		
 		$('.main-nav .main-nav-item').removeClass('active');
-		$('.main .main-nav-pane').removeClass('active');
+		$('.main .main-pane').removeClass('active');
 		$(this).addClass('active');
 		var activeSection = $(this).attr("href");
 		$(activeSection).addClass('active');
-        console.log(activeSection);
+		$('html, body').animate({ scrollTop: 0 }, 'fast');
 	});
 
 	// Search tab styling on click
