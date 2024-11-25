@@ -224,8 +224,20 @@ button,
   margin-top: 1rem;
 }
 
-/* Form Groups Titles */
-.tab-content h5.group-title {
+/* Form Groups */
+
+
+/* Form Groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+h5.search-title {
+  margin-bottom: 0;
+}
+
+h5.group-title {
   display: flex;
   justify-content: start;
   align-content: start;
@@ -234,15 +246,8 @@ button,
   line-height: var(--spacing-lg);
 }
 
-.tab-content h5.group-title:first-child {
+h5.group-title:first-child {
   margin-top: 0;
-}
-
-
-/* Form Groups */
-.form-group {
-  display: flex;
-  flex-direction: column;
 }
 
 h5.group-title label {
