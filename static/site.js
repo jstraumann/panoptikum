@@ -143,15 +143,16 @@ const category_selectors = [
 	}
 
 	function titleSearch(e) {
-		console.log("titleSearch");
-		$('input[name="Jahr"]').val(''); // Copies Entry to html input form
-		$('input[name="Titel"]').val(this.innerHTML); // Copies Entry to html input form
+		// console.log("titleSearch");
+		$('#inputYear').val(''); // Copies Entry to html input form
+		$("#searchTitleInput").val(this.innerHTML); // Copies Entry to html input form
 		werkSearchCount();
 	}
 
 	function yearSearch(e) {
-		$('input[name="Titel"]').val(''); // Copies Entry to html input form
-		$('input[name="Jahr"]').val(this.innerHTML); // Copies Entry to html input form
+		// $("#searchTitleInput").val(''); // Copies Entry to html input form
+		$('#inputYear').val(this.innerHTML); // Copies Entry to html input form
+		clusterTitle.update(titlelist_uniqueEntries);
 		werkSearchCount();
 	}
 
@@ -219,6 +220,56 @@ const category_selectors = [
             // Trigger the 'change' event on the form after the delay
             $(this).closest('form').trigger('change');
         }, doneTypingInterval);
+    });
+
+    // Handle the keyup event
+    $('#searchTitleInput').on('keyup', function() {
+        let result = [];
+        let searchTerm = $(this).val().toLowerCase(); 
+
+        if (searchTerm) {
+            // Loop through the title list and filter based on input value
+            $.each(titlelist_uniqueEntries, function(index, word) {
+                word = word.slice(5, -6); // Remove <div></div> from the word
+                if (searchTerm.length == 1) {
+                    if (word.toLowerCase().startsWith(searchTerm)) {
+                        result.push('<div>' + word + '</div>');
+                    }
+                } else {
+                    if (word.toLowerCase().indexOf(searchTerm) > -1) {
+                        result.push('<div>' + word + '</div>');
+                    }
+                }
+            });
+        } else {
+            // If no input, show a fallback message or return the full list
+            result = titlelist_uniqueEntries;
+        }
+
+        // Update the cluster title with the result
+        clusterTitle.update(result);
+    });
+
+	$('#inputYear').on('keyup', function() {
+        let result = [];
+        let searchTerm = $(this).val().toLowerCase(); 
+
+        if (searchTerm) {
+            // Loop through the year list and filter based on the input value
+            $.each(yearlist, function(index, word) {
+                word = word.slice(5, -6); // Removes <div></div> from the word
+                // Case for just one letter
+                if (word.toLowerCase().startsWith(searchTerm)) {
+                    result.push('<div>' + word + '</div>');
+                }
+            });
+        } else {
+            // If no input, return the entire list
+            result = yearlist;
+        }
+
+        // Update the cluster with the results
+        clusterYear.update(result);
     });
 
 

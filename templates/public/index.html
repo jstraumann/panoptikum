@@ -99,41 +99,10 @@
           <div class="tab-pane active" id="titleSearch">
 
             <div class="form-group">
-              <input id="searchTitleInput" class="searchOnEnter"  type="text" name="searchTitleInput" placeholder="Neue Titelsuche" autocomplete="off"/>
-            </div> 
-
-            <div class="form-group">
-              <label for="inputTitle">
+              <label for="searchTitleInput">
                 <h5 class="search-title">Titel</h5>
               </label>
-              <input id="inputTitle" type="text" name="Titel" placeholder="Titel eingeben" autocomplete="off"/>
-              <script>
-                let inputtitle = document.querySelector('#inputTitle');
-                inputtitle.onkeyup = function () {
-                  let result = [];
-                  if (inputtitle.value) {
-                    for (word of titlelist_uniqueEntries) {
-                      word = word.slice(5, -6); //removes <div></div> for search from word
-                      if (inputtitle.value.length == 1) {
-                        // option mit suche nach anfangsbuchstabe bei 1 buchstaben im feld
-                        if (word.toLowerCase().startsWith(inputtitle.value.toLowerCase())) {
-                          result.push('<div>' + word + '</div>');
-                        }
-                      } else {
-                        // option mit suche als zeichenkette wenn mehr als 1buchstaben im feld sind
-                        if (word.toLowerCase().indexOf(inputtitle.value.toLowerCase()) > -1) { //compares values
-                          result.push('<div>' + word + '</div>');
-                        }
-                      }
-                    }
-                  } else {
-                    // No value found
-                    result = titlelist_uniqueEntries;
-                  }
-                  clusterTitle.update(result);
-                };
-              </script>
-              <!--HTML scroll clusterize area-->
+              <input id="searchTitleInput" class="searchOnEnter" type="text" name="searchTitleInput" placeholder="Neue Titelsuche" autocomplete="off"/>
               <div id="scrollAreaTitle" class="clusterize-scroll">
                 <div id="contentAreaTitle" class="clusterize-content">
                   <div class="clusterize-no-data">
@@ -141,32 +110,13 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> 
 
             <div class="form-group">
               <label for="inputJahr">
                 <h5 class="search-title">Jahreszahl</h5>
               </label>
               <input id="inputYear" class="searchOnEnter" type="text" name="Jahr" placeholder="Jahr eingeben" autocomplete="off"/>
-              <script>
-                let inputyear = document.querySelector('#inputYear');
-                inputyear.onkeyup = function () {
-                  let result = [];
-                  if (inputyear.value) {
-                    for (word of yearlist) {
-                      word = word.slice(5, -6); // Removes <div></div> from query
-                      // Case for just one letter
-                      if (word.toLowerCase().startsWith(inputyear.value.toLowerCase())) {
-                        result.push('<div>' + word + '</div>');
-                      }
-                    }
-                  } else {
-                    // No value in found
-                    result = yearlist;
-                  }
-                  clusterYear.update(result);
-                };
-              </script>
               <div id="scrollAreaYear" class="clusterize-scroll-5">
                 <div id="contentAreaYear" class="clusterize-content">
                   <div class="clusterize-no-data">
