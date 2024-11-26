@@ -411,14 +411,10 @@ function werkSearchStart(e, from_page, random, fromURL) {
 			});
 		});
 
-		// Initialize the gallery		
-		const container = $tgt.get(0);
-		initializeGallery(container);
+		// Initialize the gallery, open immediately when random
+		const container = $tgt.get(0);		
+		initializeGallery(container, random);
 
-		// Automatically open if only one image or random mode
-		if (data.length === 1 || random) {
-			gallery.openGallery(0);
-		}
 	}).fail(function () {
 		alert('Could not search!');
 	});
@@ -492,7 +488,7 @@ function loadSavedItems() {
 	}
 }
 
-function initializeGallery(container) {	
+function initializeGallery(container, openImmediately = false) {	
 	const galleryOptions = {
 		selector: '.item a',
 		licenseKey: '0000-0000-000-0000',
@@ -508,5 +504,8 @@ function initializeGallery(container) {
         // Destroy and reinitialize the gallery if it's already created
         container.galleryInstance.destroy(true);
         container.galleryInstance = lightGallery(container, galleryOptions);
+    }
+    if (openImmediately) {
+        container.galleryInstance.openGallery();
     }
 }

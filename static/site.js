@@ -159,17 +159,21 @@ const category_selectors = [
 		e.preventDefault(); 
 		e.stopPropagation();
 		werkSearchStart();
-		$("#worksMenuItem").click(); // Switch tab
+		$("#worksMenuItem").click(); 
 	});
 
 	// Random search
-	$('#random').click(werkSearchRandom); // -button.click
+	// $('#random').click(werkSearchRandom); // -button.click
+	$('#random').on('click', function() {
+		$("#worksMenuItem").click(); 
+		werkSearchRandom();
+	});
 
 	// Reset search
 	$('#restart').on('click', { resetPage: false }, werkSearchReset);
 	$('#restartAll').on('click', function() {
 		werkSearchReset();
-		$("#searchMenuItem").click(); // Switch tab
+		$("#searchMenuItem").click(); 
 	});
 
 	// Pagination
