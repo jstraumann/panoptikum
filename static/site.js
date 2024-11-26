@@ -160,7 +160,6 @@ const category_selectors = [
 	$('#start').on('click', function(e) {
 		e.preventDefault(); 
 		e.stopPropagation();
-		werkSearchStart();
 		$('#worksMenuItem').click();
 	});
 
@@ -185,18 +184,20 @@ const category_selectors = [
 	$('#contentAreaYear').on('click', 'div', yearSearch);
 
 	// Main nav tabs
-	$('.main-nav-item').on('click', function (e) {	
-		$('.main-nav .main-nav-item').removeClass('active');
-		$('.main .main-pane').removeClass('active');
-		$(this).addClass('active');
-		var activeSection = $(this).attr("href");
-		$(activeSection).addClass('active');		
-		$('html, body').animate({ scrollTop: 0 }, 'fast');
+	$('.main-nav-item').on('click', function (e, startSearch = true) {
+        // Normal tab switching logic
+        $('.main-nav .main-nav-item').removeClass('active');
+        $('.main .main-pane').removeClass('active');
+        $(this).addClass('active');
+        var activeSection = $(this).attr("href");
+        $(activeSection).addClass('active');        
+        $('html, body').animate({ scrollTop: 0 }, 'fast');
 
-		if (e.currentTarget.id === "worksMenuItem") {
-			werkSearchStart(); 
-		}
-	});
+		// Check if startSearch is true
+        if (startSearch) {
+            werkSearchStart(); // Start the search if startSearch is true
+        }
+    });
 
 	// Search tab styling on click
 	$('#search .nav-link').click(function () {
@@ -356,7 +357,7 @@ const category_selectors = [
 			e.preventDefault(); // Prevent any default Enter key behavior
 			// Check if #searchMenuItem has the 'active' class
 			if ($('#searchMenuItem').hasClass('active') && !$('#start').hasClass('disabled')) {
-				$('#worksMenuItem').trigger('click'); 
+				$('#worksMenuItem').trigger('click', [true]);
 				return;
 			}
 			if ($('#worksMenuItem').hasClass('active')) {

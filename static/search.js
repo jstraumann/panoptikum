@@ -120,7 +120,14 @@ function get_werkSearchQuery(from_page) {
 
 // Obtains a count of search results
 function werkSearchCount() {
+
+	
+	
 	qg = get_werkSearchQuery(1);
+
+	console.log("count", qg);
+
+
 	$('#selection').empty().append(qg.html);
 	if (qg.html === '') $('#restart').addClass('hidden');
 
@@ -311,6 +318,9 @@ function werkSearchStart(e, from_page, random, fromURL) {
 		e.preventDefault();
 		e.stopPropagation();
 	}
+
+	console.log(e);
+	
 	
 	// Setting default value for 'from_page' if not provided or undefined
 	if (typeof from_page === 'undefined' || from_page === null) {
