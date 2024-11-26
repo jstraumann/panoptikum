@@ -318,9 +318,6 @@ function werkSearchStart(e, from_page, random, fromURL) {
 		e.preventDefault();
 		e.stopPropagation();
 	}
-
-	console.log(e);
-	
 	
 	// Setting default value for 'from_page' if not provided or undefined
 	if (typeof from_page === 'undefined' || from_page === null) {
@@ -331,7 +328,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 		// Handling the random search case
 		$('#results').find('div.row').empty();
 		$('#selection').empty();
-		window.location.replace("/#&gid=1&pid=15");
+		// window.location.replace("/#&gid=1&pid=15");
 	} else if (fromURL === true) {
 		// Handling the URL search case
 		werkSearchCount();
@@ -422,7 +419,9 @@ function werkSearchStart(e, from_page, random, fromURL) {
 		});
 
 		// Initialize the gallery, open immediately when random
-		const container = $tgt.get(0);		
+		const container = $tgt.get(0);	
+		console.log("RAndom", random);
+			
 		initializeGallery(container, random);
 
 	}).fail(function () {
@@ -501,7 +500,6 @@ function loadSavedItems() {
 function initializeGallery(container, openImmediately = false) {	
 	const galleryOptions = {
 		selector: '.item a',
-		licenseKey: '0000-0000-000-0000',
 		speed: 1,
 		download: false,
 		addClass: "js-gallery"

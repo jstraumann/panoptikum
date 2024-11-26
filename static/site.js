@@ -166,7 +166,7 @@ const category_selectors = [
 	// Random search
 	$('#random').on('click', function() {
 		werkSearchRandom();
-		$("#worksMenuItem").click(); 
+		$('#worksMenuItem').trigger('click', [false]);
 	});
 
 	// Reset search
