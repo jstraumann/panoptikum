@@ -341,6 +341,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 	// Load and build the query
 	var wsq = get_werkSearchQuery(from_page);
 	var q = wsq.query;
+	var single = false;
 
 	// Update page number
 	$('#more').data('page', wsq.page);
@@ -351,6 +352,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 	$.getJSON(random ? '/api/images.random' : '/api/images.json' + q, function (data) {
 		
 		var $tgt = $('#results').show().find('div.row');
+		single = (data.length == 1);
 
 		$('.pagination').addClass('hidden');
 		if (data.length === PER_PAGE)
@@ -419,10 +421,8 @@ function werkSearchStart(e, from_page, random, fromURL) {
 		});
 
 		// Initialize the gallery, open immediately when random
-		const container = $tgt.get(0);	
-		console.log("RAndom", random);
-			
-		initializeGallery(container, random);
+		const container = $tgt.get(0);				
+		initializeGallery(container, (random || single));
 
 	}).fail(function () {
 		alert('Could not search!');
