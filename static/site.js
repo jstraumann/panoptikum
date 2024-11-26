@@ -212,7 +212,7 @@ const category_selectors = [
 
 
 	// Search when user types
-	$('.searchOnEnter').on('input', function() {
+	$('.dynamic-input').on('input', function() {
         // Clear the previous timer to reset the delay every time the user types
         clearTimeout(typingTimer);
 

@@ -5,6 +5,7 @@
 }
 
 :root {
+  --primaryDarker: #005fcc;  
   --primary: #1e90ff;
   --gray4: #565656;
   --gray3: #9a9a9a;
@@ -272,9 +273,6 @@ button,
 }
 
 /* Form Groups */
-
-
-/* Form Groups */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -309,9 +307,48 @@ h5.group-title input[type="checkbox"] {
 }
 
 .form-group input[type="text"] {
+  opacity: 0.6;
   padding: var(--spacing-md);
   margin-bottom: var(--spacing-sm);
   border: none;
+}
+
+.form-group input[type="text"]:focus {
+  opacity: 1;
+}
+
+/* Form Groups Main and Dynamic Inputs */
+.form-group input.main-input {
+  font-size: 1.2rem;
+  padding: var(--spacing-lg);
+}
+
+.form-group .input-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.form-group .dynamic-input {
+  width: 100%;
+}
+
+.form-group .search-indicator {
+  position: absolute;
+  left: auto;
+  right: 0;
+  font-size: 1.25rem;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  opacity: 0;
+  line-height: var(--spacing-xl);
+}
+
+.form-group input.main-input + .search-indicator {
+  padding: var(--spacing-lg);
+}
+
+.form-group .dynamic-input:focus + .search-indicator {
+  opacity: 1;
+  color: var(--primaryDarker);
 }
 
 /* Form Groups Content */
@@ -319,14 +356,12 @@ h5.group-title input[type="checkbox"] {
   display: block;
   column-count: 3;
   column-gap: var(--spacing-lg);
-
   margin: var(--spacing-lg) var(--spacing-sm) var(--spacing-lg) var(--spacing-md);
   padding: 0;
 }
 
 .form-group.row .form-check {
   box-sizing: border-box;
-  /* Ensures padding and border are included in the width */
 }
 
 @media (max-width: 1199px) {
@@ -499,6 +534,12 @@ strong {
 .clusterize-scroll {
   max-height: 120px;
   overflow: auto;
+  opacity: 0.75;
+  transition: all 0.2s ease;
+}
+
+.clusterize-scroll:hover {
+  opacity: 1;
 }
 
 .clusterize-content {

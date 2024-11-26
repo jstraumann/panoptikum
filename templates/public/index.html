@@ -35,9 +35,10 @@
 <body>
   <!-- Main Navigation -->
   <div class="main container-fluid d-flex flex-column">
-    <div class="page-header d-flex sticky-top" id="banner">      
+    <div class="page-header d-flex sticky-top" id="banner">
       <div class="main-nav d-flex content-left">
-        <h1 class="page-title"><a id="home" href="javascript:void(0);" onclick="this.href=window.location.origin;">Bildarchiv JS</a></h1>
+        <h1 class="page-title"><a id="home" href="javascript:void(0);"
+            onclick="this.href=window.location.origin;">Bildarchiv JS</a></h1>
       </div>
       <div class="main-nav content-center d-flex mx-auto">
         <button class="btn main-nav-item active btn-polar" id="searchMenuItem" href="#search">
@@ -102,7 +103,11 @@
               <label for="searchTitleInput">
                 <h5 class="search-title">Titel</h5>
               </label>
-              <input id="searchTitleInput" class="searchOnEnter" type="text" name="searchTitleInput" placeholder="Neue Titelsuche" autocomplete="off"/>
+              <div class="input-wrapper">
+                <input id="searchTitleInput" class="main-input dynamic-input" type="text" name="searchTitleInput"
+                  placeholder="Neue Titelsuche" autocomplete="off" autofocus />
+                <span class="search-indicator">↩</span>
+              </div>
               <div id="scrollAreaTitle" class="clusterize-scroll">
                 <div id="contentAreaTitle" class="clusterize-content">
                   <div class="clusterize-no-data">
@@ -110,14 +115,18 @@
                   </div>
                 </div>
               </div>
-            </div> 
+            </div>
 
             <div class="form-group">
               <label for="inputJahr">
                 <h5 class="search-title">Jahreszahl</h5>
               </label>
-              <input id="inputYear" class="searchOnEnter" type="text" name="Jahr" placeholder="Jahr eingeben" autocomplete="off"/>
-              <div id="scrollAreaYear" class="clusterize-scroll-5">
+              <div class="input-wrapper">
+                <input id="inputYear" class="dynamic-input" type="text" name="Jahr" placeholder="Jahr eingeben"
+                  autocomplete="off" />
+                <span class="search-indicator">↩</span>
+              </div>
+              <div id="scrollAreaYear" class="clusterize-scroll">
                 <div id="contentAreaYear" class="clusterize-content">
                   <div class="clusterize-no-data">
                     Lade Jahre…
@@ -130,53 +139,59 @@
               <label class="col-form-label" for="Nummer">
                 <h5 class="search-title">Werknummer</h5>
               </label>
-              <input id="werkNumber" class="searchOnEnter" type="text" name="Nummer" placeholder="Werknummer eingeben"/>
+              <div class="input-wrapper">
+                <input id="werkNumber" class="dynamic-input" type="text" name="Nummer"
+                  placeholder="Werknummer eingeben" />
+                <span class="search-indicator">↩</span>
+              </div>
             </div>
+            
           </div>
-          <!-- Inhalt -->
-          <div class="tab-pane" id="contentSearch"> </div>
-          <!-- Form -->
-          <div class="tab-pane" id="formSearch"> </div>
         </div>
-      </form>
+        <!-- Inhalt -->
+        <div class="tab-pane" id="contentSearch"> </div>
+        <!-- Form -->
+        <div class="tab-pane" id="formSearch"> </div>
     </div>
+    </form>
+  </div>
 
-    <!-- Resultate / Werke -->
-    <div class="container container-fill main-pane" id="works">
-      <div id="results">
-        <h2 class="hidden">Werke</h2>
-        <!-- Results Actions -->
-        <div class="list-actions d-flex">
-          <button class="btn" id="selectAllResults">
-            Alle Werke markieren
-          </button>
-          <button class="btn ml-auto hidden" id="restartAll">
-            Reset
-          </button>
-        </div>
-        <div class="row output tab-content hidden">
-        </div>
-        <div class="pagination hidden">
-          <button id="more" class="btn btn-secondary mx-auto">Mehr anzeigen…</button>
-        </div>
-        <div class="empty-state">Keine Werke gefunden…</div>
+  <!-- Resultate / Werke -->
+  <div class="container container-fill main-pane" id="works">
+    <div id="results">
+      <h2 class="hidden">Werke</h2>
+      <!-- Results Actions -->
+      <div class="list-actions d-flex">
+        <button class="btn" id="selectAllResults">
+          Alle Werke markieren
+        </button>
+        <button class="btn ml-auto hidden" id="restartAll">
+          Reset
+        </button>
       </div>
+      <div class="row output tab-content hidden">
+      </div>
+      <div class="pagination hidden">
+        <button id="more" class="btn btn-secondary mx-auto">Mehr anzeigen…</button>
+      </div>
+      <div class="empty-state">Keine Werke gefunden…</div>
     </div>
+  </div>
 
-    <!-- Gespeicherte Liste -->
-    <div class="container container-fill main-pane" id="lists">
-      <div id="savedList">
-        <h2 class="hidden">Gespeichert Werke</h2>
-        <div class="list-actions d-flex">
-          <button class="btn" id="deleteSavedList">Liste löschen</button>
-          <button class="btn" id="exportSavedList">Liste exportieren</button>
-          <button class="btn" id="importSavedList">Liste importieren</button>
-        </div>
-        <div class="row output tab-content">
-        </div>
-        <div class="empty-state">Keine Werke gespeichert…</div>
+  <!-- Gespeicherte Liste -->
+  <div class="container container-fill main-pane" id="lists">
+    <div id="savedList">
+      <h2 class="hidden">Gespeichert Werke</h2>
+      <div class="list-actions d-flex">
+        <button class="btn" id="deleteSavedList">Liste löschen</button>
+        <button class="btn" id="exportSavedList">Liste exportieren</button>
+        <button class="btn" id="importSavedList">Liste importieren</button>
       </div>
+      <div class="row output tab-content">
+      </div>
+      <div class="empty-state">Keine Werke gespeichert…</div>
     </div>
+  </div>
   </div>
 
   <!-- Help Modal -->
@@ -193,7 +208,8 @@
         <div class="modal-body">
           <ul>
             <li>Wählen Sie eine der drei Rubriken „Werk“, „Inhalt“ oder „Form" aus.</li>
-            <li>Klicken Sie auf „Anzeigen“, um die Auswahl anzuzeigen. Die Anzahl der gefundenen Werke wird angezeigt.</li>
+            <li>Klicken Sie auf „Anzeigen“, um die Auswahl anzuzeigen. Die Anzahl der gefundenen Werke wird angezeigt.
+            </li>
             <li>Klicken Sie auf „Zufall“, um eine spontane Werkauswahl zu erhalten.</li>
           </ul>
         </div>
@@ -202,7 +218,8 @@
   </div>
 
   <!-- Modal Selection Confirmation -->
-  <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+  <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -224,7 +241,8 @@
 
   <footer class="footer container-fluid">
     <h6>Impressum:</h6>
-    <div><a href="juergstraumann.ch">Jürg Straumann</a>, <a href="http://datalets.ch">Datalets</a> und <a href="http://www.redefine.studio">Redefine GmbH</a>. Dieses
+    <div><a href="juergstraumann.ch">Jürg Straumann</a>, <a href="http://datalets.ch">Datalets</a> und <a
+        href="http://www.redefine.studio">Redefine GmbH</a>. Dieses
       Projekt ist <a href="https://github.com/dataletsch/panoptikum">Open
         Source</a>, 2025</div>
   </footer>
