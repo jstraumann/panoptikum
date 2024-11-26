@@ -497,9 +497,7 @@ function loadSavedItems() {
 	}
 }
 
-function initializeGallery(container) {
-	console.log('init gallery');
-	
+function initializeGallery(container) {	
 	const galleryOptions = {
 		selector: '.item a',
 		licenseKey: '0000-0000-000-0000',
@@ -508,15 +506,12 @@ function initializeGallery(container) {
 		addClass: "js-gallery"
 	};
 
-    // Use a property to track whether the gallery is already initialized
     if (!container.galleryInstance) {
         // Initialize the gallery
         container.galleryInstance = lightGallery(container, galleryOptions);
-        console.log("Gallery initialized");
     } else {
         // Destroy and reinitialize the gallery if it's already created
         container.galleryInstance.destroy(true);
         container.galleryInstance = lightGallery(container, galleryOptions);
-        console.log("Gallery updated");
     }
 }

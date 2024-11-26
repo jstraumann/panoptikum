@@ -178,7 +178,7 @@ const category_selectors = [
 	$('#contentAreaYear').on('click', 'div', yearSearch);
 
 	// Main nav tabs
-	$('.main-nav-item').click(function () {
+	$('.main-nav-item').on('click', function (e) {
 		$('.main-nav .main-nav-item').removeClass('active');
 		$('.main .main-pane').removeClass('active');
 		$(this).addClass('active');
@@ -249,6 +249,23 @@ const category_selectors = [
 		}
 		input.click();
 	});
+
+	// Start search
+	$(document).on('keydown', function(e) {
+		if (e.key === 'Enter') {
+			e.preventDefault(); // Prevent any default Enter key behavior
+			// Check if #searchMenuItem has the 'active' class
+			if ($('#searchMenuItem').hasClass('active') && !$('#start').hasClass('disabled')) {
+				$('#start').trigger('click'); 
+				return;
+			}
+			if ($('#worksMenuItem').hasClass('active')) {
+				$('#searchMenuItem').trigger('click'); 
+				return;
+			}
+		}
+	});
+	
 })();
 
 
