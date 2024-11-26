@@ -1,5 +1,7 @@
 var cache = {};
 var filters = {};
+let typingTimer;
+const doneTypingInterval = 500; 
 
 const category_selectors = [
 	'o_Motiven',
@@ -205,6 +207,20 @@ const category_selectors = [
 		$('input[name="Titel"]').val('');
 		werkSearchCount();
 	});
+
+
+	// Search when user types
+	$('.searchOnEnter').on('input', function() {
+        // Clear the previous timer to reset the delay every time the user types
+        clearTimeout(typingTimer);
+
+        // Set a new timer
+        typingTimer = setTimeout(() => {
+            // Trigger the 'change' event on the form after the delay
+            $(this).closest('form').trigger('change');
+        }, doneTypingInterval);
+    });
+
 
 	// Save all result images
 	$('#selectAllResults').on('click', function (e) {
