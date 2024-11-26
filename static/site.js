@@ -33,10 +33,13 @@ const category_selectors = [
 		});
 		listTitles();
 		applySearchFromURL();
+		loadSavedItems();
 
 	}).fail(function () {
 		alert('Fehler: Daten konnten nicht geladen werden.');
 	});
+
+	werkSearchCount();
 
 	// Apply fancy polar button effect
 	$('.btn-polar').each(function() {
@@ -55,7 +58,6 @@ const category_selectors = [
 	function initFilterSections(sname) {
 		// Add section headers
 		console.log("Init sections", sname);
-		loadSavedItems();
 
 		let id = "";
 		switch (sname) {
@@ -265,7 +267,6 @@ const category_selectors = [
 			}
 		}
 	});
-	
 })();
 
 

@@ -35,11 +35,10 @@ function werkSearchReset(e) {
 
 	// Update appearance
 	$('form')[0].reset();
-	$('#total').text('0');
-	$('#start').addClass('disable');
 	$('#restart, #restartAll').addClass('hidden');
 	$('#results .pagination, #results .output').addClass('hidden');
 	$('#results .empty-state').removeClass('hidden');
+	werkSearchCount();
 
 	clusterTitle.update(titlelist_uniqueEntries);
 	clusterYear.update(yearlist);
@@ -123,7 +122,7 @@ function get_werkSearchQuery(from_page) {
 function werkSearchCount() {
 	qg = get_werkSearchQuery(1);
 	$('#selection').empty().append(qg.html);
-	if (qg.html === '') return $('#total').text('0');
+	if (qg.html === '') $('#restart').addClass('hidden');
 
 	$.getJSON('/api/images' + qg.query, function (data) {
 		$('#total').html(data.total);
@@ -312,7 +311,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 		e.preventDefault();
 		e.stopPropagation();
 	}
-
+	
 	// Setting default value for 'from_page' if not provided or undefined
 	if (typeof from_page === 'undefined' || from_page === null) {
 		from_page = 1;
@@ -343,8 +342,6 @@ function werkSearchStart(e, from_page, random, fromURL) {
 	}
 
 	$.getJSON(random ? '/api/images.random' : '/api/images.json' + q, function (data) {
-
-		console.log(data);
 		
 		var $tgt = $('#results').show().find('div.row');
 
@@ -451,7 +448,7 @@ function loadSavedItems() {
 		console.log("Keine Werke gespeichert…");
 
 	} else {
-		console.log(savedData.length);
+		console.log('Saved images:',savedData.length);
 		$("#savedList .output").removeClass('hidden');
 		$("#savedList .empty-state").addClass('hidden');
 		var urlPrefix = "https://archiv.juergstraumann.ch/";
@@ -459,8 +456,6 @@ function loadSavedItems() {
 
 		// For each saved storage number, find the corresponding item in the data array
 		savedData.forEach(function (item) {
-			console.log("done", item);
-
 			var $container = $('<div>').addClass('item');
 			var $link = $('<a>').attr('href', urlPrefix + item.path).attr('data-sub-html', werkTitle(item));
 			var $img = $('<img>').attr('src', urlPrefix + item.thumb).addClass('thumb');
