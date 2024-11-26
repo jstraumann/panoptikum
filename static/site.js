@@ -208,9 +208,36 @@ const category_selectors = [
 	$('#selectAllResults').on('click', function (e) {
 		e.preventDefault();
 		e.stopPropagation();
-		$('.check').prop('checked', true);
-		$('.check').trigger('change');
+	
+		// Count the number of elements with the class 'check'
+		const totalChecks = $('.check').length;
+	
+		// If more than 50 elements, show the modal
+		if (totalChecks > 50) {
+			// Set the message for the modal
+			$('#modalMessage').text(`Wollen Sie ${totalChecks} Werke zu ihrer Liste hinzufügen?`);
+			
+			// Show the modal
+			$('#confirmationModal').modal('show');
+	
+			// Handle the "Proceed" button click inside the modal
+			$('#confirmSelection').off('click').on('click', function () {
+				// Proceed with checking the checkboxes
+				$('.check').prop('checked', true);
+				$('.check').trigger('change');
+				
+				// Close the modal
+				$('#confirmationModal').modal('hide');
+			});
+	
+		} else {
+			// If 50 or fewer elements, proceed with checking the checkboxes
+			$('.check').prop('checked', true);
+			$('.check').trigger('change');
+		}
 	});
+	
+	
 
 	// Delete local storage -> Delete saved images
 	$('#deleteSavedList').on('click', function (e) {
