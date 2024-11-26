@@ -362,6 +362,7 @@ const category_selectors = [
 			}
 			if ($('#worksMenuItem').hasClass('active')) {
 				$('#searchMenuItem').trigger('click'); 
+				$('#searchTitleInput').focus();
 				return;
 			}
 		}
