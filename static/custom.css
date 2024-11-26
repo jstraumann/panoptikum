@@ -61,7 +61,6 @@ a {
 }
 
 .page-header {
-  padding: 0 var(--spacing-lg);
   background-color: var(--white);
   height: 5rem;
 }
@@ -215,8 +214,8 @@ button,
   width: fit-content;
   display: table;
   --offset: 1rem;
-  --move-initial: calc(-25% + var(--offset));
-  --move-final: calc(-50% + var(--offset));
+  --move-initial: calc(-12.5% + var(--offset));
+  --move-final: calc(-25% + var(--offset));
   transform: translate3d(var(--move-initial), 0, 0);
   animation: marquee 1.2s linear infinite;
   animation-play-state: paused;
