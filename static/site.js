@@ -289,7 +289,7 @@ const category_selectors = [
 			e.preventDefault(); // Prevent any default Enter key behavior
 			// Check if #searchMenuItem has the 'active' class
 			if ($('#searchMenuItem').hasClass('active') && !$('#start').hasClass('disabled')) {
-				$('#start').trigger('click'); 
+				$('#worksMenuItem').trigger('click'); 
 				return;
 			}
 			if ($('#worksMenuItem').hasClass('active')) {
