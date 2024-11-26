@@ -414,15 +414,9 @@ function werkSearchStart(e, from_page, random, fromURL) {
 			});
 		});
 
-		// Initialize the gallery
-		gallery = lightGallery($tgt.get(0), {
-			selector: '.item a',
-			plugins: [],
-			licenseKey: '0000-0000-000-0000',
-			speed: 1,
-			download: false,
-			addClass: "js-gallery"
-		});
+		// Initialize the gallery		
+		const container = $tgt.get(0);
+		initializeGallery(container);
 
 		// Automatically open if only one image or random mode
 		if (data.length === 1 || random) {
@@ -497,15 +491,32 @@ function loadSavedItems() {
 
 		});
 
-		// Initialize the gallery
-		gallery = lightGallery($tgt.get(0), {
-			selector: '.item a',
-			plugins: [],
-			licenseKey: '0000-0000-000-0000',
-			speed: 500,
-			download: false,
-			addClass: "js-gallery"
-		});
+		// Initialize the gallery		
+		const container = $tgt.get(0);
+		initializeGallery(container);
 	}
 }
 
+function initializeGallery(container) {
+	console.log('init gallery');
+	
+	const galleryOptions = {
+		selector: '.item a',
+		licenseKey: '0000-0000-000-0000',
+		speed: 1,
+		download: false,
+		addClass: "js-gallery"
+	};
+
+    // Use a property to track whether the gallery is already initialized
+    if (!container.galleryInstance) {
+        // Initialize the gallery
+        container.galleryInstance = lightGallery(container, galleryOptions);
+        console.log("Gallery initialized");
+    } else {
+        // Destroy and reinitialize the gallery if it's already created
+        container.galleryInstance.destroy(true);
+        container.galleryInstance = lightGallery(container, galleryOptions);
+        console.log("Gallery updated");
+    }
+}
