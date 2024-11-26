@@ -440,19 +440,20 @@ strong {
 #results .item,
 #savedList .item {
   position: relative;
+  transition: transform ease 0.2s;
 }
 
 #results .item img,
 #savedList .item img {
   box-shadow: var(--black25) 0px 50px 100px -20px, var(--black25) 0px 30px 60px -30px;
   max-width: 100%;
-  transition: transform ease 0.2s;
 }
 
-#results .item img:hover,
-#savedList .item img:hover {
+#results .item:hover,
+#savedList .item:hover {
   transform: scale(1.02);
 }
+
 
 #results .item input[type="checkbox"].check,
 #savedList .item input[type="checkbox"].check {
@@ -460,13 +461,62 @@ strong {
   position: absolute;
   top: 0;
   right: 0;
-  margin: var(--spacing-lg);
+
+  appearance: none; 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  
+  cursor: pointer;
+  opacity: 0;
+  color: var(--white);
 }
 
 #savedList .item input[type="checkbox"].check {
   left: 0;
   right: auto;
+  background-color: var(--danger);
 }
+
+#results .item:hover input[type="checkbox"].check,
+#savedList .item:hover input[type="checkbox"].check {
+  opacity: 1;
+  background-color: var(--black25);
+}
+
+#results .item input[type="checkbox"].check::before,
+#savedList .item input[type="checkbox"].check::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, 0);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-plus'><line x1='12' y1='5' x2='12' y2='19'></line><line x1='5' y1='12' x2='19' y2='12'></line></svg>");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#results .item input[type="checkbox"].check:checked {
+  background-color: var(--primary);
+  opacity: 1;
+}
+
+#savedList .item input[type="checkbox"].check:checked {
+  background-color: var(--danger);
+}
+
+#results .item input[type="checkbox"].check:checked::before {
+  content: "✓"; 
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-check'><polyline points='20 6 9 17 4 12'></polyline></svg>");
+}
+
+#savedList .item input[type="checkbox"].check:checked::before {
+   content: "×"; 
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-x'><line x1='18' y1='6' x2='6' y2='18'></line><line x1='6' y1='6' x2='18' y2='18'></line></svg>");
+} 
 
 .empty-state,
 .pagination {
