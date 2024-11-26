@@ -142,7 +142,6 @@ const category_selectors = [
 
 	function titleSearch(e) {
 		console.log("titleSearch");
-		
 		$('input[name="Jahr"]').val(''); // Copies Entry to html input form
 		$('input[name="Titel"]').val(this.innerHTML); // Copies Entry to html input form
 		werkSearchCount();
@@ -158,14 +157,14 @@ const category_selectors = [
 	$('#start').on('click', function(e) {
 		e.preventDefault(); 
 		e.stopPropagation();
+		werkSearchStart();
 		$('#worksMenuItem').click();
 	});
 
 	// Random search
-	// $('#random').click(werkSearchRandom); // -button.click
 	$('#random').on('click', function() {
-		$("#worksMenuItem").click(); 
 		werkSearchRandom();
+		$("#worksMenuItem").click(); 
 	});
 
 	// Reset search
@@ -183,13 +182,17 @@ const category_selectors = [
 	$('#contentAreaYear').on('click', 'div', yearSearch);
 
 	// Main nav tabs
-	$('.main-nav-item').on('click', function (e) {
+	$('.main-nav-item').on('click', function (e) {	
 		$('.main-nav .main-nav-item').removeClass('active');
 		$('.main .main-pane').removeClass('active');
 		$(this).addClass('active');
 		var activeSection = $(this).attr("href");
-		$(activeSection).addClass('active');
+		$(activeSection).addClass('active');		
 		$('html, body').animate({ scrollTop: 0 }, 'fast');
+
+		if (e.currentTarget.id === "worksMenuItem") {
+			werkSearchStart(); 
+		}
 	});
 
 	// Search tab styling on click
@@ -235,8 +238,6 @@ const category_selectors = [
 			$('.check').trigger('change');
 		}
 	});
-	
-	
 
 	// Delete local storage -> Delete saved images
 	$('#deleteSavedList').on('click', function (e) {

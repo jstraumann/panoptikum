@@ -6,17 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>-Bildarchiv JS-</title>
+  <title>Bildarchiv JS</title>
 
   <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css" media="screen">
   <link rel="stylesheet" href="/static/lib/clusterize.css" media="screen">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/css/lightgallery.css">
   <link rel="stylesheet" href="/static/custom.css">
 
-  <!-- Matomo -->
+  <!-- Matomo Tracker -->
   <script type="text/javascript">
     var _paq = window._paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
     (function () {
@@ -45,7 +44,7 @@
           Suche
         </button>
         <button class="btn main-nav-item btn-polar " id="worksMenuItem" href="#works">
-          Resultate
+          Werke
         </button>
         <button class="btn main-nav-item btn-polar" id="listMenuItem" href="#lists">
           Meine Liste
@@ -199,7 +198,7 @@
         <!-- Results Actions -->
         <div class="list-actions d-flex">
           <button class="btn" id="selectAllResults">
-            Alle Bilder auswählen
+            Alle Werke markieren
           </button>
           <button class="btn ml-auto hidden" id="restartAll">
             Reset
@@ -245,7 +244,7 @@
           <ul>
             <li>Wählen Sie eine der drei Rubriken „Werk“, „Inhalt“ oder „Form" aus.</li>
             <li>Klicken Sie auf „Anzeigen“, um die Auswahl anzuzeigen. Die Anzahl der gefundenen Werke wird angezeigt.</li>
-            <li>Klicken Sie auf „Zufall“, um eine spontane Bildauswahl zu erhalten.</li>
+            <li>Klicken Sie auf „Zufall“, um eine spontane Werkauswahl zu erhalten.</li>
           </ul>
         </div>
       </div>
@@ -267,7 +266,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button>
-          <button type="button" class="btn btn-primary" id="confirmSelection">Bilder auswählen</button>
+          <button type="button" class="btn btn-primary" id="confirmSelection">Werke auswählen</button>
         </div>
       </div>
     </div>
