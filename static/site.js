@@ -158,8 +158,7 @@ const category_selectors = [
 	$('#start').on('click', function(e) {
 		e.preventDefault(); 
 		e.stopPropagation();
-		werkSearchStart();
-		$("#worksMenuItem").click(); 
+		$('#worksMenuItem').click();
 	});
 
 	// Random search
