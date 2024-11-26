@@ -193,6 +193,14 @@ const category_selectors = [
         $(activeSection).addClass('active');        
         $('html, body').animate({ scrollTop: 0 }, 'fast');
 
+		if (history.pushState) {
+			var params = new URLSearchParams(window.location.search);
+			var tabId = $(this).attr('id').replace("MenuItem", ""); // Remove "MenuItem"
+			params.set('tab', tabId); // Set the tab parameter without "MenuItem"
+			var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + params.toString();
+			window.history.pushState({ path: newUrl }, '', newUrl);
+		}
+
 		// Check if startSearch is true
         if (startSearch) {
             werkSearchStart(); // Start the search if startSearch is true
@@ -373,38 +381,62 @@ const category_selectors = [
 
 function updateURLWithSearchString(searchString) {
 	if (history.pushState) {
-		var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + searchString;
-		window.history.pushState({ path: newUrl }, '', newUrl);
-	}
+        // Parse existing URL parameters
+        var params = new URLSearchParams(window.location.search);
+
+        // Add or update the search parameters
+        var searchPairs = searchString.split("&");
+        searchPairs.forEach(function (pair) {
+            var [key, value] = pair.split("=");
+            if (key) params.set(key, value);
+        });
+
+        // Build the updated URL
+        var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + params.toString();
+        window.history.pushState({ path: newUrl }, '', newUrl);
+    }
 }
 
 function applySearchFromURL() {
-	var params = {};
-	var searchStr = window.location.search;
-	if (searchStr) {
-		var pairs = searchStr.substring(1).split("&");
-		for (var i = 0; i < pairs.length; i++) {
-			var pair = pairs[i].split("=");
-			params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || "");
-		}
-	}
-	applyURLsearch = false
-	category_selectors.forEach(function (category) {
-		if (params[category]) {
-			// Split the parameter by '|' to get the individual values
-			var values = params[category].split('|');
-			applyURLsearch = true;
-			// Use the constructed ID to check each corresponding checkbox or input
-			values.forEach(function (value) {
-				var inputID = category + value;
-				$('#' + inputID).prop('checked', true);
-				console.log("checked:" + inputID);
-			});
-		}
-	});
-	// Trigger the search if params have been found
-	if (applyURLsearch) {
-		werkSearchStart(null, 1, false, true);
-		$("#worksMenuItem").click();
-	}
+    var params = {};
+    var searchStr = window.location.search;
+
+    if (searchStr) {
+        var pairs = searchStr.substring(1).split("&");
+        for (var i = 0; i < pairs.length; i++) {
+            var pair = pairs[i].split("=");
+            params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || "");
+        }
+    }
+
+    var applyURLsearch = false;
+
+    // Handle category selectors
+    category_selectors.forEach(function (category) {
+        if (params[category]) {
+            // Split the parameter by '|' to get the individual values
+            var values = params[category].split('|');
+            applyURLsearch = true;
+            // Use the constructed ID to check each corresponding checkbox or input
+            values.forEach(function (value) {
+                var inputID = category + value;
+                $('#' + inputID).prop('checked', true);
+                console.log("checked:" + inputID);
+            });
+        }
+    });
+
+    // Handle tab selection from the 'tab' parameter
+    if (params.tab) {
+        var tabId = params.tab + "MenuItem"; 
+        var $tab = $('#' + tabId);
+        if ($tab.length) {
+            $tab.trigger('click', [false]); // Trigger click on the tab, passing `false` to avoid a redundant search
+        }
+    }
+
+    // Trigger the search if params have been found
+    if (applyURLsearch) {
+        werkSearchStart(null, 1, false, true);
+    }
 }
