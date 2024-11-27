@@ -412,10 +412,21 @@ const category_selectors = [
 			}
 		}
 		if (e.key === 'Backspace') {
-			// Check if #worksMenuItem is active
 			if ($('#worksMenuItem').hasClass('active')) {
+				e.preventDefault();
 				$('#searchMenuItem').trigger('click');
 				$('#searchTitleInput').focus();
+				return
+			}
+			if (!$(e.target).is('input[type="text"], textarea, [contenteditable]')) {				
+				if ($('#searchMenuItem').hasClass('active')) {
+					$('#restart').trigger('click');
+					$('#searchTitleInput').focus();
+					return
+				}
+
+				// Prevent default behavior to avoid navigating back in history
+				
 			}
 		}
 	});
