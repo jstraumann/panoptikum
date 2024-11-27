@@ -1,4 +1,5 @@
 import re
+import unicodedata
 import pandas as pd
 
 def get_random(dp_werke):
@@ -31,18 +32,32 @@ def filter_columns(df, args):
                     for and_cond in and_conditions:
                         or_conditions = and_cond.split('|')
 
-                        if f in ["Titel"]:  # Attributes where partial matches are allowed
-                            # Relax matching for partial hits
-                            regex_patterns = [re.escape(option) for option in or_conditions]
+                        # Check if the field being searched is 'Titel'
+                        search_field = f
+                        if f == "Titel":
+                            # Use 'TitelEinfach' for searching
+                            search_field = "TitelEinfach"
+
+                            # Normalize search strings in the same way as 'TitelEinfach'
+                            def normalize_search_string(s):
+                                return ''.join(
+                                    c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn'
+                                ).replace('...', '').replace('-', '').replace('…', '').replace('«', '').replace('»', '').replace('"', '').lower()
+
+                            regex_patterns = [re.escape(normalize_search_string(option)) for option in or_conditions]
+
                         else:
                             # Strict word-boundary matches for other fields
                             regex_patterns = [
                                 f"(?<![a-zA-ZäöüÄÖÜ0-9]){re.escape(option)}(?![a-zA-ZäöüÄÖÜ0-9])"
                                 for option in or_conditions
                             ]
-                        
+
+                        # Join conditions into a single regex
                         or_regex = f"({'|'.join(regex_patterns)})"
-                        df = df.loc[df[f].str.contains(or_regex, regex=True, case=False, na=False)]
+
+                        # Apply the filtering on the correct field
+                        df = df.loc[df[search_field].str.contains(or_regex, regex=True, case=False, na=False)]
 
                 elif 'int' in dfname:
                     try:
