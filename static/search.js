@@ -1,5 +1,11 @@
+var titlelist = {};
+var titlelist_uniqueEntries = {};
+var yearlist = [];
+
 var PER_PAGE = 100;
-var clusterTitle = new Clusterize({ // Clusterize prepares title search output
+
+// Clusterize title- and yearlist
+var clusterTitle = new Clusterize({
 	scrollId: 'scrollAreaTitle',
 	contentId: 'contentAreaTitle'
 });
@@ -8,58 +14,54 @@ var clusterYear = new Clusterize({
 	contentId: 'contentAreaYear'
 });
 
-function hasAttr(attr) {
-	return (typeof attr !== typeof undefined && attr !== false)
-}
-
 function werkSearchNext(e) {
-	var ppp = $('button#more').data('page');
-	werkSearchStart(e, ppp + 1);
+	var currentPage = $('#more').data('page');
+	werkSearchStart(e, currentPage + 1);
 }
 
 function werkSearchRandom(e) {
 	werkSearchReset(e);
 	$('#restart').removeClass('hidden');
-	$('button#more').hide();
+	$('.pagination').hide();
 	werkSearchStart(e, 1, true);
 }
 
-function werkSearchBack(e) {
-	if (typeof e !== typeof undefined)
-		e.preventDefault(); e.stopPropagation();
-
-	var $det = $('#details').hide(); $('#browser').show();
-}
-
 function werkSearchReset(e) {
-	if (typeof e !== typeof undefined)
-		e.preventDefault(); e.stopPropagation();
+	if (typeof e !== typeof undefined) {
+		e.preventDefault();
+		e.stopPropagation();
+	}
 
-	// Clear the form and return to start when tapped
+	// Update appearance
 	$('form')[0].reset();
-	$('#total').text('0');
-	$('#start').addClass('disable'); 	// Anzeigen ausblenden
-	$('#restart').addClass('hidden');	// Hide reset button
-	$('a[href="#inhalt"]').click(); // Switch tab
+	$('#restart, #restartAll').addClass('hidden');
+	$('#results .pagination, #results .output').addClass('hidden');
+	$('#results .empty-state').removeClass('hidden');
+	werkSearchCount();
 
-	clusterTitle.update(titlelist_uniqueEntries); // Resets title list display
-	clusterYear.update(yearlist); 		// Resets year list display
+	clusterTitle.update(titlelist_uniqueEntries);
+	clusterYear.update(yearlist);
 
 	// Update the URL to the base URL
-    const baseUrl = window.location.origin;
-    history.pushState(null, '', baseUrl);
+	const baseUrl = window.location.origin;
+	history.pushState(null, '', baseUrl);
 }
 
 // Query builder
 function get_werkSearchQuery(from_page) {
-	var searchCriteria = $('#searchCriteria').val();
+	var searchCriteria = $('#searchCriteriaInput').val();
+	var contentSearch = $('#searchTitleInput').val();
 	var q = '?sort=-Jahr&';
 	q += 'per_page=' + PER_PAGE;
 
-	console.log("Werksearch");
+	var currentPage = (typeof from_page === typeof 1) ? from_page : 1;
+	q += '&page=' + currentPage;
 
-	var ppp = (typeof from_page === typeof 1) ? from_page : 1;
-	q += '&page=' + ppp;
+	// If there's a search term, include it in the query
+	if (contentSearch) {
+		console.log(contentSearch);
+		q += '&o_Titel=' + encodeURIComponent(contentSearch);
+	}
 
 	filterselect = '';
 	filterdata = {};
@@ -68,8 +70,8 @@ function get_werkSearchQuery(from_page) {
 		var nm = $(this).attr('name');
 		console.log("category=" + nm);
 
-		if (!hasAttr(nm)) return;
-		if (!filterdata[nm]) filterdata[nm] = [];
+		if (!nm) {return;}
+		if (!filterdata[nm]) {filterdata[nm] = [];}
 		filterdata[nm].push($(this).attr('value'));
 		var label = $(this).parent().find('label');
 
@@ -77,19 +79,19 @@ function get_werkSearchQuery(from_page) {
 			.clone()    // Clone the element
 			.children() // Select all the children
 			.remove()   // Remove all the children
-			.end()  	// Again go back to selected element
+			.end()      // Go back to selected element
 			.text();
-		var labelNumber = label.find(".count").text()
+		var labelNumber = label.find(".count").text();
 		filterselect += '<span>' + labelTitle + ' ' + labelNumber + '</span>';
 	});
 
 	$('input[type=text]').each(function () {
 		var nm = $(this).attr('name');
-		if (!hasAttr(nm)) return;
-		if (!nm.indexOf('o_') == 0) nm = 'o_' + nm;
+		if (!nm) {return;}
+		if (!nm.indexOf('o_') == 0) {nm = 'o_' + nm;}
 		var v = $(this).val();
-		if (!v.length) return;
-		if (!filterdata[nm]) filterdata[nm] = [];
+		if (!v.length) {return;}
+		if (!filterdata[nm]) {filterdata[nm] = [];}
 		filterdata[nm].push(v);
 		filterselect += '<span>' + v + '</span>';
 	});
@@ -101,18 +103,16 @@ function get_werkSearchQuery(from_page) {
 
 	$.each(Object.keys(filterdata), function () {
 		q += '&' + this + '=' + filterdata[this].join(joinCharater);
-		// Results in searchtsring
-		// q += '&' + this + '=' + filterdata[this].join(',');
-		// q += '&' + this + '=' + filterdata[this].join('|'); // Assuming '|' is the OR operator for the API
 	});
 
 	console.log("query" + q);
 
+	$('#restart, #restartAll').removeClass('hidden');
 
 	return {
 		data: filterdata,
 		html: filterselect,
-		page: ppp,
+		page: currentPage,
 		query: q
 	}
 }
@@ -120,12 +120,13 @@ function get_werkSearchQuery(from_page) {
 // Obtains a count of search results
 function werkSearchCount() {
 	qg = get_werkSearchQuery(1);
+
 	$('#selection').empty().append(qg.html);
-	if (qg.html === '') return $('#total').text('0');
+	if (qg.html === '') {$('#restart').addClass('hidden');}
 
 	$.getJSON('/api/images' + qg.query, function (data) {
 		$('#total').html(data.total);
-		$('#restart').removeClass('hidden');
+		$('#restart', 'restartAll').removeClass('hidden');
 		$('#start').removeClass('disable')
 			.addClass(data.total > 0 ? '' : 'disable');
 	});
@@ -208,7 +209,7 @@ function werkTitle(item) {
 		item['Techniken'].split(' ').forEach(function (t) {
 			getcode = techniques[t.trim()]
 			if (typeof getcode !== 'undefined') {
-				if (getcode.toLowerCase().indexOf('technik') > 0) return;
+				if (getcode.toLowerCase().indexOf('technik') > 0) {return;}
 				itemarr.push(getcode);
 			}
 		})
@@ -249,6 +250,7 @@ function werkTitle(item) {
 	return s;
 }
 
+// This function is used in a different file
 // Generates list of Titles, stores them in global titlelist
 function listTitles() {
 	q = '?sort=-Jahr&per_page=-1';
@@ -257,7 +259,7 @@ function listTitles() {
 
 	$.getJSON('/api/images.json' + q, function (data) {
 		// Create title item array
-		data.forEach(function (item, index) {
+		data.forEach(function (item) {
 			// Saves data for years in yearList
 			if (item['Jahr'] != null) {
 				if (yearItems[item['Jahr'].substr(0, 4)]) {
@@ -267,17 +269,22 @@ function listTitles() {
 				}
 			}
 			// Saves data for titles in titlelist
-			if (item['Titel'] != null) {
-				fixedItem = '<div>' + item['Titel'] + '</div>';
+			if (item['Titel'] != null && item['TitelEinfach'] != null) {
+				fixedItem = 
+					'<div>' +
+						'<span class="display">' + item['Titel'] + '</span>' +
+						'<span class="hidden">' + item['TitelEinfach'] + '</span>' +
+					'</div>';
 				titleItems.push(fixedItem);
 			}
 		});
+
 		titleItems.sort(function (a, b) {
 			return a.localeCompare(b);
 		});
 
 		titlelist = titleItems; // Globally available
-		titlelist_uniqueEntries = removeDuplicates(titlelist) // Removes duplicates and stores it globally.
+		titlelist_uniqueEntries = removeDuplicates(titlelist); // Removes duplicates and stores globally
 
 		yearItems.forEach(function (item, index) {
 			yearlist.push('<div>' + index + '</div>');
@@ -306,14 +313,11 @@ function removeDuplicates(names) {
 
 // Main function to run a search
 function werkSearchStart(e, from_page, random, fromURL) {
-
-
-	// Check if 'e' is not null and then prevent default actions
 	if (e) {
 		e.preventDefault();
 		e.stopPropagation();
 	}
-
+	
 	// Setting default value for 'from_page' if not provided or undefined
 	if (typeof from_page === 'undefined' || from_page === null) {
 		from_page = 1;
@@ -323,46 +327,41 @@ function werkSearchStart(e, from_page, random, fromURL) {
 		// Handling the random search case
 		$('#results').find('div.row').empty();
 		$('#selection').empty();
-		window.location.replace("/#&gid=1&pid=15");
+		// window.location.replace("/#&gid=1&pid=15");
 	} else if (fromURL === true) {
 		// Handling the URL search case
 		werkSearchCount();
 		$('#restart').removeClass('hidden');
 	} else {
 		// Exit if the 'start' button is disabled
-		if ($('#start').hasClass('disable')) return;
+		if ($('#start').hasClass('disable')) {return;}
 	}
 
 	// Load and build the query
-	$('.modal').modal('show'); // Show loading or processing modal
 	var wsq = get_werkSearchQuery(from_page);
 	var q = wsq.query;
+	var single = false;
 
 	// Update page number
-	$('button#more').data('page', wsq.page);
+	$('#more').data('page', wsq.page);
 	if (wsq.page === 1) {
 		$('#results').find('div.row').empty();
 	}
 
 	$.getJSON(random ? '/api/images.random' : '/api/images.json' + q, function (data) {
-		setTimeout(function () {
-			$('.modal').modal('hide');
-		}, 500);
-
-		// $('#filters .tab-content').hide();
-
+		
 		var $tgt = $('#results').show().find('div.row');
-		$('a[href="#resultate"]').click(); // Switch tab
+		single = (data.length == 1 && $('#worksMenuItem').hasClass("active"));
 
-		$('button#more').hide();
+		$('.pagination').addClass('hidden');
 		if (data.length === PER_PAGE)
-			$('button#more').show(); 
+			{$('.pagination').removeClass('hidden');}
 
 		var urlPrefix = "https://archiv.juergstraumann.ch/";
 
 		// Generate thumbnails
 		data.forEach(function (item) {
-			var $container = $('<div>').addClass('col-sm-2 item');
+			var $container = $('<div>').addClass('item');
 			var $link = $('<a>').attr('href', urlPrefix + item.path).attr('data-sub-html', werkTitle(item));
 			var $img = $('<img>').attr('src', urlPrefix + item.thumb).addClass('thumb');
 
@@ -420,28 +419,22 @@ function werkSearchStart(e, from_page, random, fromURL) {
 			});
 		});
 
+		// Initialize the gallery, open immediately when random
+		const container = $tgt.get(0);		
+		initializeGallery(container, (random || single));
+		// initializeGallery(container, (random));
 
-		// Initialize the gallery
-		const gallery = lightGallery($tgt.get(0), {
-			selector: '.item a',
-			plugins: [],
-			licenseKey: '0000-0000-000-0000',
-			speed: 1,
-			download: false,
-			addClass: "js-gallery"
-		});
-
-		// Automatically open if only one image or random mode
-		if (data.length === 1 || random) {
-			gallery.openGallery(0);
-		}
 	}).fail(function () {
-		alert('Could not search!');
+		console.log('Fehler: Suche fehlgeschlagen');
 	});
 
 	// Update URL
 	updateURLWithSearchString(q.substring(1)); // Remove '?' from query before updating URL
 
+	// Update Apperance
+	$('#restart, #restartAll').removeClass('hidden');
+	$('#results .pagination, #results .output').removeClass('hidden');
+	$('#results .empty-state').addClass('hidden');
 }
 
 function loadSavedItems() {
@@ -455,19 +448,20 @@ function loadSavedItems() {
 
 	if (savedData.length === 0) {
 		// If no items are saved, show the "No saved items" message
-		$savedList.html('<div class="empty-state">Keine Werke gespeichert…</div>');
+		$("#savedList .output").addClass('hidden');
+		$("#savedList .empty-state").removeClass('hidden');
 		console.log("Keine Werke gespeichert…");
 
 	} else {
-		console.log(savedData.length);
+		console.log('Saved images:',savedData.length);
+		$("#savedList .output").removeClass('hidden');
+		$("#savedList .empty-state").addClass('hidden');
 		var urlPrefix = "https://archiv.juergstraumann.ch/";
 		var $tgt = $('#savedList').find('div.output');
 
 		// For each saved storage number, find the corresponding item in the data array
 		savedData.forEach(function (item) {
-			console.log("done", item);
-
-			var $container = $('<div>').addClass('col-sm-2 item');
+			var $container = $('<div>').addClass('item');
 			var $link = $('<a>').attr('href', urlPrefix + item.path).attr('data-sub-html', werkTitle(item));
 			var $img = $('<img>').attr('src', urlPrefix + item.thumb).addClass('thumb');
 			var $checkbox = $('<input type="checkbox">')
@@ -481,31 +475,60 @@ function loadSavedItems() {
 			$tgt.append($container);
 
 			$checkbox.on('change', function () {
-				
-				var storageNumber = $(this).data('storage-number');
 				var savedData = JSON.parse(localStorage.getItem('selectedItems')) || [];
 				// Remove the item from the savedList
 				savedData = savedData.filter(function (i) {
 					console.log(i);
 					return i.Nummer !== item.Nummer;  // Remove the item with the matching 'Nummer'
 				});
-				
+
 				// Save the updated array back to localStorage
 				localStorage.setItem('selectedItems', JSON.stringify(savedData));
 				loadSavedItems();
 			});
+		});
 
-			
-		});
-		// Initialize the gallery
-		const gallery = lightGallery($tgt.get(0), {
-			selector: '.item a',
-			plugins: [],
-			licenseKey: '0000-0000-000-0000',
-			speed: 500,
-			download: false,
-			addClass: "js-gallery"
-		});
+		// Initialize the gallery		
+		const container = $tgt.get(0);
+		initializeGallery(container);
 	}
 }
 
+function initializeGallery(container, openImmediately = false) {	
+	const galleryOptions = {
+		selector: '.item a',
+		speed: 1,
+		download: false,
+		addClass: "js-gallery"
+	};
+
+    if (!container.galleryInstance) {
+        // Initialize the gallery
+        container.galleryInstance = lightGallery(container, galleryOptions);
+    } else {
+        // Destroy and reinitialize the gallery if it's already created
+        container.galleryInstance.destroy(true);
+        container.galleryInstance = lightGallery(container, galleryOptions);
+    }
+    if (openImmediately) {
+        container.galleryInstance.openGallery();
+    }
+}
+
+function updateURLWithSearchString(searchString) {
+	if (history.pushState) {
+		// Parse existing URL parameters
+		var params = new URLSearchParams(window.location.search);
+
+		// Add or update the search parameters
+		var searchPairs = searchString.split("&");
+		searchPairs.forEach(function (pair) {
+			var [key, value] = pair.split("=");
+			if (key) {params.set(key, value);}
+		});
+
+		// Build the updated URL
+		var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + params.toString();
+		window.history.pushState({ path: newUrl }, '', newUrl);
+	}
+}

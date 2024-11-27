@@ -49,12 +49,6 @@ sudo apt-get install python3.7 python3-numpy
   gunicorn --log-level=info -w 4 -b :8000 app:app
   ```
 
-3. Alternatively use docker
-   Make sure docker and docker-compose are installed.
-   ```
-   docker-compose up --build
-   ```
-
 ## Deployment
 Changes to the github are automatically deployed.
 Visit https://bildarchiv-js.ch/ to verify that the update was succesful.
@@ -122,3 +116,14 @@ Further explanation about the data refresh.
 
 - Add the new filter to `data/filters.csv` manually.
 - Run `python collect.py` to update the count.
+
+
+### Ideas
+
+- Select for My List in Gallery View
+- Include image search / Find similar images
+- Sidebar Mode
+- Collapsible search groups
+- Replace Zus'arbeit in data update
+- Export: Download .zip incl images
+- Save public list or accounts

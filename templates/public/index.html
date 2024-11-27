@@ -6,18 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>-Bildarchiv JS-</title>
+  <title>Bildarchiv JS</title>
 
   <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css" media="screen">
-  <link rel="stylesheet" href="/static/lib/font-awesome/4.7.0/font-awesome.min.css" media="screen">
   <link rel="stylesheet" href="/static/lib/clusterize.css" media="screen">
-  <link rel="stylesheet" href="/static/custom.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/css/lightgallery.css">
+  <link rel="stylesheet" href="/static/custom.css">
 
-  <!-- Matomo -->
+  <!-- Matomo Tracker -->
   <script type="text/javascript">
     var _paq = window._paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
     (function () {
@@ -32,247 +30,228 @@
     <p><img src="https://matomo.designone.ch/matomo.php?idsite=11&amp;rec=1" style="border:0;" alt="" /></p>
   </noscript>
   <!-- End Matomo Code -->
-
-
 </head>
 
 <body>
-  <div class="top container" id="browser">
+  <!-- Main Navigation -->
+  <div class="main container-fluid d-flex flex-column">
+    <div class="page-header d-flex sticky-top" id="banner">
+      <div class="main-nav d-flex content-left">
+        <h1 class="page-title" title="Bildarchiv Jürg Straumann"><a id="home" href="javascript:void(0);"
+            onclick="this.href=window.location.origin;">Bildarchiv JS</a></h1>
+      </div>
+      <div class="main-nav content-center d-flex mx-auto">
+        <button class="btn main-nav-item active btn-polar" id="searchMenuItem" title="Werke finden" href="#search">
+          Suche
+        </button>
+        <button class="btn main-nav-item btn-polar " id="worksMenuItem" title="Werke anzeigen" href="#works">
+          Werke
+        </button>
+        <button class="btn main-nav-item btn-polar" id="listMenuItem" title="Gespeicherte Werke" href="#lists">
+          Meine Liste
+        </button>
+      </div>
+      <div class="content-right d-flex justify-content-end">
+        <button class="btn" id="random" title="Zufällige Werke anzeigen">
+          Zufall
+        </button>
+        <button class="btn" id="help" data-toggle="modal" data-target="#helpModal" title="Tipps anzeigen">
+          Hilfe
+        </button>
+      </div>
+    </div>
 
-    <div class="page-header" id="banner">
-      <div class="row">
-        <div class="col-sm anleitung-infoblock">
-          <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseInfoblock"
-            aria-expanded="false" aria-controls="collapseExample">Hilfe</button>
-          <h1 class="page-title"><a href="https://bildarchiv-js.ch/">Bildarchiv JS</a></h1>
-          <ul class="collapse collapsed" id="collapseInfoblock">
-            <li>Wählen Sie eine der drei Rubriken „Inhalt“, „Form“ oder „Werk" aus.</li>
-            <li>Suchmodus:
-              <ul>
-                <li><b>Werk erfüllt ein Kriterium:</b> Sucht nach Werken mit "Menschen" ODER "Figurengruppen" und zeigt
-                  beides in den Resultaten an.</li>
-                <li><b>Werk erfüllt alle Kriterien:</b> Sucht nach Werken mit "Menschen" UND "Figurengruppen" und zeigt
-                  nur genaue Treffer an. </li>
-              </ul>
-            <li>Klicken Sie auf „Anzeigen“, um die Auswahl anzuzeigen.</li>
-            <li>Klicken Sie auf „Zufall“, um eine spontane Bildauswahl zu erhalten.</li>
+    <!-- Search Form -->
+    <div class="container container-fill main-pane active" id="search">
+      <form id="searchForm">
+        <h2 class="hidden">Suche</h2>
+        <div class="list-actions nav-tabs d-flex">
+          <!-- Search Form Nav -->
+          <div class="search-modes d-flex mr-auto">
+            <a class="nav-item nav-link btn-polar active" id="titleSearchMode" data-toggle="tab"
+              title="Titel, Jahr und Werknummer" href="#titleSearch">
+              Werk
+            </a>
+            <a class="nav-item nav-link btn-polar" id="contentSearchMode" data-toggle="tab"
+              title="Inhalte, Motive und Serien" href="#contentSearch">
+              Inhalt
+            </a>
+            <a class="nav-item nav-link btn-polar" id="formSearchMode" data-toggle="tab"
+              title="Techniken, Farbe und Format" href="#formSearch">
+              Form
+            </a>
+          </div>
+          <!-- Search Actions -->
+          <div class="search-action d-flex">
+            <select class="btn hidden" id="searchCriteriaInput">
+              <option value="OR">Werk erfüllt ein Kriterium</option>
+              <option value="AND">Werk erfüllt alle Kriterien</option>
+            </select>
+            <button class="btn ml-auto hidden" id="restart" title="Suche zurücksetzen">
+              Reset ↤
+            </button>
+            <button class="btn btn-primary disable" id="start" title="Werke anzeigen, ENTER">
+              <span id="total">0</span> Anzeigen <span id="enter"> ↩</span>
+            </button>
+          </div>
 
+        </div>
+
+        <!-- Erweiterte Suche -->
+        <div class="tab-content">
+          <!-- Titel -->
+          <div class="tab-pane active" id="titleSearch">
+            <div class="filter-group">
+              <div class="form-group">
+                <label for="searchTitleInput">
+                  <h5 class="search-title">Titel</h5>
+                </label>
+                <div class="input-wrapper">
+                  <input id="searchTitleInput" class="main-input dynamic-input" type="text" name="searchTitleInput"
+                    placeholder="Titel eingeben" autocomplete="off" autofocus />
+                  <span class="search-indicator">↩</span>
+                </div>
+                <div id="scrollAreaTitle" class="clusterize-scroll">
+                  <div id="contentAreaTitle" class="clusterize-content">
+                    <div class="clusterize-no-data">
+                      Lade Titel…
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter-group">
+              <div class="form-group">
+                <label for="inputJahr">
+                  <h5 class="search-title">Jahreszahl</h5>
+                </label>
+                <div class="input-wrapper">
+                  <input id="inputYear" class="dynamic-input" type="text" name="Jahr" placeholder="Jahr eingeben"
+                    autocomplete="off" />
+                  <span class="search-indicator">↩</span>
+                </div>
+                <div id="scrollAreaYear" class="clusterize-scroll">
+                  <div id="contentAreaYear" class="clusterize-content">
+                    <div class="clusterize-no-data">
+                      Lade Jahre…
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter-group">
+              <div class="form-group">
+                <label class="col-form-label" for="Nummer">
+                  <h5 class="search-title">Werknummer</h5>
+                </label>
+                <div class="input-wrapper">
+                  <input id="werkNumber" class="dynamic-input" type="text" name="Nummer"
+                    placeholder="Werknummer eingeben" />
+                  <span class="search-indicator">↩</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inhalt -->
+          <div class="tab-pane" id="contentSearch"> </div>
+          <!-- Form -->
+          <div class="tab-pane" id="formSearch"> </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Resultate / Werke -->
+    <div class="container container-fill main-pane" id="works">
+      <div id="results">
+        <h2 class="hidden">Werke</h2>
+        <!-- Results Actions -->
+        <div class="list-actions d-flex">
+          <button class="btn" id="selectAllResults" title="Alle Werke in Liste speichern">
+            Alle Werke markieren
+          </button>
+          <button class="btn ml-auto hidden" id="restartAll" title="Suche zurücksetzen, BACKSPACE">
+            Reset ↤
+          </button>
+        </div>
+        <div class="row output tab-content hidden">
+        </div>
+        <div class="pagination hidden">
+          <button id="more" class="btn btn-secondary mx-auto">Mehr anzeigen…</button>
+        </div>
+        <div class="empty-state">Keine Werke gefunden…</div>
+      </div>
+    </div>
+
+    <!-- Gespeicherte Liste -->
+    <div class="container container-fill main-pane" id="lists">
+      <div id="savedList">
+        <h2 class="hidden">Gespeichert Werke</h2>
+        <div class="list-actions d-flex">
+          <button class="btn" id="deleteSavedList" title="Meine Liste löschen">Liste löschen</button>
+          <button class="btn" id="exportSavedList" title="Meine Liste als JSON exportieren">Liste exportieren</button>
+          <button class="btn" id="importSavedList" title="JSON-Liste hochladen">Liste importieren</button>
+        </div>
+        <div class="row output tab-content">
+        </div>
+        <div class="empty-state">Keine Werke gespeichert…</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Help Modal -->
+  <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="helpModalLabel">Hilfe</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>Wählen Sie eine der drei Rubriken „Werk“, „Inhalt“ oder „Form" aus.</li>
+            <li>Klicken Sie auf „Anzeigen“, um die Auswahl anzuzeigen. Die Anzahl der gefundenen Werke wird angezeigt.
+            </li>
+            <li>Klicken Sie auf „Zufall“, um eine spontane Werkauswahl zu erhalten.</li>
           </ul>
         </div>
       </div>
     </div>
+  </div>
 
-    <form>
-      <div class="container bs-component" id="filters">
-         <!-- Aktionen -->
-         <div class="anzeige">
-
-          <div class="btn_container">
-            <select class="btn_bildarchiv" id="searchCriteria">
-              <option value="OR">Werk erfüllt ein Kriterium</option>
-              <option value="AND">Werk erfüllt alle Kriterien</option>
-            </select>
-            <i class="fa fa-chevron-down" aria-hidden="true"></i>
-          </div>
-
-          <a class="btn_bildarchiv disable" id="start">Anzeigen&nbsp;&nbsp;<i class="fa fa-play"></i> </a>
-          <a class="btn_bildarchiv ghost" id="random"><i class="fa fa-random"></i> Zufall</a>
+  <!-- Modal Selection Confirmation -->
+  <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmationModalLabel">Auswahl bestätigen</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-
-
-        <!-- Tabs -->
-        <div class="nav nav-tabs flex-container">
-          <div class="kategorien">
-            <a class="nav-item nav-link btn_bildarchiv active" data-toggle="tab" href="#inhalt">Inhalt</a>
-            <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#form">Form</a>
-            <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#anderes">Werk</a>
-            <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#resultate">Resultate</a>
-            <a class="nav-item nav-link btn_bildarchiv" data-toggle="tab" href="#gespeichert">Meine Liste</a>
-          </div>
-          <div class="auswahl">
-            <span class="">Ausgewählt: <span id="total">0</span><a class="btn_reset hidden" id="restart"><i
-                  class="fa fa-close"></i> Reset</a></span>
-          </div>
+        <div class="modal-body">
+          <p id="modalMessage"></p>
         </div>
-
-       
-        <!-- Inhalte -->
-        <div class="tab-content">
-          <div class="tab-pane show active" id="inhalt"></div>
-          <div class="tab-pane" id="form"></div>
-          <div class="tab-pane" id="anderes">
-            <div class="row">
-              <div class="col-sm-8">
-                <div class="form-group">
-                  <label class="col-form-label" for="inputTitel">
-                    <h5>Titel</h5>
-                  </label>
-                  <input name="Titel" autocomplete="off" autofocus placeholder="Titelsuche" type="text"
-                    class="searchOnEnter">
-                  <script>
-                    let input = document.querySelector('input');
-
-                    input.onkeyup = function () {
-                      let result = [];
-                      if (input.value) {
-                        for (word of titlelist_uniqueEntries) {
-                          word = word.slice(5, -6); //removes <div></div> for search from word
-                          if (input.value.length == 1) {
-                            // option mit suche nach anfangsbuchstabe bei 1 buchstaben im feld
-                            if (word.toLowerCase().startsWith(input.value.toLowerCase())) {
-                              result.push('<div>' + word + '</div>');
-                            }
-                          } else {
-                            // option mit suche als zeichenkette wenn mehr als 1buchstaben im feld sind
-                            if (word.toLowerCase().indexOf(input.value.toLowerCase()) > -1) { //compares values
-                              result.push('<div>' + word + '</div>');
-                            }
-                          }
-                        }
-                      } else {
-                        // no value in found
-                        result = titlelist_uniqueEntries;
-                      }
-                      clusterTitle.update(result);
-                    };
-                  </script>
-                  <!--HTML scroll clusterize area-->
-                  <div id="scrollAreaTitle" class="clusterize-scroll">
-                    <div id="contentAreaTitle" class="clusterize-content">
-                      <div class="clusterize-no-data">Lade titel…</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group" data-cols="1" data-tag="standort" data-type="Standort">
-                </div>
-
-                <div class="form-group" data-cols="1" data-tag="Zusammenarbeit" data-type="Zus'arbeit">
-                </div>
-
-                <div class="form-group" data-cols="1" data-tag="status" data-type="Status">
-                </div>
-              </div>
-
-              <div class="col-sm-4">
-
-                <div class="form-group">
-                  <label class="col-form-label" for="inputJahr">
-                    <h5>Jahreszahl</h5>
-                  </label>
-                  <input placeholder="" id="inputYear" name="Jahr" type="text">
-                  <script>
-                    let inputyear = document.querySelector('#inputYear');
-
-                    inputyear.onkeyup = function () {
-                      let result = [];
-                      if (inputyear.value) {
-                        for (word of yearlist) {
-                          word = word.slice(5, -6); //removes <div></div> for search from word
-                          // option mit suche nach anfangsbuchstabe bei 1 buchstaben im feld
-                          if (word.toLowerCase().startsWith(inputyear.value.toLowerCase())) {
-                            result.push('<div>' + word + '</div>');
-                          }
-                        }
-                      } else {
-                        // no value in found
-                        result = yearlist;
-                      }
-                      clusterYear.update(result);
-                    };
-                  </script>
-                  <div id="scrollAreaYear" class="clusterize-scroll-5">
-                    <div id="contentAreaYear" class="clusterize-content">
-                      <div class="clusterize-no-data">Lade Jahre…</div>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="form-group">
-                  <label class="col-form-label" for="inputNummer">
-                    <h5>Werknummer</h5>
-                  </label>
-                  <input class="searchOnEnter" name="Nummer" type="text">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Werke -->
-          <div class="tab-pane" id="resultate">
-            <div id="results">
-              <div id="selection"></div>
-              <div class="container main">
-                <h4>Werke</h4>
-                <div class="list-actions">
-                  <button class="btn btn-sm btn-default" id="selectAllResults">Alle Bilder auswählen</button>
-                </div>
-                <div class="row output">
-                  <div class="empty-state">Keine Werke gefunden…</div>
-                </div>
-              </div>
-              <div class="pagination">
-                <button id="more" class="btn_bildarchiv" style="display:none">Mehr anzeigen</button>
-              </div>
-            </div>
-          </div>
-          <!-- Gespeicherte Liste -->
-          <div class="tab-pane" id="gespeichert">
-            <div id="savedList">
-              <div class="container main">
-                <h4>Gespeichert</h4>
-                <div class="list-actions">
-                  <button class="btn btn-sm btn-default" id="deleteSavedList">Liste löschen</button>
-                  <button class="btn btn-sm btn-default" id="exportSavedList">Liste exportieren</button>
-                  <button class="btn btn-sm btn-default" id="importSavedList">Liste importieren</button>
-                </div>
-                <div class="row output">
-                  <div class="empty-state">Keine Werke gespeichert…</div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button>
+          <button type="button" class="btn btn-primary" id="confirmSelection">Werke auswählen</button>
         </div>
-
-      </div>
-    </form>
-
-
-  </div> <!-- // -.top.container -->
-
-  <div class="container main" id="details" style="display:none">
-    <div class="image"></div>
-    <div class="row">
-      <div class="col-sm-12">
-        <button class="btn btn-sm btn-warning" id="back">Zurück</button>
-        <b data-fld="Titel"></b> &nbsp;
-        <span class="Nummer" data-fld="Nummer"></span>
-        <span class="Techniken" data-fld="Techniken"></span>
-        <span data-fld="Format"></span> cm &nbsp;
-        <span data-fld="Jahr"></span>
-        <span data-fld="Zus'arbeit"></span>
       </div>
     </div>
   </div>
 
-  <div class="modal fade" tabindex="-1" role="dialog" id="spinnerModal">
-    <div class="modal-dialog modal-dialog-centered text-center" role="document">
-      <!-- <span class="fa fa-spinner fa-spin fa-3x w-100">🖌 ⌛ 🎨</span> -->
-    </div>
-  </div>
-
-  <footer id="footer">
-    <div class="row">
-      <div class="col-lg-12">
-
-        <p>Impressum:
-          2023 <a href="http://datalets.ch">Datalets</a> &bull;
-          <a href="https://github.com/dataletsch/panoptikum">Open source</a> under the MIT License</a>.
-        </p>
-
-      </div>
-    </div>
-
+  <footer class="footer container-fluid">
+    <h6>Impressum:</h6>
+    <div><a href="juergstraumann.ch" title="Jürg Straumann, Künstler">Jürg Straumann</a>, <a
+        href="http://www.redefine.studio" title="Philipp Lehmann, Design & Developer">Redefine</a>, <a
+        href="https://code-fabrik.ch/" title="Lukas Diener, Developer">Code Fabrik</a> und <a href="http://datalets.ch"
+        title="Oleg Lavrovsky, Engineer">Datalets</a>. Dieses
+      Projekt ist <a href="https://github.com/dataletsch/panoptikum" title="Github">Open
+        Source</a>, 2025</div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/lightgallery.min.js"></script>
