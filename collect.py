@@ -24,26 +24,42 @@ def list_files(dir):
 def flatten(xss):
     return [x for xs in xss for x in xs]
 
-def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
-    with open(os.path.join('data',filename), 'r') as csvin:
+def normalize_title(title):
+    """
+    Normalize a title by removing special characters, accents, and unnecessary punctuation.
+    """
+    import unicodedata
+    if not title:
+        return ""
+    # Remove accents and diacritical marks
+    title = unicodedata.normalize('NFD', title).encode('ascii', 'ignore').decode('utf-8')
+    # Remove special characters and punctuation
+    title = title.translate(str.maketrans("", "", ".-…\"'«»“”()[]{}"))
+    # Replace ellipses with a space
+    title = title.replace("...", " ").replace("…", " ")
+    # Convert to lowercase
+    return title.strip().lower()
 
+def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
+    with open(os.path.join('data', filename), 'r') as csvin:
         reader = csv.DictReader(csvin)
         fieldnames = reader.fieldnames
 
-        if not 'path' in fieldnames: fieldnames.append('path')
-        if not 'thumb' in fieldnames: fieldnames.append('thumb')
+        # Ensure new columns exist
+        if 'path' not in fieldnames: fieldnames.append('path')
+        if 'thumb' not in fieldnames: fieldnames.append('thumb')
+        if 'TitelEinfach' not in fieldnames: fieldnames.append('TitelEinfach')  # Add normalized title column
 
         fieldnames.append('Techniken')
         fieldnames.append('Motiven')
         fieldnames.append('Darstellungsformen')
 
-        outputpath = os.path.join('data',outputfile)
-        
+        outputpath = os.path.join('data', outputfile)
         print("Writing to %s" % outputpath)
 
         with open(outputpath, 'w+') as csvout:
             writer = csv.DictWriter(csvout, fieldnames=fieldnames,
-                delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+                                     delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             writer.writeheader()
 
             print('Scanning images, showing any missing below:')
@@ -54,27 +70,15 @@ def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
                     print(r['Nummer'], end=' ')
                     continue
 
+                # Add paths
                 r['path'] = imagerow['path']
                 r['thumb'] = imagerow['thumb']
 
-                # Title cleaning logic here
-                # if 'Titel' in r:
-                #     title = r['Titel']
-                #     # Check if the title is encased in double quotes
-                #     if title.startswith('"') and title.endswith('"'):
-                #         # Remove the outermost quotes
-                #         title = title[1:-1]
-                #     # Replace escaped double quotes with single quotes
-                #     title = title.replace('""', '"')
-                #     # Continue with other replacements
-                #     title = (title
-                #             .replace('«', '').replace('»', '')  # Removes guillemets
-                #             .replace('“', '').replace('”', '')  # Removes curly double quotes
-                #             .replace('"', '')  # Removes curly double quotes
-                #             .replace("...", "…")  # Replaces three consecutive dots with an ellipsis
-                #             .strip())
-                #     r['Titel'] = title
+                # Add normalized title
+                if 'Titel' in r:
+                    r['TitelEinfach'] = normalize_title(r['Titel'])
 
+                # Process other fields
                 r['Techniken'] = ' '.join([
                     r['Technik'],
                     r['Technik I'],
@@ -83,9 +87,7 @@ def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
                     r['Technik IV'],
                 ])
 
-                # Combine FoD and FoP into Fo
-                r['Technik'] = r['Technik'].replace('FoD', 'Fo')
-                r['Technik'] = r['Technik'].replace('FoP', 'Fo')
+                r['Technik'] = r['Technik'].replace('FoD', 'Fo').replace('FoP', 'Fo')
 
                 r['Motiven'] = ' '.join(flatten([
                     r['Motiv I'].split(", "),
@@ -104,9 +106,6 @@ def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
                 writer.writerow(r)
 
             print("--- Done.")
-
-
-
 
 if __name__ == '__main__':
     lf = list_files('images')
