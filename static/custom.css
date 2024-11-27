@@ -5,8 +5,9 @@
 }
 
 :root {
-  --primaryDarker: #005fcc;  
-  --primary: #1e90ff;
+  --primaryDarker: #00299b;  
+  --primary: #0031BA;
+  --danger: #ba0000;
   --gray4: #565656;
   --gray3: #9a9a9a;
   --gray2: #bebebe;
@@ -14,6 +15,7 @@
   --black: #020202;
   --black10: rgba(0, 0, 0, 0.1);
   --black25: rgba(0, 0, 0, 0.25);
+  --black50: rgba(0, 0, 0, 0.5);
   --white: #fff;
   --white25: rgba(255, 255, 255, 0.25);
 
@@ -194,6 +196,17 @@ button,
 .lg-prev {
   border-radius: 0;
 
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  color: var(--white);
+  background-color: var(--primaryDarker);
+  border-color: var(--primaryDarker);
 }
 
 .btn-polar {
@@ -514,7 +527,7 @@ strong {
 #results .item:hover input[type="checkbox"].check,
 #savedList .item:hover input[type="checkbox"].check {
   opacity: 1;
-  background-color: var(--black25);
+  background-color: var(--black50);
 }
 
 #results .item input[type="checkbox"].check::before,
