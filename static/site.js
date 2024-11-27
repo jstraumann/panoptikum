@@ -240,8 +240,8 @@ const category_selectors = [
 
 		if (history.pushState) {
 			var params = new URLSearchParams(window.location.search);
-			var tabId = $(this).attr('id').replace("MenuItem", ""); // Remove "MenuItem"
-			params.set('tab', tabId); // Set the tab parameter without "MenuItem"
+			var tabId = $(this).attr('id').replace("MenuItem", "");
+			params.set('tab', tabId); 
 			var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + params.toString();
 			window.history.pushState({ path: newUrl }, '', newUrl);
 		}
@@ -255,6 +255,13 @@ const category_selectors = [
 	// Search tab styling on click
 	$('#search .nav-link').click(function () {
 		$('#search .nav-item.nav-link').removeClass('active');
+		if (history.pushState) {
+			var params = new URLSearchParams(window.location.search);
+			var modeId = $(this).attr('id').replace("SearchMode", "");			
+			params.set('mode', modeId); 
+			var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + params.toString();
+			window.history.pushState({ path: newUrl }, '', newUrl);
+		}
 	});
 
 	// Search when user types
@@ -464,6 +471,17 @@ function applySearchFromURL() {
 		var $tab = $('#' + tabId);
 		if ($tab.length) {
 			$tab.trigger('click', [false]); // Trigger click on the tab, passing `false` to avoid a redundant search
+		}
+	}
+
+	console.log("load");
+	
+	// Handle mode selection from the 'mode' parameter
+	if (params.mode) {
+		var modeId = params.mode + "SearchMode";
+		var $mode = $('#' + modeId);
+		if ($mode.length) {
+			$mode.trigger('click'); 
 		}
 	}
 
