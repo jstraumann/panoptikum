@@ -1,7 +1,7 @@
 var cache = {};
 var filters = {};
 let typingTimer;
-const doneTypingInterval = 500;
+const doneTypingInterval = 250;
 
 const category_selectors = [
 	'o_Motiven',

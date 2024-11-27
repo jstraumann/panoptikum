@@ -273,9 +273,32 @@ button,
 }
 
 /* Form Groups */
-.form-group {
-  display: flex;
-  flex-direction: column;
+.filter-group {
+  position: relative;
+  transition: all ease 0.2s;
+  padding-bottom: 1rem;
+  /* border-bottom: var(--gray2) solid 2px ; */
+}
+
+.filter-group::after {
+  transition: all ease 0.2s;
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: -1rem; 
+  right: -1rem;
+  height: 2px;
+  background-color: var(--white25);
+}
+
+.filter-group:hover {
+  opacity: 1;
+}
+
+.filter-group:hover::after {
+  z-index: -1;
+  height: 100%;
 }
 
 h5.search-title {
@@ -286,8 +309,7 @@ h5.group-title {
   display: flex;
   justify-content: start;
   align-content: start;
-  background-color: var(--white25);
-  margin: var(--spacing-lg) 0 var(--spacing-md) 0;
+  margin: var(--spacing-lg) 0 0 0;
   line-height: var(--spacing-lg);
 }
 
@@ -304,6 +326,11 @@ h5.group-title label {
 
 h5.group-title input[type="checkbox"] {
   margin: var(--spacing-lg) var(--spacing-sm) var(--spacing-lg) var(--spacing-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group input[type="text"] {
@@ -356,7 +383,7 @@ h5.group-title input[type="checkbox"] {
   display: block;
   column-count: 3;
   column-gap: var(--spacing-lg);
-  margin: var(--spacing-lg) var(--spacing-sm) var(--spacing-lg) var(--spacing-md);
+  margin: var(--spacing-sm) var(--spacing-sm) var(--spacing-lg) var(--spacing-md);
   padding: 0;
 }
 
