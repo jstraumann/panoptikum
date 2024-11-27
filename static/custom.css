@@ -580,6 +580,22 @@ strong {
   color: black;
 }
 
+/* Modal */
+.modal-content {
+  background-color: var(--white);
+  border: none;
+  border-radius: 0;
+}
+
+.modal-header {
+  padding: 1rem 1rem 0 1rem;
+  border-bottom: none;
+}
+
+.modal-header .close {
+  font-weight: 200;
+  font-size: 2rem;
+}
 /* Clusterize */
 .clusterize-scroll {
   max-height: 120px;
