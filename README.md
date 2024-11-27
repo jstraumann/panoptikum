@@ -49,12 +49,6 @@ sudo apt-get install python3.7 python3-numpy
   gunicorn --log-level=info -w 4 -b :8000 app:app
   ```
 
-3. Alternatively use docker
-   Make sure docker and docker-compose are installed.
-   ```
-   docker-compose up --build
-   ```
-
 ## Deployment
 Changes to the github are automatically deployed.
 Visit https://bildarchiv-js.ch/ to verify that the update was succesful.
