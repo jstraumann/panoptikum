@@ -213,6 +213,7 @@ button,
   position: relative;
   font-family: signo, sans-serif;
   font-weight: 500;
+  overflow: hidden;
 }
 
 .btn-polar>span {
@@ -231,6 +232,8 @@ button,
   right: 0;
   overflow: hidden;
   pointer-events: none;
+  transform: rotateZ(50deg);
+  animation: waveEffect 6s ease-in-out infinite;
 }
 
 .marquee-inner {
@@ -241,7 +244,7 @@ button,
   --move-initial: calc(-12.5% + var(--offset));
   --move-final: calc(-25% + var(--offset));
   transform: translate3d(var(--move-initial), 0, 0);
-  animation: marquee 1.2s linear infinite;
+  animation: horizontalShift 1.2s linear infinite;
   animation-play-state: paused;
   opacity: 0;
   height: 100%;
@@ -261,7 +264,7 @@ button,
   padding: 0 var(--spacing-sm);
 }
 
-@keyframes marquee {
+@keyframes horizontalShift {
   0% {
     transform: translate3d(var(--move-initial), 0, 0);
   }
@@ -270,6 +273,21 @@ button,
     transform: translate3d(var(--move-final), 0, 0);
   }
 }
+
+@keyframes waveEffect {
+  0% {
+    transform: rotateZ(15deg);
+  }
+
+  50% {
+    transform: rotateZ(-15deg);
+  }
+
+  100% {
+    transform: rotateZ(15deg);
+  }
+}
+
 
 /* Container */
 .container.main-pane {
