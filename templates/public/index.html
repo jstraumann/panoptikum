@@ -83,10 +83,10 @@
               <option value="OR">Werk erfüllt ein Kriterium</option>
               <option value="AND">Werk erfüllt alle Kriterien</option>
             </select>
-            <button class="btn ml-auto hidden" id="restart">
+            <button class="btn ml-auto hidden" id="restart" title="Suche zurücksetzen">
               Reset
             </button>
-            <button class="btn btn-primary disable" id="start">
+            <button class="btn btn-primary disable" id="start" title="Werke anzeigen">
               <span id="total">0</span> Anzeigen <span id="enter"> ↩</span>
             </button>
           </div>
@@ -156,10 +156,10 @@
         <h2 class="hidden">Werke</h2>
         <!-- Results Actions -->
         <div class="list-actions d-flex">
-          <button class="btn" id="selectAllResults">
+          <button class="btn" id="selectAllResults" title="Alle Werke in Liste speichern">
             Alle Werke markieren
           </button>
-          <button class="btn ml-auto hidden" id="restartAll">
+          <button class="btn ml-auto hidden" id="restartAll" title="Suche zurücksetzen">
             Reset
           </button>
         </div>
@@ -177,9 +177,9 @@
       <div id="savedList">
         <h2 class="hidden">Gespeichert Werke</h2>
         <div class="list-actions d-flex">
-          <button class="btn" id="deleteSavedList">Liste löschen</button>
-          <button class="btn" id="exportSavedList">Liste exportieren</button>
-          <button class="btn" id="importSavedList">Liste importieren</button>
+          <button class="btn" id="deleteSavedList" title="Meine Liste löschen">Liste löschen</button>
+          <button class="btn" id="exportSavedList" title="Meine Liste als JSON exportieren">Liste exportieren</button>
+          <button class="btn" id="importSavedList" title="JSON-Liste hochladen">Liste importieren</button>
         </div>
         <div class="row output tab-content">
         </div>
