@@ -37,24 +37,24 @@
   <div class="main container-fluid d-flex flex-column">
     <div class="page-header d-flex sticky-top" id="banner">      
       <div class="main-nav d-flex content-left">
-        <h1 class="page-title"><a id="home" href="javascript:void(0);" onclick="this.href=window.location.origin;">Bildarchiv JS</a></h1>
+        <h1 class="page-title" title="Bildarchiv Jürg Straumann"><a id="home" href="javascript:void(0);" onclick="this.href=window.location.origin;">Bildarchiv JS</a></h1>
       </div>
       <div class="main-nav content-center d-flex mx-auto">
-        <button class="btn main-nav-item active btn-polar" id="searchMenuItem" href="#search">
+        <button class="btn main-nav-item active btn-polar" id="searchMenuItem" title="Werke finden" href="#search">
           Suche
         </button>
-        <button class="btn main-nav-item btn-polar " id="worksMenuItem" href="#works">
+        <button class="btn main-nav-item btn-polar " id="worksMenuItem" title="Werke anzeigen" href="#works">
           Werke
         </button>
-        <button class="btn main-nav-item btn-polar" id="listMenuItem" href="#lists">
+        <button class="btn main-nav-item btn-polar" id="listMenuItem" title="Gespeicherte Werke" href="#lists">
           Meine Liste
         </button>
       </div>
       <div class="content-right d-flex justify-content-end">
-        <button class="btn" id="random">
+        <button class="btn" id="random" title="Zufällige Werke anzeigen">
           Zufall
         </button>
-        <button class="btn" id="help" data-toggle="modal" data-target="#helpModal">
+        <button class="btn" id="help" data-toggle="modal" data-target="#helpModal" title="Tipps anzeigen">
           Hilfe
         </button>
       </div>
@@ -67,13 +67,13 @@
         <div class="list-actions nav-tabs d-flex">
           <!-- Search Form Nav -->
           <div class="search-modes d-flex mr-auto">
-            <a class="nav-item nav-link btn-polar active" data-toggle="tab" href="#titleSearch">
+            <a class="nav-item nav-link btn-polar active" data-toggle="tab" title="Titel, Jahr und Werknummer" href="#titleSearch">
               Werk
             </a>
-            <a class="nav-item nav-link btn-polar" data-toggle="tab" href="#contentSearch">
+            <a class="nav-item nav-link btn-polar" data-toggle="tab" title="Inhalte, Motive und Serien" href="#contentSearch">
               Inhalt
             </a>
-            <a class="nav-item nav-link btn-polar" data-toggle="tab" href="#formSearch">
+            <a class="nav-item nav-link btn-polar" data-toggle="tab" title="Techniken, Farbe und Format" href="#formSearch">
               Form
             </a>
           </div>
@@ -233,8 +233,8 @@
 
   <footer class="footer container-fluid">
     <h6>Impressum:</h6>
-    <div><a href="juergstraumann.ch">Jürg Straumann</a>, <a href="http://datalets.ch">Datalets</a> und <a href="http://www.redefine.studio">Redefine GmbH</a>. Dieses
-      Projekt ist <a href="https://github.com/dataletsch/panoptikum">Open
+    <div><a href="juergstraumann.ch" title="Jürg Straumann, Künstler">Jürg Straumann</a>, <a href="http://www.redefine.studio" title="Philipp Lehmann, Design & Developer">Redefine</a>, <a href="https://code-fabrik.ch/" title="Lukas Diener, Developer">Code Fabrik</a> und <a href="http://datalets.ch" title="Oleg Lavrovsky, Engineer">Datalets</a>. Dieses
+      Projekt ist <a href="https://github.com/dataletsch/panoptikum" title="Github">Open
         Source</a>, 2025</div>
   </footer>
 
