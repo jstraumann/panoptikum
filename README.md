@@ -116,3 +116,12 @@ Further explanation about the data refresh.
 
 - Add the new filter to `data/filters.csv` manually.
 - Run `python collect.py` to update the count.
+
+
+### Ideas
+
+- Select for My List in Gallery View
+- Include image search / Find similar images
+- Sidebar Mode
+- Collapsible search groups
+- Replace Zus'arbeit in data update
