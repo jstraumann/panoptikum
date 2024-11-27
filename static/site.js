@@ -143,12 +143,12 @@ const category_selectors = [
 	}
 
 	function titleSearch(e) {
-		// console.log("titleSearch");
-		$('#inputYear').val(''); // Copies Entry to html input form
-		$("#searchTitleInput").val(this.innerHTML); // Copies Entry to html input form
+		$('#inputYear').val(''); 
+		const visibleTitle = $(this).find('.display').text().trim();
+		$("#searchTitleInput").val(visibleTitle); 
 		werkSearchCount();
 	}
-
+	
 	function yearSearch(e) {
 		// $("#searchTitleInput").val(''); // Copies Entry to html input form
 		$('#inputYear').val(this.innerHTML); // Copies Entry to html input form

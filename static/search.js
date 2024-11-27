@@ -269,17 +269,22 @@ function listTitles() {
 				}
 			}
 			// Saves data for titles in titlelist
-			if (item['Titel'] != null) {
-				fixedItem = '<div>' + item['Titel'] + '</div>';
+			if (item['Titel'] != null && item['TitelEinfach'] != null) {
+				fixedItem = 
+					'<div>' +
+						'<span class="display">' + item['Titel'] + '</span>' +
+						'<span class="hidden">' + item['TitelEinfach'] + '</span>' +
+					'</div>';
 				titleItems.push(fixedItem);
 			}
 		});
+
 		titleItems.sort(function (a, b) {
 			return a.localeCompare(b);
 		});
 
 		titlelist = titleItems; // Globally available
-		titlelist_uniqueEntries = removeDuplicates(titlelist) // Removes duplicates and stores it globally.
+		titlelist_uniqueEntries = removeDuplicates(titlelist); // Removes duplicates and stores globally
 
 		yearItems.forEach(function (item, index) {
 			yearlist.push('<div>' + index + '</div>');
@@ -289,6 +294,7 @@ function listTitles() {
 		clusterYear.update(yearlist);
 	});
 }
+
 
 function countDuplicates(names) {
 	var count = {};
