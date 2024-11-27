@@ -125,3 +125,5 @@ Further explanation about the data refresh.
 - Sidebar Mode
 - Collapsible search groups
 - Replace Zus'arbeit in data update
+- Export: Download .zip incl images
+- Save public list or accounts
