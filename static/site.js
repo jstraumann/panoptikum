@@ -25,9 +25,9 @@ const category_selectors = [
 		cache.forEach(function (d) {
 			dm = d.Mode.toLowerCase();
 			if (!filters[dm])
-				filters[dm] = [];
+				{filters[dm] = [];}
 			if (!filters[dm].includes(d.Type))
-				filters[dm].push(d.Type);
+				{filters[dm].push(d.Type);}
 		});
 
 		Object.keys(filters).forEach(function (f) {
@@ -39,7 +39,7 @@ const category_selectors = [
 		loadSavedItems();
 
 	}).fail(function () {
-		alert('Fehler: Daten konnten nicht geladen werden.');
+		console.log('Fehler: Daten konnten nicht geladen werden.');
 	});
 
 	werkSearchCount();
@@ -73,11 +73,7 @@ const category_selectors = [
 		$(id).each(function () {
 			var $tgt = $(this);			
 			filters[sname].forEach(function (i) {
-				if ($('div[data-tag="' + sname + '"]').attr('data-type') === i) return;
-		
-				var allOfType = cache.filter(c => c.Type === i);
-				var allCodes = allOfType.map(c => c.Code);
-				var filter = allCodes.join('|');
+				if ($('div[data-tag="' + sname + '"]').attr('data-type') === i) {return;}
 		
 				// Append filter group and add a master checkbox in the group title
 				$tgt.append(
@@ -186,18 +182,22 @@ const category_selectors = [
 		});
 	}
 
-	function titleSearch(e) {
-		$('#inputYear').val('');
+	function titleSearch() {
+		$("#inputYear, #werkNumber").val(''); 
 		const visibleTitle = $(this).find('.display').text().trim();
 		$("#searchTitleInput").val(visibleTitle);
 		werkSearchCount();
 	}
 
-	function yearSearch(e) {
-		// $("#searchTitleInput").val(''); // Copies Entry to html input form
-		$('#inputYear').val(this.innerHTML); // Copies Entry to html input form
+	function yearSearch() {
+		$("#searchTitleInput, #werkNumber").val(''); 
+		$('#inputYear').val(this.innerHTML);
 		clusterTitle.update(titlelist_uniqueEntries);
 		werkSearchCount();
+	}
+
+	function werkNoSearch() {
+		$("#searchTitleInput, #inputYear").val(''); 
 	}
 
 	// Run search
@@ -226,6 +226,7 @@ const category_selectors = [
 	// Title, Year Search
 	$('#contentAreaTitle').on('click', 'div', titleSearch);
 	$('#contentAreaYear').on('click', 'div', yearSearch);
+	$('#werkNumber').on('keyup', werkNoSearch);
 
 	// Main nav tabs
 	$('.main-nav-item').on('click', function (e, startSearch = true) {
@@ -383,14 +384,13 @@ const category_selectors = [
 		input.accept = 'application/json';
 		input.onchange = async (event) => {
 			const file = event.target.files[0];
-			if (!file) return;
+			if (!file) {return;}
 			try {
 				const text = await file.text();
 				localStorage.setItem('selectedItems', text);
 				loadSavedItems();
 			} catch (error) {
 				console.error('Error parsing JSON:', error);
-				alert('Fehler beim importieren der Liste');
 			}
 		}
 		input.click();
@@ -421,26 +421,6 @@ const category_selectors = [
 	});
 })();
 
-
-
-function updateURLWithSearchString(searchString) {
-	if (history.pushState) {
-		// Parse existing URL parameters
-		var params = new URLSearchParams(window.location.search);
-
-		// Add or update the search parameters
-		var searchPairs = searchString.split("&");
-		searchPairs.forEach(function (pair) {
-			var [key, value] = pair.split("=");
-			if (key) params.set(key, value);
-		});
-
-		// Build the updated URL
-		var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + params.toString();
-		window.history.pushState({ path: newUrl }, '', newUrl);
-	}
-}
-
 function applySearchFromURL() {
 	var params = {};
 	var searchStr = window.location.search;
@@ -453,14 +433,11 @@ function applySearchFromURL() {
 		}
 	}
 
-	var applyURLsearch = false;
-
 	// Handle category selectors
 	category_selectors.forEach(function (category) {
 		if (params[category]) {
 			// Split the parameter by '|' to get the individual values
 			var values = params[category].split('|');
-			applyURLsearch = true;
 			// Use the constructed ID to check each corresponding checkbox or input
 			values.forEach(function (value) {
 				var inputID = category + value;
@@ -480,7 +457,5 @@ function applySearchFromURL() {
 	}
 
 	// Trigger the search if params have been found
-	// if (applyURLsearch) {
 	werkSearchStart(null, 1, false, true);
-	// }
 }

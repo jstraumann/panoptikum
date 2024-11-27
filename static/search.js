@@ -516,3 +516,21 @@ function initializeGallery(container, openImmediately = false) {
         container.galleryInstance.openGallery();
     }
 }
+
+function updateURLWithSearchString(searchString) {
+	if (history.pushState) {
+		// Parse existing URL parameters
+		var params = new URLSearchParams(window.location.search);
+
+		// Add or update the search parameters
+		var searchPairs = searchString.split("&");
+		searchPairs.forEach(function (pair) {
+			var [key, value] = pair.split("=");
+			if (key) {params.set(key, value);}
+		});
+
+		// Build the updated URL
+		var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + params.toString();
+		window.history.pushState({ path: newUrl }, '', newUrl);
+	}
+}

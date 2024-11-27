@@ -237,7 +237,7 @@ button,
 .btn-polar:hover .marquee-inner {
   animation-play-state: running;
   opacity: 1;
-  transition-duration: .4s;
+  transition-duration: 0.4s;
 }
 
 .marquee span {
