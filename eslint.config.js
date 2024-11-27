@@ -20,6 +20,10 @@ module.exports = [
       "no-alert": "warn",
       "no-console": "off",
       "eqeqeq": "off",
+      "padding-line-between-statements": [
+        "error",
+        { "blankLine": "always", "prev": "function", "next": "function" }
+      ]
     },
   },
 ];

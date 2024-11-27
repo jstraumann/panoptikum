@@ -1,7 +1,6 @@
 var titlelist = {};
 var titlelist_uniqueEntries = {};
 var yearlist = [];
-var gallery;
 
 var PER_PAGE = 100;
 
@@ -71,8 +70,8 @@ function get_werkSearchQuery(from_page) {
 		var nm = $(this).attr('name');
 		console.log("category=" + nm);
 
-		if (!nm) return;
-		if (!filterdata[nm]) filterdata[nm] = [];
+		if (!nm) {return;}
+		if (!filterdata[nm]) {filterdata[nm] = [];}
 		filterdata[nm].push($(this).attr('value'));
 		var label = $(this).parent().find('label');
 
@@ -88,11 +87,11 @@ function get_werkSearchQuery(from_page) {
 
 	$('input[type=text]').each(function () {
 		var nm = $(this).attr('name');
-		if (!nm) return;
-		if (!nm.indexOf('o_') == 0) nm = 'o_' + nm;
+		if (!nm) {return;}
+		if (!nm.indexOf('o_') == 0) {nm = 'o_' + nm;}
 		var v = $(this).val();
-		if (!v.length) return;
-		if (!filterdata[nm]) filterdata[nm] = [];
+		if (!v.length) {return;}
+		if (!filterdata[nm]) {filterdata[nm] = [];}
 		filterdata[nm].push(v);
 		filterselect += '<span>' + v + '</span>';
 	});
@@ -123,7 +122,7 @@ function werkSearchCount() {
 	qg = get_werkSearchQuery(1);
 
 	$('#selection').empty().append(qg.html);
-	if (qg.html === '') $('#restart').addClass('hidden');
+	if (qg.html === '') {$('#restart').addClass('hidden');}
 
 	$.getJSON('/api/images' + qg.query, function (data) {
 		$('#total').html(data.total);
@@ -210,7 +209,7 @@ function werkTitle(item) {
 		item['Techniken'].split(' ').forEach(function (t) {
 			getcode = techniques[t.trim()]
 			if (typeof getcode !== 'undefined') {
-				if (getcode.toLowerCase().indexOf('technik') > 0) return;
+				if (getcode.toLowerCase().indexOf('technik') > 0) {return;}
 				itemarr.push(getcode);
 			}
 		})
@@ -251,6 +250,7 @@ function werkTitle(item) {
 	return s;
 }
 
+// This function is used in a different file
 // Generates list of Titles, stores them in global titlelist
 function listTitles() {
 	q = '?sort=-Jahr&per_page=-1';
@@ -259,7 +259,7 @@ function listTitles() {
 
 	$.getJSON('/api/images.json' + q, function (data) {
 		// Create title item array
-		data.forEach(function (item, index) {
+		data.forEach(function (item) {
 			// Saves data for years in yearList
 			if (item['Jahr'] != null) {
 				if (yearItems[item['Jahr'].substr(0, 4)]) {
@@ -294,7 +294,6 @@ function listTitles() {
 		clusterYear.update(yearlist);
 	});
 }
-
 
 function countDuplicates(names) {
 	var count = {};
@@ -335,7 +334,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 		$('#restart').removeClass('hidden');
 	} else {
 		// Exit if the 'start' button is disabled
-		if ($('#start').hasClass('disable')) return;
+		if ($('#start').hasClass('disable')) {return;}
 	}
 
 	// Load and build the query
@@ -356,7 +355,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 
 		$('.pagination').addClass('hidden');
 		if (data.length === PER_PAGE)
-			$('.pagination').removeClass('hidden');
+			{$('.pagination').removeClass('hidden');}
 
 		var urlPrefix = "https://archiv.juergstraumann.ch/";
 
@@ -426,7 +425,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 		// initializeGallery(container, (random));
 
 	}).fail(function () {
-		alert('Could not search!');
+		console.log('Fehler: Suche fehlgeschlagen');
 	});
 
 	// Update URL
@@ -476,7 +475,6 @@ function loadSavedItems() {
 			$tgt.append($container);
 
 			$checkbox.on('change', function () {
-				var storageNumber = $(this).data('storage-number');
 				var savedData = JSON.parse(localStorage.getItem('selectedItems')) || [];
 				// Remove the item from the savedList
 				savedData = savedData.filter(function (i) {
