@@ -120,13 +120,7 @@ function get_werkSearchQuery(from_page) {
 
 // Obtains a count of search results
 function werkSearchCount() {
-
-	
-	
 	qg = get_werkSearchQuery(1);
-
-	console.log("count", qg);
-
 
 	$('#selection').empty().append(qg.html);
 	if (qg.html === '') $('#restart').addClass('hidden');
@@ -352,7 +346,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 	$.getJSON(random ? '/api/images.random' : '/api/images.json' + q, function (data) {
 		
 		var $tgt = $('#results').show().find('div.row');
-		single = (data.length == 1);
+		single = (data.length == 1 && $('#worksMenuItem').hasClass("active"));
 
 		$('.pagination').addClass('hidden');
 		if (data.length === PER_PAGE)
@@ -421,8 +415,9 @@ function werkSearchStart(e, from_page, random, fromURL) {
 		});
 
 		// Initialize the gallery, open immediately when random
-		const container = $tgt.get(0);				
+		const container = $tgt.get(0);		
 		initializeGallery(container, (random || single));
+		// initializeGallery(container, (random));
 
 	}).fail(function () {
 		alert('Could not search!');
@@ -487,8 +482,6 @@ function loadSavedItems() {
 				localStorage.setItem('selectedItems', JSON.stringify(savedData));
 				loadSavedItems();
 			});
-
-
 		});
 
 		// Initialize the gallery		
