@@ -77,7 +77,7 @@ const category_selectors = [
 		
 				// Append filter group and add a master checkbox in the group title
 				$tgt.append(
-					`<div class="filter-group">
+					`<div class="filter-group checkboxes">
 						<h5 class="group-title">
 							<input type="checkbox" class="select-all" data-type="${i}" id="group_${i}">
 							<label for="group_${i}">${i}</label>

@@ -298,7 +298,7 @@ button,
   pointer-events: none;
   content: "";
   position: absolute;
-  top: 0; 
+  top: -1rem; 
   left: -1rem; 
   right: -1rem;
   height: 2px;
@@ -313,9 +313,13 @@ button,
   opacity: 1;
 }
 
-.filter-group:hover::after {
+.filter-group.checkboxes:hover::after {
   z-index: -1;
   height: 100%;
+}
+
+.filter-group {
+  padding-bottom: 1rem;
 }
 
 h5.search-title {
