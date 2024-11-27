@@ -292,6 +292,10 @@ button,
   background-color: var(--white25);
 }
 
+.filter-group:first-child::after {
+  height: 0px;
+}
+
 .filter-group:hover {
   opacity: 1;
 }
