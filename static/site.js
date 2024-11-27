@@ -374,6 +374,13 @@ const category_selectors = [
 				return;
 			}
 		}
+		if (e.key === 'Backspace') {
+			// Check if #worksMenuItem is active
+			if ($('#worksMenuItem').hasClass('active')) {
+				$('#searchMenuItem').trigger('click'); 
+				$('#searchTitleInput').focus();
+			}
+		}
 	});
 })();
 
@@ -436,7 +443,7 @@ function applySearchFromURL() {
     }
 
     // Trigger the search if params have been found
-    if (applyURLsearch) {
+    // if (applyURLsearch) {
         werkSearchStart(null, 1, false, true);
-    }
+    // }
 }
