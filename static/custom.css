@@ -195,7 +195,15 @@ button,
 .lg-next,
 .lg-prev {
   border-radius: 0;
+}
 
+@media (max-width: 480px) {
+  button,
+.btn,
+.lg-next,
+.lg-prev {
+    padding: var(--spacing-sm);
+  }
 }
 
 .btn-primary {
@@ -233,7 +241,7 @@ button,
   overflow: hidden;
   pointer-events: none;
   transform: rotateZ(50deg);
-  animation: waveEffect 6s ease-in-out infinite;
+  animation: scaleEffect 6s ease-in-out infinite;
 }
 
 .marquee-inner {
@@ -274,21 +282,31 @@ button,
   }
 }
 
-@keyframes waveEffect {
+@keyframes scaleEffect {
   0% {
-    transform: rotateZ(15deg);
+    transform: rotateZ(8.5deg) scale(1.0);
   }
 
   50% {
-    transform: rotateZ(-15deg);
+    transform: rotateZ(-8.5deg) scale(2.0);
   }
 
   100% {
-    transform: rotateZ(15deg);
+    transform: rotateZ(8.5deg) scale(1.0);
   }
 }
 
-
+/* Search action */
+@media (max-width: 480px) {
+  .search-action {
+    z-index: 10;
+    background-color: var(--white);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
 /* Container */
 .container.main-pane {
   display: none;
@@ -301,6 +319,12 @@ button,
 .container-fill {
   min-height: calc(100vh - 11.5rem);
   margin-top: 1rem;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0;
+  }
 }
 
 /* Form Groups */
