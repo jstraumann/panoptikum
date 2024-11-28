@@ -630,11 +630,10 @@ strong {
 }
 
 @media (max-width: 480px) {
-
   #results .item input[type="checkbox"].check,
   #savedList .item input[type="checkbox"].check {
     opacity: 1;
-    background-color: var(--black50);
+    background-color: var(--black25);
   }
 }
 
