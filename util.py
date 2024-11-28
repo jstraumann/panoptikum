@@ -42,7 +42,24 @@ def filter_columns(df, args):
                             def normalize_search_string(s):
                                 return ''.join(
                                     c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn'
-                                ).replace('...', '').replace('-', '').replace('…', '').replace('«', '').replace('»', '').replace('"', '').lower()
+                                ).replace('...', '') \
+                                .replace('-', '') \
+                                .replace('–', '') \
+                                .replace('…', '') \
+                                .replace(':', '') \
+                                .replace('«', '') \
+                                .replace('»', '') \
+                                .replace('"', '') \
+                                .replace("'", '') \
+                                .replace('(', '') \
+                                .replace(')', '') \
+                                .replace(']', '') \
+                                .replace('[', '') \
+                                .replace('{', '') \
+                                .replace('}', '') \
+                                .replace('.', '') \
+                                .replace(',', '') \
+                                .lower()
 
                             regex_patterns = [re.escape(normalize_search_string(option)) for option in or_conditions]
 
