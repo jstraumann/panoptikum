@@ -47,6 +47,16 @@ function werkSearchReset(e) {
 	history.pushState(null, '', baseUrl);
 }
 
+// normalize Search String
+function normalizeSearchString(str) {
+    return str
+        .normalize('NFD') // Decompose combined characters into their base components
+        .replace(/[\u0300-\u036f]/g, '') // Remove diacritical marks
+        .replace(/[.…"«»"-]/g, '') // Remove specific special characters
+        .replace(/"/g, '') // Remove double quotes
+        .toLowerCase(); // Convert to lowercase
+}
+
 // Query builder
 function get_werkSearchQuery(from_page) {
 	var searchCriteria = $('#searchCriteriaInput').val();
@@ -59,6 +69,7 @@ function get_werkSearchQuery(from_page) {
 
 	// If there's a search term, include it in the query
 	if (contentSearch) {
+		contentSearch = normalizeSearchString(contentSearch); // Normalize contentSearch
 		console.log(contentSearch);
 		q += '&o_Titel=' + encodeURIComponent(contentSearch);
 	}
@@ -256,6 +267,8 @@ function listTitles() {
 	q = '?sort=-Jahr&per_page=-1';
 	let titleItems = [];
 	let yearItems = [];
+	console.log("list titles");
+	
 
 	$.getJSON('/api/images.json' + q, function (data) {
 		// Create title item array
