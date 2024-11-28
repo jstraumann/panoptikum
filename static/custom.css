@@ -8,8 +8,9 @@
   --primaryDarker: #00299b;  
   --primary: #0031BA;
   --danger: #ba0000;
-  --gray4: #565656;
-  --gray3: #9a9a9a;
+  --gray5: #565656;
+  --gray4: #9a9a9a;
+  --gray3: #cccccc;
   --gray2: #bebebe;
   --gray1: #BBBBBB;
   --black: #020202;
@@ -182,6 +183,10 @@ h1.page-title a:hover {
   width: 100%;
   background-color: var(--white25);
   margin-bottom: var(--spacing-lg);
+  position: sticky;
+  top: 5rem;
+  z-index: 10;
+  background: var(--gray3);
 }
 
 .list-actions .btn {
@@ -297,7 +302,15 @@ button,
 }
 
 /* Search action */
+@media (max-width: 920px) {
+  .list-actions {
+    top: 8.5rem;
+  }
+}
 @media (max-width: 480px) {
+  .list-actions {
+    top: 7rem;
+  }
   .search-action {
     z-index: 10;
     background-color: var(--white);
@@ -710,7 +723,7 @@ strong {
   counter-reset: clusterize-counter;
   background: var(--white);
   padding: var(--spacing-md);
-  color: var(--gray3);
+  color: var(--gray4);
 }
 
 .clusterize-no-data td {
