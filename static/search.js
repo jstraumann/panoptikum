@@ -60,10 +60,24 @@ function normalizeSearchString(str) {
 function get_werkSearchQuery(from_page) {
 	var searchCriteria = $('#searchCriteriaInput').val();
 	var contentSearch = $('#searchTitleInput').val();
-	var q = '?sort=-Jahr&';
-	q += 'per_page=' + PER_PAGE;
 
+	// Get the selected value from the select element
+	const selectedValue = $('#resultOrder').val(); // This will be "UP" or "DOWN"
+
+	// Define the sortMethod object
+	const sortMethod = {
+		UP: "-Nummer",
+		DOWN: "Nummer",
+		TITLE: "Titel"
+	};
+
+	// Get the sort method based on the selected value
+	const sort = sortMethod[selectedValue];
+
+	// Create the query string
 	var currentPage = (typeof from_page === typeof 1) ? from_page : 1;
+	let q = `?sort=${sort}&`;
+	q += `per_page=${PER_PAGE}`;
 	q += '&page=' + currentPage;
 
 	// If there's a search term, include it in the query
