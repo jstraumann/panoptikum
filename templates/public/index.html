@@ -45,18 +45,18 @@
           Suche
         </button>
         <button class="btn main-nav-item" id="worksMenuItem" title="Werke anzeigen" href="#works">
-          Anzeigen
+          Anzeige
         </button>
         <button class="btn main-nav-item" id="listMenuItem" title="Gespeicherte Werke" href="#lists">
           Meine Liste
         </button>
       </div>
       <div class="content-right d-flex justify-content-end">
+        <button class="btn ml-auto hidden" id="restart" title="Suche zurücksetzen">
+          Reset ↤
+        </button>
         <button class="btn" id="random" title="Zufällige Werke anzeigen">
           Zufall
-        </button>
-        <button class="btn" id="help" data-toggle="modal" data-target="#helpModal" title="Tipps anzeigen">
-          Hilfe
         </button>
       </div>
     </div>
@@ -83,13 +83,11 @@
           </div>
           <!-- Search Actions -->
           <div class="search-action d-flex">
-            <select class="btn hidden" id="searchCriteriaInput">
+            <select class="btn" id="searchCriteriaInput">
               <option value="OR">Werk erfüllt ein Kriterium</option>
               <option value="AND">Werk erfüllt alle Kriterien</option>
             </select>
-            <button class="btn ml-auto hidden" id="restart" title="Suche zurücksetzen">
-              Reset ↤
-            </button>
+            
             <button class="btn btn-primary disable" id="start" title="Werke anzeigen, ENTER">
               <span id="total">0</span> Anzeigen <span id="enter"> ↩</span>
             </button>
@@ -177,9 +175,6 @@
           <button class="btn" id="selectAllResults" title="Alle Werke in Liste speichern">
             Alle Werke markieren
           </button>
-          <button class="btn ml-auto hidden" id="restartAll" title="Suche zurücksetzen, BACKSPACE">
-            Reset ↤
-          </button>
         </div>
         <div class="row output tab-content hidden">
         </div>
@@ -202,29 +197,6 @@
         <div class="row output tab-content">
         </div>
         <div class="empty-state">Keine Werke gespeichert…</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Help Modal -->
-  <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="helpModalLabel">Hilfe</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <ul>
-            <li>Wählen Sie eine der drei Rubriken „Werk“, „Inhalt“ oder „Form" aus.</li>
-            <li>Klicken Sie auf „Anzeigen“, um die Auswahl anzuzeigen. Die Anzahl der gefundenen Werke wird angezeigt.
-            </li>
-            <li>Klicken Sie auf „Zufall“, um eine spontane Werkauswahl zu erhalten.</li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>

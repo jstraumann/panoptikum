@@ -214,8 +214,7 @@ const category_selectors = [
 	});
 
 	// Reset search
-	$('#restart').on('click', { resetPage: false }, werkSearchReset);
-	$('#restartAll').on('click', function () {
+	$('#restart').on('click', function () {
 		werkSearchReset();
 		$("#searchMenuItem").click();
 	});

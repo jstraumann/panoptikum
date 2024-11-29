@@ -34,7 +34,7 @@ function werkSearchReset(e) {
 
 	// Update appearance
 	$('form')[0].reset();
-	$('#restart, #restartAll').addClass('hidden');
+	$('#restart').addClass('hidden');
 	$('#results .empty-state').removeClass('hidden');
 	werkSearchCount();
 
@@ -133,7 +133,7 @@ function get_werkSearchQuery(from_page) {
 
 	console.log("query" + q);
 
-	$('#restart, #restartAll').removeClass('hidden');
+	$('#restart').removeClass('hidden');
 
 	return {
 		data: filterdata,
@@ -152,7 +152,7 @@ function werkSearchCount() {
 
 	$.getJSON('/api/images' + qg.query, function (data) {
 		$('#total').html(data.total);
-		$('#restart', 'restartAll').removeClass('hidden');
+		$('#restart').removeClass('hidden');
 		$('#start').removeClass('disable')
 			.addClass(data.total > 0 ? '' : 'disable');
 	});
@@ -460,7 +460,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 	updateURLWithSearchString(q.substring(1)); // Remove '?' from query before updating URL
 
 	// Update Apperance
-	$('#restart, #restartAll').removeClass('hidden');
+	$('#restart').removeClass('hidden');
 	$('#results .pagination, #results .output').removeClass('hidden');
 	$('#results .empty-state').addClass('hidden');
 }
