@@ -66,8 +66,10 @@ function get_werkSearchQuery(from_page) {
 
 	// Define the sortMethod object
 	const sortMethod = {
-		UP: "-Nummer",
-		DOWN: "Nummer",
+		YEAR_UP: "Jahr",
+		ID_UP: "-Nummer",
+		YEAR_DOWN: "-Jahr",
+		ID_DOWN: "Nummer",
 		TITLE: "Titel"
 	};
 
