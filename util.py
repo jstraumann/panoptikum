@@ -59,6 +59,7 @@ def filter_columns(df, args):
                                 .replace('}', '') \
                                 .replace('.', '') \
                                 .replace(',', '') \
+                                .replace('&', '') \
                                 .lower()
 
                             regex_patterns = [re.escape(normalize_search_string(option)) for option in or_conditions]

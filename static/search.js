@@ -276,6 +276,33 @@ function werkTitle(item) {
 	return s;
 }
 
+
+function sortData(data) {
+    return data.sort(function (a, b) {
+        // Ensure 'TitelEinfach' is not null or empty, set to 'Ohne Titel' if missing
+        const regex = /([a-zA-Z]+)(\d*)/;
+
+        // If 'TitelEinfach' is null or empty, set it to 'Ohne Titel'
+        const aTitle = a.TitelEinfach ? a.TitelEinfach : 'Ohne Titel';
+        const bTitle = b.TitelEinfach ? b.TitelEinfach : 'Ohne Titel';
+
+        // Split titles into alphabetic and numeric parts
+        const matchA = aTitle.match(regex);
+        const matchB = bTitle.match(regex);
+
+        // If either match is null, treat as alphabetic comparison only
+        if (!matchA || !matchB) {
+            return bTitle.localeCompare(aTitle); // Reverse the comparison for descending order
+        }
+
+        // First, compare the alphabetic parts (A-Z)
+        const alphaComparison = matchA[1].localeCompare(matchB[1]);
+
+        // If alphabetic parts are different, return alphabetic comparison result
+        return alphaComparison;
+    });
+}
+
 // This function is used in a different file
 // Generates list of Titles, stores them in global titlelist
 function listTitles() {
@@ -286,8 +313,11 @@ function listTitles() {
 	
 
 	$.getJSON('/api/images.json' + q, function (data) {
+
+		const sortedData = sortData(data);
+	
 		// Create title item array
-		data.forEach(function (item) {
+		sortedData.forEach(function (item) {
 			// Saves data for years in yearList
 			if (item['Jahr'] != null) {
 				if (yearItems[item['Jahr'].substr(0, 4)]) {
@@ -300,15 +330,11 @@ function listTitles() {
 			if (item['Titel'] != null && item['TitelEinfach'] != null) {
 				fixedItem = 
 					'<div>' +
-						'<span class="display">' + item['Titel'] + '</span>' +
 						'<span class="hidden" aria-hidden="true">' + item['TitelEinfach'] + '</span>' +
+						'<span class="display">' + item['Titel'] + '</span>' +
 					'</div>';
 				titleItems.push(fixedItem);
 			}
-		});
-
-		titleItems.sort(function (a, b) {
-			return a.localeCompare(b);
 		});
 
 		titlelist = titleItems; // Globally available

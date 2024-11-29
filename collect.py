@@ -34,7 +34,7 @@ def normalize_title(title):
     # Remove accents and diacritical marks
     title = unicodedata.normalize('NFD', title).encode('ascii', 'ignore').decode('utf-8')
     # Remove special characters and punctuation
-    title = title.translate(str.maketrans("", "", ".-…\"'«»“”()[]{}"))
+    title = title.translate(str.maketrans("", "", ".-…\"'«»“”()[]{}&"))
     # Replace ellipses with a space
     title = title.replace("...", " ").replace("…", " ")
     # Convert to lowercase
