@@ -40,14 +40,14 @@
         <h1 class="page-title" title="Bildarchiv Jürg Straumann"><a id="home" href="javascript:void(0);"
             onclick="this.href=window.location.origin;">Bildarchiv JS</a></h1>
       </div>
-      <div class="main-nav content-center d-flex mx-auto">
-        <button class="btn main-nav-item active btn-polar" id="searchMenuItem" title="Werke finden" href="#search">
+      <div class="main-nav content-center active d-flex mx-auto">
+        <button class="btn main-nav-item active" id="searchMenuItem" title="Werke finden" href="#search">
           Suche
         </button>
-        <button class="btn main-nav-item btn-polar " id="worksMenuItem" title="Werke anzeigen" href="#works">
-          Werke
+        <button class="btn main-nav-item" id="worksMenuItem" title="Werke anzeigen" href="#works">
+          Anzeigen
         </button>
-        <button class="btn main-nav-item btn-polar" id="listMenuItem" title="Gespeicherte Werke" href="#lists">
+        <button class="btn main-nav-item" id="listMenuItem" title="Gespeicherte Werke" href="#lists">
           Meine Liste
         </button>
       </div>
@@ -68,17 +68,17 @@
         <div class="list-actions nav-tabs d-flex">
           <!-- Search Form Nav -->
           <div class="search-modes d-flex mr-auto">
-            <a class="nav-item nav-link btn-polar active" id="titleSearchMode" data-toggle="tab"
-              title="Titel, Jahr und Werknummer" href="#titleSearch">
-              Werk
-            </a>
-            <a class="nav-item nav-link btn-polar" id="contentSearchMode" data-toggle="tab"
+            <a class="nav-item nav-link active" id="contentSearchMode" data-toggle="tab"
               title="Inhalte, Motive und Serien" href="#contentSearch">
               Inhalt
             </a>
-            <a class="nav-item nav-link btn-polar" id="formSearchMode" data-toggle="tab"
+            <a class="nav-item nav-link" id="formSearchMode" data-toggle="tab"
               title="Techniken, Farbe und Format" href="#formSearch">
               Form
+            </a>
+            <a class="nav-item nav-link" id="titleSearchMode" data-toggle="tab"
+              title="Titel, Jahr und Werknummer" href="#titleSearch">
+              Werk
             </a>
           </div>
           <!-- Search Actions -->
@@ -100,7 +100,7 @@
         <!-- Erweiterte Suche -->
         <div class="tab-content">
           <!-- Titel -->
-          <div class="tab-pane active" id="titleSearch">
+          <div class="tab-pane" id="titleSearch">
             <div class="filter-group">
               <div class="form-group">
                 <label for="searchTitleInput">
@@ -154,7 +154,7 @@
           </div>
 
           <!-- Inhalt -->
-          <div class="tab-pane" id="contentSearch"> </div>
+          <div class="tab-pane active" id="contentSearch"> </div>
           <!-- Form -->
           <div class="tab-pane" id="formSearch"> </div>
         </div>
