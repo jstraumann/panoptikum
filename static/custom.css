@@ -19,6 +19,7 @@
   --black50: rgba(0, 0, 0, 0.5);
   --white: #fff;
   --white25: rgba(255, 255, 255, 0.25);
+  --white10: rgba(255, 255, 255, 0.1);
 
   --spacing-xs: 0.1rem;
   --spacing-sm: 0.25rem;
@@ -137,9 +138,9 @@ h1.page-title a:hover {
 }
 
 .main-nav-item.active {
-  color: var(--white);
+  color: var(--black);
   font-weight: 500;
-  background-color: var(--black);
+  background-color: var(--gray2);
 }
 
 
@@ -225,85 +226,6 @@ button,
   border-color: var(--primaryDarker);
 }
 
-.btn-polar {
-  position: relative;
-  font-family: signo, sans-serif;
-  font-weight: 500;
-  overflow: hidden;
-}
-
-.btn-polar>span {
-  display: inline-block;
-}
-
-.btn-polar:hover>span {
-  opacity: 0;
-}
-
-.marquee {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow: hidden;
-  pointer-events: none;
-  transform: rotateZ(50deg);
-  animation: scaleEffect 6s ease-in-out infinite;
-}
-
-.marquee-inner {
-  position: relative;
-  width: fit-content;
-  display: table;
-  --offset: 1rem;
-  --move-initial: calc(-12.5% + var(--offset));
-  --move-final: calc(-25% + var(--offset));
-  transform: translate3d(var(--move-initial), 0, 0);
-  animation: horizontalShift 1.2s linear infinite;
-  animation-play-state: paused;
-  opacity: 0;
-  height: 100%;
-}
-
-.btn-polar:hover .marquee-inner {
-  animation-play-state: running;
-  opacity: 1;
-  transition-duration: 0.4s;
-}
-
-.marquee span {
-  text-align: center;
-  white-space: nowrap;
-  display: table-cell;
-  vertical-align: middle;
-  padding: 0 var(--spacing-sm);
-}
-
-@keyframes horizontalShift {
-  0% {
-    transform: translate3d(var(--move-initial), 0, 0);
-  }
-
-  100% {
-    transform: translate3d(var(--move-final), 0, 0);
-  }
-}
-
-@keyframes scaleEffect {
-  0% {
-    transform: rotateZ(8.5deg) scale(1.0);
-  }
-
-  50% {
-    transform: rotateZ(-8.5deg) scale(2.0);
-  }
-
-  100% {
-    transform: rotateZ(8.5deg) scale(1.0);
-  }
-}
-
 /* Search action */
 @media (max-width: 920px) {
   .list-actions {
@@ -349,13 +271,10 @@ button,
 /* Form Groups */
 .filter-group {
   position: relative;
-  transition: all ease 0.2s;
   padding-bottom: 1rem;
-  /* border-bottom: var(--gray2) solid 2px ; */
 }
 
 .filter-group::after {
-  transition: all ease 0.2s;
   pointer-events: none;
   content: "";
   position: absolute;
@@ -363,7 +282,7 @@ button,
   left: -1rem;
   right: -1rem;
   height: 2px;
-  background-color: var(--white25);
+  background-color: var(--white10);
 }
 
 .filter-group:first-child::after {

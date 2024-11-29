@@ -35,7 +35,6 @@ function werkSearchReset(e) {
 	// Update appearance
 	$('form')[0].reset();
 	$('#restart, #restartAll').addClass('hidden');
-	$('#results .pagination, #results .output').addClass('hidden');
 	$('#results .empty-state').removeClass('hidden');
 	werkSearchCount();
 
