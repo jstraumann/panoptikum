@@ -326,6 +326,11 @@ const category_selectors = [
 		clusterYear.update(result);
 	});
 
+	$('#resultOrder').on('change', function () {
+		// Call the function when the selection changes
+		werkSearchStart();
+	});	
+
 
 	// Save all result images
 	$('#selectAllResults').on('click', function (e) {
