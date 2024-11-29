@@ -205,6 +205,12 @@ button,
   border-radius: 0;
 }
 
+.btn.select {
+  text-align: left;
+  padding-right: var(--spacing-sm);
+  margin-right: var(--spacing-sm);
+}
+
 @media (max-width: 480px) {
 
   button,
@@ -437,6 +443,17 @@ strong {
   display: none !important;
 }
 
+@media (max-width: 480px) {
+
+  .mobile-shorter {
+    max-width: 8rem;
+    /* Adjust the max width for mobile */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
 /* Results */
 #results .container,
 #savedList .container {
@@ -549,6 +566,7 @@ strong {
 }
 
 @media (max-width: 480px) {
+
   #savedList .item input[type="checkbox"].check:checked,
   #results .item input[type="checkbox"].check,
   #savedList .item input[type="checkbox"].check {

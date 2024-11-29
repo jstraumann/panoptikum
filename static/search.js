@@ -301,7 +301,7 @@ function listTitles() {
 				fixedItem = 
 					'<div>' +
 						'<span class="display">' + item['Titel'] + '</span>' +
-						'<span class="hidden">' + item['TitelEinfach'] + '</span>' +
+						'<span class="hidden" aria-hidden="true">' + item['TitelEinfach'] + '</span>' +
 					'</div>';
 				titleItems.push(fixedItem);
 			}
