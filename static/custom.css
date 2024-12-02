@@ -190,29 +190,6 @@ h1.page-title a:hover {
   border-radius: 0.1rem;
 }
 
-/* List Actions */
-.list-actions {
-  width: 100%;
-  background-color: var(--white25);
-  margin-bottom: var(--spacing-lg);
-  position: sticky;
-  top: 5rem;
-  z-index: 10;
-  background: var(--gray30);
-  box-shadow: var(--black25) 0px 20px 100px -20px, var(--black25) 0px 10px 20px -15px;
-  border-radius: 0.1rem;
-  overflow: hidden;
-}
-
-.list-actions .btn {
-  padding: var(--spacing-md) var(--spacing-lg);
-  border: none;
-}
-
-.list-actions .btn:hover {
-  background-color: var(--white25);
-}
-
 /* Buttons */
 button,
 .btn,
@@ -246,6 +223,29 @@ button,
   color: var(--white);
   background-color: var(--primaryDarker);
   border-color: var(--primaryDarker);
+}
+
+/* List Actions */
+.list-actions {
+  width: 100%;
+  background-color: var(--white25);
+  margin-bottom: var(--spacing-lg);
+  position: sticky;
+  top: 5rem;
+  z-index: 10;
+  background: var(--gray30);
+  box-shadow: var(--black25) 0px 20px 100px -20px, var(--black25) 0px 10px 20px -15px;
+  border-radius: 0.1rem;
+  overflow: hidden;
+}
+
+.list-actions .btn {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: none;
+}
+
+.list-actions .btn:hover {
+  background-color: var(--white25);
 }
 
 /* Search action */
