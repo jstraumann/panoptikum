@@ -8,11 +8,12 @@
   --primaryDarker: #00299b;
   --primary: #0031BA;
   --danger: #ba0000;
-  --gray5: #565656;
-  --gray4: #9a9a9a;
-  --gray3: #cccccc;
-  --gray2: #bebebe;
-  --gray1: #BBBBBB;
+  --gray50: #565656;
+  --gray40: #9a9a9a;
+  --gray30: #cccccc;
+  --gray20: #bebebe;
+  --gray10: #BBBBBB;
+  --gray05: #e4e4e4;
   --black: #020202;
   --black10: rgba(0, 0, 0, 0.1);
   --black25: rgba(0, 0, 0, 0.25);
@@ -33,7 +34,7 @@ body {
   font-family: "Switzer", monospace;
   font-weight: 340;
   font-optical-sizing: auto;
-  background-color: var(--gray1) !important;
+  background-color: var(--gray10) !important;
   color: var(--black);
   margin: 0;
   padding: 0;
@@ -133,14 +134,21 @@ h1.page-title a:hover {
   font-size: 1.064rem;
   border-radius: 0;
   padding: var(--spacing-lg) var(--spacing-xl);
-  box-shadow: none;
+  border:  0;
+  border-left:  1px  solid var(--gray05);
   transition: all 0.2s ease;
+  box-shadow: none;
 }
 
+.main-nav-item:last-child {
+  border-right:  1px  solid var(--gray05);
+} 
+
 .main-nav-item.active {
+  z-index: 10;
   color: var(--black);
   font-weight: 500;
-  background-color: var(--gray2);
+  background-color: var(--gray10);
 }
 
 
@@ -179,6 +187,7 @@ h1.page-title a:hover {
   margin: 0;
   padding: var(--spacing-lg);
   background-color: var(--white25);
+  border-radius: 0.1rem;
 }
 
 /* List Actions */
@@ -189,12 +198,19 @@ h1.page-title a:hover {
   position: sticky;
   top: 5rem;
   z-index: 10;
-  background: var(--gray3);
+  background: var(--gray30);
+  box-shadow: var(--black25) 0px 20px 100px -20px, var(--black25) 0px 10px 20px -15px;
+  border-radius: 0.1rem;
+  overflow: hidden;
 }
 
 .list-actions .btn {
   padding: var(--spacing-md) var(--spacing-lg);
   border: none;
+}
+
+.list-actions .btn:hover {
+  background-color: var(--white25);
 }
 
 /* Buttons */
@@ -628,7 +644,7 @@ strong {
 
 /* Lightbox */
 .js-gallery .lg-backdrop {
-  background-color: var(--gray1);
+  background-color: var(--gray10);
 }
 
 .js-gallery .lg-counter,
@@ -671,7 +687,7 @@ strong {
   counter-reset: clusterize-counter;
   background: var(--white);
   padding: var(--spacing-md);
-  color: var(--gray4);
+  color: var(--gray40);
 }
 
 .clusterize-no-data td {
