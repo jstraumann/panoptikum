@@ -219,7 +219,8 @@ button,
   border-color: var(--primary);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.list-actions .btn-primary:hover {
   color: var(--white);
   background-color: var(--primaryDarker);
   border-color: var(--primaryDarker);
