@@ -134,15 +134,15 @@ h1.page-title a:hover {
   font-size: 1.064rem;
   border-radius: 0;
   padding: var(--spacing-lg) var(--spacing-xl);
-  border:  0;
-  border-left:  1px  solid var(--gray05);
+  border: 0;
+  border-left: 1px solid var(--gray05);
   transition: all 0.2s ease;
   box-shadow: none;
 }
 
 .main-nav-item:last-child {
-  border-right:  1px  solid var(--gray05);
-} 
+  border-right: 1px solid var(--gray05);
+}
 
 .main-nav-item.active {
   z-index: 10;
@@ -219,12 +219,6 @@ button,
   border-color: var(--primary);
 }
 
-.btn-primary:hover,
-.list-actions .btn-primary:hover {
-  color: var(--white);
-  background-color: var(--primaryDarker);
-  border-color: var(--primaryDarker);
-}
 
 /* List Actions */
 .list-actions {
@@ -247,6 +241,13 @@ button,
 
 .list-actions .btn:hover {
   background-color: var(--white25);
+}
+
+.btn-primary:hover,
+.list-actions .btn-primary:hover {
+  color: var(--white);
+  background-color: var(--primaryDarker);
+  border-color: var(--primaryDarker);
 }
 
 /* Search action */
