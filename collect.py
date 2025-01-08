@@ -30,16 +30,19 @@ def list_files(dir):
         try:
             brightness = calculate_brightness(file_path)
             hue = calculate_hue(file_path)
+            saturation = calculate_saturation(file_path)
         except Exception as e:
             print(f"Error processing {file_path}: {e}")
             brightness = None
             hue = None
+            saturation = None
 
         r[wn] = {
             'path': file_path.strip('./'),
             'thumb': os.path.join(root, 'thumb', name).strip('./'),
             'brightness': brightness,
-            'hue': hue
+            'hue': hue,
+            'saturation': saturation
         }
 
         # Print progress
@@ -52,8 +55,6 @@ def list_files(dir):
 def calculate_brightness(image_path):
     """
     Calculate the average brightness of an image.
-    Brightness is computed as the mean of grayscale pixel values,
-    normalized to a scale from 0 to 100 and rounded to the nearest integer.
     """
     with Image.open(image_path) as img:
         img = img.convert("L")  # Convert image to grayscale
@@ -64,14 +65,25 @@ def calculate_brightness(image_path):
 def calculate_hue(image_path):
     """
     Calculate the average hue of an image.
-    Hue is computed in the HSV color space,
-    rounded to the nearest integer.
     """
     with Image.open(image_path) as img:
         img = img.convert("RGB")  # Ensure the image is in RGB mode
         img = img.convert("HSV")  # Convert to HSV
         hue_values = [pixel[0] for pixel in img.getdata()]  # Extract the hue channel
-        return round(sum(hue_values) / len(hue_values))  # Rounded average hue
+        normalized_hues = [(hue / 255) * 360 for hue in hue_values]  # Normalize to 0-360
+        return round(sum(normalized_hues) / len(normalized_hues)) # Rounded average hue
+    
+def calculate_saturation(image_path):
+    """
+    Calculate the average saturation of an image.
+    Normalizes the saturation values to range from 0 to 100.
+    """
+    with Image.open(image_path) as img:
+        img = img.convert("RGB")  # Ensure the image is in RGB mode
+        img = img.convert("HSV")  # Convert to HSV
+        saturation_values = [pixel[1] for pixel in img.getdata()]  # Extract the saturation channel
+        normalized_saturations = [(saturation / 255) * 100 for saturation in saturation_values]  # Normalize to 0-100
+        return round(sum(normalized_saturations) / len(normalized_saturations))
 
 def flatten(xss):
     return [x for xs in xss for x in xs]
@@ -96,6 +108,7 @@ def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
         if 'TitelEinfach' not in fieldnames: fieldnames.append('TitelEinfach')  # Add normalized title column
         if 'brightness' not in fieldnames: fieldnames.append('brightness')  # Add brightness column
         if 'hue' not in fieldnames: fieldnames.append('hue')  # Add hue column
+        if 'saturation' not in fieldnames: fieldnames.append('saturation')  # Add saturation column
 
         fieldnames.append('Techniken')
         fieldnames.append('Motiven')
@@ -122,6 +135,7 @@ def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
                 r['thumb'] = imagerow['thumb']
                 r['brightness'] = imagerow['brightness']
                 r['hue'] = imagerow['hue']
+                r['saturation'] = imagerow['saturation']
 
                 # Add normalized title
                 if 'Titel' in r:

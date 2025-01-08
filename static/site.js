@@ -103,11 +103,11 @@ const category_selectors = [
 					`<div id="brightnessSliders" class="filter-group sliders">
 						<h5 class="group-title"><label>Berechnete Helligkeit</label></h5>
 						<div class="slider-group">
-							<input type="range" id="brightness_min" class="brightness-slider" min="0" max="100" step="1" value="0">
+							<input type="range" id="brightness_min" class="range-slider" min="0" max="100" step="1" value="0">
 							<label for="brightness_min">Min Helligkeit: <span id="brightness_min_label">0%</span></label>
 						</div>
 						<div class="slider-group">
-							<input type="range" id="brightness_max" class="brightness-slider" min="0" max="100" step="1" value="100">
+							<input type="range" id="brightness_max" class="range-slider" min="0" max="100" step="1" value="100">
 							<label for="brightness_max">Max Helligkeit: <span id="brightness_max_label">100%</span></label>
 						</div>
 					</div>`
@@ -127,11 +127,11 @@ const category_selectors = [
 					`<div id="hueSliders" class="filter-group sliders">
 						<h5 class="group-title"><label>Berechneter Farbton</label></h5>
 						<div class="slider-group">
-							<input type="range" id="hue_min" class="hue-slider" min="0" max="360" step="1" value="0">
+							<input type="range" id="hue_min" class="range-slider" min="0" max="360" step="1" value="0">
 							<label for="hue_min">Min Farbton: <span id="hue_min_label">0°</span></label>
 						</div>
 						<div class="slider-group">
-							<input type="range" id="hue_max" class="hue-slider" min="0" max="360" step="1" value="360">
+							<input type="range" id="hue_max" class="range-slider" min="0" max="360" step="1" value="360">
 							<label for="hue_max">Max Farbton: <span id="hue_max_label">360°</span></label>
 						</div>
 					</div>`
@@ -145,6 +145,32 @@ const category_selectors = [
 				$(document).on('input', '#hue_max', function () {
 					$('#hue_max_label').text(`${this.value}°`);
 				});
+
+				// Saturation slider
+				$tgt.append(
+					`<div id="saturationSliders" class="filter-group sliders">
+						<h5 class="group-title"><label>Berechnete Sättigung</label></h5>
+						<div class="slider-group">
+							<input type="range" id="saturation_min" class="range-slider" min="0" max="100" step="1" value="0">
+							<label for="saturation_min">Min Farbton: <span id="saturation_min_label">0%</span></label>
+						</div>
+						<div class="slider-group">
+							<input type="range" id="saturation_max" class="range-slider" min="0" max="100" step="1" value="360">
+							<label for="saturation_max">Max Farbton: <span id="saturation_max_label">100%</span></label>
+						</div>
+					</div>`
+				);
+			
+				// Update hue labels dynamically
+				$(document).on('input', '#saturation_min', function () {
+					$('#saturation_min_label').text(`${this.value}°`);
+				});
+			
+				$(document).on('input', '#saturation_max', function () {
+					$('#saturation_max_label').text(`${this.value}°`);
+				});
+
+
 			}
 		});
 	
@@ -158,6 +184,40 @@ const category_selectors = [
 			renderForm($(this), data);
 		});
 	}
+
+	function createSlider(id, min = 0, max = 100, value = 0, step = 1) {
+		// Create the slider container
+		const sliderGroup = document.createElement('div');
+		sliderGroup.classList.add('slider-group');
+	
+		// Create the input element (slider)
+		const slider = document.createElement('input');
+		slider.type = 'range';
+		slider.id = id;
+		slider.classList.add('filter-slider');
+		slider.min = min;
+		slider.max = max;
+		slider.value = value;
+		slider.step = step;
+	
+		// Create the label for the slider
+		const label = document.createElement('label');
+		label.setAttribute('for', id);
+		label.innerHTML = `${id.charAt(0).toUpperCase() + id.slice(1)}: <span id="${id}_label">${value}%</span>`;
+	
+		// Append the slider and label to the slider group
+		sliderGroup.appendChild(slider);
+		sliderGroup.appendChild(label);
+	
+		// Update the label dynamically when the slider value changes
+		slider.addEventListener('input', function() {
+			const labelText = document.getElementById(`${id}_label`);
+			labelText.textContent = `${this.value}%`;
+		});
+	
+		return sliderGroup;  // Return the entire slider group element
+	}
+	
 	
 
 	function addFormListeners() {

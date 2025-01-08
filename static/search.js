@@ -38,6 +38,8 @@ function werkSearchReset(e) {
 	$('#brightness_min_label').text('0%');
 	$('#hue_max_label').text('360°');
 	$('#hue_min_label').text('0°');
+	$('#saturation_max_label').text('100%');
+	$('#saturation_min_label').text('0%');
 	$('#restart').addClass('hidden');
 	$('#results .empty-state').removeClass('hidden');
 	werkSearchCount();
@@ -121,26 +123,6 @@ function get_werkSearchQuery(from_page) {
         filterselect += '<span>' + v + '</span>';
     });
 
-    // Add brightness sliders to the query
-    const brightnessMin = $('#brightness_min').val();
-    const brightnessMax = $('#brightness_max').val();
-
-    if (!(brightnessMin == 0 && brightnessMax == 100)) {
-        q += `&brightness_min=${brightnessMin}&brightness_max=${brightnessMax}`;
-        filterselect += `<span>Min Helligkeit: ${brightnessMin}%</span>`;
-        filterselect += `<span>Max Helligkeit: ${brightnessMax}%</span>`;
-    }
-
-	// Add brightness sliders to the query
-	const hueMin = $('#hue_min').val();
-	const hueMax = $('#hue_max').val();
-
-	if (!(hueMin == 0 && hueMax == 360)) {
-		q += `&hue_min=${brightnessMin}&hue_max=${brightnessMax}`;
-		filterselect += `<span>Min Helligkeit: ${brightnessMin}%</span>`;
-		filterselect += `<span>Max Helligkeit: ${brightnessMax}%</span>`;
-	}
-
     var joinCharater = ',';
     if (searchCriteria == "OR") {
         joinCharater = '|'
@@ -149,6 +131,30 @@ function get_werkSearchQuery(from_page) {
     $.each(Object.keys(filterdata), function () {
         q += '&' + this + '=' + filterdata[this].join(joinCharater);
     });
+
+    // Add brightness sliders to the query
+    const brightnessMin = $('#brightness_min').val();
+    const brightnessMax = $('#brightness_max').val();
+
+    if (!(brightnessMin == 0 && brightnessMax == 100)) {
+        q += `&brightness_min=${brightnessMin}&brightness_max=${brightnessMax}`;
+    }
+
+	// Add brightness sliders to the query
+	const hueMin = $('#hue_min').val();
+	const hueMax = $('#hue_max').val();
+
+	if (!(hueMin == 0 && hueMax == 360)) {
+		q += `&hue_min=${hueMin}&hue_max=${hueMax}`;
+	}
+
+	// Add saturation sliders to the query
+	const saturationMin = $('#saturation_min').val();
+	const saturationMax = $('#saturation_max').val();
+
+	if (!(saturationMin == 0 && saturationMax == 100)) {
+		q += `&saturation_min=${saturationMin}&saturation_max=${saturationMax}`;
+	}
 
     console.log("query" + q);
 
@@ -568,24 +574,24 @@ function loadSavedItems() {
 }
 
 function initializeGallery(container, openImmediately = false) {	
-	// const galleryOptions = {
-	// 	selector: '.item a',
-	// 	speed: 1,
-	// 	download: false,
-	// 	addClass: "js-gallery"
-	// };
+	const galleryOptions = {
+		selector: '.item a',
+		speed: 1,
+		download: false,
+		addClass: "js-gallery"
+	};
 
-    // if (!container.galleryInstance) {
-    //     // Initialize the gallery
-    //     container.galleryInstance = lightGallery(container, galleryOptions);
-    // } else {
-    //     // Destroy and reinitialize the gallery if it's already created
-    //     container.galleryInstance.destroy(true);
-    //     container.galleryInstance = lightGallery(container, galleryOptions);
-    // }
-    // if (openImmediately) {
-    //     container.galleryInstance.openGallery();
-    // }
+    if (!container.galleryInstance) {
+        // Initialize the gallery
+        container.galleryInstance = lightGallery(container, galleryOptions);
+    } else {
+        // Destroy and reinitialize the gallery if it's already created
+        container.galleryInstance.destroy(true);
+        container.galleryInstance = lightGallery(container, galleryOptions);
+    }
+    if (openImmediately) {
+        container.galleryInstance.openGallery();
+    }
 }
 
 function updateURLWithSearchString(searchString) {

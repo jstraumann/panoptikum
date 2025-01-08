@@ -17,19 +17,43 @@ def get_paginated(args, dp_werke, as_json=False):
     return pagination_info
 
 def filter_columns(df, args):
+    # Check and apply filters for brightness_min, brightness_max, hue_min, and hue_max
+    brightness_min = args.get('brightness_min')
+    brightness_max = args.get('brightness_max')
+    hue_min = args.get('hue_min')
+    hue_max = args.get('hue_max')
+
+    # Filter by brightness if min and/or max values are provided
+    if brightness_min is not None or brightness_max is not None:
+        try:
+            if brightness_min is not None:
+                brightness_min = float(brightness_min)
+                df = df[df['brightness'] >= brightness_min]
+            if brightness_max is not None:
+                brightness_max = float(brightness_max)
+                df = df[df['brightness'] <= brightness_max]
+        except ValueError:
+            print(f"Invalid range for brightness: {brightness_min}, {brightness_max}")
+    
+    # Filter by hue if min and/or max values are provided
+    if hue_min is not None or hue_max is not None:
+        try:
+            if hue_min is not None:
+                hue_min = float(hue_min)
+                df = df[df['hue'] >= hue_min]
+            if hue_max is not None:
+                hue_max = float(hue_max)
+                df = df[df['hue'] <= hue_max]
+        except ValueError:
+            print(f"Invalid range for hue: {hue_min}, {hue_max}")
+    
+    # Continue with the original filtering logic for other columns
     for f in df.columns:
         val = args.get('o_' + f, None)
         if val is not None:
             if f == "Zus'arbeit":
                 # Special handling for "Zus'arbeit" field to match non-empty values
                 df = df[df[f].notna() & df[f].str.strip().astype(bool)]
-            elif f in ["brightness", "hue"]:
-                # Handle range filters for brightness and hue
-                try:
-                    min_val, max_val = map(float, val.split(','))
-                    df = df[(df[f] >= min_val) & (df[f] <= max_val)]
-                except ValueError:
-                    print(f"Invalid range for {f}: {val}")
             else:
                 df = df.dropna(subset=[f])
                 dfname = df[f].dtype.name.lower()
@@ -91,6 +115,7 @@ def filter_columns(df, args):
                     except ValueError:
                         pass
     return df
+
 
 def sort_data(df, args):
     with_sort = args.get('sort', None)
