@@ -59,22 +59,21 @@ const category_selectors = [
 	});
 
 	function initFilterSections(sname) {
-		// Add section headers
 		console.log("Init sections", sname);
-
+	
 		const searchIds = {
 			anderes: "#titleSearch",
 			inhalt: "#contentSearch",
 			form: "#formSearch"
 		};
-
+	
 		let id = searchIds[sname] || "";
-
+	
 		$(id).each(function () {
-			var $tgt = $(this);			
+			var $tgt = $(this);            
 			filters[sname].forEach(function (i) {
 				if ($('div[data-tag="' + sname + '"]').attr('data-type') === i) {return;}
-		
+			
 				// Append filter group and add a master checkbox in the group title
 				$tgt.append(
 					`<div class="filter-group checkboxes">
@@ -86,34 +85,92 @@ const category_selectors = [
 					</div>`
 				);
 			});
-		
+	
 			// Ensure 'select-all' reflects the state of individual checkboxes
 			$(document).on('change', 'input[type="checkbox"]:not(.select-all)', function () {
 				var $checkboxGroup = $(this).closest('.filter-group').find('input[type="checkbox"]:not(.select-all)');
 				var $selectAllCheckbox = $(this).closest('.filter-group').find('.select-all');
-		
+			
 				// Update the 'select-all' checkbox if all checkboxes are selected
 				var allChecked = $checkboxGroup.length === $checkboxGroup.filter(':checked').length;
 				$selectAllCheckbox.prop('checked', allChecked);
 			});
+	
+			// Add range sliders for brightness and hue
+			if (sname === "form") {
+				// Brightness slider
+				$tgt.append(
+					`<div id="brightnessSliders" class="filter-group sliders">
+						<h5 class="group-title">Berechnete Helligkeit</h5>
+						<div class="slider-group">
+							<input type="range" id="brightness_min" class="brightness-slider" min="0" max="100" step="1" value="0">
+							<label for="brightness_min">Min Helligkeit: <span id="brightness_min_label">0%</span></label>
+						</div>
+						<div class="slider-group">
+							<input type="range" id="brightness_max" class="brightness-slider" min="0" max="100" step="1" value="100">
+							<label for="brightness_max">Max Helligkeit: <span id="brightness_max_label">100%</span></label>
+						</div>
+					</div>`
+				);
+			
+				// Update brightness labels dynamically
+				$(document).on('input', '#brightness_min', function () {
+					$('#brightness_min_label').text(`${this.value}%`);
+					
+				});
+			
+				$(document).on('input', '#brightness_max', function () {
+					$('#brightness_max_label').text(`${this.value}%`);
+					
+				});
+			
+				// Hue slider
+				$tgt.append(
+					`<div id="hueSliders" class="filter-group sliders">
+						<h5 class="group-title">Berechneter Farbton</h5>
+						<div class="slider-group">
+							<input type="range" id="hue_min" class="hue-slider" min="0" max="360" step="1" value="0">
+							<label for="hue_min">Min Farbton: <span id="hue_min_label">0°</span></label>
+						</div>
+						<div class="slider-group">
+							<input type="range" id="hue_max" class="hue-slider" min="0" max="360" step="1" value="360">
+							<label for="hue_max">Max Farbton: <span id="hue_max_label">360°</span></label>
+						</div>
+					</div>`
+				);
+			
+				// Update hue labels dynamically
+				$(document).on('input', '#hue_min', function () {
+					$('#hue_min_label').text(`${this.value}°`);
+					
+				});
+			
+				$(document).on('input', '#hue_max', function () {
+					$('#hue_max_label').text(`${this.value}°`);
+					
+				});
+			}
 		});
-
+	
 		// Subset the data
 		var data = cache.filter(function (i) {
 			return i.Mode.toLowerCase() == sname.toLowerCase();
 		});
-
+	
 		// Process any tags
 		$('div[data-tag="' + sname + '"]').each(function () {
 			renderForm($(this), data);
 		});
 	}
+	
 
 	function addFormListeners() {
 		var isSelectAllProcessing = false;
 	
 		// Handle form change events
 		$('form').change(function () {
+			console.log("form update");
+			
 			// Only proceed if select-all is not being processed
 			if (!isSelectAllProcessing) {
 				$('input[name="Titel"]').val(''); // Reset Titel input

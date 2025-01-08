@@ -23,6 +23,13 @@ def filter_columns(df, args):
             if f == "Zus'arbeit":
                 # Special handling for "Zus'arbeit" field to match non-empty values
                 df = df[df[f].notna() & df[f].str.strip().astype(bool)]
+            elif f in ["brightness", "hue"]:
+                # Handle range filters for brightness and hue
+                try:
+                    min_val, max_val = map(float, val.split(','))
+                    df = df[(df[f] >= min_val) & (df[f] <= max_val)]
+                except ValueError:
+                    print(f"Invalid range for {f}: {val}")
             else:
                 df = df.dropna(subset=[f])
                 dfname = df[f].dtype.name.lower()

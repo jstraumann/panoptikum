@@ -20,7 +20,7 @@ FAP,Form,Drucktechnik,Technik,Fine Art Print,,,66
 Hs,Form,Drucktechnik,Technik,Holzschnitt,,,10
 Ls,Form,Drucktechnik,Technik,Linolschnitt,,,59
 Lg,Form,Drucktechnik,Technik,Lithografie,,,21
-Od,Form,Drucktechnik,Technik,Offsetdruck,,,9
+Od,Form,Drucktechnik,Technik,Offsetdruck,,,8
 R,Form,Drucktechnik,Technik,Radierung,,,359
 Rd,Form,Drucktechnik,Technik,Reliefdruck,,,5
 S,Form,Drucktechnik,Technik,Siebdruck,,,4
@@ -29,21 +29,21 @@ Mt,Form,mehrere Techniken,Technik,Mischtechnik (3 Techniken und mehr),,,1670
 H1,Form,Helligkeit,Helligkeit,hell,,,719
 H2,Form,Helligkeit,Helligkeit,eher hell,,,3867
 H3,Form,Helligkeit,Helligkeit,mittlere Helligkeit,,,2926
-H4,Form,Helligkeit,Helligkeit,eher dunkel,,,2008
+H4,Form,Helligkeit,Helligkeit,eher dunkel,,,2007
 H5,Form,Helligkeit,Helligkeit,dunkel,,,241
 bw,Form,Farbigkeit nach Dominanz,Farbigkeit,schwarzweiss,,,1322
 gr,Form,Farbigkeit nach Dominanz,Farbigkeit,grau,,,4877
 cf,Form,Farbigkeit nach Dominanz,Farbigkeit,vielfarbig,,,2228
 y,Form,Farbigkeit nach Dominanz,Farbigkeit,gelb,,,81
 g,Form,Farbigkeit nach Dominanz,Farbigkeit,grün,,,225
-c,Form,Farbigkeit nach Dominanz,Farbigkeit,blau,,,267
+c,Form,Farbigkeit nach Dominanz,Farbigkeit,blau,,,266
 v,Form,Farbigkeit nach Dominanz,Farbigkeit,violett,,,156
 m,Form,Farbigkeit nach Dominanz,Farbigkeit,rot,,,121
 b,Form,Farbigkeit nach Dominanz,Farbigkeit,braun,,,463
 klein,Form,Format,Grösse,klein,,((grössere Zahl max. 30)),6656
-mittel,Form,Format,Grösse,mittel,,((grössere Zahl 31 - 90)),3014
+mittel,Form,Format,Grösse,mittel,,((grössere Zahl 31 - 90)),3013
 gross,Form,Format,Grösse,gross,,((grössere Zahl 91 und mehr)),117
-breit,Form,Ausrichtung,Ausrichtung,breit,,,8221
+breit,Form,Ausrichtung,Ausrichtung,breit,,,8220
 hoch,Form,Ausrichtung,Ausrichtung,hoch,,,1336
 quadratisch,Form,Ausrichtung,Ausrichtung,quadratisch,,,229
 Cb,Form,Darstellungsformen,Darstellungsformen,Collagebuch,,,16
@@ -64,7 +64,7 @@ sM,Form,Darstellungsformen,Darstellungsformen,serielle Muster,,,53
 Ul,Form,Darstellungsformen,Darstellungsformen,Umrisslinie,,,253
 Gs,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Gegenständliches,,,2798
 U,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches,,,3548
-UnG,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches neben Gegenständlichem,,,1565
+UnG,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches neben Gegenständlichem,,,1564
 UoG,Form,Darstellungsarten,Gegenständlich/Ungegenständlich,Ungegenständliches oder Gegenständliches,,,1863
 hK,Form,Komposition,Komposition,horizontale Komposition,,,104
 vK,Form,Komposition,Komposition,vertikale Komposition,,,214
@@ -86,9 +86,9 @@ sko,Form,Bildsprache,Bildsprache,Skorpion-/Pluto-Gestaltung,,,285
 sch,Form,Bildsprache,Bildsprache,Schütze-/Jupiter-Gestaltung,,,29
 ste,Form,Bildsprache,Bildsprache,Steinbock-/Saturn-Gestaltung,,,114
 was,Form,Bildsprache,Bildsprache,Wassermann-/Uranus-Gestaltung,,,198
-fis,Form,Bildsprache,Bildsprache,Fische-/Neptun-Gestaltung,,,103
+fis,Form,Bildsprache,Bildsprache,Fische-/Neptun-Gestaltung,,,102
 mF,Inhalt,Motive,Motiven,"Menschen (Einzelne, bekleidet)","A, AP, Ba, FigG, FigR, KiA, P, Sb, Z, ZM",,540
-FigG,Inhalt,Motive,Motiven,Figurengruppen,,,485
+FigG,Inhalt,Motive,Motiven,Figurengruppen,,,484
 FigR,Inhalt,Motive,Motiven,Figuren im Raum (Innenraum),,,262
 KiA,Inhalt,Motive,Motiven,KünstlerInnen im Atelier,,,28
 Z,Inhalt,Motive,Motiven,"ZeichnerInnen, MalerInnen",,,136
@@ -103,16 +103,16 @@ Kt,Inhalt,Motive,Motiven,Körperteile,,,154
 Mw,Inhalt,Motive,Motiven,Mischwesen,Ken,,102
 Ken,Inhalt,Motive,Motiven,Kentauren,,,51
 Tie,Inhalt,Motive,Motiven,Tiere,,,248
-Pf,Inhalt,Motive,Motiven,Pflanzen,,,420
+Pf,Inhalt,Motive,Motiven,Pflanzen,,,419
 F,Inhalt,Motive,Motiven,"Früchte, Gemüse",,,246
 Gä,Inhalt,Motive,Motiven,Gärten,,,25
 L,Inhalt,Motive,Motiven,Landschaften,,,452
-Ar,Inhalt,Motive,Motiven,"Architektur, Intérieurs",,,333
+Ar,Inhalt,Motive,Motiven,"Architektur, Intérieurs",,,332
 Ma,Inhalt,Motive,Motiven,Mauern,,,63
 At,Inhalt,Motive,Motiven,Ateliers,,,186
 StmFG,Inhalt,Motive,Motiven,Stillleben mit Früchten und/oder Gemüsen,,,210
 StoFG,Inhalt,Motive,Motiven,Stillleben ohne Früchte und/oder Gemüse,,,143
-O,Inhalt,Motive,Motiven,Objekte,"Sta, Vo",,1783
+O,Inhalt,Motive,Motiven,Objekte,"Sta, Vo",,1782
 Fk,Inhalt,Motive,Motiven,Farbkörper,,,47
 bb,Inhalt,Motive,Motiven,Black Box,,,278
 So,Inhalt,Motive,Motiven,Sockel,,,107
@@ -207,7 +207,7 @@ Kr12e,Inhalt,Projekt „Klee revisited“,Paraphrasen,Fünfklang,,,23
 1985-1999,Zeit,Chronologie,Jahr,1985–1999,,,0
 1979-1984,Zeit,Chronologie,Jahr,1979–1984,,,0
 1973-1978,Zeit,Chronologie,Jahr,1973–1978,,,0
-iBdK,Anderes,Standort,Standort,im Besitz des Künstlers,,,9277
+iBdK,Anderes,Standort,Standort,im Besitz des Künstlers,,,9276
 PB,Anderes,Standort,Status,Privatbesitz,,,298
 vers,Anderes,Standort,Status,verschollen,,,58
 vernichtet,Anderes,Standort,Status,vernichtet,,,0

@@ -549,24 +549,24 @@ function loadSavedItems() {
 }
 
 function initializeGallery(container, openImmediately = false) {	
-	const galleryOptions = {
-		selector: '.item a',
-		speed: 1,
-		download: false,
-		addClass: "js-gallery"
-	};
+	// const galleryOptions = {
+	// 	selector: '.item a',
+	// 	speed: 1,
+	// 	download: false,
+	// 	addClass: "js-gallery"
+	// };
 
-    if (!container.galleryInstance) {
-        // Initialize the gallery
-        container.galleryInstance = lightGallery(container, galleryOptions);
-    } else {
-        // Destroy and reinitialize the gallery if it's already created
-        container.galleryInstance.destroy(true);
-        container.galleryInstance = lightGallery(container, galleryOptions);
-    }
-    if (openImmediately) {
-        container.galleryInstance.openGallery();
-    }
+    // if (!container.galleryInstance) {
+    //     // Initialize the gallery
+    //     container.galleryInstance = lightGallery(container, galleryOptions);
+    // } else {
+    //     // Destroy and reinitialize the gallery if it's already created
+    //     container.galleryInstance.destroy(true);
+    //     container.galleryInstance = lightGallery(container, galleryOptions);
+    // }
+    // if (openImmediately) {
+    //     container.galleryInstance.openGallery();
+    // }
 }
 
 function updateURLWithSearchString(searchString) {

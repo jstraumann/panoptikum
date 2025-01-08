@@ -1,49 +1,42 @@
 import os
-
 from pandas_datapackage_reader import read_datapackage
+import pandas as pd
 
-from util import *
-import pandas
-
-pandas.set_option('display.max_rows', 100000)
+pd.set_option('display.max_rows', 100000)
 
 def update_stats():
+    # Load data
     data = read_datapackage("data")
     filters = data['filters']
     filename = os.path.join('data', filters._metadata['path'])
     images = data['images']
 
-    # Apply stats
+    # Clean and prepare data
     images.fillna('', inplace=True)
-    # print(images.head)
     filters.dropna(subset=['Code', 'Column'], inplace=True)
-    # print(filters.head)
-    #print("filters['Code']", images['Grösse'])
 
-    # Combine FoD and FoP into Fo
-    images = images.replace({ 'Technik': 'FoD', 'Techniken': 'FoD' }, { 'Technik': 'Fo', 'Techniken': 'Fo' })
-    images = images.replace({ 'Technik': 'FoP', 'Techniken': 'FoP' }, { 'Technik': 'Fo', 'Techniken': 'Fo' })
+    # Combine 'FoD' and 'FoP' into 'Fo' in 'Technik' and 'Techniken'
+    images['Technik'] = images['Technik'].replace({'FoD': 'Fo', 'FoP': 'Fo'})
+    images['Techniken'] = images['Techniken'].replace({'FoD': 'Fo', 'FoP': 'Fo'})
+
+    # Vectorized calculation of 'Count'
+    def calculate_count(code, column):
+        if code == '.*':
+            return images[column].str.len().gt(0).sum()
+        else:
+            regex = (
+                f"(^| ){code}( |$|,)"  # Match whole word with boundaries
+            )
+            return images[column].str.contains(regex, regex=True, na=False).sum()
 
     filters['Count'] = filters.apply(
-        lambda row: (
-            (row['Code'] == '.*' and len(
-                images.loc[
-                    images[row['Column']].str.len() > 0
-                ]
-            )) or len(
-                images.loc[
-                    images[row['Column']].str.match('^' + row['Code'] + '$', case=True) |
-                    images[row['Column']].str.contains(' ' + row['Code'] + ' ') |
-                    images[row['Column']].str.match('^' + row['Code'] + '[ |,]', case=True) |
-                    images[row['Column']].str.endswith(' ' + row['Code'])
-                ]
-            )
-        ), axis = 1
+        lambda row: calculate_count(row['Code'], row['Column']),
+        axis=1
     )
 
+    # Save results
     print(filters.head(n=50))
-
-    print("Writing to %s" % filename)
+    print(f"Writing to {filename}")
     filters.to_csv(filename, index=False)
 
 

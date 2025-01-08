@@ -1,43 +1,88 @@
-import os, csv
+import os
+import csv
 from csv import DictWriter
-
+from PIL import Image, ImageStat  # For image analysis
 from stats import *
+
 
 def list_files(dir):
     r = {}
+    all_files = []
     for root, dirs, files in os.walk(dir):
-        if 'thumb' in root: continue
+        if 'thumb' in root:
+            continue
         dirs.sort()
         for name in files:
-            fn, ext = os.path.splitext(name)
-            try:
-                wn = int(fn.split('_')[0].split(' ')[0].split(',')[0].strip('.+jpg'))
-            except:
-                print('Invalid file: %s' % os.path.join(root, name))
-                continue
-            r[wn] = {
-                'path': os.path.join(root, name).strip('./'),
-                'thumb': os.path.join(root, 'thumb', name).strip('./'),
-            }
+            if not name.startswith('.'):  # Skip hidden files like .DS_Store
+                all_files.append(os.path.join(root, name))
+
+    total_files = len(all_files)
+    print(f"Found {total_files} files to process.")
+
+    for index, file_path in enumerate(all_files, start=1):
+        root, name = os.path.split(file_path)
+        fn, ext = os.path.splitext(name)
+        try:
+            wn = int(fn.split('_')[0].split(' ')[0].split(',')[0].strip('.+jpg'))
+        except:
+            print(f"Invalid file: {file_path}")
+            continue
+        try:
+            brightness = calculate_brightness(file_path)
+            hue = calculate_hue(file_path)
+        except Exception as e:
+            print(f"Error processing {file_path}: {e}")
+            brightness = None
+            hue = None
+
+        r[wn] = {
+            'path': file_path.strip('./'),
+            'thumb': os.path.join(root, 'thumb', name).strip('./'),
+            'brightness': brightness,
+            'hue': hue
+        }
+
+        # Print progress
+        progress = (index / total_files) * 100
+        print(f"Processed {index}/{total_files} files ({progress:.2f}%)", end="\r")
+
+    print("\n--- File processing complete ---")
     return r
+
+def calculate_brightness(image_path):
+    """
+    Calculate the average brightness of an image.
+    Brightness is computed as the mean of grayscale pixel values,
+    normalized to a scale from 0 to 100 and rounded to the nearest integer.
+    """
+    with Image.open(image_path) as img:
+        img = img.convert("L")  # Convert image to grayscale
+        stat = ImageStat.Stat(img)
+        normalized_brightness = (stat.mean[0] / 255) * 100  # Normalize to 0-100
+        return round(normalized_brightness)
+
+def calculate_hue(image_path):
+    """
+    Calculate the average hue of an image.
+    Hue is computed in the HSV color space,
+    rounded to the nearest integer.
+    """
+    with Image.open(image_path) as img:
+        img = img.convert("RGB")  # Ensure the image is in RGB mode
+        img = img.convert("HSV")  # Convert to HSV
+        hue_values = [pixel[0] for pixel in img.getdata()]  # Extract the hue channel
+        return round(sum(hue_values) / len(hue_values))  # Rounded average hue
 
 def flatten(xss):
     return [x for xs in xss for x in xs]
 
 def normalize_title(title):
-    """
-    Normalize a title by removing special characters, accents, and unnecessary punctuation.
-    """
     import unicodedata
     if not title:
         return ""
-    # Remove accents and diacritical marks
     title = unicodedata.normalize('NFD', title).encode('ascii', 'ignore').decode('utf-8')
-    # Remove special characters and punctuation
     title = title.translate(str.maketrans("", "", ".-…\"'«»“”()[]{}&"))
-    # Replace ellipses with a space
     title = title.replace("...", " ").replace("…", " ")
-    # Convert to lowercase
     return title.strip().lower()
 
 def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
@@ -49,6 +94,8 @@ def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
         if 'path' not in fieldnames: fieldnames.append('path')
         if 'thumb' not in fieldnames: fieldnames.append('thumb')
         if 'TitelEinfach' not in fieldnames: fieldnames.append('TitelEinfach')  # Add normalized title column
+        if 'brightness' not in fieldnames: fieldnames.append('brightness')  # Add brightness column
+        if 'hue' not in fieldnames: fieldnames.append('hue')  # Add hue column
 
         fieldnames.append('Techniken')
         fieldnames.append('Motiven')
@@ -70,9 +117,11 @@ def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
                     print(r['Nummer'], end=' ')
                     continue
 
-                # Add paths
+                # Add paths and brightness
                 r['path'] = imagerow['path']
                 r['thumb'] = imagerow['thumb']
+                r['brightness'] = imagerow['brightness']
+                r['hue'] = imagerow['hue']
 
                 # Add normalized title
                 if 'Titel' in r:
