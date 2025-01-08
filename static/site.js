@@ -116,12 +116,10 @@ const category_selectors = [
 				// Update brightness labels dynamically
 				$(document).on('input', '#brightness_min', function () {
 					$('#brightness_min_label').text(`${this.value}%`);
-					
 				});
 			
 				$(document).on('input', '#brightness_max', function () {
 					$('#brightness_max_label').text(`${this.value}%`);
-					
 				});
 			
 				// Hue slider
@@ -142,12 +140,10 @@ const category_selectors = [
 				// Update hue labels dynamically
 				$(document).on('input', '#hue_min', function () {
 					$('#hue_min_label').text(`${this.value}°`);
-					
 				});
 			
 				$(document).on('input', '#hue_max', function () {
 					$('#hue_max_label').text(`${this.value}°`);
-					
 				});
 			}
 		});

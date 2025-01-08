@@ -58,89 +58,104 @@ function normalizeSearchString(str) {
 
 // Query builder
 function get_werkSearchQuery(from_page) {
-	var searchCriteria = $('#searchCriteriaInput').val();
-	var contentSearch = $('#searchTitleInput').val();
+    var searchCriteria = $('#searchCriteriaInput').val();
+    var contentSearch = $('#searchTitleInput').val();
 
-	// Get the selected value from the select element
-	const selectedValue = $('#resultOrder').val(); // This will be "UP" or "DOWN"
+    const selectedValue = $('#resultOrder').val(); // This will be "UP" or "DOWN"
 
-	// Define the sortMethod object
-	const sortMethod = {
-		YEAR_UP: "Jahr",
-		ID_UP: "-Nummer",
-		YEAR_DOWN: "-Jahr",
-		ID_DOWN: "Nummer",
-		TITLE: "Titel"
-	};
+    const sortMethod = {
+        YEAR_UP: "Jahr",
+        ID_UP: "-Nummer",
+        YEAR_DOWN: "-Jahr",
+        ID_DOWN: "Nummer",
+        TITLE: "Titel"
+    };
 
-	// Get the sort method based on the selected value
-	const sort = sortMethod[selectedValue];
+    const sort = sortMethod[selectedValue];
 
-	// Create the query string
-	var currentPage = (typeof from_page === typeof 1) ? from_page : 1;
-	let q = `?sort=${sort}&`;
-	q += `per_page=${PER_PAGE}`;
-	q += '&page=' + currentPage;
+    var currentPage = (typeof from_page === typeof 1) ? from_page : 1;
+    let q = `?sort=${sort}&`;
+    q += `per_page=${PER_PAGE}`;
+    q += '&page=' + currentPage;
 
-	// If there's a search term, include it in the query
-	if (contentSearch) {
-		contentSearch = normalizeSearchString(contentSearch); // Normalize contentSearch
-		console.log(contentSearch);
-		q += '&o_Titel=' + encodeURIComponent(contentSearch);
+    if (contentSearch) {
+        contentSearch = normalizeSearchString(contentSearch);
+        console.log(contentSearch);
+        q += '&o_Titel=' + encodeURIComponent(contentSearch);
+    }
+
+    filterselect = '';
+    filterdata = {};
+
+    $('input:checked').each(function () {
+        var nm = $(this).attr('name');
+        console.log("category=" + nm);
+
+        if (!nm) {return;}
+        if (!filterdata[nm]) {filterdata[nm] = [];}
+        filterdata[nm].push($(this).attr('value'));
+        var label = $(this).parent().find('label');
+
+        var labelTitle = label
+            .clone()
+            .children()
+            .remove()
+            .end()
+            .text();
+        var labelNumber = label.find(".count").text();
+        filterselect += '<span>' + labelTitle + ' ' + labelNumber + '</span>';
+    });
+
+    // $('input[type=text]').each(function () {
+    //     var nm = $(this).attr('name');
+    //     if (!nm) {return;}
+    //     if (!nm.indexOf('o_') == 0) {nm = 'o_' + nm;}
+    //     var v = $(this).val();
+    //     if (!v.length) {return;}
+    //     if (!filterdata[nm]) {filterdata[nm] = [];}
+    //     filterdata[nm].push(v);
+    //     filterselect += '<span>' + v + '</span>';
+    // });
+
+    // Add brightness sliders to the query
+    const brightnessMin = $('#brightness_min').val();
+    const brightnessMax = $('#brightness_max').val();
+
+    if (!(brightnessMin == 0 && brightnessMax == 100)) {
+        q += `&brightness_min=${brightnessMin}&brightness_max=${brightnessMax}`;
+        filterselect += `<span>Min Helligkeit: ${brightnessMin}%</span>`;
+        filterselect += `<span>Max Helligkeit: ${brightnessMax}%</span>`;
+    }
+
+	// Add brightness sliders to the query
+	const hueMin = $('#hue_min').val();
+	const hueMax = $('#hue_max').val();
+
+	if (!(hueMin == 0 && hueMax == 360)) {
+		q += `&hue_min=${brightnessMin}&hue_max=${brightnessMax}`;
+		filterselect += `<span>Min Helligkeit: ${brightnessMin}%</span>`;
+		filterselect += `<span>Max Helligkeit: ${brightnessMax}%</span>`;
 	}
 
-	filterselect = '';
-	filterdata = {};
+    var joinCharater = ',';
+    if (searchCriteria == "OR") {
+        joinCharater = '|'
+    }
 
-	$('input:checked').each(function () {
-		var nm = $(this).attr('name');
-		console.log("category=" + nm);
+    $.each(Object.keys(filterdata), function () {
+        q += '&' + this + '=' + filterdata[this].join(joinCharater);
+    });
 
-		if (!nm) {return;}
-		if (!filterdata[nm]) {filterdata[nm] = [];}
-		filterdata[nm].push($(this).attr('value'));
-		var label = $(this).parent().find('label');
+    console.log("query" + q);
 
-		var labelTitle = label
-			.clone()    // Clone the element
-			.children() // Select all the children
-			.remove()   // Remove all the children
-			.end()      // Go back to selected element
-			.text();
-		var labelNumber = label.find(".count").text();
-		filterselect += '<span>' + labelTitle + ' ' + labelNumber + '</span>';
-	});
+    $('#restart').removeClass('hidden');
 
-	$('input[type=text]').each(function () {
-		var nm = $(this).attr('name');
-		if (!nm) {return;}
-		if (!nm.indexOf('o_') == 0) {nm = 'o_' + nm;}
-		var v = $(this).val();
-		if (!v.length) {return;}
-		if (!filterdata[nm]) {filterdata[nm] = [];}
-		filterdata[nm].push(v);
-		filterselect += '<span>' + v + '</span>';
-	});
-
-	var joinCharater = ',';
-	if (searchCriteria == "OR") {
-		joinCharater = '|'
-	}
-
-	$.each(Object.keys(filterdata), function () {
-		q += '&' + this + '=' + filterdata[this].join(joinCharater);
-	});
-
-	console.log("query" + q);
-
-	$('#restart').removeClass('hidden');
-
-	return {
-		data: filterdata,
-		html: filterselect,
-		page: currentPage,
-		query: q
-	}
+    return {
+        data: filterdata,
+        html: filterselect,
+        page: currentPage,
+        query: q
+    }
 }
 
 // Obtains a count of search results
