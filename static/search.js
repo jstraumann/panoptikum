@@ -34,6 +34,10 @@ function werkSearchReset(e) {
 
 	// Update appearance
 	$('form')[0].reset();
+	$('#brightness_max_label').text('100%');
+	$('#brightness_min_label').text('0%');
+	$('#hue_max_label').text('360°');
+	$('#hue_min_label').text('0°');
 	$('#restart').addClass('hidden');
 	$('#results .empty-state').removeClass('hidden');
 	werkSearchCount();
@@ -106,16 +110,16 @@ function get_werkSearchQuery(from_page) {
         filterselect += '<span>' + labelTitle + ' ' + labelNumber + '</span>';
     });
 
-    // $('input[type=text]').each(function () {
-    //     var nm = $(this).attr('name');
-    //     if (!nm) {return;}
-    //     if (!nm.indexOf('o_') == 0) {nm = 'o_' + nm;}
-    //     var v = $(this).val();
-    //     if (!v.length) {return;}
-    //     if (!filterdata[nm]) {filterdata[nm] = [];}
-    //     filterdata[nm].push(v);
-    //     filterselect += '<span>' + v + '</span>';
-    // });
+    $('input[type=text]').each(function () {
+        var nm = $(this).attr('name');
+        if (!nm) {return;}
+        if (!nm.indexOf('o_') == 0) {nm = 'o_' + nm;}
+        var v = $(this).val();
+        if (!v.length) {return;}
+        if (!filterdata[nm]) {filterdata[nm] = [];}
+        filterdata[nm].push(v);
+        filterselect += '<span>' + v + '</span>';
+    });
 
     // Add brightness sliders to the query
     const brightnessMin = $('#brightness_min').val();

@@ -101,7 +101,7 @@ const category_selectors = [
 				// Brightness slider
 				$tgt.append(
 					`<div id="brightnessSliders" class="filter-group sliders">
-						<h5 class="group-title">Berechnete Helligkeit</h5>
+						<h5 class="group-title"><label>Berechnete Helligkeit</label></h5>
 						<div class="slider-group">
 							<input type="range" id="brightness_min" class="brightness-slider" min="0" max="100" step="1" value="0">
 							<label for="brightness_min">Min Helligkeit: <span id="brightness_min_label">0%</span></label>
@@ -125,7 +125,7 @@ const category_selectors = [
 				// Hue slider
 				$tgt.append(
 					`<div id="hueSliders" class="filter-group sliders">
-						<h5 class="group-title">Berechneter Farbton</h5>
+						<h5 class="group-title"><label>Berechneter Farbton</label></h5>
 						<div class="slider-group">
 							<input type="range" id="hue_min" class="hue-slider" min="0" max="360" step="1" value="0">
 							<label for="hue_min">Min Farbton: <span id="hue_min_label">0°</span></label>
