@@ -17,35 +17,14 @@ def get_paginated(args, dp_werke, as_json=False):
     return pagination_info
 
 def filter_columns(df, args):
-    # Check and apply filters for brightness_min, brightness_max, hue_min, and hue_max
-    brightness_min = args.get('brightness_min')
-    brightness_max = args.get('brightness_max')
-    hue_min = args.get('hue_min')
-    hue_max = args.get('hue_max')
+    rangefilters = [
+        ('brightness', args.get('brightness_min'), args.get('brightness_max')),
+        ('hue', args.get('hue_min'), args.get('hue_max')),
+        ('saturation', args.get('saturation_min'), args.get('saturation_max'))
+    ]
 
-    # Filter by brightness if min and/or max values are provided
-    if brightness_min is not None or brightness_max is not None:
-        try:
-            if brightness_min is not None:
-                brightness_min = float(brightness_min)
-                df = df[df['brightness'] >= brightness_min]
-            if brightness_max is not None:
-                brightness_max = float(brightness_max)
-                df = df[df['brightness'] <= brightness_max]
-        except ValueError:
-            print(f"Invalid range for brightness: {brightness_min}, {brightness_max}")
-    
-    # Filter by hue if min and/or max values are provided
-    if hue_min is not None or hue_max is not None:
-        try:
-            if hue_min is not None:
-                hue_min = float(hue_min)
-                df = df[df['hue'] >= hue_min]
-            if hue_max is not None:
-                hue_max = float(hue_max)
-                df = df[df['hue'] <= hue_max]
-        except ValueError:
-            print(f"Invalid range for hue: {hue_min}, {hue_max}")
+    for column, min_value, max_value in rangefilters:
+        df = filter_by_range(df, column, min_value, max_value)
     
     # Continue with the original filtering logic for other columns
     for f in df.columns:
@@ -116,6 +95,17 @@ def filter_columns(df, args):
                         pass
     return df
 
+def filter_by_range(df, column, min_value, max_value):
+    try:
+        if min_value is not None:
+            min_value = float(min_value)
+            df = df[df[column] >= min_value]
+        if max_value is not None:
+            max_value = float(max_value)
+            df = df[df[column] <= max_value]
+    except ValueError:
+        print(f"Invalid range for {column}: {min_value}, {max_value}")
+    return df
 
 def sort_data(df, args):
     with_sort = args.get('sort', None)

@@ -205,7 +205,6 @@ button,
 }
 
 @media (max-width: 480px) {
-
   button,
   .btn,
   .lg-next,
@@ -257,7 +256,7 @@ button,
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 720px) {
   .list-actions {
     top: 7rem;
   }
@@ -414,6 +413,11 @@ h5.group-title input[type="checkbox"] {
 
 .form-group.row .form-check {
   box-sizing: border-box;
+}
+
+.slider-group input[type="range"] {
+  width: 60%;
+  margin-right: 1rem;
 }
 
 @media (max-width: 1199px) {
