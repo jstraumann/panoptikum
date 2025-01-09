@@ -42,6 +42,27 @@ function werkSearchReset(e) {
 	$('#saturation_min_label').text('0%');
 	$('#restart').addClass('hidden');
 	$('#results .empty-state').removeClass('hidden');
+	// Reset the noUiSlider values
+	const brightnessSlider = document.getElementById('brightness_range_slider');
+	const hueSlider = document.getElementById('hue_range_slider');
+	const saturationSlider = document.getElementById('saturation_range_slider');
+
+	// Reset the brightness slider (assuming initial min is 0 and max is 100)
+	if (brightnessSlider) {
+		brightnessSlider.noUiSlider.set([0, 100]);
+	}
+
+	// Reset the hue slider (assuming initial min is 0° and max is 360°)
+	if (hueSlider) {
+		hueSlider.noUiSlider.set([0, 360]);
+	}
+
+	// Reset the saturation slider (assuming initial min is 0% and max is 100%)
+	if (saturationSlider) {
+		saturationSlider.noUiSlider.set([0, 100]);
+	}
+	console.log("set sliders");
+
 	werkSearchCount();
 
 	clusterTitle.update(titlelist_uniqueEntries);
@@ -54,91 +75,91 @@ function werkSearchReset(e) {
 
 // normalize Search String
 function normalizeSearchString(str) {
-    return str
-        .normalize('NFD') // Decompose combined characters into their base components
-        .replace(/[\u0300-\u036f]/g, '') // Remove diacritical marks
-        .replace(/[.…"«»"-]/g, '') // Remove specific special characters
-        .replace(/"/g, '') // Remove double quotes
-        .toLowerCase(); // Convert to lowercase
+	return str
+		.normalize('NFD') // Decompose combined characters into their base components
+		.replace(/[\u0300-\u036f]/g, '') // Remove diacritical marks
+		.replace(/[.…"«»"-]/g, '') // Remove specific special characters
+		.replace(/"/g, '') // Remove double quotes
+		.toLowerCase(); // Convert to lowercase
 }
 
 // Query builder
 function get_werkSearchQuery(from_page) {
-    var searchCriteria = $('#searchCriteriaInput').val();
-    var contentSearch = $('#searchTitleInput').val();
+	var searchCriteria = $('#searchCriteriaInput').val();
+	var contentSearch = $('#searchTitleInput').val();
 
-    const selectedValue = $('#resultOrder').val(); // This will be "UP" or "DOWN"
+	const selectedValue = $('#resultOrder').val(); // This will be "UP" or "DOWN"
 
-    const sortMethod = {
-        YEAR_UP: "Jahr",
-        ID_UP: "-Nummer",
-        YEAR_DOWN: "-Jahr",
-        ID_DOWN: "Nummer",
-        TITLE: "Titel"
-    };
+	const sortMethod = {
+		YEAR_UP: "Jahr",
+		ID_UP: "-Nummer",
+		YEAR_DOWN: "-Jahr",
+		ID_DOWN: "Nummer",
+		TITLE: "Titel"
+	};
 
-    const sort = sortMethod[selectedValue];
+	const sort = sortMethod[selectedValue];
 
-    var currentPage = (typeof from_page === typeof 1) ? from_page : 1;
-    let q = `?sort=${sort}&`;
-    q += `per_page=${PER_PAGE}`;
-    q += '&page=' + currentPage;
+	var currentPage = (typeof from_page === typeof 1) ? from_page : 1;
+	let q = `?sort=${sort}&`;
+	q += `per_page=${PER_PAGE}`;
+	q += '&page=' + currentPage;
 
-    if (contentSearch) {
-        contentSearch = normalizeSearchString(contentSearch);
-        console.log(contentSearch);
-        q += '&o_Titel=' + encodeURIComponent(contentSearch);
-    }
+	if (contentSearch) {
+		contentSearch = normalizeSearchString(contentSearch);
+		console.log(contentSearch);
+		q += '&o_Titel=' + encodeURIComponent(contentSearch);
+	}
 
-    filterselect = '';
-    filterdata = {};
+	filterselect = '';
+	filterdata = {};
 
-    $('input:checked').each(function () {
-        var nm = $(this).attr('name');
-        console.log("category=" + nm);
+	$('input:checked').each(function () {
+		var nm = $(this).attr('name');
+		console.log("category=" + nm);
 
-        if (!nm) {return;}
-        if (!filterdata[nm]) {filterdata[nm] = [];}
-        filterdata[nm].push($(this).attr('value'));
-        var label = $(this).parent().find('label');
+		if (!nm) { return; }
+		if (!filterdata[nm]) { filterdata[nm] = []; }
+		filterdata[nm].push($(this).attr('value'));
+		var label = $(this).parent().find('label');
 
-        var labelTitle = label
-            .clone()
-            .children()
-            .remove()
-            .end()
-            .text();
-        var labelNumber = label.find(".count").text();
-        filterselect += '<span>' + labelTitle + ' ' + labelNumber + '</span>';
-    });
+		var labelTitle = label
+			.clone()
+			.children()
+			.remove()
+			.end()
+			.text();
+		var labelNumber = label.find(".count").text();
+		filterselect += '<span>' + labelTitle + ' ' + labelNumber + '</span>';
+	});
 
-    $('input[type=text]').each(function () {
-        var nm = $(this).attr('name');
-        if (!nm) {return;}
-        if (!nm.indexOf('o_') == 0) {nm = 'o_' + nm;}
-        var v = $(this).val();
-        if (!v.length) {return;}
-        if (!filterdata[nm]) {filterdata[nm] = [];}
-        filterdata[nm].push(v);
-        filterselect += '<span>' + v + '</span>';
-    });
+	$('input[type=text]').each(function () {
+		var nm = $(this).attr('name');
+		if (!nm) { return; }
+		if (!nm.indexOf('o_') == 0) { nm = 'o_' + nm; }
+		var v = $(this).val();
+		if (!v.length) { return; }
+		if (!filterdata[nm]) { filterdata[nm] = []; }
+		filterdata[nm].push(v);
+		filterselect += '<span>' + v + '</span>';
+	});
 
-    var joinCharater = ',';
-    if (searchCriteria == "OR") {
-        joinCharater = '|'
-    }
+	var joinCharater = ',';
+	if (searchCriteria == "OR") {
+		joinCharater = '|'
+	}
 
-    $.each(Object.keys(filterdata), function () {
-        q += '&' + this + '=' + filterdata[this].join(joinCharater);
-    });
+	$.each(Object.keys(filterdata), function () {
+		q += '&' + this + '=' + filterdata[this].join(joinCharater);
+	});
 
-    // Add brightness sliders to the query
-    const brightnessMin = $('#brightness_min').val();
-    const brightnessMax = $('#brightness_max').val();
+	// Add brightness sliders to the query
+	const brightnessMin = $('#brightness_min').val();
+	const brightnessMax = $('#brightness_max').val();
 
-    if (!(brightnessMin == 0 && brightnessMax == 100)) {
-        q += `&brightness_min=${brightnessMin}&brightness_max=${brightnessMax}`;
-    }
+	if (!(brightnessMin == 0 && brightnessMax == 100)) {
+		q += `&brightness_min=${brightnessMin}&brightness_max=${brightnessMax}`;
+	}
 
 	// Add brightness sliders to the query
 	const hueMin = $('#hue_min').val();
@@ -156,16 +177,16 @@ function get_werkSearchQuery(from_page) {
 		q += `&saturation_min=${saturationMin}&saturation_max=${saturationMax}`;
 	}
 
-    console.log("query" + q);
+	console.log("query" + q);
 
-    $('#restart').removeClass('hidden');
+	$('#restart').removeClass('hidden');
 
-    return {
-        data: filterdata,
-        html: filterselect,
-        page: currentPage,
-        query: q
-    }
+	return {
+		data: filterdata,
+		html: filterselect,
+		page: currentPage,
+		query: q
+	}
 }
 
 // Obtains a count of search results
@@ -173,7 +194,6 @@ function werkSearchCount() {
 	qg = get_werkSearchQuery(1);
 
 	$('#selection').empty().append(qg.html);
-	if (qg.html === '') {$('#restart').addClass('hidden');}
 
 	$.getJSON('/api/images' + qg.query, function (data) {
 		$('#total').html(data.total);
@@ -260,7 +280,7 @@ function werkTitle(item) {
 		item['Techniken'].split(' ').forEach(function (t) {
 			getcode = techniques[t.trim()]
 			if (typeof getcode !== 'undefined') {
-				if (getcode.toLowerCase().indexOf('technik') > 0) {return;}
+				if (getcode.toLowerCase().indexOf('technik') > 0) { return; }
 				itemarr.push(getcode);
 			}
 		})
@@ -303,29 +323,29 @@ function werkTitle(item) {
 
 
 function sortData(data) {
-    return data.sort(function (a, b) {
-        // Ensure 'TitelEinfach' is not null or empty, set to 'Ohne Titel' if missing
-        const regex = /([a-zA-Z]+)(\d*)/;
+	return data.sort(function (a, b) {
+		// Ensure 'TitelEinfach' is not null or empty, set to 'Ohne Titel' if missing
+		const regex = /([a-zA-Z]+)(\d*)/;
 
-        // If 'TitelEinfach' is null or empty, set it to 'Ohne Titel'
-        const aTitle = a.TitelEinfach ? a.TitelEinfach : 'Ohne Titel';
-        const bTitle = b.TitelEinfach ? b.TitelEinfach : 'Ohne Titel';
+		// If 'TitelEinfach' is null or empty, set it to 'Ohne Titel'
+		const aTitle = a.TitelEinfach ? a.TitelEinfach : 'Ohne Titel';
+		const bTitle = b.TitelEinfach ? b.TitelEinfach : 'Ohne Titel';
 
-        // Split titles into alphabetic and numeric parts
-        const matchA = aTitle.match(regex);
-        const matchB = bTitle.match(regex);
+		// Split titles into alphabetic and numeric parts
+		const matchA = aTitle.match(regex);
+		const matchB = bTitle.match(regex);
 
-        // If either match is null, treat as alphabetic comparison only
-        if (!matchA || !matchB) {
-            return bTitle.localeCompare(aTitle); // Reverse the comparison for descending order
-        }
+		// If either match is null, treat as alphabetic comparison only
+		if (!matchA || !matchB) {
+			return bTitle.localeCompare(aTitle); // Reverse the comparison for descending order
+		}
 
-        // First, compare the alphabetic parts (A-Z)
-        const alphaComparison = matchA[1].localeCompare(matchB[1]);
+		// First, compare the alphabetic parts (A-Z)
+		const alphaComparison = matchA[1].localeCompare(matchB[1]);
 
-        // If alphabetic parts are different, return alphabetic comparison result
-        return alphaComparison;
-    });
+		// If alphabetic parts are different, return alphabetic comparison result
+		return alphaComparison;
+	});
 }
 
 // This function is used in a different file
@@ -335,12 +355,12 @@ function listTitles() {
 	let titleItems = [];
 	let yearItems = [];
 	console.log("list titles");
-	
+
 
 	$.getJSON('/api/images.json' + q, function (data) {
 
 		const sortedData = sortData(data);
-	
+
 		// Create title item array
 		sortedData.forEach(function (item) {
 			// Saves data for years in yearList
@@ -353,10 +373,10 @@ function listTitles() {
 			}
 			// Saves data for titles in titlelist
 			if (item['Titel'] != null && item['TitelEinfach'] != null) {
-				fixedItem = 
+				fixedItem =
 					'<div>' +
-						'<span class="hidden" aria-hidden="true">' + item['TitelEinfach'] + '</span>' +
-						'<span class="display">' + item['Titel'] + '</span>' +
+					'<span class="hidden" aria-hidden="true">' + item['TitelEinfach'] + '</span>' +
+					'<span class="display">' + item['Titel'] + '</span>' +
 					'</div>';
 				titleItems.push(fixedItem);
 			}
@@ -396,7 +416,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 		e.preventDefault();
 		e.stopPropagation();
 	}
-	
+
 	// Setting default value for 'from_page' if not provided or undefined
 	if (typeof from_page === 'undefined' || from_page === null) {
 		from_page = 1;
@@ -413,7 +433,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 		$('#restart').removeClass('hidden');
 	} else {
 		// Exit if the 'start' button is disabled
-		if ($('#start').hasClass('disable')) {return;}
+		if ($('#start').hasClass('disable')) { return; }
 	}
 
 	// Load and build the query
@@ -428,13 +448,12 @@ function werkSearchStart(e, from_page, random, fromURL) {
 	}
 
 	$.getJSON(random ? '/api/images.random' : '/api/images.json' + q, function (data) {
-		
+
 		var $tgt = $('#results').show().find('div.row');
 		single = (data.length == 1 && $('#worksMenuItem').hasClass("active"));
 
 		$('.pagination').addClass('hidden');
-		if (data.length === PER_PAGE)
-			{$('.pagination').removeClass('hidden');}
+		if (data.length === PER_PAGE) { $('.pagination').removeClass('hidden'); }
 
 		var urlPrefix = "https://archiv.juergstraumann.ch/";
 
@@ -499,7 +518,7 @@ function werkSearchStart(e, from_page, random, fromURL) {
 		});
 
 		// Initialize the gallery, open immediately when random
-		const container = $tgt.get(0);		
+		const container = $tgt.get(0);
 		initializeGallery(container, (random || single));
 		// initializeGallery(container, (random));
 
@@ -532,7 +551,7 @@ function loadSavedItems() {
 		console.log("Keine Werke gespeichert…");
 
 	} else {
-		console.log('Saved images:',savedData.length);
+		console.log('Saved images:', savedData.length);
 		$("#savedList .output").removeClass('hidden');
 		$("#savedList .empty-state").addClass('hidden');
 		var urlPrefix = "https://archiv.juergstraumann.ch/";
@@ -573,7 +592,7 @@ function loadSavedItems() {
 	}
 }
 
-function initializeGallery(container, openImmediately = false) {	
+function initializeGallery(container, openImmediately = false) {
 	const galleryOptions = {
 		selector: '.item a',
 		speed: 1,
@@ -581,17 +600,17 @@ function initializeGallery(container, openImmediately = false) {
 		addClass: "js-gallery"
 	};
 
-    if (!container.galleryInstance) {
-        // Initialize the gallery
-        container.galleryInstance = lightGallery(container, galleryOptions);
-    } else {
-        // Destroy and reinitialize the gallery if it's already created
-        container.galleryInstance.destroy(true);
-        container.galleryInstance = lightGallery(container, galleryOptions);
-    }
-    if (openImmediately) {
-        container.galleryInstance.openGallery();
-    }
+	if (!container.galleryInstance) {
+		// Initialize the gallery
+		container.galleryInstance = lightGallery(container, galleryOptions);
+	} else {
+		// Destroy and reinitialize the gallery if it's already created
+		container.galleryInstance.destroy(true);
+		container.galleryInstance = lightGallery(container, galleryOptions);
+	}
+	if (openImmediately) {
+		container.galleryInstance.openGallery();
+	}
 }
 
 function updateURLWithSearchString(searchString) {
@@ -603,7 +622,7 @@ function updateURLWithSearchString(searchString) {
 		var searchPairs = searchString.split("&");
 		searchPairs.forEach(function (pair) {
 			var [key, value] = pair.split("=");
-			if (key) {params.set(key, value);}
+			if (key) { params.set(key, value); }
 		});
 
 		// Build the updated URL

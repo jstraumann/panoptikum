@@ -420,6 +420,62 @@ h5.group-title input[type="checkbox"] {
   margin-right: 1rem;
 }
 
+.filter-group .noUi-target {
+  margin: 0 var(--spacing-xl) var(--spacing-xl) var(--spacing-xl);
+  border-radius: var(--spacing-sm);
+  height: 0.5rem;
+}
+
+.filter-group .noUi-base {
+  background-color: var(--gray40); 
+  border-radius: var(--spacing-sm); /* Circular handles */
+  
+}
+
+.filter-group .noUi-connect {
+  background-color: var(--white); /* Green color for the connected range */
+  border-radius: var(--spacing-xl); /* Rounded corners for the connection */
+}
+
+.filter-group .noUi-origin {
+  border-radius: var(--spacing-xl); /* Circular handles */
+}
+
+.filter-group .noUi-handle {
+  background: var(--primary); 
+  border: 1px solid var(--primary); 
+  border-radius: var(--spacing-sm); /* Circular handles */
+  box-shadow: var(--black25) 0px 50px 100px -20px, var(--black25) 0px 30px 60px -30px;
+  cursor: pointer; /* Pointer cursor on hover */
+  width: 1rem;
+  height: 1rem;
+  right: -0.25rem;
+  top: -0.25rem;
+
+  /*   --spacing-xs: 0.1rem;
+  --spacing-sm: 0.25rem;
+  --spacing-md: 0.5rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem; */
+}
+
+.filter-group .noUi-handle:after, 
+.filter-group .noUi-handle:before {
+  opacity: 0;
+}
+
+/* When hovered */
+.slider-group .noUi-handle:hover {
+  background-color: var(--primaryDarker); 
+  border-color: var(--primaryDarker); 
+}
+
+/* When active (while dragging the handle) */
+.slider-group .noUi-handle:active {
+  background-color: var(--primaryDarker); 
+}
+
 @media (max-width: 1199px) {
   .form-group.row {
     column-count: 2;

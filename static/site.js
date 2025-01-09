@@ -46,19 +46,20 @@ const category_selectors = [
 	werkSearchCount();
 
 	function initFilterSections(sname) {
-		console.log("Init sections", sname);
+		console.log("🔥 Init sections", sname);
 	
 		const searchIds = {
 			anderes: "#titleSearch",
 			inhalt: "#contentSearch",
 			form: "#formSearch",
-			color: "#colorSearch"
+			farbe: "#colorSearch"
 		};
 	
-		let id = searchIds[sname] || "";
+		let id = searchIds[sname] || "";		
 	
 		$(id).each(function () {
-			var $tgt = $(this);            
+			var $tgt = $(this); 
+			
 			filters[sname].forEach(function (i) {
 				if ($('div[data-tag="' + sname + '"]').attr('data-type') === i) {return;}
 			
@@ -98,31 +99,75 @@ const category_selectors = [
 
 	function initColorFilterSection() {
 		const $tgt = $("#colorSearch");
-		console.log("color section :::");
 	
 		// Helper function to add slider group
 		function addSliderGroup(idPrefix, title, min, max, step, unit) {
 			$tgt.append(
 				`<div id="${idPrefix}Sliders" class="filter-group sliders">
 					<h5 class="group-title"><label>${title}</label></h5>
-					<div class="slider-group">
-						<input type="range" id="${idPrefix}_min" class="range-slider" min="${min}" max="${max}" step="${step}" value="${min}">
-						<label for="${idPrefix}_min">Min: <span id="${idPrefix}_min_label">${min}${unit}</span></label>
+					<div class="slider-group d-flex">
+						<input type="range" id="${idPrefix}_min" class="range-slider hidden" min="${min}" max="${max}" step="${step}" value="${min}">
+						<label class="flex-fill" for="${idPrefix}_min">Min: <span id="${idPrefix}_min_label">${min}${unit}</span></label>
+						<input type="range" id="${idPrefix}_max" class="range-slider hidden" min="${min}" max="${max}" step="${step}" value="${max}">
+						<label class="flex-fill text-right" for="${idPrefix}_max">Max: <span id="${idPrefix}_max_label">${max}${unit}</span></label>
 					</div>
-					<div class="slider-group">
-						<input type="range" id="${idPrefix}_max" class="range-slider" min="${min}" max="${max}" step="${step}" value="${max}">
-						<label for="${idPrefix}_max">Max: <span id="${idPrefix}_max_label">${max}${unit}</span></label>
-					</div>
+					<!-- Intermediate slider with two handles -->
+					<div class="slider-group slider-styled" id="${idPrefix}_range_slider"></div>
 				</div>`
 			);
 	
-			// Update labels dynamically
+			// Initialize noUiSlider with two handles for min and max
+			const rangeSlider = document.getElementById(`${idPrefix}_range_slider`);
+			noUiSlider.create(rangeSlider, {
+				start: [min, max],
+				connect: true,
+				range: {
+					'min': min,
+					'max': max
+				},
+				step: step,
+				format: {
+					to: function (value) {
+						return value.toFixed(0); // format to integer
+					},
+					from: function (value) {
+						return parseFloat(value);
+					}
+				}
+			});
+	
+			// When slider values change, update min and max inputs and trigger form change
+			rangeSlider.noUiSlider.on('update', function (values, handle) {
+				if (handle === 0) {
+					// Handle 0 controls the min value
+					const minValue = values[0];
+					$(`#${idPrefix}_min`).val(minValue);
+					$(`#${idPrefix}_min_label`).text(`${minValue}${unit}`);
+					// Trigger form change for min
+					$(`#${idPrefix}_min`).trigger('change');
+				} else {
+					// Handle 1 controls the max value
+					const maxValue = values[1];
+					$(`#${idPrefix}_max`).val(maxValue);
+					$(`#${idPrefix}_max_label`).text(`${maxValue}${unit}`);
+					// Trigger form change for max
+					$(`#${idPrefix}_max`).trigger('change');
+				}
+			});
+	
+			// Sync the original range sliders with the noUiSlider handles
 			$(document).on('input', `#${idPrefix}_min`, function () {
-				$(`#${idPrefix}_min_label`).text(`${this.value}${unit}`);
+				const minValue = this.value;
+				rangeSlider.noUiSlider.set([minValue, null]); // Only update min value
+				// Trigger form change for min
+				$(this).trigger('change');
 			});
 	
 			$(document).on('input', `#${idPrefix}_max`, function () {
-				$(`#${idPrefix}_max_label`).text(`${this.value}${unit}`);
+				const maxValue = this.value;
+				rangeSlider.noUiSlider.set([null, maxValue]); // Only update max value
+				// Trigger form change for max
+				$(this).trigger('change');
 			});
 		}
 	
@@ -131,6 +176,7 @@ const category_selectors = [
 		addSliderGroup("hue", "Berechneter Farbton", 0, 360, 1, "°");
 		addSliderGroup("saturation", "Berechnete Sättigung", 0, 100, 1, "%");
 	}
+	
 	
 
 	function createSlider(id, min = 0, max = 100, value = 0, step = 1) {

@@ -5,7 +5,7 @@ from PIL import Image, ImageStat  # For image analysis
 from stats import *
 
 
-def list_files(dir, test=False):
+def list_files(dir):
     r = {}
     all_files = []
     for root, dirs, files in os.walk(dir):
@@ -15,9 +15,6 @@ def list_files(dir, test=False):
         for name in files:
             if not name.startswith('.'):  # Skip hidden files like .DS_Store
                 all_files.append(os.path.join(root, name))
-
-    if test:
-        all_files = all_files[:150]  # Limit to the first 150 files if test is True
 
     total_files = len(all_files)
     print(f"Found {total_files} files to process.")
@@ -174,7 +171,6 @@ def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
             print("--- Done.")
 
 if __name__ == '__main__':
-    test = True  # Set to False to process all files
-    lf = list_files('images', test=test)
+    lf = list_files('images')
     update_files(lf)
     update_stats()
