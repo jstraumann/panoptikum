@@ -45,20 +45,6 @@ const category_selectors = [
 
 	werkSearchCount();
 
-	// Apply fancy polar button effect
-	$('.btn-polar').each(function () {
-		const buttonText = $(this).text();
-		const newContent = `
-            <span>${buttonText}</span>
-            <div class="marquee" aria-hidden="true">
-                <div class="marquee-inner">
-                    <span>${buttonText}${buttonText}${buttonText}${buttonText}${buttonText}${buttonText}${buttonText}${buttonText}</span>
-                </div>
-            </div>
-        `;
-		$(this).html(newContent);
-	});
-
 	function initFilterSections(sname) {
 		console.log("Init sections", sname);
 	
@@ -111,83 +97,41 @@ const category_selectors = [
 	}
 
 	function initColorFilterSection() {
-		// Add range sliders for brightness and hue
-			
-		var $tgt = $("#colorSearch");  
+		const $tgt = $("#colorSearch");
 		console.log("color section :::");
-		
-		// Brightness slider
-		$tgt.append(
-			`<div id="brightnessSliders" class="filter-group sliders">
-				<h5 class="group-title"><label>Berechnete Helligkeit</label></h5>
-				<div class="slider-group">
-					<input type="range" id="brightness_min" class="range-slider" min="0" max="100" step="1" value="0">
-					<label for="brightness_min">Min Helligkeit: <span id="brightness_min_label">0%</span></label>
-				</div>
-				<div class="slider-group">
-					<input type="range" id="brightness_max" class="range-slider" min="0" max="100" step="1" value="100">
-					<label for="brightness_max">Max Helligkeit: <span id="brightness_max_label">100%</span></label>
-				</div>
-			</div>`
-		);
 	
-		// Update brightness labels dynamically
-		$(document).on('input', '#brightness_min', function () {
-			$('#brightness_min_label').text(`${this.value}%`);
-		});
+		// Helper function to add slider group
+		function addSliderGroup(idPrefix, title, min, max, step, unit) {
+			$tgt.append(
+				`<div id="${idPrefix}Sliders" class="filter-group sliders">
+					<h5 class="group-title"><label>${title}</label></h5>
+					<div class="slider-group">
+						<input type="range" id="${idPrefix}_min" class="range-slider" min="${min}" max="${max}" step="${step}" value="${min}">
+						<label for="${idPrefix}_min">Min: <span id="${idPrefix}_min_label">${min}${unit}</span></label>
+					</div>
+					<div class="slider-group">
+						<input type="range" id="${idPrefix}_max" class="range-slider" min="${min}" max="${max}" step="${step}" value="${max}">
+						<label for="${idPrefix}_max">Max: <span id="${idPrefix}_max_label">${max}${unit}</span></label>
+					</div>
+				</div>`
+			);
 	
-		$(document).on('input', '#brightness_max', function () {
-			$('#brightness_max_label').text(`${this.value}%`);
-		});
+			// Update labels dynamically
+			$(document).on('input', `#${idPrefix}_min`, function () {
+				$(`#${idPrefix}_min_label`).text(`${this.value}${unit}`);
+			});
 	
-		// Hue slider
-		$tgt.append(
-			`<div id="hueSliders" class="filter-group sliders">
-				<h5 class="group-title"><label>Berechneter Farbton</label></h5>
-				<div class="slider-group">
-					<input type="range" id="hue_min" class="range-slider" min="0" max="360" step="1" value="0">
-					<label for="hue_min">Min Farbton: <span id="hue_min_label">0°</span></label>
-				</div>
-				<div class="slider-group">
-					<input type="range" id="hue_max" class="range-slider" min="0" max="360" step="1" value="360">
-					<label for="hue_max">Max Farbton: <span id="hue_max_label">360°</span></label>
-				</div>
-			</div>`
-		);
+			$(document).on('input', `#${idPrefix}_max`, function () {
+				$(`#${idPrefix}_max_label`).text(`${this.value}${unit}`);
+			});
+		}
 	
-		// Update hue labels dynamically
-		$(document).on('input', '#hue_min', function () {
-			$('#hue_min_label').text(`${this.value}°`);
-		});
-	
-		$(document).on('input', '#hue_max', function () {
-			$('#hue_max_label').text(`${this.value}°`);
-		});
-
-		// Saturation slider
-		$tgt.append(
-			`<div id="saturationSliders" class="filter-group sliders">
-				<h5 class="group-title"><label>Berechnete Sättigung</label></h5>
-				<div class="slider-group">
-					<input type="range" id="saturation_min" class="range-slider" min="0" max="100" step="1" value="0">
-					<label for="saturation_min">Min Farbton: <span id="saturation_min_label">0%</span></label>
-				</div>
-				<div class="slider-group">
-					<input type="range" id="saturation_max" class="range-slider" min="0" max="100" step="1" value="360">
-					<label for="saturation_max">Max Farbton: <span id="saturation_max_label">100%</span></label>
-				</div>
-			</div>`
-		);
-	
-		// Update hue labels dynamically
-		$(document).on('input', '#saturation_min', function () {
-			$('#saturation_min_label').text(`${this.value}%`);
-		});
-	
-		$(document).on('input', '#saturation_max', function () {
-			$('#saturation_max_label').text(`${this.value}%`);
-		});
+		// Add sliders for brightness, hue, and saturation
+		addSliderGroup("brightness", "Berechnete Helligkeit", 0, 100, 1, "%");
+		addSliderGroup("hue", "Berechneter Farbton", 0, 360, 1, "°");
+		addSliderGroup("saturation", "Berechnete Sättigung", 0, 100, 1, "%");
 	}
+	
 
 	function createSlider(id, min = 0, max = 100, value = 0, step = 1) {
 		// Create the slider container
