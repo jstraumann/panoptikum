@@ -33,6 +33,7 @@ const category_selectors = [
 		Object.keys(filters).forEach(function (f) {
 			initFilterSections(f);
 		});
+		initColorFilterSection();
 		addFormListeners();
 		listTitles();
 		applySearchFromURL();
@@ -44,37 +45,24 @@ const category_selectors = [
 
 	werkSearchCount();
 
-	// Apply fancy polar button effect
-	$('.btn-polar').each(function () {
-		const buttonText = $(this).text();
-		const newContent = `
-            <span>${buttonText}</span>
-            <div class="marquee" aria-hidden="true">
-                <div class="marquee-inner">
-                    <span>${buttonText}${buttonText}${buttonText}${buttonText}${buttonText}${buttonText}${buttonText}${buttonText}</span>
-                </div>
-            </div>
-        `;
-		$(this).html(newContent);
-	});
-
 	function initFilterSections(sname) {
-		// Add section headers
-		console.log("Init sections", sname);
-
+		console.log("🔥 Init sections", sname);
+	
 		const searchIds = {
 			anderes: "#titleSearch",
 			inhalt: "#contentSearch",
-			form: "#formSearch"
+			form: "#formSearch",
+			farbe: "#colorSearch"
 		};
-
-		let id = searchIds[sname] || "";
-
+	
+		let id = searchIds[sname] || "";		
+	
 		$(id).each(function () {
-			var $tgt = $(this);			
+			var $tgt = $(this); 
+			
 			filters[sname].forEach(function (i) {
 				if ($('div[data-tag="' + sname + '"]').attr('data-type') === i) {return;}
-		
+			
 				// Append filter group and add a master checkbox in the group title
 				$tgt.append(
 					`<div class="filter-group checkboxes">
@@ -86,34 +74,153 @@ const category_selectors = [
 					</div>`
 				);
 			});
-		
+	
 			// Ensure 'select-all' reflects the state of individual checkboxes
 			$(document).on('change', 'input[type="checkbox"]:not(.select-all)', function () {
 				var $checkboxGroup = $(this).closest('.filter-group').find('input[type="checkbox"]:not(.select-all)');
 				var $selectAllCheckbox = $(this).closest('.filter-group').find('.select-all');
-		
+			
 				// Update the 'select-all' checkbox if all checkboxes are selected
 				var allChecked = $checkboxGroup.length === $checkboxGroup.filter(':checked').length;
 				$selectAllCheckbox.prop('checked', allChecked);
 			});
 		});
-
+	
 		// Subset the data
 		var data = cache.filter(function (i) {
 			return i.Mode.toLowerCase() == sname.toLowerCase();
 		});
-
+	
 		// Process any tags
 		$('div[data-tag="' + sname + '"]').each(function () {
 			renderForm($(this), data);
 		});
 	}
 
+	function initColorFilterSection() {
+		const $tgt = $("#colorSearch");
+	
+		// Helper function to add slider group
+		function addSliderGroup(idPrefix, title, min, max, step, unit) {
+			$tgt.append(
+				`<div id="${idPrefix}Sliders" class="filter-group sliders">
+					<h5 class="group-title"><label>${title}</label></h5>
+					<div class="slider-group d-flex">
+						<input type="range" id="${idPrefix}_min" class="range-slider hidden" min="${min}" max="${max}" step="${step}" value="${min}">
+						<label class="flex-fill" for="${idPrefix}_min">Min: <span id="${idPrefix}_min_label">${min}${unit}</span></label>
+						<input type="range" id="${idPrefix}_max" class="range-slider hidden" min="${min}" max="${max}" step="${step}" value="${max}">
+						<label class="flex-fill text-right" for="${idPrefix}_max">Max: <span id="${idPrefix}_max_label">${max}${unit}</span></label>
+					</div>
+					<!-- Intermediate slider with two handles -->
+					<div class="slider-group slider-styled" id="${idPrefix}_range_slider"></div>
+				</div>`
+			);
+	
+			// Initialize noUiSlider with two handles for min and max
+			const rangeSlider = document.getElementById(`${idPrefix}_range_slider`);
+			noUiSlider.create(rangeSlider, {
+				start: [min, max],
+				connect: true,
+				range: {
+					'min': min,
+					'max': max
+				},
+				step: step,
+				format: {
+					to: function (value) {
+						return value.toFixed(0); // format to integer
+					},
+					from: function (value) {
+						return parseFloat(value);
+					}
+				}
+			});
+	
+			// When slider values change, update min and max inputs and trigger form change
+			rangeSlider.noUiSlider.on('update', function (values, handle) {
+				if (handle === 0) {
+					// Handle 0 controls the min value
+					const minValue = values[0];
+					$(`#${idPrefix}_min`).val(minValue);
+					$(`#${idPrefix}_min_label`).text(`${minValue}${unit}`);
+					// Trigger form change for min
+					$(`#${idPrefix}_min`).trigger('change');
+				} else {
+					// Handle 1 controls the max value
+					const maxValue = values[1];
+					$(`#${idPrefix}_max`).val(maxValue);
+					$(`#${idPrefix}_max_label`).text(`${maxValue}${unit}`);
+					// Trigger form change for max
+					$(`#${idPrefix}_max`).trigger('change');
+				}
+			});
+	
+			// Sync the original range sliders with the noUiSlider handles
+			$(document).on('input', `#${idPrefix}_min`, function () {
+				const minValue = this.value;
+				rangeSlider.noUiSlider.set([minValue, null]); // Only update min value
+				// Trigger form change for min
+				$(this).trigger('change');
+			});
+	
+			$(document).on('input', `#${idPrefix}_max`, function () {
+				const maxValue = this.value;
+				rangeSlider.noUiSlider.set([null, maxValue]); // Only update max value
+				// Trigger form change for max
+				$(this).trigger('change');
+			});
+		}
+	
+		// Add sliders for brightness, hue, and saturation
+		addSliderGroup("brightness", "Berechnete Helligkeit", 0, 100, 1, "%");
+		addSliderGroup("hue", "Berechneter Farbton", 0, 360, 1, "°");
+		addSliderGroup("saturation", "Berechnete Sättigung", 0, 100, 1, "%");
+	}
+	
+	
+
+	function createSlider(id, min = 0, max = 100, value = 0, step = 1) {
+		// Create the slider container
+		const sliderGroup = document.createElement('div');
+		sliderGroup.classList.add('slider-group');
+	
+		// Create the input element (slider)
+		const slider = document.createElement('input');
+		slider.type = 'range';
+		slider.id = id;
+		slider.classList.add('filter-slider');
+		slider.min = min;
+		slider.max = max;
+		slider.value = value;
+		slider.step = step;
+	
+		// Create the label for the slider
+		const label = document.createElement('label');
+		label.setAttribute('for', id);
+		label.innerHTML = `${id.charAt(0).toUpperCase() + id.slice(1)}: <span id="${id}_label">${value}%</span>`;
+	
+		// Append the slider and label to the slider group
+		sliderGroup.appendChild(slider);
+		sliderGroup.appendChild(label);
+	
+		// Update the label dynamically when the slider value changes
+		slider.addEventListener('input', function() {
+			const labelText = document.getElementById(`${id}_label`);
+			labelText.textContent = `${this.value}%`;
+		});
+	
+		return sliderGroup;  // Return the entire slider group element
+	}
+	
+	
+
 	function addFormListeners() {
 		var isSelectAllProcessing = false;
 	
 		// Handle form change events
 		$('form').change(function () {
+			console.log("form update");
+			
 			// Only proceed if select-all is not being processed
 			if (!isSelectAllProcessing) {
 				$('input[name="Titel"]').val(''); // Reset Titel input

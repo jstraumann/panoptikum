@@ -17,6 +17,16 @@ def get_paginated(args, dp_werke, as_json=False):
     return pagination_info
 
 def filter_columns(df, args):
+    rangefilters = [
+        ('brightness', args.get('brightness_min'), args.get('brightness_max')),
+        ('hue', args.get('hue_min'), args.get('hue_max')),
+        ('saturation', args.get('saturation_min'), args.get('saturation_max'))
+    ]
+
+    for column, min_value, max_value in rangefilters:
+        df = filter_by_range(df, column, min_value, max_value)
+    
+    # Continue with the original filtering logic for other columns
     for f in df.columns:
         val = args.get('o_' + f, None)
         if val is not None:
@@ -83,6 +93,18 @@ def filter_columns(df, args):
                         df = df[df[f].isin(int_conditions)]
                     except ValueError:
                         pass
+    return df
+
+def filter_by_range(df, column, min_value, max_value):
+    try:
+        if min_value is not None:
+            min_value = float(min_value)
+            df = df[df[column] >= min_value]
+        if max_value is not None:
+            max_value = float(max_value)
+            df = df[df[column] <= max_value]
+    except ValueError:
+        print(f"Invalid range for {column}: {min_value}, {max_value}")
     return df
 
 def sort_data(df, args):

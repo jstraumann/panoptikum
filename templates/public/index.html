@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css" media="screen">
   <link rel="stylesheet" href="/static/lib/clusterize.css" media="screen">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/css/lightgallery.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@14.7.0/distribute/nouislider.min.css" />
   <link rel="stylesheet" href="/static/custom.css">
 
   <!-- Matomo Tracker -->
@@ -73,8 +74,12 @@
               Inhalt
             </a>
             <a class="nav-item nav-link" id="formSearchMode" data-toggle="tab"
-              title="Techniken, Farbe und Format" href="#formSearch">
+              title="Techniken und Format" href="#formSearch">
               Form
+            </a>
+            <a class="nav-item nav-link" id="colorSearchMode" data-toggle="tab"
+              title="Farbe, Helligkeit und Sättigung" href="#colorSearch">
+              Farbe
             </a>
             <a class="nav-item nav-link" id="titleSearchMode" data-toggle="tab"
               title="Titel, Jahr und Werknummer" href="#titleSearch">
@@ -155,6 +160,8 @@
           <div class="tab-pane active" id="contentSearch"> </div>
           <!-- Form -->
           <div class="tab-pane" id="formSearch"> </div>
+          <!-- Color -->
+          <div class="tab-pane" id="colorSearch"> </div>
         </div>
       </form>
     </div>
@@ -238,6 +245,7 @@
   <script src="/static/lib/jquery-3.3.1.js"></script>
   <script src="/static/lib/clusterize.min.js"></script>
   <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
+  <script src="/static/lib/nouislider.min.js"></script>
 
   <script src="/static/search.js"></script>
   <script src="/static/site.js"></script>
