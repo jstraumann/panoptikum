@@ -173,7 +173,7 @@ const category_selectors = [
 	
 		// Add sliders for brightness, hue, and saturation
 		addSliderGroup("brightness", "Berechnete Helligkeit", 0, 100, 1, "%");
-		addSliderGroup("hue", "Berechneter Farbton", 0, 360, 1, "°");
+		// addSliderGroup("hue", "Berechneter Farbton", 0, 360, 1, "°");
 		addSliderGroup("saturation", "Berechnete Sättigung", 0, 100, 1, "%");
 	}
 	
