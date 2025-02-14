@@ -59,7 +59,7 @@ To add new images into the collection and ensure the metadata is up to date, fol
 
 1. Save `WERKVERZEICHNIS.csv`:
 
-    Open the new `WERKVERZEICHNIS.xlsx` in Calc and save as CSV, using `UTF-8` as
+    Open the new `WERKVERZEICHNIS.xlsx` in Calc, Excel or Numbers and export it as CSV, using `UTF-8` as
     encoding, `,` as delimiter, `"` as quotation and enabling
     `quote all text cells`. This should produce a file `WERKVERZEICHNIS.csv`.
     It's suggested to save the old version as a duplicate.
@@ -67,7 +67,7 @@ To add new images into the collection and ensure the metadata is up to date, fol
 2. Download all existing images (check username): 
 
     `rsync -azP root@cloud.juergstraumann.ch:/var/lib/dokku/data/storage/archiv/images/ ./images/`
-3. Place any new image files in the `IMPORT` folder and rename them to `WV_neu_$date_ersatz` or `WV_neu_$date`
+3. Place any new image files in the `IMPORT` folder. Create this folder if it does not exist yet. Rename the subfolders to `WV_neu_$date_ersatz` or `WV_neu_$date`
 4. Remove metadata from images:
 
     Make sure you are in the `IMPORT` folder and run `find . -name '.*_*' | xargs -d '\n' rm` or alternatively `exiftool -all= *.jpg`, `exiftool -all= *.png`
@@ -106,7 +106,7 @@ Further explanation about the image collection workflow.
 
 Further explanation about the data refresh.
 
-- To update the metadata, we run this script from the pipenv shell: `python collect.py`.
+- To update the metadata, we run this script from the pipenv shell: `python collect.py`. Currently this takes a while because hue, saturation and brightness are calculated for each image. One could add a logic to skip unchanged images.
 
 - This script expects a `data/WERKVERZEICHNIS.csv` which is the UTF-8 encoded conversion of the source Excel file. It creates (or refreshes) a Data Package specification by inferring schema from the data using [Data Package Pipelines](https://github.com/frictionlessdata/datapackage-pipelines).
 
