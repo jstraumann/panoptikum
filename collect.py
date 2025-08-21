@@ -1,11 +1,28 @@
 import os
 import csv
 from csv import DictWriter
-from PIL import Image, ImageStat  # For image analysis
+from PIL import Image, ImageStat
 from stats import *
 
 
-def list_files(dir):
+def load_existing_data(filename='images.csv'):
+    """
+    Loads existing image data from the images.csv file into a dictionary for quick lookup.
+    """
+    data_cache = {}
+    output_path = os.path.join('data', filename)
+    if os.path.exists(output_path):
+        print(f"Found existing data file: {output_path}. Loading cached values...")
+        with open(output_path, 'r', encoding='utf-8') as csvin:
+            reader = csv.DictReader(csvin)
+            for row in reader:
+                # Use 'Nummer' as the unique key for the cache
+                if 'Nummer' in row and row['Nummer']:
+                    data_cache[int(row['Nummer'])] = row
+        print("--- Cache loaded ---")
+    return data_cache
+
+def list_files(dir, existing_data_cache):
     r = {}
     all_files = []
     for root, dirs, files in os.walk(dir):
@@ -13,7 +30,7 @@ def list_files(dir):
             continue
         dirs.sort()
         for name in files:
-            if not name.startswith('.'):  # Skip hidden files like .DS_Store
+            if not name.startswith('.'):
                 all_files.append(os.path.join(root, name))
 
     total_files = len(all_files)
@@ -24,18 +41,29 @@ def list_files(dir):
         fn, ext = os.path.splitext(name)
         try:
             wn = int(fn.split('_')[0].split(' ')[0].split(',')[0].strip('.+jpg'))
-        except:
-            print(f"Invalid file: {file_path}")
+        except (ValueError, IndexError):
+            print(f"Invalid file name format, skipping: {file_path}")
             continue
-        try:
-            brightness = calculate_brightness(file_path)
-            hue = calculate_hue(file_path)
-            saturation = calculate_saturation(file_path)
-        except Exception as e:
-            print(f"Error processing {file_path}: {e}")
-            brightness = None
-            hue = None
-            saturation = None
+
+        # Check if data exists in the cache
+        cached_data = existing_data_cache.get(wn)
+        
+        # Assume values are cached if they are not None or empty strings
+        if cached_data and cached_data.get('brightness') and cached_data.get('hue') and cached_data.get('saturation'):
+            brightness = int(cached_data['brightness'])
+            hue = int(cached_data['hue'])
+            saturation = int(cached_data['saturation'])
+        else:
+            # If data is not cached, calculate it
+            try:
+                brightness = calculate_brightness(file_path)
+                hue = calculate_hue(file_path)
+                saturation = calculate_saturation(file_path)
+            except Exception as e:
+                print(f"Error processing {file_path}: {e}")
+                brightness = None
+                hue = None
+                saturation = None
 
         r[wn] = {
             'path': file_path.strip('./'),
@@ -171,6 +199,7 @@ def update_files(lf, filename='WERKVERZEICHNIS.csv', outputfile='images.csv'):
             print("--- Done.")
 
 if __name__ == '__main__':
-    lf = list_files('images')
+    existing_data = load_existing_data()
+    lf = list_files('images', existing_data)
     update_files(lf)
     update_stats()
