@@ -1,8 +1,0 @@
-datapackage
-Flask
-Flask-API
-gunicorn
-pandas-datapackage-reader
-requests
-tableschema
-flask-cors

@@ -1,5 +1,4 @@
 from flask import Flask
-from flask_api import FlaskAPI
 from flask_cors import CORS
 from pandas_datapackage_reader import read_datapackage
 from functools import wraps
@@ -15,7 +14,7 @@ try:
 except:
     from util import *
 
-app = FlaskAPI(__name__)
+app = Flask(__name__)
 CORS(app)
 
 # Create API endpoints
