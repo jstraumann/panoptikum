@@ -118,3 +118,9 @@ Further explanation about the data refresh.
 - Replace Zus'arbeit in data update
 - Export: Download .zip incl images
 - Save public list or accounts
+- Update ImageMagick
+- Filter are added manually in the same file that is updated. Design a error proof process
+- Prune images directory: Check how old versions of artworks are stored and maybe remove older versions of artworks
+- Use english as consistent project language ie. rename WERKSVERZEICHNIS.csv
+- Simplify update process with a single `update.py` that runs `convert.py`, `thumbs.py`, `collect.py`, etc
+
