@@ -14,6 +14,7 @@ Opl,Form,Technik,Technik,Ölpastell,,,18
 OP,Form,Technik,Technik,Ölfarbe auf Pavatex,,,819
 OL,Form,Technik,Technik,Ölfarbe auf Leinwand,,,92
 OPa,Form,Technik,Technik,Ölfarbe auf Papier,,,71
+Skb,Form,Technik,Technik,Skizzenbuch,,,8
 T,Form,Technik,Technik,Tusche,,,305
 Dd,Form,Drucktechnik,Technik,Digitaldruck (ohne Fine Art Print),,,16
 FAP,Form,Drucktechnik,Technik,Fine Art Print,,,70
@@ -136,6 +137,9 @@ Par8a,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Fotografie,ParVB,,20
 Par8b,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Film, Video",,,60
 Par9a,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Installationen,,,56
 Par9b,Inhalt,"Paraphrasen, Variationen",Paraphrasen,"Performance, Theater, Tanz",,,83
+Par10,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Musik,,,55
+Par11,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Literatur,,,36
+Par12,Inhalt,"Paraphrasen, Variationen",Paraphrasen,Selbstzitate,,,85
 ParEH,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Edward Hopper,,,7
 ParAR,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Auguste Rodin,,,40
 ParFV,Inhalt,"Paraphrasen, Variationen: grössere Werkgruppen zu",Paraphrasen,Félix Vallotton,,,497
