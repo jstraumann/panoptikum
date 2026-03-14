@@ -38,7 +38,7 @@ def filter_columns(df, args):
                 dfname = df[f].dtype.name.lower()
                 and_conditions = val.split(',')
 
-                if 'object' in dfname:
+                if 'object' in dfname or 'str' in dfname:
                     for and_cond in and_conditions:
                         or_conditions = and_cond.split('|')
 
