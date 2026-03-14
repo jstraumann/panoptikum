@@ -8,38 +8,29 @@ Made with [Frictionless Data](https://frictionlessdata.io), [Flask](http://flask
 ## Prerequisites
 Before starting with the deployment, ensure you have the following installed:
 
-- Python 3.7
-- pip and virtualenv
+- Python 3.11
+- pip and pipenv
 - ImageMagick (for image processing)
-- NumPy
 
-## Installation 
-Install Python 3.7 and using:
+## Installation
+Install Python 3.11 using [pyenv](https://github.com/pyenv/pyenv):
 
 ```
-sudo apt-get install python3.7 python3-numpy
+pyenv install 3.11.11
 ```
 
 ## Development
 
- 1. Set up the environment using pipenv:
-      ```
-      python3 -m pip install pipenv
-      ```
-
-2. Alternatively, use virtualenv:
+1. Set up the environment using pipenv:
     ```
-    virtualenv --system-site-packages -p python3.7 env
-    source env/bin/activate
-    pip install -r requirements.txt
+    python3 -m pip install pipenv
+    pipenv sync
     ```
 
-3. Running the Application:
+2. Running the Application:
 - For development
   ```
-  pipenv --python 3
   pipenv shell
-  pipenv sync
   env FLASK_DEBUG=1 flask run
   ```
 
@@ -76,7 +67,7 @@ To add new images into the collection and ensure the metadata is up to date, fol
 6. Crop and resize the images by running `./convert.sh`.
 7. Generate thumbnails by running `./thumbs.sh`.
 
-8. Run `python collect.py`.
+8. Run `pipenv run python collect.py`.
 9. Test app locally:
     
     Create the virtualenv and install the requirements as described above. New images probably don't show up because they are not uploaded yet.
@@ -106,7 +97,7 @@ Further explanation about the image collection workflow.
 
 Further explanation about the data refresh.
 
-- To update the metadata, we run this script from the pipenv shell: `python collect.py`. Currently this takes a while because hue, saturation and brightness are calculated for each image. One could add a logic to skip unchanged images.
+- To update the metadata, we run this script from the pipenv shell: `pipenv run python collect.py`. Currently this takes a while because hue, saturation and brightness are calculated for each image. One could add a logic to skip unchanged images.
 
 - This script expects a `data/WERKVERZEICHNIS.csv` which is the UTF-8 encoded conversion of the source Excel file. It creates (or refreshes) a Data Package specification by inferring schema from the data using [Data Package Pipelines](https://github.com/frictionlessdata/datapackage-pipelines).
 
