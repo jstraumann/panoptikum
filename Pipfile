@@ -13,5 +13,6 @@ hypercorn = "*"
 pandas = ">=1.5"
 flask-cors = "*"
 markupsafe = "*"
+pillow = "*"
 
 [requires]

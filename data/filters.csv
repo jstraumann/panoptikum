@@ -46,6 +46,7 @@ gross,Form,Format,Grösse,gross,,((grössere Zahl 91 und mehr)),125
 breit,Form,Ausrichtung,Ausrichtung,breit,,,9101
 hoch,Form,Ausrichtung,Ausrichtung,hoch,,,1512
 quadratisch,Form,Ausrichtung,Ausrichtung,quadratisch,,,271
+bs,Form,Darstellungsformen,Darstellungsformen,Bars and stripes,,,62
 Fro,Form,Darstellungsformen,Darstellungsformen,Frottage,,,54
 Gi,Form,Darstellungsformen,Darstellungsformen,"Gitterstruktur, Netzstruktur",,,323
 RiK,Form,Darstellungsformen,Darstellungsformen,Körper im Raum zu Raum im Körper,,,103
@@ -74,6 +75,7 @@ Drk,Form,Komposition,Komposition,Dreieckskomposition,,,57
 ROk,Form,Komposition,Komposition,Rund- oder Ovalkomposition,,,126
 Zk,Form,Komposition,Komposition,Zentralkomposition,,,613
 Rk,Form,Komposition,Komposition,Randkomposition,,,77
+aov,Form,Komposition,Komposition,All over,,,55
 wid,Form,Bildsprache,Bildsprache,Widder-/Mars-Gestaltung,,,68
 sti,Form,Bildsprache,Bildsprache,Stier-/Venus-Gestaltung,,,16
 zwi,Form,Bildsprache,Bildsprache,Zwillinge-/Merkur-Gestaltung,,,400
@@ -179,6 +181,7 @@ wo,Inhalt,Serien,Serie,worship,,,9
 24V,Inhalt,Serien,Serie,24 Variationen,,,24
 54a,Inhalt,Serien,Serie,54 assists,,,54
 6R,Inhalt,Serien,Serie,6 Räume (Radierungen),,,6
+wswd,Inhalt,Serien,Serie,what shall we do?,,,20
 Kr1,Inhalt,Projekt „Klee revisited“,Paraphrasen,Bewegung,,,186
 Kr2a,Inhalt,Projekt „Klee revisited“,Paraphrasen,Pflanzen,,,143
 Kr2b,Inhalt,Projekt „Klee revisited“,Paraphrasen,Tiere,,,91

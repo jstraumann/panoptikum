@@ -12,7 +12,8 @@ def update_stats():
     images = data['images']
 
     # Clean and prepare data
-    images.fillna('', inplace=True)
+    str_cols = images.select_dtypes(include='object').columns
+    images[str_cols] = images[str_cols].fillna('')
     filters.dropna(subset=['Code', 'Column'], inplace=True)
 
     # Combine 'FoD' and 'FoP' into 'Fo' in 'Technik' and 'Techniken'
