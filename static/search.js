@@ -157,15 +157,15 @@ function get_werkSearchQuery(from_page) {
 	const brightnessMin = $('#brightness_min').val();
 	const brightnessMax = $('#brightness_max').val();
 
-	if (!(brightnessMin == 0 && brightnessMax == 100)) {
+	if (brightnessMin !== undefined && brightnessMax !== undefined && !(brightnessMin == 0 && brightnessMax == 100)) {
 		q += `&brightness_min=${brightnessMin}&brightness_max=${brightnessMax}`;
 	}
 
-	// Add brightness sliders to the query
+	// Add hue sliders to the query
 	const hueMin = $('#hue_min').val();
 	const hueMax = $('#hue_max').val();
 
-	if (!(hueMin == 0 && hueMax == 360)) {
+	if (hueMin !== undefined && hueMax !== undefined && !(hueMin == 0 && hueMax == 360)) {
 		q += `&hue_min=${hueMin}&hue_max=${hueMax}`;
 	}
 
@@ -173,7 +173,7 @@ function get_werkSearchQuery(from_page) {
 	const saturationMin = $('#saturation_min').val();
 	const saturationMax = $('#saturation_max').val();
 
-	if (!(saturationMin == 0 && saturationMax == 100)) {
+	if (saturationMin !== undefined && saturationMax !== undefined && !(saturationMin == 0 && saturationMax == 100)) {
 		q += `&saturation_min=${saturationMin}&saturation_max=${saturationMax}`;
 	}
 
