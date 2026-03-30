@@ -755,3 +755,24 @@ strong {
 .clusterize-no-data td {
   text-align: center;
 }
+
+/* Filter Preview Tooltip */
+#filter-preview {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+#filter-preview.visible {
+  opacity: 1;
+}
+
+#filter-preview img {
+  display: block;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  box-shadow: var(--black25) 0px 50px 100px -20px, var(--black25) 0px 30px 60px -30px;
+}

@@ -1,5 +1,6 @@
 var cache = {};
 var filters = {};
+var previewCache = {};
 let typingTimer;
 const doneTypingInterval = 250;
 
@@ -286,6 +287,9 @@ const category_selectors = [
 					'</label>') +
 				'</div>'
 			);
+			if (this.Code !== null) {
+				prefetchFilterPreview('o_' + this.Column, this.Code);
+			}
 		});
 	}
 
@@ -514,6 +518,40 @@ const category_selectors = [
 		input.click();
 	});
 
+	// Filter preview tooltip
+	var previewTooltip = $('<div id="filter-preview"><img></div>').hide().appendTo('body');
+	var previewInterval = null;
+	var previewTimeout = null;
+
+	$(document).on('mouseenter', '.form-check', function () {
+		var $cb = $(this).find('input[type="checkbox"]');
+		var column = $cb.attr('name');
+		var code = $cb.attr('value');
+		if (!column || !code) { return; }
+		var key = column + '|' + code;
+		var anchorEl = $(this).find('.count')[0] || this;
+		clearTimeout(previewTimeout);
+		previewTimeout = setTimeout(function () {
+			showFilterPreview(key, anchorEl, previewTooltip);
+			clearInterval(previewInterval);
+			var images = previewCache[key];
+			if (images && images.length > 1) {
+				var idx = 0;
+				previewInterval = setInterval(function () {
+					idx = (idx + 1) % images.length;
+					previewTooltip.find('img').attr('src', images[idx]);
+				}, 500);
+			}
+		}, 200);
+	});
+
+	$(document).on('mouseleave', '.form-check', function () {
+		clearTimeout(previewTimeout);
+		clearInterval(previewInterval);
+		previewTooltip.removeClass('visible');
+		setTimeout(function () { previewTooltip.hide(); }, 150);
+	});
+
 	// Start search
 	$(document).on('keydown', function (e) {
 		if (e.key === 'Enter') {
@@ -598,4 +636,30 @@ function applySearchFromURL() {
 
 	// Trigger the search if params have been found
 	werkSearchStart(null, 1, false, true);
+}
+
+function prefetchFilterPreview(column, code) {
+	var key = column + '|' + code;
+	if (previewCache.hasOwnProperty(key)) { return; }
+	previewCache[key] = null; // mark in-progress
+	var urlPrefix = "https://archiv.juergstraumann.ch/";
+	$.getJSON('/api/images.json?' + encodeURIComponent(column) + '=' + encodeURIComponent(code) + '&per_page=5&sort=-Nummer', function (data) {
+		previewCache[key] = (data && data.length > 0)
+			? data.map(function (i) { return urlPrefix + i.thumb; })
+			: [];
+	}).fail(function () {
+		previewCache[key] = [];
+	});
+}
+
+function showFilterPreview(key, el, $tooltip) {
+	var images = previewCache[key];
+	if (!images || images.length === 0) { return; }
+	var rect = el.getBoundingClientRect();
+	var left = rect.right + 6;
+	var top = rect.top - (120 / 2) + (rect.height / 2);
+	if (left + 170 > window.innerWidth) { left = rect.left - 166; }
+	$tooltip.find('img').attr('src', images[0]);
+	$tooltip.css({ top: top + 'px', left: left + 'px' }).show();
+	setTimeout(function () { $tooltip.addClass('visible'); }, 10);
 }
