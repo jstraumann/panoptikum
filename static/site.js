@@ -523,7 +523,16 @@ const category_selectors = [
 	var previewInterval = null;
 	var previewTimeout = null;
 
+	var $previewEnabled = $('#previewEnabled');
+	if (localStorage.getItem('previewEnabled') === 'false') {
+		$previewEnabled.prop('checked', false);
+	}
+	$previewEnabled.on('change', function () {
+		localStorage.setItem('previewEnabled', this.checked);
+	});
+
 	$(document).on('mouseenter', '.form-check', function () {
+		if (!$previewEnabled.prop('checked')) { return; }
 		var $cb = $(this).find('input[type="checkbox"]');
 		var column = $cb.attr('name');
 		var code = $cb.attr('value');
