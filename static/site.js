@@ -287,9 +287,6 @@ const category_selectors = [
 					'</label>') +
 				'</div>'
 			);
-			if (this.Code !== null) {
-				prefetchFilterPreview('o_' + this.Column, this.Code);
-			}
 		});
 	}
 
@@ -537,6 +534,7 @@ const category_selectors = [
 		var column = $cb.attr('name');
 		var code = $cb.attr('value');
 		if (!column || !code) { return; }
+		prefetchFilterPreview(column, code);
 		var key = column + '|' + code;
 		var anchorEl = $(this).find('.count')[0] || this;
 		clearTimeout(previewTimeout);
@@ -618,7 +616,6 @@ function applySearchFromURL() {
 			values.forEach(function (value) {
 				var inputID = category + value;
 				$('#' + inputID).prop('checked', true);
-				console.log("checked:" + inputID);
 			});
 		}
 	});
@@ -631,8 +628,6 @@ function applySearchFromURL() {
 			$tab.trigger('click', [false]); // Trigger click on the tab, passing `false` to avoid a redundant search
 		}
 	}
-
-	console.log("load");
 	
 	// Handle mode selection from the 'mode' parameter
 	if (params.mode) {
