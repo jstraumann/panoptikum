@@ -321,6 +321,26 @@ const category_selectors = [
 		$('#worksMenuItem').trigger('click', [false]);
 	});
 
+	// Dark mode toggle
+	var $iconMoon = $('#iconMoon');
+	var $iconSun = $('#iconSun');
+	var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+	var savedTheme = localStorage.getItem('theme');
+	var isDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+
+	function updateDarkModeIcon() {
+		$iconMoon.toggleClass('hidden', isDark);
+		$iconSun.toggleClass('hidden', !isDark);
+	}
+	updateDarkModeIcon();
+
+	$('#darkModeToggle').on('click', function () {
+		isDark = !isDark;
+		document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+		localStorage.setItem('theme', isDark ? 'dark' : 'light');
+		updateDarkModeIcon();
+	});
+
 	// Reset search
 	$('#restart').on('click', function () {
 		werkSearchReset();
