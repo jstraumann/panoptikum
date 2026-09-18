@@ -609,9 +609,61 @@ function initializeGallery(container, openImmediately = false) {
 		container.galleryInstance.destroy(true);
 		container.galleryInstance = lightGallery(container, galleryOptions);
 	}
+
+	if (!container.lgListToggleBound) {
+		container.lgListToggleBound = true;
+		bindLightboxListToggle(container);
+	}
+
 	if (openImmediately) {
 		container.galleryInstance.openGallery();
 	}
+}
+
+function bindLightboxListToggle(container) {
+
+	// "Meine Liste" always holds already-added items, so its lightbox button
+	// is a plain remove (×) action rather than the add/remove (+/✓) toggle.
+	var isSavedList = $(container).closest('#savedList').length > 0;
+
+	function currentCheckbox() {
+		var index = container.galleryInstance.index;
+		return $(container).find('.item').eq(index).find('input.check');
+	}
+
+	// Each lightGallery instance gets its own uniquely-id'd toolbar
+	// (#lg-toolbar-<lgId>), so scope lookups to the instance that fired
+	// the event instead of a global ".lg-toolbar" selector, which would
+	// also match other initialized-but-closed galleries on the page.
+	function toolbarSelector() {
+		return '#lg-toolbar-' + container.galleryInstance.lgId;
+	}
+
+	function syncListToggle() {
+		var $btn = $(toolbarSelector()).find('.lg-list-toggle');
+		var $checkbox = currentCheckbox();
+		$btn.toggleClass('checked', $checkbox.is(':checked'));
+	}
+
+	container.addEventListener('lgAfterOpen', function () {
+		var $toolbar = $(toolbarSelector());
+		if (!$toolbar.find('.lg-list-toggle').length) {
+			var label = isSavedList ? 'Aus Liste entfernen' : 'Zur Liste hinzufügen/entfernen';
+			var $btn = $('<button type="button" class="lg-icon lg-list-toggle" aria-label="' + label + '" title="' + label + '"></button>');
+			if (isSavedList) {
+				$btn.addClass('saved-list');
+			}
+			$btn.on('click', function () {
+				var $checkbox = currentCheckbox();
+				$checkbox.prop('checked', !$checkbox.is(':checked')).trigger('change');
+				syncListToggle();
+			});
+			$toolbar.prepend($btn);
+		}
+		syncListToggle();
+	});
+
+	container.addEventListener('lgAfterSlide', syncListToggle);
 }
 
 function updateURLWithSearchString(searchString) {
