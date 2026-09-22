@@ -235,7 +235,7 @@ button,
   border-radius: 0;
 }
 
-.btn:not(.btn-primary):not(.btn-secondary):not(.active) {
+.btn:not(.btn-primary):not(.btn-secondary):not(.btn-danger):not(.active) {
   color: var(--black);
 }
 
@@ -280,6 +280,19 @@ button,
 .btn-primary {
   background-color: var(--primary);
   border-color: var(--primary);
+}
+
+.btn-danger {
+  color: var(--white);
+  background-color: var(--danger);
+  border-color: var(--danger);
+}
+
+.btn-danger:hover {
+  color: var(--white);
+  background-color: var(--danger);
+  border-color: var(--danger);
+  opacity: 0.85;
 }
 
 

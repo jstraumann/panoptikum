@@ -479,7 +479,9 @@ const category_selectors = [
 		// If more than 50 elements, show the modal
 		if (totalChecks > 50) {
 			// Set the message for the modal
+			$('#confirmationModalLabel').text('Auswahl bestätigen');
 			$('#modalMessage').text(`Wollen Sie ${totalChecks} Werke zu ihrer Liste hinzufügen?`);
+			$('#confirmSelection').removeClass('btn-danger').addClass('btn-primary').text('Werke auswählen');
 
 			// Show the modal
 			$('#confirmationModal').modal('show');
@@ -505,8 +507,18 @@ const category_selectors = [
 	$('#deleteSavedList').on('click', function (e) {
 		e.preventDefault();
 		e.stopPropagation();
-		localStorage.removeItem('selectedItems');
-		loadSavedItems();
+
+		$('#confirmationModalLabel').text('Liste löschen');
+		$('#modalMessage').text('Möchten Sie Ihre gespeicherte Liste wirklich löschen?');
+		$('#confirmSelection').removeClass('btn-primary').addClass('btn-danger').text('Löschen');
+
+		$('#confirmationModal').modal('show');
+
+		$('#confirmSelection').off('click').on('click', function () {
+			localStorage.removeItem('selectedItems');
+			loadSavedItems();
+			$('#confirmationModal').modal('hide');
+		});
 	});
 
 	// Export list
