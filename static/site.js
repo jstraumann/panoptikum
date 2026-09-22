@@ -38,7 +38,14 @@ const category_selectors = [
 		addFormListeners();
 		listTitles();
 		applySearchFromURL();
-		loadSavedItems();
+
+		var sharedListMatch = window.location.pathname.match(/^\/liste\/([^/]+)\/?$/);
+		if (sharedListMatch) {
+			$('#listMenuItem').trigger('click', [false]);
+			loadSharedList(sharedListMatch[1]);
+		} else {
+			loadSavedItems();
+		}
 
 	}).fail(function () {
 		console.log('Fehler: Daten konnten nicht geladen werden.');
@@ -533,6 +540,20 @@ const category_selectors = [
 			}
 		}
 		input.click();
+	});
+
+	// Share the current list as a read-only link
+	$('#shareSavedList').on('click', function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+		shareSavedList();
+	});
+
+	// Adopt a shared (read-only) list as your own
+	$('#adoptSharedList').on('click', function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+		adoptSharedList();
 	});
 
 	// Filter preview tooltip

@@ -18,6 +18,7 @@ yarn-error.log
 
 .~lock*
 __pycache__
+data/lists.db
 env/
 shell/
 .vscode

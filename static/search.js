@@ -1,6 +1,7 @@
 var titlelist = {};
 var titlelist_uniqueEntries = {};
 var yearlist = [];
+var sharedListItems = [];
 
 var PER_PAGE = 100;
 
@@ -593,6 +594,97 @@ function loadSavedItems() {
 	}
 }
 
+function loadSharedList(listId) {
+
+	$('#savedList').addClass('shared-mode');
+	$('#deleteSavedList, #exportSavedList, #importSavedList, #shareSavedList').addClass('hidden');
+	$('#adoptSharedList').removeClass('hidden');
+	$('.shared-list-banner').removeClass('hidden');
+
+	$.getJSON('/api/lists/' + encodeURIComponent(listId), function (items) {
+		sharedListItems = items;
+		var $savedList = $('#savedList .output');
+		$savedList.empty();
+
+		if (items.length === 0) {
+			$('#savedList .output').addClass('hidden');
+			$('#savedList .empty-state').removeClass('hidden').text('Diese Liste ist leer…');
+		} else {
+			$('#savedList .output').removeClass('hidden');
+			$('#savedList .empty-state').addClass('hidden');
+			var urlPrefix = "https://archiv.juergstraumann.ch/";
+			var $tgt = $('#savedList').find('div.output');
+
+			items.forEach(function (item) {
+				var $container = $('<div>').addClass('item');
+				var $link = $('<a>').attr('href', urlPrefix + item.path).attr('data-sub-html', werkTitle(item));
+				var $img = $('<img>').attr('src', urlPrefix + item.thumb).addClass('thumb');
+				$link.append($img);
+				$container.append($link);
+				$tgt.append($container);
+			});
+
+			const container = $tgt.get(0);
+			initializeGallery(container);
+		}
+	}).fail(function () {
+		$('#savedList .output').addClass('hidden');
+		$('#savedList .empty-state').removeClass('hidden').text('Diese Liste wurde nicht gefunden…');
+	});
+}
+
+function createSharedList(items, callback) {
+	$.ajax({
+		url: '/api/lists',
+		method: 'POST',
+		contentType: 'application/json',
+		data: JSON.stringify({ items: items }),
+		success: function (res) { callback(res.id, res.edit_token); },
+		error: function () { alert('Liste konnte nicht geteilt werden.'); }
+	});
+}
+
+function shareSavedList() {
+	var savedData = JSON.parse(localStorage.getItem('selectedItems')) || [];
+	if (savedData.length === 0) {
+		alert('Ihre Liste ist leer.');
+		return;
+	}
+	var items = savedData.map(function (i) { return i.Nummer; });
+	var shared = JSON.parse(localStorage.getItem('sharedList') || 'null');
+
+	function onShared(id, editToken) {
+		localStorage.setItem('sharedList', JSON.stringify({ id: id, editToken: editToken }));
+		var url = window.location.origin + '/liste/' + id;
+		if (navigator.clipboard && navigator.clipboard.writeText) {
+			navigator.clipboard.writeText(url).catch(function () { });
+		}
+		prompt('Link zum Teilen (in Zwischenablage kopiert):', url);
+	}
+
+	if (shared && shared.id && shared.editToken) {
+		$.ajax({
+			url: '/api/lists/' + encodeURIComponent(shared.id),
+			method: 'PUT',
+			contentType: 'application/json',
+			headers: { 'X-Edit-Token': shared.editToken },
+			data: JSON.stringify({ items: items }),
+			success: function () { onShared(shared.id, shared.editToken); },
+			error: function () {
+				// Edit token no longer valid (e.g. list was deleted elsewhere) -> share as a new list
+				createSharedList(items, onShared);
+			}
+		});
+	} else {
+		createSharedList(items, onShared);
+	}
+}
+
+function adoptSharedList() {
+	localStorage.setItem('selectedItems', JSON.stringify(sharedListItems));
+	window.location.href = window.location.origin + '/?tab=lists';
+}
+
 function initializeGallery(container, openImmediately = false) {
 	const galleryOptions = {
 		selector: '.item a',
@@ -625,6 +717,8 @@ function bindLightboxListToggle(container) {
 	// "Meine Liste" always holds already-added items, so its lightbox button
 	// is a plain remove (×) action rather than the add/remove (+/✓) toggle.
 	var isSavedList = $(container).closest('#savedList').length > 0;
+	// A shared (read-only) list has no checkboxes to toggle at all.
+	var isSharedList = $(container).closest('#savedList').hasClass('shared-mode');
 
 	function currentCheckbox() {
 		var index = container.galleryInstance.index;
@@ -646,6 +740,7 @@ function bindLightboxListToggle(container) {
 	}
 
 	container.addEventListener('lgAfterOpen', function () {
+		if (isSharedList) { return; }
 		var $toolbar = $(toolbarSelector());
 		if (!$toolbar.find('.lg-list-toggle').length) {
 			var label = isSavedList ? 'Aus Liste entfernen' : 'Zur Liste hinzufügen/entfernen';
