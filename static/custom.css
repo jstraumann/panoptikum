@@ -375,6 +375,9 @@ button,
 h5.search-title {
   margin-bottom: 0;
 }
+h5.settings-title {
+  margin-bottom: var(--spacing-md);
+}
 
 h5.group-title {
   display: flex;
@@ -835,6 +838,20 @@ strong {
 }
 
 
+
+/* Settings Modal */
+.settings-row .settings-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  border: 1px solid var(--gray05);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.settings-row .settings-toggle-btn svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
 
 /* Modal */
 .modal-content {

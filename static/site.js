@@ -331,6 +331,7 @@ const category_selectors = [
 	// Dark mode toggle
 	var $iconMoon = $('#iconMoon');
 	var $iconSun = $('#iconSun');
+	var $darkModeLabel = $('#darkModeLabel');
 	var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 	var savedTheme = localStorage.getItem('theme');
 	var isDark = savedTheme ? savedTheme === 'dark' : prefersDark;
@@ -338,6 +339,7 @@ const category_selectors = [
 	function updateDarkModeIcon() {
 		$iconMoon.toggleClass('hidden', isDark);
 		$iconSun.toggleClass('hidden', !isDark);
+		$darkModeLabel.text(isDark ? 'Dunkelmodus' : 'Hellmodus');
 	}
 	updateDarkModeIcon();
 
