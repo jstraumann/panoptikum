@@ -229,14 +229,15 @@
     <div class="container container-fill main-pane" id="lists">
       <div id="savedList">
         <h2 class="hidden">Gespeichert Werke</h2>
+        <div class="shared-list-banner hidden">Sie betrachten eine geteilte Liste.</div>
         <div class="list-actions d-flex">
-          <button class="btn" id="shareSavedList" title="Liste-Link zum Teilen erzeugen">Link teilen</button>
+          <button class="btn" id="shareSavedList" title="Liste-Link zum Teilen erzeugen">Liste teilen</button>
           <button class="btn" id="exportSavedList" title="Meine Liste als JSON exportieren">Exportieren</button>
           <button class="btn" id="importSavedList" title="JSON-Liste hochladen">Importieren</button>
           <button class="btn hidden" id="adoptSharedList" title="Diese geteilte Liste als meine Liste übernehmen">Liste übernehmen</button>
+          <button class="btn hidden" id="cancelSharedList" title="Geteilte Liste verlassen">Abbrechen</button>
           <button class="btn ml-auto" id="deleteSavedList" title="Meine Liste löschen">Löschen</button>
         </div>
-        <div class="shared-list-banner hidden">Sie betrachten eine geteilte Liste.</div>
         <div class="row output tab-content">
         </div>
         <div class="empty-state">Keine Werke gespeichert…</div>
@@ -257,9 +258,12 @@
         </div>
         <div class="modal-body">
           <p id="modalMessage"></p>
+          <div class="share-link-wrapper hidden">
+            <input type="text" id="shareLinkInput" readonly>
+          </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button>
+          <button type="button" class="btn btn-secondary" id="modalCancelBtn" data-dismiss="modal">Abbrechen</button>
           <button type="button" class="btn btn-primary" id="confirmSelection">Werke auswählen</button>
         </div>
       </div>

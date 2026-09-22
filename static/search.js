@@ -598,7 +598,7 @@ function loadSharedList(listId) {
 
 	$('#savedList').addClass('shared-mode');
 	$('#deleteSavedList, #exportSavedList, #importSavedList, #shareSavedList').addClass('hidden');
-	$('#adoptSharedList').removeClass('hidden');
+	$('#adoptSharedList, #cancelSharedList').removeClass('hidden');
 	$('.shared-list-banner').removeClass('hidden');
 
 	$.getJSON('/api/lists/' + encodeURIComponent(listId), function (items) {
@@ -656,10 +656,22 @@ function shareSavedList() {
 	function onShared(id, editToken) {
 		localStorage.setItem('sharedList', JSON.stringify({ id: id, editToken: editToken }));
 		var url = window.location.origin + '/liste/' + id;
-		if (navigator.clipboard && navigator.clipboard.writeText) {
-			navigator.clipboard.writeText(url).catch(function () { });
-		}
-		prompt('Link zum Teilen (in Zwischenablage kopiert):', url);
+
+		$('#confirmationModalLabel').text('Liste teilen');
+		$('#modalMessage').text('Hier ist der Link zum Teilen:');
+		$('#shareLinkInput').val(url);
+		$('.share-link-wrapper').removeClass('hidden');
+		$('#modalCancelBtn').text('Schliessen');
+		$('#confirmSelection').addClass('hidden');
+
+		$('#confirmationModal').off('shown.bs.modal').one('shown.bs.modal', function () {
+			$('#shareLinkInput').trigger('select');
+		});
+		$('#confirmationModal').modal('show');
+
+		$('#shareLinkInput').off('click').on('click', function () {
+			this.select();
+		});
 	}
 
 	if (shared && shared.id && shared.editToken) {
@@ -682,6 +694,10 @@ function shareSavedList() {
 
 function adoptSharedList() {
 	localStorage.setItem('selectedItems', JSON.stringify(sharedListItems));
+	window.location.href = window.location.origin + '/?tab=lists';
+}
+
+function cancelSharedList() {
 	window.location.href = window.location.origin + '/?tab=lists';
 }
 

@@ -481,7 +481,9 @@ const category_selectors = [
 			// Set the message for the modal
 			$('#confirmationModalLabel').text('Auswahl bestätigen');
 			$('#modalMessage').text(`Wollen Sie ${totalChecks} Werke zu ihrer Liste hinzufügen?`);
-			$('#confirmSelection').removeClass('btn-danger').addClass('btn-primary').text('Werke auswählen');
+			$('#confirmSelection').removeClass('btn-danger hidden').addClass('btn-primary').text('Werke auswählen');
+			$('.share-link-wrapper').addClass('hidden');
+			$('#modalCancelBtn').text('Abbrechen');
 
 			// Show the modal
 			$('#confirmationModal').modal('show');
@@ -510,7 +512,9 @@ const category_selectors = [
 
 		$('#confirmationModalLabel').text('Liste löschen');
 		$('#modalMessage').text('Möchten Sie Ihre gespeicherte Liste wirklich löschen?');
-		$('#confirmSelection').removeClass('btn-primary').addClass('btn-danger').text('Löschen');
+		$('#confirmSelection').removeClass('btn-primary hidden').addClass('btn-danger').text('Löschen');
+		$('.share-link-wrapper').addClass('hidden');
+		$('#modalCancelBtn').text('Abbrechen');
 
 		$('#confirmationModal').modal('show');
 
@@ -568,6 +572,13 @@ const category_selectors = [
 		e.preventDefault();
 		e.stopPropagation();
 		adoptSharedList();
+	});
+
+	// Leave a shared (read-only) list without adopting it
+	$('#cancelSharedList').on('click', function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+		cancelSharedList();
 	});
 
 	// Filter preview tooltip
