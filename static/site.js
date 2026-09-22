@@ -339,7 +339,7 @@ const category_selectors = [
 	function updateDarkModeIcon() {
 		$iconMoon.toggleClass('hidden', isDark);
 		$iconSun.toggleClass('hidden', !isDark);
-		$darkModeLabel.text(isDark ? 'Dunkelmodus' : 'Hellmodus');
+		$darkModeLabel.text(isDark ? 'Dunkel' : 'Hell');
 	}
 	updateDarkModeIcon();
 
@@ -571,6 +571,13 @@ const category_selectors = [
 		localStorage.setItem('previewEnabled', this.checked);
 	});
 
+	// Default tab setting
+	var $defaultTabSetting = $('#defaultTabSetting');
+	$defaultTabSetting.val(localStorage.getItem('defaultTab') || 'search');
+	$defaultTabSetting.on('change', function () {
+		localStorage.setItem('defaultTab', this.value);
+	});
+
 	$(document).on('mouseenter', '.form-check', function () {
 		if (!$previewEnabled.prop('checked')) { return; }
 		var $cb = $(this).find('input[type="checkbox"]');
@@ -669,6 +676,15 @@ function applySearchFromURL() {
 		var $tab = $('#' + tabId);
 		if ($tab.length) {
 			$tab.trigger('click', [false]); // Trigger click on the tab, passing `false` to avoid a redundant search
+		}
+	} else {
+		// No explicit tab in the URL: fall back to the user's default tab setting
+		var defaultTab = localStorage.getItem('defaultTab');
+		if (defaultTab && defaultTab !== 'search') {
+			var $defaultTab = $('#' + defaultTab + 'MenuItem');
+			if ($defaultTab.length) {
+				$defaultTab.trigger('click', [false]);
+			}
 		}
 	}
 	
