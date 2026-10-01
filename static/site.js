@@ -594,6 +594,25 @@ const category_selectors = [
 		localStorage.setItem('previewEnabled', this.checked);
 	});
 
+	// Help boxes (Suche, Anzeige), each toggled by its settings checkbox
+	$('[data-help]').each(function () {
+		var $box = $(this);
+		var key = $box.data('help');
+		var $setting = $('#' + key);
+		function setHelp(enabled) {
+			$box.toggle(enabled);
+			$setting.prop('checked', enabled);
+			localStorage.setItem(key, enabled);
+		}
+		setHelp(localStorage.getItem(key) !== 'false');
+		$box.find('.close').on('click', function () {
+			setHelp(false);
+		});
+		$setting.on('change', function () {
+			setHelp(this.checked);
+		});
+	});
+
 	// Default tab setting
 	var $defaultTabSetting = $('#defaultTabSetting');
 	$defaultTabSetting.val(localStorage.getItem('defaultTab') || 'search');

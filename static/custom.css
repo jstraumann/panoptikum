@@ -296,6 +296,25 @@ button,
 }
 
 
+/* Search Help */
+.search-help {
+  background-color: var(--gray05);
+  border-left: 3px solid var(--primary);
+  border-radius: 0.1rem;
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.search-help .close {
+  float: right;
+  margin-left: var(--spacing-md);
+}
+
+.search-help ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
 /* List Actions */
 .list-actions {
   width: 100%;

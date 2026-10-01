@@ -98,6 +98,19 @@
     <div class="container container-fill main-pane active" id="search">
       <form id="searchForm">
         <h2 class="hidden">Suche</h2>
+        <!-- Search Help -->
+        <div class="search-help" data-help="searchHelpEnabled">
+          <button type="button" class="close" title="Tipps ausblenden"
+            aria-label="Tipps ausblenden">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h3>Tipps</h3>
+          <ul>
+            <li>Sie können Stichworte aus einer oder mehreren Rubriken wählen</li>
+            <li>„Ein Kriterium“ zeigt Werke mit irgendeinem der gewählten Stichworte, „alle Kriterien“ nur Werke, die alle erfüllen.</li>
+            <li>Klicken Sie auf „Anzeigen“, um Ihre Auswahl zu sehen.</li>
+          </ul>
+        </div>
         <div class="list-actions nav-tabs d-flex">
           <!-- Search Form Nav -->
           <div class="search-modes d-flex mr-auto">
@@ -203,6 +216,20 @@
     <div class="container container-fill main-pane" id="works">
       <div id="results">
         <h2 class="hidden">Werke</h2>
+        <!-- Works Help -->
+        <div class="search-help" data-help="worksHelpEnabled">
+          <button type="button" class="close" title="Tipps ausblenden"
+            aria-label="Tipps ausblenden">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h3>Tipps</h3>
+          <ul>
+            <li>Klicken Sie auf einen Bildausschnitt, um die Vergrösserung und die Bildlegende zu sehen</li>
+            <li>Markieren Sie ein Werk mit dem Plus, um es in „Meine Liste“ zu speichern.</li>
+            <li>Ändern Sie die Reihenfolge nach Jahr, Werknummer oder Titel</li>
+            <li>Oben rechts: Der Pfeil setzt die Suche zurück, „Zufall“ zeigt eine spontane Werkauswahl, und die Regler öffnen die Einstellungen</li>
+          </ul>
+        </div>
         <!-- Results Actions -->
         <div class="list-actions d-flex">
           <select class="btn select mobile-shorter" id="resultOrder">
@@ -287,6 +314,14 @@
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="previewEnabled">
               <label class="form-check-label" for="previewEnabled">Werkvorschau in der Suche Alanzeigen</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="searchHelpEnabled" checked>
+              <label class="form-check-label" for="searchHelpEnabled">Tipps in der Suche anzeigen</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="worksHelpEnabled" checked>
+              <label class="form-check-label" for="worksHelpEnabled">Tipps in der Anzeige anzeigen</label>
             </div>
           </div>
           <div class="filter-group settings-row">
