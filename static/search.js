@@ -22,7 +22,6 @@ function werkSearchNext(e) {
 
 function werkSearchRandom(e) {
 	werkSearchReset(e);
-	$('#restart').removeClass('hidden');
 	$('.pagination').hide();
 	werkSearchStart(e, 1, true);
 }
@@ -41,7 +40,6 @@ function werkSearchReset(e) {
 	$('#hue_min_label').text('0°');
 	$('#saturation_max_label').text('100%');
 	$('#saturation_min_label').text('0%');
-	$('#restart').addClass('hidden');
 	$('#results .empty-state').removeClass('hidden');
 	// Reset the noUiSlider values
 	const brightnessSlider = document.getElementById('brightness_range_slider');
@@ -180,7 +178,6 @@ function get_werkSearchQuery(from_page) {
 
 	console.log("query" + q);
 
-	$('#restart').removeClass('hidden');
 
 	return {
 		data: filterdata,
@@ -198,7 +195,6 @@ function werkSearchCount() {
 
 	$.getJSON('/api/images' + qg.query, function (data) {
 		$('#total').html(data.total);
-		$('#restart').removeClass('hidden');
 		$('#start').removeClass('disable')
 			.addClass(data.total > 0 ? '' : 'disable');
 	});
@@ -432,7 +428,6 @@ function werkSearchStart(e, from_page, random, fromURL) {
 	} else if (fromURL === true) {
 		// Handling the URL search case
 		werkSearchCount();
-		$('#restart').removeClass('hidden');
 	} else {
 		// Exit if the 'start' button is disabled
 		if ($('#start').hasClass('disable')) { return; }
@@ -532,7 +527,6 @@ function werkSearchStart(e, from_page, random, fromURL) {
 	updateURLWithSearchString(q.substring(1)); // Remove '?' from query before updating URL
 
 	// Update Apperance
-	$('#restart').removeClass('hidden');
 	$('#results .pagination, #results .output').removeClass('hidden');
 	$('#results .empty-state').addClass('hidden');
 }

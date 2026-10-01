@@ -246,6 +246,11 @@ button,
   vertical-align: middle;
 }
 
+.content-right .btn .btn-label {
+  margin-left: var(--spacing-sm);
+  vertical-align: middle;
+}
+
 .btn.select {
   text-align: left;
   padding-right: 2rem;

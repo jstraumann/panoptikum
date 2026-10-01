@@ -351,7 +351,7 @@ const category_selectors = [
 	});
 
 	// Reset search
-	$('#restart').on('click', function () {
+	$('#resetResults').on('click', function () {
 		werkSearchReset();
 		$("#searchMenuItem").click();
 	});
@@ -677,7 +677,7 @@ const category_selectors = [
 			}
 			if (!$(e.target).is('input[type="text"], textarea, [contenteditable]')) {				
 				if ($('#searchMenuItem').hasClass('active')) {
-					$('#restart').trigger('click');
+					$('#resetResults').trigger('click');
 					$('#searchTitleInput').focus();
 					return
 				}
