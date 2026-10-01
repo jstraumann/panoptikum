@@ -587,8 +587,8 @@ const category_selectors = [
 	var previewTimeout = null;
 
 	var $previewEnabled = $('#previewEnabled');
-	if (localStorage.getItem('previewEnabled') === 'false') {
-		$previewEnabled.prop('checked', false);
+	if (localStorage.getItem('previewEnabled') === 'true') {
+		$previewEnabled.prop('checked', true);
 	}
 	$previewEnabled.on('change', function () {
 		localStorage.setItem('previewEnabled', this.checked);
