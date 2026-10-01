@@ -370,6 +370,8 @@ const category_selectors = [
 		$('.main-nav .main-nav-item').removeClass('active');
 		$('.main .main-pane').removeClass('active');
 		$(this).addClass('active');
+		// Results view has no visible tab of its own; keep Suche highlighted
+		$('#searchMenuItem').toggleClass('highlight', this.id === 'worksMenuItem');
 		var activeSection = $(this).attr("href");
 		$(activeSection).addClass('active');
 		$('html, body').animate({ scrollTop: 0 }, 'fast');
