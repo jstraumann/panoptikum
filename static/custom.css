@@ -943,7 +943,8 @@ strong {
   border-color: var(--primary);
 }
 
-.modal-header .close {
+.modal-header .close,
+.search-help .close {
   font-weight: 200;
   font-size: 2rem;
   color: var(--black);

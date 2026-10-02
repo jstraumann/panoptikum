@@ -596,23 +596,29 @@ const category_selectors = [
 		localStorage.setItem('previewEnabled', this.checked);
 	});
 
-	// Help boxes (Suche, Anzeige), each toggled by its settings checkbox
-	$('[data-help]').each(function () {
-		var $box = $(this);
-		var key = $box.data('help');
-		var $setting = $('#' + key);
-		function setHelp(enabled) {
-			$box.toggle(enabled);
-			$setting.prop('checked', enabled);
-			localStorage.setItem(key, enabled);
-		}
-		setHelp(localStorage.getItem(key) !== 'false');
-		$box.find('.close').on('click', function () {
-			setHelp(false);
+	// Help boxes (Suche, Anzeige): each remembers being closed, one settings checkbox
+	// shows all (checked), none (unchecked) or some (indeterminate) and re-enables both
+	var $helpBoxes = $('[data-help]');
+	var $helpEnabled = $('#helpEnabled');
+	function setHelp($boxes, enabled) {
+		$boxes.each(function () {
+			$(this).toggle(enabled);
+			localStorage.setItem($(this).data('help'), enabled);
 		});
-		$setting.on('change', function () {
-			setHelp(this.checked);
-		});
+		var shown = $helpBoxes.filter(function () {
+			return localStorage.getItem($(this).data('help')) !== 'false';
+		}).length;
+		$helpEnabled.prop('checked', shown === $helpBoxes.length);
+		$helpEnabled.prop('indeterminate', shown > 0 && shown < $helpBoxes.length);
+	}
+	$helpBoxes.each(function () {
+		setHelp($(this), localStorage.getItem($(this).data('help')) !== 'false');
+	});
+	$helpBoxes.find('.close').on('click', function () {
+		setHelp($(this).closest('[data-help]'), false);
+	});
+	$helpEnabled.on('change', function () {
+		setHelp($helpBoxes, this.checked);
 	});
 
 	// Default tab setting
