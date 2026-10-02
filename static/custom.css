@@ -699,7 +699,7 @@ strong {
   font-size: var(--spacing-xl);
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
 
   appearance: none;
   -webkit-appearance: none;
@@ -714,8 +714,8 @@ strong {
 }
 
 #savedList .item input[type="checkbox"].check {
-  left: 0;
-  right: auto;
+  left: auto;
+  right: 0;
   background-color: var(--danger);
 }
 
